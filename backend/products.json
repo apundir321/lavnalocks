@@ -1,0 +1,54 @@
+{
+    "status": "success",
+    "items": [{
+            "id": 1,
+            "title": "L-A8",
+            "price": 14200,
+            "image": "assets/img/lavna3.jpg"
+        },
+        {
+            "id": 2,
+            "title": "L-A24",
+            "price": 14200,
+            "image": "assets/img/lavna4.jpg"
+        },
+        {
+            "id": 3,
+            "title": "L-A28(BLACK)",
+            "price": 8999,
+            "image": "assets/img/lavna5.jpg"
+        },
+        {
+            "id": 4,
+            "title": "L-A28(GOLD)",
+            "price": 8999,
+            "image": "assets/img/lavna6.jpg"
+        },
+        {
+            "id": 5,
+            "title": "L-A15",
+            "price":  4999,
+            "image": "assets/img/lavna8.jpg"
+
+        },
+        {
+            "id": 6,
+            "title": "L-H300",
+            "price": 7500,
+            "image": "assets/img/lavna10.jpg"
+
+        },
+        {
+            "id": 7,
+            "title": "L-A5",
+            "price": 13900,
+            "image": "assets/img/lavna11.jpg"
+        },
+        {
+            "id": 8,
+            "title": "L-S9",
+            "price": 5900,
+            "image": "assets/img/lavna12.jpg"
+        } 
+    ]
+}

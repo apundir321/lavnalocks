@@ -1,0 +1,169 @@
+{{>header}}<br><br><br><br><br>
+
+
+        <!-- ****** Quick View Modal Area Start ****** -->
+        <div class="container" > 
+            <div>
+             <div>
+                 <div>     
+                   <div>
+                       <div>
+                         <div class="container">
+                             <div class="row">
+                                 <div class="col-12 col-lg-5">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                                <!-- Indicators -->
+                                       
+
+                                         <ul id="portfolio-flters" style="list-style: none; display:flex; text-align:center; line-height:2rem; background-color:none;">
+                                            
+                                            {{!-- <button><li data-filter=".filter-gold"><b>Gold</b></li></button> --}}
+                                            {{!-- <button style="margin-left: 3rem;"><li data-filter=".filter-black"><b>Black</b></li></button> --}}
+                                            {{!-- <li data-filter=".filter-card">Sofa</li> --}}
+                                          
+                                         </ul>
+                                         
+
+                                            <div class="row portfolio-container" >
+
+                                                <div class="col-lg-4 col-md-6 portfolio-item filter-gold">
+                                                    <div id="items" class="portfolio-wrap add" >
+                                                    {{!-- <img style="max-width: 300%;" src="assets/img/lavna3.jpg" class="img-fluid" alt=""> --}}
+                                                 <div class="product">
+                                                            <img src="{{product.image}}"><br><br>
+                                                            {{!-- <p class="name">${i.name}</p>
+                                                            <p class="price">$${i.price}</p> --}}
+                                                            <p class="is-available text-center" style="background-color: var(--green);
+    width: 8em;
+    color: var(--ivory);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0.3em;
+    text-transform: uppercase;">In stock</p>
+                                                            <button type="button" class="btn btn-primary" style="width: 140%;" onclick="addToCart();">Add to Shopping cart</button>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div><br><br>
+                                            
+
+                                                <!-- Wrapper for slides -->
+                                   
+                                        </div>
+                                     </div>
+                                            <div class="col-12 col-lg-7">
+                                                <div>
+                                                    <h1 class="title"  style="font-size: 5rem;"><b ><div id="productTitle">{{product.title}}</div></b></h1>
+                                                
+                                                    <h3 class="price">M.R.P. {{product.price}}</h3>
+                                                    {{!-- <p style="font-size: 1.5rem;">Meet the 4 in 1 Digital gate lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, and Key.</p> --}}
+                                                    <p style="font-size: 1.5rem;">{{product.description}}</p>
+                                                    <h2><b>Features Of Gate Lock:</b></h2>
+                                                   <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; Up to 120 fingerprints can be registered in this Digital lock and unlocking speed is 0.5 seconds only.
+                                                   </p><br>
+                                                   <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp; Up to 120 RFID card can be registered in this gate lock, the RFID card is specially designed for this gate lock only for your security.
+                                                   </p><br>
+                                                    <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;  Up to 120 pin can be registered in this Digital lock and the Touch Key Pad is very fine to use.
+                                                   </p><br>
+                                                   <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;  This fingerprint lock also contain 3 computerized mechanical key which can be used to unlock.
+                                                   </p><br>
+                                                   <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;  If the DND button is on, the electronic lock can’t be opened from outside.
+                                                   </p><br>
+                                                    <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;  There is an inbuilt doorbell in this smart lock.
+                                                   </p><br>
+                                                    <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;  The security lock will give you an indication on the screen that the battery is low.
+                                                   </p><br>
+                                                     <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;   In case the battery is completely discharged, an external 9V battery can be used to give power to the gate lock.
+                                                   </p><br>
+                                                    <p style="font-size: 1.5rem;">
+                                                       <i style="font-size: 2rem;" class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;   The fingerprint lock will eliminate the manual locking as it will get locked automatically when the door gets closed.
+                                                   </p><br>
+                                                </div><br><br>
+                                                <!-- Add to Cart Form -->
+                                                {{!-- <form  class="btn__group" method="post">
+                                                    <div class="add_to_cart">
+                                                        <button style="margin:1rem; padding:1rem;" class="btn-primary add" type="button" id="btn" onclick="addTocart(index)">Add To Cart</button>
+                                                    </div>                                                                              
+                                                </form><br> --}}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+            </div>
+        </div>
+        
+  <br><br><br><br>
+
+  
+  
+        <!-- ****** Quick View Modal Area End ****** -->
+  <footer style="width: 100% !important;">
+    <div class="footer-content img-responsive">
+      <a href="/" class="logo"><img style="width: 40%; height: 40%;" src="/assets/img/logo (1).svg"></a>
+
+        <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
+        <ul class="socials" style="text-align: center; align-items: center; justify-content: center;">
+            <li><a href="https://www.facebook.com/lavnadigitallocks"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=+91-7838486896"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:2rem !important;">
+        <p style="color: black !important; text-align: center; align-items: center; justify-content: center;">copyright &copy;2020 Lavna Locks | Powered by FlyBunch Ventures Pvt Ltd</p>
+    </div>
+</footer>
+
+<script>
+
+    function addToCart()
+    {
+        var title = document.getElementById("productTitle").innerHTML;
+        
+        window.location.href = "/add-to-cart/"+title;
+    }
+</script>
+
+
+  <!-- End Footer -->
+
+  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+
+  <!-- Vendor JS Files -->
+  {{!-- <script src="/public/assets/vendor/jquery/jquery.min.js"></script> --}}
+     <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/public/assets/vendor/aos/aos.js"></script>
+   
+
+  <!-- Template Main JS File -->
+  <script src="/public/assets/js/main.js"></script>
+  <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

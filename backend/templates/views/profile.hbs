@@ -1,0 +1,112 @@
+  
+{{>header}}<br><br><br><br>
+  
+  <div class="container">
+      <div class="row mt-3 mb-3">
+        <div class="col-md-8 m-auto">
+          {{!-- <% if (successMsg) { %> --}}
+          {{#if successMsg}}
+          <div id="success" class="alert alert-success">
+            {{successMsg }}
+          </div>
+          {{else}}
+          <div id="success" class="alert alert-success d-none"></div>
+          {{/if}}
+        </div>
+        <div class="col-md-8 m-auto">
+         {{#if errorMsg}}
+          <div id="error" class="alert alert-danger">
+             {{errorMsg}} 
+          </div>
+          {{else}}
+          <div id="error" class="alert alert-danger d-none"></div>
+          {{/if}}
+        </div>
+      </div>
+  <div class="row mt-4">
+    <div class="col-md-8 m-auto">
+       {{#if orders }} 
+      <h3>My orders</h3>
+      {{#each orders}}
+      <div class="card m-3">
+        <div class="card-body">
+          <p class="card-text ">
+            <ul class="list-group">
+              {{!-- <% order.cart.items.forEach( item => { %> --}}
+              {{#each this.cart.items}}
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{!-- {{<%= }}item.title %> | <%= item.qty %> Units --}}
+                {{this.title}} | {{this.qty}} Units
+                <span class="badge badge-info badge-pill"><i class="fa fa-rupee"></i>{{this.price}}</span>
+              </li>
+              {{/each}}
+            </ul>
+          </p>
+        </div>
+        <div class="card-footer">
+          <strong>Total Price: <i class="fa fa-rupee"></i> {{ this.cart.totalCost}}</strong>
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+        <h3 class="text-center" >You have not made any orders yet</h3>
+      {{/if}}
+    </div>
+  </div>
+</div>
+</div>
+
+<br><br><br><br>
+
+  
+  
+        <!-- ****** Quick View Modal Area End ****** -->
+  <footer style="width: 100% !important;">
+    <div class="footer-content img-responsive">
+      <a href="/" class="logo"><img style="width: 40%; height: 40%;" src="/assets/img/logo (1).svg"></a>
+
+        <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
+        <ul class="socials" style="text-align: center; align-items: center; justify-content: center;">
+            <li><a href="https://www.facebook.com/lavnadigitallocks"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=+91-7838486896"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:2rem !important;">
+        <p style="color: black !important; text-align: center; align-items: center; justify-content: center;">copyright &copy;2020 Lavna Locks | Powered by FlyBunch Ventures Pvt Ltd</p>
+    </div>
+</footer>
+
+
+
+
+  <!-- End Footer -->
+
+  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+
+  <!-- Vendor JS Files -->
+  {{!-- <script src="/public/assets/vendor/jquery/jquery.min.js"></script> --}}
+     <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/public/assets/vendor/aos/aos.js"></script>
+   
+
+  <!-- Template Main JS File -->
+  <script src="/public/assets/js/main.js"></script>
+  {{!-- <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
+
+</body>
+
+</html>

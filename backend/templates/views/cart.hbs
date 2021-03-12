@@ -1,0 +1,157 @@
+{{>header}}<br><br><br><br><br>
+
+    <div class="container cart">
+  {{!-- {{#if (cart != null && !cart.paid ) }} --}}
+  {{#if cart}}
+  <div class="row">
+    <div class="col-md-11 col-sm-12 m-auto table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr >
+            <th>Product</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+            <th>Quantity</th>
+            <th>&nbsp;</th>
+            <th>Total</th>
+            <th>Subtotal</th>
+            <th>&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each products}}
+          <tr class="my-auto">
+            <td>
+              <a
+              href="/products/{{this.title}}"
+            >
+              <img src="{{this.image}}" class="img-small image-fluid" alt="image thumbnail" />
+              </a>
+            </td>
+            <td>
+              <div class="float-left mb-3">
+                <a class="title-link"
+                href="/products/{{this.title}}"
+              >
+                <h6 class="text-left" style="
+    font-size: 20px;
+    margin-top: 2px;
+">{{ this.title}}</h6> 
+                {{!-- <p class="text-left">Product No: {{ this.productCode}}</p> --}}
+              </div>
+              
+              </a>
+            </td>
+            <td class="text-center">
+              <a href="/add-to-cart/{{ this.title}}"
+                ><i class="fa fa-plus-square" aria-hidden="true" style="
+    font-size: x-large;"></i
+              > </a>
+            </td>
+            <td class="text-center">
+              <p class="qty-display pt-1" style="font-size: 16px;">
+              {{ this.qty}}
+            </p>
+          </td>
+            <td class="text-center" >
+              <a href="/reduce/{{ this.title}}"
+                ><i class="fa fa-minus-square" aria-hidden="true" style="
+    font-size: x-large;"></i
+              ></a>
+            </td>
+            <td style="font-size: 16px;">{{this.price }}</td>
+            <td style="font-size: 16px;">{{ this.totalPrice}}</td>
+            <td>
+              <a
+                href="/removeAll/{{ this.title}}"
+                class="btn btn-danger btn-sm button-style-danger" style="
+    font-size: 15px;
+    margin-top: -4px;"
+                >Remove</a
+              >
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+<hr>
+  <div class="row mt-4 mr-auto">
+    <div class="col-md-11 col-sm-12 m-auto">
+      <strong>Total: {{cart.totalCost}} </strong>
+    </div>
+  </div>
+  <div class="row mt-2 mr-auto">
+    <div class="col-md-11 col-sm-12 m-auto">
+      <button type="button" class="btn btn-primary" style="
+    
+    font-size: 18px;
+    border-color: black;
+    font-style: initial;" onclick="addToCart()">Checkout</button>
+    </div>
+  </div>
+  {{else}}
+  <div class="row text-center">
+    <div class="col-md-9 col-sm-9 m-auto">
+      <h2>No items in the cart</h2>
+    </div>
+  </div>
+
+ {{/if}}
+</div>
+   <br><br><br><br>
+
+  
+  
+        <!-- ****** Quick View Modal Area End ****** -->
+  <footer style="width: 100% !important;">
+    <div class="footer-content img-responsive">
+      <a href="/" class="logo"><img style="width: 40%; height: 40%;" src="/assets/img/logo (1).svg"></a>
+
+        <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
+        <ul class="socials" style="text-align: center; align-items: center; justify-content: center;">
+            <li><a href="https://www.facebook.com/lavnadigitallocks"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=+91-7838486896"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:2rem !important;">
+        <p style="color: black !important; text-align: center; align-items: center; justify-content: center;">copyright &copy;2020 Lavna Locks | Powered by FlyBunch Ventures Pvt Ltd</p>
+    </div>
+</footer>
+
+<script>
+
+    function addToCart()
+    {
+        window.location.href = "/checkout";
+    }
+</script>
+
+
+  <!-- End Footer -->
+
+  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+
+  <!-- Vendor JS Files -->
+  <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/public/assets/vendor/aos/aos.js"></script>
+   
+
+  <!-- Template Main JS File -->
+  <script src="/public/assets/js/main.js"></script>
+  {{!-- <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
+
+</body>
+
+</html>
