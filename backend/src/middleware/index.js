@@ -2,7 +2,7 @@ let middlewareObject = {};
 
 //a middleware to check if a user is logged in or not
 middlewareObject.isNotLoggedIn = (req, res, next) => {
-  console.log("&&&&&&&&&&&77");
+ 
   if (!req.isAuthenticated()) {
     return next();
   }

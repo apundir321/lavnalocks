@@ -260,11 +260,13 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   cart = await Cart.findById(req.session.cart._id);
 
   const errMsg = req.flash("error")[0];
-  res.render("checkout", {
+  res.render("checkout1", {
+    cart:cart,
     total: cart.totalCost,
     csrfToken: req.csrfToken(),
     errorMsg,
     pageName: "Checkout",
+    products: await productsFromCart(cart)
   });
 });
 
@@ -276,6 +278,7 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
   const cart = await Cart.findById(req.session.cart._id);
   stripe.charges.create(
     {
+      
       amount: cart.totalCost * 100,
       currency: "usd",
       source: req.body.stripeToken,
