@@ -32,7 +32,7 @@ passport.use(
         const newUser = await new User();
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);
-        newUser.username = req.body.firstname;
+        newUser.firstname = req.body.firstname;
         await newUser.save();
         return done(null, newUser);
       } catch (error) {

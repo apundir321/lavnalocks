@@ -18,7 +18,7 @@ router.use(csrfProtection);
 
 // GET: display the signup form with csrf token
 router.get("/signup", middleware.isNotLoggedIn, (req, res) => {
-  var errorMsg = req.flash("error")[0];
+  var errorMsg = req.flash("error");
   res.render("register", {
     csrfToken: req.csrfToken(),
     errorMsg,

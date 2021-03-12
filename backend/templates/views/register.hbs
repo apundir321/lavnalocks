@@ -288,7 +288,11 @@ footer{
 
   </header><!-- End Header --><br><br><br><br><br><br><br>
 
-
+{{#if errorMsg }}
+      <div id="flash-msg" class="alert alert-danger">
+        {{errorMsg}}
+      </div>
+      {{/if}}
 
   
   <form action="/user/signup" method="POST" style="border:1px solid #ccc" id="reg-form">

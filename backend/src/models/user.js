@@ -15,8 +15,7 @@ const employeeSchema = new mongoose.Schema({
         required: true
     },
     confirmpassword : {
-        type: String,
-        required: true
+        type: String
     },
 
 })
