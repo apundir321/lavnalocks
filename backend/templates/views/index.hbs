@@ -425,7 +425,7 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 text-center">
-           <form action="sendemail.php" class="contactform" method="POST">
+           <form action="/contact-us" class="contactform" method="POST">
               <h2>Send Message</h2><br>
               <div class="error"></div>
               <div class="inputbox">
@@ -444,6 +444,7 @@
               <div class="inputbox">
                   <!-- <input type="submit" value="Send"> -->
                   <!-- <button class="btn btn-primary" value="submit">SEND</button> -->
+                  <input type="hidden" name="_csrf" value="{{csrfToken}}" />
                   <button style="font-size: 1.5rem;" class="btn btn-primary" type="submit">SEND</button>
                   
                   <!-- <a type="submit" class="ms-layer sbut11 blue btn-xround" href="#">SEND</a>  -->

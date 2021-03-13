@@ -11,6 +11,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const csrfProtection = csrf();
 router.use(csrfProtection);
+const nodemailer = require("nodemailer");
 
 // GET: home page
 router.get("/", async (req, res) => {
@@ -19,7 +20,8 @@ router.get("/", async (req, res) => {
       .sort("-createdAt")
       .populate("category");
 
-    res.render("index", { pageName: "Home", products });
+    res.render("index", { pageName: "Home", products,
+    csrfToken: req.csrfToken() });
   } catch (error) {
     console.log(error);
     res.redirect("/");
@@ -352,7 +354,69 @@ router.post('/payment', function(req, res){
 	.catch((err) => { 
 		res.send(err)	 // If some error occurs 
 	}); 
-}) 
+})
+
+
+//POST: handle contact us form logic using nodemailer
+router.post(
+  "/contact-us"
+  ,
+  (req, res) => {
+    // instantiate the SMTP server
+    const smtpTrans = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        // company's email and password
+        user: "anuragpundir621@gmail.com",
+        pass: "khkdqfcbsacrmqhs",
+      },
+      tls: {
+        rejectUnauthorized: false,
+      },
+    });
+
+    // email options
+    const mailOpts = {
+      from: "anuragpundir621@gmail.com",
+      to: "anuragpundir631@gmail.com",
+      subject: `Enquiry from ${req.body.name}`,
+      html: 
+      `
+      <div>
+      <h2 style="color: #478ba2; text-align:center;">Client's name: ${req.body.name}</h2>
+      <h3 style="color: #478ba2;">Client's email: (${req.body.email})<h3>
+      <h3 style="color: #478ba2;">Client's email: (${req.body.phone})<h3>
+      </div>
+      <h3 style="color: #478ba2;">Client's message: </h3>
+      <div style="font-size: 30;">
+      ${req.body.message}
+      </div>
+      `
+      ,
+    };
+
+    // send the email
+    smtpTrans.sendMail(mailOpts, (error, response) => {
+      if (error) {
+        console.log(error);
+        req.flash(
+          "error",
+          "An error occured... Please check your internet connection and try again later"
+        );
+        return res.redirect("/");
+      } else {
+        req.flash(
+          "success",
+          "Email sent successfully! Thanks for your inquiry."
+        );
+        return res.render("query");
+      }
+    });
+  }
+);
+
 
 // create products array to store the info of each product in the cart
 async function productsFromCart(cart) {

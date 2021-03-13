@@ -54,8 +54,8 @@ router.post(
       secure: false,
       auth: {
         // company's email and password
-        user: process.env.GMAIL_EMAIL,
-        pass: process.env.GMAIL_PASSWORD,
+        user: "anuragpundir621@gmail.com",
+        pass: "OURINDIA12",
       },
       tls: {
         rejectUnauthorized: false,
@@ -64,18 +64,11 @@ router.post(
 
     // email options
     const mailOpts = {
-      from: req.body.email,
-      to: process.env.GMAIL_EMAIL,
-      subject: `Enquiry from ${req.body.name}`,
+      from: "anuragpundir621@gmail.com",
+      to: "anuragpundir631@gmail.com",
+      subject: `Enquiry from `,
       html: `
-      <div>
-      <h2 style="color: #478ba2; text-align:center;">Client's name: ${req.body.name}</h2>
-      <h3 style="color: #478ba2;">Client's email: (${req.body.email})<h3>
-      </div>
-      <h3 style="color: #478ba2;">Client's message: </h3>
-      <div style="font-size: 30;">
-      ${req.body.message}
-      </div>
+      test email
       `,
     };
 
