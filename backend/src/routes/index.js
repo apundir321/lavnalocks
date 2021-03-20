@@ -260,7 +260,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   }
   //load the cart with the session's cart's id from the db
   cart = await Cart.findById(req.session.cart._id);
-
+  console.log(await productsFromCart(cart));
   const errMsg = req.flash("error")[0];
   res.render("checkout1", {
     cart:cart,
@@ -424,7 +424,7 @@ async function productsFromCart(cart) {
   for (const item of cart.items) {
     let foundProduct = 
       await Product.findOne({title:item.title}).exec();
-      console.log(foundProduct);
+      // console.log(foundProduct);
     foundProduct["qty"] = item.qty;
     foundProduct["totalPrice"] = item.price;
     products.push(foundProduct);
