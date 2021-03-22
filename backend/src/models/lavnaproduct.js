@@ -18,7 +18,12 @@ const lavnaProductSchema = Schema({
   description: {
     type: String,
     required:true
-  }
+  },
+  sellingPrice:{
+    type: Number,
+    required:true
+  },
+  subItems:[{title:String, image:String,price:Number,description:String,sellingPrice:Number}]
 });
 
 module.exports = mongoose.model("LavnaProduct", lavnaProductSchema);

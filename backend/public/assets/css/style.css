@@ -457,7 +457,6 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
-  padding: 10px;
   transition: 0.3s;
   color: rgba(255, 255, 255, 0.5);
 }
@@ -465,6 +464,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .carousel-control-next-icon:hover, #hero .carousel-control-prev-icon:hover {
   background: rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.8);
+  letter-spacing:1rem;
 }
 
 #hero .carousel-indicators li {
@@ -1172,13 +1172,15 @@ section {
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
-.faq .faq-list {
+/* .faq .faq-list {
   padding: 0 100px;
+  
 }
 
 .faq .faq-list ul {
   padding: 0;
   list-style: none;
+  overflow: hidden;
 }
 
 .faq .faq-list li + li {
@@ -1242,13 +1244,14 @@ section {
 
 .faq .faq-list a.collapsed .icon-close {
   display: none;
+  
 }
 
 @media (max-width: 1200px) {
   .faq .faq-list {
     padding: 0;
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials

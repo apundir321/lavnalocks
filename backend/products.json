@@ -1,42 +1,117 @@
 {
     "status": "success",
-    "items": [{
+    "items": [
+        {
             "id": 1,
             "title": "L-A8",
             "price": 14200,
+            "sellingPrice": 9900,
             "image": "assets/img/lavna3.jpg"
         },
         {
             "id": 2,
-            "title": "L-A24",
+            "title": "L-A24(Black)",
             "price": 14200,
-            "image": "assets/img/lavna4.jpg"
+            "image": "assets/img/lavna4.jpg",
+            "subItems": [
+                {
+                    "title": "L-A24(Bluetooth)",
+                    "price": 14200,
+                    "sellingPrice": 8300,
+                    "image": "assets/img/lavna11.jpg"
+                },
+                {
+                    "title": "L-A24(WI-FI)",
+                    "price": 15700,
+                    "sellingPrice": 9800,
+                    "image": "assets/img/lavna11.jpg"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "L-A24(Gold)",
+            "price": 14200,
+            "image": "assets/img/lavna4.jpg",
+            "subItems": [
+                {
+                    "title": "L-A24(Bluetooth)",
+                    "price": 14200,
+                    "sellingPrice": 8300,
+                    "image": "assets/img/lavna11.jpg"
+                },
+                {
+                    "title": "L-A24(WI-FI)",
+                    "price": 15700,
+                    "sellingPrice": 9800,
+                    "image": "assets/img/lavna11.jpg"
+                }
+            ]
         },
         {
             "id": 3,
             "title": "L-A28(BLACK)",
             "price": 8999,
-            "image": "assets/img/lavna5.jpg"
+            "sellingPrice": 7600,
+            "image": "assets/img/lavna5.jpg",
+            "subItems": [
+                {
+                    "title": "L-A28(Bluetooth)",
+                    "price": 8999,
+                    "sellingPrice": 7600,
+                    "image": "assets/img/lavna11.jpg"
+                },
+                {
+                    "title": "L-A28(WI-FI)",
+                    "price": 9999,
+                    "sellingPrice": 8700,
+                    "image": "assets/img/lavna11.jpg"
+                },
+                {
+                    "title": "L-A28(Remote)",
+                    "price": 9999,
+                    "sellingPrice": 9000,
+                    "image": "assets/img/lavna11.jpg"
+                }
+            ]
         },
         {
             "id": 4,
             "title": "L-A28(GOLD)",
             "price": 8999,
-            "image": "assets/img/lavna6.jpg"
+            "image": "assets/img/lavna6.jpg",
+            "subItems": [
+                {
+                    "title": "L-A28(Bluetooth)",
+                    "price": 8999,
+                    "sellingPrice": 7600,
+                    "image": "assets/img/lavna11.jpg"
+                },
+                {
+                    "title": "L-A28(WI-FI)",
+                    "price": 9999,
+                    "sellingPrice": 8700,
+                    "image": "assets/img/lavna11.jpg"
+                },
+                {
+                    "title": "L-A28(Remote)",
+                    "price": 9999,
+                    "sellingPrice": 9000,
+                    "image": "assets/img/lavna11.jpg"
+                }
+            ]
         },
         {
             "id": 5,
             "title": "L-A15",
-            "price":  4999,
+            "price": 4999,
             "image": "assets/img/lavna8.jpg"
-
         },
         {
             "id": 6,
             "title": "L-H300",
             "price": 7500,
             "image": "assets/img/lavna10.jpg"
-
         },
         {
             "id": 7,
@@ -49,6 +124,41 @@
             "title": "L-S9",
             "price": 5900,
             "image": "assets/img/lavna12.jpg"
-        } 
+        },
+        {
+            "id": 9,
+            "title": "L-A24(Bluetooth)",
+            "price": 14200,
+            "sellingPrice": 8300,
+            "image": "assets/img/Fwd_ LA28 _ LA24/L-A28 1.jpg"
+        },
+        {
+            "id": 10,
+            "title": "L-A24(WI-FI)",
+            "price": 15700,
+            "sellingPrice": 9800,
+            "image": "assets/img/lavna11.jpg"
+        },
+        {
+            "id": 11,
+            "title": "L-A28(Bluetooth)",
+            "price": 8999,
+            "sellingPrice": 7600,
+            "image": "assets/img/lavna11.jpg"
+        },
+        {
+            "id": 12,
+            "title": "L-A28(WI-FI)",
+            "price": 9999,
+            "sellingPrice": 8700,
+            "image": "assets/img/lavna11.jpg"
+        },
+        {
+            "id": 13,
+            "title": "L-A28(Remote)",
+            "price": 9999,
+            "sellingPrice": 9000,
+            "image": "assets/img/lavna11.jpg"
+        }
     ]
 }

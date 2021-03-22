@@ -40,10 +40,23 @@ router.get('/:name',async (req, res) => {
   console.log(req.params.name+"   ****");
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
   // console.log(foundProduct.count());
-
   res.render("products",{
     product:foundProduct
   });
+})
+
+router.get('/variant/a24',async (req, res) => {
+ 
+  // const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
+  // console.log(foundProduct.count());
+  res.render("newproductL-A24");
+})
+
+router.get('/variant/a28',async (req, res) => {
+ 
+  // const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
+  // console.log(foundProduct.count());
+  res.render("newproduct");
 })
 
 // GET: search box
