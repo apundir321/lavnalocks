@@ -46,7 +46,12 @@ app.use(express.static(static_path));
 app.set("view engine", "hbs");
 app.set("views", templates_path);
 hbs.registerPartials(partials_path);
-
+hbs.registerHelper('ifCond', function(v1, v2, options) {
+  if(v1 === v2) {
+    return options.fn(this);
+  }
+  return options.inverse(this);
+});
 // admin route
 const adminRouter = require("./routes/admin");
 app.use("/admin", adminRouter);

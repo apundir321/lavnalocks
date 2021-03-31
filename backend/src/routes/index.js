@@ -103,19 +103,19 @@ router.get("/add-to-cart/:id", async (req, res) => {
     if (itemIndex > -1) {
       // if product exists in the cart, update the quantity
       cart.items[itemIndex].qty++;
-      cart.items[itemIndex].price = cart.items[itemIndex].qty * product.price;
+      cart.items[itemIndex].price = cart.items[itemIndex].qty * product.sellingPrice;
       cart.totalQty++;
-      cart.totalCost += product.price;
+      cart.totalCost += product.sellingPrice;
     } else {
       // if product does not exists in cart, find it in the db to retrieve its price and add new item
       cart.items.push({
         productId: product._id,
         qty: 1,
-        price: product.price,
+        price: product.sellingPrice,
         title: product.title
       });
       cart.totalQty++;
-      cart.totalCost += product.price;
+      cart.totalCost += product.sellingPrice;
     }
 
     // if the user is logged in, store the user's id and save cart to the db
@@ -136,23 +136,28 @@ router.get("/add-to-cart/:id", async (req, res) => {
 // GET: view shopping cart contents
 router.get("/shopping-cart", async (req, res) => {
   try {
+
+    console.log("inside shopping cart");
     // find the cart, whether in session or in db based on the user state
     let cart_user;
     if (req.user) {
       cart_user = await Cart.findOne({ user: req.user._id });
     }
-    console.log(cart_user);
+    // console.log(cart_user);
     // if user is signed in and has cart, load user's cart from the db
     if (req.user && cart_user) {
+      console.log(" ****");
       req.session.cart = cart_user;
       return res.render("cart", {
         cart: cart_user,
         pageName: "Shopping Cart",
-        products: await productsFromCart(cart_user),
+        products: await productsFromCart(cart_user)
       });
     }
     // if there is no cart in session and user is not logged in, cart is empty
     if (!req.session.cart) {
+
+      console.log("no cart");
       return res.render("cart", {
         cart: null,
         pageName: "Shopping Cart",
@@ -191,9 +196,9 @@ router.get("/reduce/:id", async function (req, res, next) {
       const product = await Product.findOne({title:productId}).exec();
       // if product is found, reduce its qty
       cart.items[itemIndex].qty--;
-      cart.items[itemIndex].price -= product.price;
+      cart.items[itemIndex].price -= product.sellingPrice;
       cart.totalQty--;
-      cart.totalCost -= product.price;
+      cart.totalCost -= product.sellingPrice;
       // if the item's qty reaches 0, remove it from the cart
       if (cart.items[itemIndex].qty <= 0) {
         await cart.items.remove({ _id: cart.items[itemIndex]._id });
@@ -260,7 +265,6 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   }
   //load the cart with the session's cart's id from the db
   cart = await Cart.findById(req.session.cart._id);
-  console.log(await productsFromCart(cart));
   const errMsg = req.flash("error")[0];
   res.render("checkout1", {
     cart:cart,
@@ -420,15 +424,20 @@ router.post(
 
 // create products array to store the info of each product in the cart
 async function productsFromCart(cart) {
+  console.log(cart.items)
   let products = []; // array of objects
   for (const item of cart.items) {
+    // console.log(item);
     let foundProduct = 
       await Product.findOne({title:item.title}).exec();
       // console.log(foundProduct);
+      if(item.qty){
     foundProduct["qty"] = item.qty;
+      }
     foundProduct["totalPrice"] = item.price;
     products.push(foundProduct);
   }
+  console.log(products);
   return products;
 }
 

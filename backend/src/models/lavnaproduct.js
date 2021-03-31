@@ -19,6 +19,10 @@ const lavnaProductSchema = Schema({
     type: String,
     required:true
   },
+  features: {
+    type: String
+    
+  },
   sellingPrice:{
     type: Number,
     required:true
