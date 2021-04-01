@@ -52,11 +52,25 @@ router.get('/variant/a24',async (req, res) => {
   res.render("newproductL-A24");
 })
 
+router.get('/variant/a24/black',async (req, res) => {
+ 
+  // const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
+  // console.log(foundProduct.count());
+  res.render("newproductL-A24-black");
+})
+
 router.get('/variant/a28',async (req, res) => {
  
   // const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
   // console.log(foundProduct.count());
   res.render("newproduct");
+})
+
+router.get('/variant/a28/black',async (req, res) => {
+ 
+  // const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
+  // console.log(foundProduct.count());
+  res.render("newproduct-black");
 })
 
 // GET: search box

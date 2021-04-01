@@ -60,9 +60,14 @@ async function seedDB() {
   await seedCateg("L-S9",5900,"/assets/img/lavna11.jpg",3180,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-S9");
   await seedCateg("L-A24(Bluetooth)",14200,"/assets/img/lavna4.jpg",8300,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A24(Bluetooth)");
   await seedCateg("L-A24(WI-FI)",15700,"/assets/img/lavna4.jpg",9800,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A24(WI-FI)");
+  await seedCateg("L-A24-Black(Bluetooth)",14200,"/assets/img/lavna4.jpg",8300,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A24-Black(Bluetooth)");
+  await seedCateg("L-A24-Black(WI-FI)",15700,"/assets/img/lavna4.jpg",9800,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A24-Black(WI-FI)");
   await seedCateg("L-A28(Bluetooth)",8999,"/assets/img/lavna6.jpg",7600,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A28(Bluetooth)");
   await seedCateg("L-A28(WI-FI)",9999,"/assets/img/lavna6.jpg",8700,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A28(WI-FI)");
   await seedCateg("L-A28(Remote)",9999,"/assets/img/lavna6.jpg",9000,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A28(Remote)");
+  await seedCateg("L-A28-Black(Bluetooth)",8999,"/assets/img/lavna6.jpg",7600,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A28-Black(Bluetooth)");
+  await seedCateg("L-A28-Black(WI-FI)",9999,"/assets/img/lavna6.jpg",8700,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A28-Black(WI-FI)");
+  await seedCateg("L-A28-Black(Remote)",9999,"/assets/img/lavna6.jpg",9000,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A28-Black(Remote)");
   await closeDB();
 }
 

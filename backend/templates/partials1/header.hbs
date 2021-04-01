@@ -81,7 +81,7 @@
 <script src="node_modules/whatsapp-button.js/dist/wpp_js/whatsappButton.js"></script>
 
   <style>
-   
+    
     
  nav{
     font-size: 20px !important;
@@ -241,16 +241,17 @@ footer{
 	height:60px;
 	bottom:40px;
 	right:40px;
+	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-        font-size:35px;
+        font-size:30px;
 	box-shadow: 2px 2px 3px #999;
         z-index:100;
 }
 
 .whatsapp-icon {
-	margin-top:8px;
+	margin-top:16px;
 }
 /* for mobile */
 @media screen and (max-width: 767px){
@@ -277,7 +278,25 @@ footer{
       animation: rotation 5s infinite linear;
     }
     
-
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.float {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 4s ease-in-out infinite;
+	img { width: 100%; height: auto; }
+}
 
 
 @keyframes float {
@@ -714,60 +733,7 @@ dex}
     -webkit-transform: scale(1.1);
     background: #31708f;
 }
-
-
-
-
-@keyframes blinking {
-  0% {
-    background-color: #ff3d50;
-    border: 5px solid #871924;
-  }
-  /* YOU CAN ADD MORE COLORS IN THE KEYFRAMES IF YOU WANT
-  50% {
-    background-color: #55d66b;
-    border: 5px solid #126620;
-  }
-  */
-  100% {
-    background-color: #222291;
-    border: 5px solid #6565f2;
-  }
-}
-#demm {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  margin-top: -1rem;
-  /* NAME | TIME | ITERATION */
-  animation: blinking 1s infinite;
-}
-
-
   </style>
-
-  <style>
-
-    .float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:40px;
-	right:40px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-  font-size:30px;
-	box-shadow: 2px 2px 3px #999;
-  z-index:100;
-}
-
-.my-float{
-	margin-top:16px;
-}
-  </style>
-
 </head>
 
 <body>
@@ -844,14 +810,7 @@ dex}
       </div> --}}
 
     </div>
-    {{!-- <a  href="https://api.whatsapp.com/send?phone=+91-9971427608" class="whatsapp_float shadow " target="_blank"> <i id="demm" class="fa fa-whatsapp whatsapp-icon" style="text-align: center; align-item: center;">
-      
-    </i></a> --}}
-
-    
-<a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
+    <a href="https://api.whatsapp.com/send?phone=+91-9971427608" class="whatsapp_float shadow " target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
   {{!-- <div class="whatsapp"> --}}
     {{!-- <a href="https://api.whatsapp.com/send?phone=+91-9971427608"> --}}
       {{!-- <h5 style="font-family:sans-serif;"><i style="font-size:1.8rem; height: 1.2rem; top: -11%; text-align: center !important; align-items: center !important;" class="fa fa-whatsapp" aria-hidden="true">&nbsp;How Can I Help You?</i></h5> --}}
