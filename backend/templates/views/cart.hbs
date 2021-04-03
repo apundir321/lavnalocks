@@ -25,7 +25,8 @@
               <a
               href="/products/{{this.title}}"
             >
-              <img src="{{this.image}}" class="img-small image-fluid" alt="image thumbnail" />
+              <img src="{{this.image}}" class="img-small image-fluid" alt="image thumbnail" style="width: 200px;
+    margin-left: -50px;" />
               </a>
             </td>
             <td>
@@ -79,16 +80,16 @@
 <hr>
   <div class="row mt-4 mr-auto">
     <div class="col-md-11 col-sm-12 m-auto">
-      <strong>Total: <i class="fa fa-rupee"></i>{{cart.totalCost}} </strong>
+      {{!-- <strong>Total: <i class="fa fa-rupee"></i>{{cart.totalCost}} </strong> --}}
     </div>
   </div>
   <div class="row mt-2 mr-auto">
     <div class="col-md-11 col-sm-12 m-auto">
-      <button type="button" class="btn btn-primary" style="
-    
-    font-size: 18px;
-    border-color: black;
-    font-style: initial;" onclick="addToCart()">Checkout</button>
+      
+      <span style=" float:left;
+		 padding-top:10px;
+		 margin-right:10px;"> Total price: <i class="fa fa-rupee"></i><b>{{cart.totalCost}}</b></span>
+    <a href="/checkout" class="btn btn-success pull-right">Checkout</a>
     </div>
   </div>
   {{else}}
@@ -123,7 +124,6 @@
 </footer>
 
 <script>
-
     function addToCart()
     {
         window.location.href = "/checkout";
