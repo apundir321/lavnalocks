@@ -952,6 +952,14 @@ footer{
                         <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <button type="submit" class="btn btn-primary btn-submit-fix">Place Order</button>
+                           {{!-- <button id="rzp-button1">Pay</button> --}}
+
+
+                                
+                                {{!-- <span id="payment-button-sending" style="display:none;">Sending…</span> --}}
+                            </button>
+
+            
                             </div>
                         </div>
                     </div>
@@ -963,8 +971,38 @@ footer{
     </div>
 
 </div>
-<script type="text/javascript" src="https://js.stripe.com/v3/"></script>
-<script type="text/javascript" src="/javascripts/checkout.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+var options = {
+    "key": "rzp_test_3PiqSvpA4z5ROD", // Enter the Key ID generated from the Dashboard
+    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "{{orderId}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    "callback_url": "/profile",
+    "prefill": {
+        "name": "Gaurav Kumar",
+        "email": "gaurav.kumar@example.com",
+        "contact": "9999999999"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+</script>
+
+{{!-- <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+<script type="text/javascript" src="/javascripts/checkout.js"></script> --}}
 <footer style="width: 100% !important;">
     <div class="footer-content img-responsive">
         <a href="/" class="logo"><img style="width: 40%; height: 40%;" src="assets/img/logo (1).svg"></a>
@@ -977,7 +1015,7 @@ footer{
                         class="fa fa-instagram"></i></a></li>
             <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;"
                         class="fa fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=+91-7838486896"><i style="font-size: 1.8rem;"
+            <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;"
                         class="fa fa-whatsapp"></i></a></li>
         </ul>
     </div>
