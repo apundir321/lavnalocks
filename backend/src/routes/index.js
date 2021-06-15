@@ -8,10 +8,25 @@ const Order = require("../models/order");
 const middleware = require("../middleware");
 const router = express.Router();
 const app = express();
+const crypto = require("crypto");
 const bodyParser = require('body-parser');
 const csrfProtection = csrf();
 router.use(csrfProtection);
 const nodemailer = require("nodemailer");
+var Razorpay = require('razorpay');
+const { body } = require("express-validator");
+var instance = new Razorpay({
+  key_id: 'rzp_live_AesJaVZnibvAwT',
+  key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
+})
+let price = 2000,
+  currency = 'INR',
+  receipt = 'lavna_order_id',
+  payment_capture = 1,
+  notes = "lavna",
+  order_id, payment_id;
+
+
 
 // GET: home page
 router.get("/", async (req, res) => {
@@ -20,8 +35,10 @@ router.get("/", async (req, res) => {
       .sort("-createdAt")
       .populate("category");
 
-    res.render("index", { pageName: "Home", products,
-    csrfToken: req.csrfToken() });
+    res.render("index", {
+      pageName: "Home", products,
+      csrfToken: req.csrfToken()
+    });
   } catch (error) {
     console.log(error);
     res.redirect("/");
@@ -30,7 +47,7 @@ router.get("/", async (req, res) => {
 
 router.get("/cart", async (req, res) => {
   try {
-   
+
     res.render("cart");
   } catch (error) {
     console.log(error);
@@ -98,7 +115,7 @@ router.get("/add-to-cart/:id", async (req, res) => {
     }
     console.log(cart);
     // add the product to the cart
-    const product = await Product.findOne({title:productId}).exec();
+    const product = await Product.findOne({ title: productId }).exec();
     const itemIndex = cart.items.findIndex((p) => p.title == productId);
     if (itemIndex > -1) {
       // if product exists in the cart, update the quantity
@@ -129,7 +146,7 @@ router.get("/add-to-cart/:id", async (req, res) => {
     // res.redirect("/products/"+productId);
   } catch (err) {
     console.log(err.message);
-    res.redirect("/products/"+productId);
+    res.redirect("/products/" + productId);
   }
 });
 
@@ -193,7 +210,7 @@ router.get("/reduce/:id", async function (req, res, next) {
     let itemIndex = cart.items.findIndex((p) => p.title == productId);
     if (itemIndex > -1) {
       // find the product to find its price
-      const product = await Product.findOne({title:productId}).exec();
+      const product = await Product.findOne({ title: productId }).exec();
       // if product is found, reduce its qty
       cart.items[itemIndex].qty--;
       cart.items[itemIndex].price -= product.sellingPrice;
@@ -248,7 +265,7 @@ router.get("/removeAll/:id", async function (req, res, next) {
     if (cart.totalQty <= 0) {
       req.session.cart = null;
       await Cart.findByIdAndRemove(cart._id);
-    } 
+    }
     res.redirect(req.headers.referer);
   } catch (err) {
     console.log(err.message);
@@ -257,34 +274,81 @@ router.get("/removeAll/:id", async function (req, res, next) {
 });
 
 // GET: checkout form with csrf token
-router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
-  const errorMsg = req.flash("error")[0];
-
+router.get("/checkout", async (req, res) => {
+  console.log("checking out");
+  if (!req.isAuthenticated()) {
+    console.log("authenticated");
+  }
+   const errorMsg = req.flash("error")[0];
+ 
   if (!req.session.cart) {
     return res.redirect("/shopping-cart");
   }
   //load the cart with the session's cart's id from the db
-  cart = await Cart.findById(req.session.cart._id);
+  if (req.user) {
+    cart = await Cart.findById(req.session.cart._id);
+      res.render("checkout1", {
+      cart: cart,
+      total: cart.totalCost,
+      totalAmount: cart.totalCost*100,
+      csrfToken: req.csrfToken(),
+      errorMsg,
+      key: "rzp_live_AesJaVZnibvAwT",
+      pageName: "Checkout",
+      order_id: order_id,
+      products: await productsFromCart(cart)
+    });
+  }
+  else {
+    cart = req.session.cart;
+    res.render("guest_checkout", {
+      cart: cart,
+      total: cart.totalCost,
+      totalAmount: cart.totalCost*100,
+      csrfToken: req.csrfToken(),
+      errorMsg,
+      key: "rzp_live_AesJaVZnibvAwT",
+      pageName: "Checkout",
+      order_id: order_id,
+      products: await productsFromCart(cart)
+    });
+  }
   const errMsg = req.flash("error")[0];
-  res.render("checkout1", {
-    cart:cart,
-    total: cart.totalCost,
-    csrfToken: req.csrfToken(),
-    errorMsg,
-    pageName: "Checkout",
-    products: await productsFromCart(cart)
-  });
+});
+
+router.get("/successpayment", async (req, res) => {
+  res.render("success_payment",{});
+});
+
+router.get("/errorpayment", async (req, res) => {
+  res.render("error_payment",{});
+});
+
+
+router.post("/createOrder", async (req, res) => {
+  console.log("creating order");
+  params = req.body;
+  instance.orders
+    .create(params)
+    .then((data) => {
+      res.send({ sub: data, status: "success" });
+    })
+    .catch((error) => {
+      res.send({ sub: error, status: "failed" });
+    });
 });
 
 // POST: handle checkout logic and payment using Stripe
 router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
+
+  console.log("checking out 2");
   if (!req.session.cart) {
     return res.redirect("/shopping-cart");
   }
   const cart = await Cart.findById(req.session.cart._id);
   stripe.charges.create(
     {
-      
+
       amount: cart.totalCost * 100,
       currency: "usd",
       source: req.body.stripeToken,
@@ -317,47 +381,108 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
         // req.flash("success", "Successfully purchased");
         req.session.cart = null;
         allOrders = await Order.find({ user: req.user });
-    res.render("profile", {
-      orders: allOrders,
-      successMsg:"Successfully purchased",
-      pageName: "User Profile",
-    });
+        res.render("profile", {
+          orders: allOrders,
+          successMsg: "Successfully purchased",
+          pageName: "User Profile",
+        });
       });
     }
   );
 });
 
-router.post('/payment', function(req, res){ 
+router.post("/confirmOrder", async(req, res) => {
+  try {
+    console.log(req.body.order_pay_id);
+    let body = req.body.order_id + "|" + req.body.order_pay_id;
+    console.log(body);
+    const cart = await Cart.findById(req.session.cart._id);
+    console.log(cart);
+    // var expectedSignature = crypto
+    //   .createHmac("sha256", "NlctE8WAxE9R5qWZesH0t1bU")
+    //   .update(body.toString())
+    //   .digest("hex");
+    // console.log("sig" + req.body.order_sig);
+    // console.log("sig" + expectedSignature);
+    
+    // if (expectedSignature === req.body.order_sig) {
+      const order = new Order({
+        user: req.user,
+        cart: {
+          totalQty: cart.totalQty,
+          totalCost: cart.totalCost,
+          items: cart.items,
+        },
+        address: "Gurgaon",
+        paymentId: req.body.order_pay_id,
+      });
+      order.save(async (err, newOrder) => {
+        if (err) {
+          console.log(err);
+          return res.redirect("/checkout");
+        }
+        console.log("saved order")
+        await cart.save();
+        await Cart.findByIdAndDelete(cart._id);
+        // allOrders = await Order.find({ user: req.user });
+        // req.flash("success", "Successfully purchased");
+        req.session.cart = null;
+        var response = { status: "SUCCESS" };
+        res.send(response);
+      });
+  } catch (error) {
+    console.log(error);
+    var response = { status: "failure" };
+    res.send(response);
+  }
+});
 
-	// Moreover you can take more details from user 
-	// like Address, Name, etc from form 
-	stripe.customers.create({ 
-		email: req.body.stripeEmail, 
-		source: req.body.stripeToken, 
-		name: 'Gautam Sharma', 
-		address: { 
-			line1: 'TC 9/4 Old MES colony', 
-			postal_code: '110092', 
-			city: 'New Delhi', 
-			state: 'Delhi', 
-			country: 'India', 
-		} 
-	}) 
-	.then((customer) => { 
 
-		return stripe.charges.create({ 
-			amount: 7000,	 // Charing Rs 25 
-			description: 'Web Development Product', 
-			currency: 'USD', 
-			customer: customer.id 
-		}); 
-	}) 
-	.then((charge) => { 
-		res.send("Success") // If no error occurs 
-	}) 
-	.catch((err) => { 
-		res.send(err)	 // If some error occurs 
-	}); 
+router.post("/confirmGuestOrder", async(req, res) => {
+  try {
+    console.log(req.body.order_pay_id);  
+    req.session.cart = null;
+    var response = { status: "SUCCESS" };
+    res.send(response);
+  } catch (error) {
+    console.log(error);
+    var response = { status: "failure" };
+    res.send(response);
+  }
+});
+
+
+router.post('/payment', function (req, res) {
+
+  // Moreover you can take more details from user 
+  // like Address, Name, etc from form 
+  stripe.customers.create({
+    email: req.body.stripeEmail,
+    source: req.body.stripeToken,
+    name: 'Gautam Sharma',
+    address: {
+      line1: 'TC 9/4 Old MES colony',
+      postal_code: '110092',
+      city: 'New Delhi',
+      state: 'Delhi',
+      country: 'India',
+    }
+  })
+    .then((customer) => {
+
+      return stripe.charges.create({
+        amount: 7000,	 // Charing Rs 25 
+        description: 'Web Development Product',
+        currency: 'USD',
+        customer: customer.id
+      });
+    })
+    .then((charge) => {
+      res.send("Success") // If no error occurs 
+    })
+    .catch((err) => {
+      res.send(err)	 // If some error occurs 
+    });
 })
 
 
@@ -386,8 +511,8 @@ router.post(
       from: "anuragpundir621@gmail.com",
       to: "anuragpundir631@gmail.com",
       subject: `Enquiry from ${req.body.name}`,
-      html: 
-      `
+      html:
+        `
       <div>
       <h2 style="color: #478ba2; text-align:center;">Client's name: ${req.body.name}</h2>
       <h3 style="color: #478ba2;">Client's email: (${req.body.email})<h3>
@@ -428,12 +553,12 @@ async function productsFromCart(cart) {
   let products = []; // array of objects
   for (const item of cart.items) {
     // console.log(item);
-    let foundProduct = 
-      await Product.findOne({title:item.title}).exec();
-      // console.log(foundProduct);
-      if(item.qty){
-    foundProduct["qty"] = item.qty;
-      }
+    let foundProduct =
+      await Product.findOne({ title: item.title }).exec();
+    // console.log(foundProduct);
+    if (item.qty) {
+      foundProduct["qty"] = item.qty;
+    }
     foundProduct["totalPrice"] = item.price;
     products.push(foundProduct);
   }
