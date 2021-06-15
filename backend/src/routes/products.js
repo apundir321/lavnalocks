@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const csrf = require("csurf");
 const Product = require("../models/product");
 const Category = require("../models/category");
 const LawnaProduct = require("../models/lavnaproduct");
 var moment = require("moment");
+const csrfProtection = csrf();
+router.use(csrfProtection);
 
 // // GET: display all products
 // router.get("/", async (req, res) => {
@@ -44,6 +47,23 @@ router.get('/:name',async (req, res) => {
     product:foundProduct
   });
 })
+
+router.get("/checkout/:name", async (req, res) => {
+  console.log("checking out");
+  console.log(req.params.name+"   ****");
+  const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
+  console.log(foundProduct);
+  //load the cart with the session's cart's id from the db
+      res.render("single_checkout", {
+      product:foundProduct,
+      total: foundProduct.sellingPrice,
+      totalAmount: foundProduct.sellingPrice*100,
+      csrfToken: req.csrfToken(),
+      key: "rzp_live_AesJaVZnibvAwT"
+    });
+  });
+
+
 
 router.get('/variant/a24',async (req, res) => {
  

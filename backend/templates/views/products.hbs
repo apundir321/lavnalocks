@@ -133,6 +133,10 @@
     margin-left:10px;">In stock</p>
                   <button type="button" class="btn btn-primary" style="margin-left:10px;" onclick="addToCart();">Add to
                     Shopping cart</button>
+                  <div style="padding-top: 10px;">
+                  <button type="button" class="btn btn-dark" style="margin-left:10px;" onclick="checkout();">
+                    Buy now</button>
+                </div>
                 </div>
                 {{!-- {{#ifCond product.features "features-L-A24(WI-FI)"}}
                 {{>features_la4wifi}}
@@ -240,6 +244,12 @@
     var title = document.getElementById("productTitle").innerHTML;
 
     window.location.href = "/add-to-cart/" + title;
+  }
+
+  function checkout() {
+    var title = document.getElementById("productTitle").innerHTML;
+
+    window.location.href = "/products/checkout/" + title;
   }
 </script>
 
