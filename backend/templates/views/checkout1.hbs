@@ -957,6 +957,16 @@
                         document.getElementById("email_msg").innerHTML = "Please enter Email."
                         return;
                     }
+
+                    var postData ={
+                        "firstname":firstname,
+                        "address":address,
+                        "city":city,
+                        "phone":phone,
+                        "zip":zip,
+                        "email":email,
+                        "amount": "{{total}}"
+                    }
                     var options = {
                         "key": "{{key}}",
                         "currency": "INR",
@@ -969,7 +979,8 @@
                             var params = {
                                 order_pay_id: response.razorpay_payment_id,
                                 order_id: response.razorpay_order_id,
-                                order_sig: response.razorpay_signature
+                                order_sig: response.razorpay_signature,
+                                postDataJson:postData 
                             };
                             console.log(JSON.stringify(params))
                             var xmlHttp = new XMLHttpRequest();

@@ -19,6 +19,13 @@ var instance = new Razorpay({
   key_id: 'rzp_live_AesJaVZnibvAwT',
   key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
 })
+
+
+// var instance = new Razorpay({
+//   key_id: 'rzp_test_DPkSUHieNQ7pak',
+//   key_secret: 'PKSX1TnJLfpqFJelQCiBIjcr'
+// })
+
 let price = 2000,
   currency = 'INR',
   receipt = 'lavna_order_id',
@@ -394,6 +401,7 @@ router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
 router.post("/confirmOrder", async(req, res) => {
   try {
     console.log(req.body.order_pay_id);
+    console.log(req.body.postDataJson);
     let body = req.body.order_id + "|" + req.body.order_pay_id;
     console.log(body);
     const cart = await Cart.findById(req.session.cart._id);
@@ -426,6 +434,9 @@ router.post("/confirmOrder", async(req, res) => {
         await Cart.findByIdAndDelete(cart._id);
         // allOrders = await Order.find({ user: req.user });
         // req.flash("success", "Successfully purchased");
+        let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+        console.log("sending email");
+      console.log(emailRes);  
         req.session.cart = null;
         var response = { status: "SUCCESS" };
         res.send(response);
@@ -440,9 +451,13 @@ router.post("/confirmOrder", async(req, res) => {
 
 router.post("/confirmGuestOrder", async(req, res) => {
   try {
-    console.log(req.body.order_pay_id);  
+    console.log(req.body.order_pay_id); 
+    console.log(req.body.postDataJson);
     req.session.cart = null;
     var response = { status: "SUCCESS" };
+    let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+    console.log("sending email");
+    console.log(emailRes);
     res.send(response);
   } catch (error) {
     console.log(error);
@@ -564,6 +579,59 @@ async function productsFromCart(cart) {
   }
   console.log(products);
   return products;
+}
+
+
+async function sendPaymentEmail(postDataJson,payId) {
+  const smtpTrans = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      // company's email and password
+      user: "bhagwnshrilocks@gmail.com",
+      pass: "yeltlvpzscdqcadn",
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+
+  // email options
+  const mailOpts = {
+    from: "bhagwnshrilocks@gmail.com",
+    to: "lavnalocks@gmail.com",
+    subject: `Payment Success`,
+    html:
+      `
+    <div>
+    <h2 style="color: #478ba2; text-align:center;">Client's name: ${postDataJson.firstname}</h2>
+    <h3 style="color: #478ba2;">Client's email: (${postDataJson.email})<h3>
+    <h3 style="color: #478ba2;">Client's phone: (${postDataJson.phone})<h3>
+    <h3 style="color: #478ba2;">Client's address: (${postDataJson.address})<h3>
+    <h3 style="color: #478ba2;">Client's city: (${postDataJson.city})<h3>
+    <h3 style="color: #478ba2;">Client's zip: (${postDataJson.zip})<h3>
+    <h3 style="color: #478ba2;">Amount: (${postDataJson.amount})<h3>
+    <h3 style="color: #478ba2;">Payment Id: (${payId})<h3>
+    </div>
+    `
+    ,
+  };
+
+  // send the email
+  smtpTrans.sendMail(mailOpts, (error, response) => {
+    if (error) {
+      console.log(error);
+    
+      return response.send({ status: "SUCCESS" });
+    } else {
+      req.flash(
+        "success",
+        "Email sent successfully! Thanks for your inquiry."
+      );
+      return response.send({ status: "ERROR" });
+    }
+  });
 }
 
 module.exports = router;
