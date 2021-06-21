@@ -120,6 +120,10 @@
                   {{>img_s9}}
                   {{/ifCond}}
 
+                  {{#ifCond product.features "features-L-H300(Encoder)"}}
+                  {{>img_H300_encoder}}
+                  {{/ifCond}}
+
 
                   <br>
 
@@ -201,6 +205,13 @@
                 {{#ifCond product.features "features-L-S9"}}
                 {{>features_s9}}
                 {{/ifCond}}
+
+
+                {{#ifCond product.features "features-L-H300(Encoder)"}}
+                {{>features_h300_encoder}}
+                {{/ifCond}}
+
+                
 
               </div>
             </div>
