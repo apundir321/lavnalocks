@@ -22,8 +22,8 @@ var instance = new Razorpay({
 
 
 // var instance = new Razorpay({
-//   key_id: 'rzp_test_DPkSUHieNQ7pak',
-//   key_secret: 'PKSX1TnJLfpqFJelQCiBIjcr'
+//   key_id: 'rzp_test_sRwu7f4GZLZbMr',
+//   key_secret: 'bWZ29nGeMawqkCPhzuWGp8V7'
 // })
 
 let price = 2000,
@@ -301,6 +301,7 @@ router.get("/checkout", async (req, res) => {
       csrfToken: req.csrfToken(),
       errorMsg,
       key: "rzp_live_AesJaVZnibvAwT",
+      // key: "rzp_test_sRwu7f4GZLZbMr",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)
@@ -314,7 +315,9 @@ router.get("/checkout", async (req, res) => {
       totalAmount: cart.totalCost*100,
       csrfToken: req.csrfToken(),
       errorMsg,
+      
       key: "rzp_live_AesJaVZnibvAwT",
+      // key: "rzp_test_sRwu7f4GZLZbMr",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)
@@ -432,10 +435,12 @@ router.post("/confirmOrder", async(req, res) => {
         console.log("saved order")
         await cart.save();
         await Cart.findByIdAndDelete(cart._id);
+        console.log("sending email");
         // allOrders = await Order.find({ user: req.user });
         // req.flash("success", "Successfully purchased");
         let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
-        console.log("sending email");
+        
+        console.log(req.body.postDataJson);
       console.log(emailRes);  
         req.session.cart = null;
         var response = { status: "SUCCESS" };
@@ -611,6 +616,7 @@ async function sendPaymentEmail(postDataJson,payId) {
     <h3 style="color: #478ba2;">Client's address: (${postDataJson.address})<h3>
     <h3 style="color: #478ba2;">Client's city: (${postDataJson.city})<h3>
     <h3 style="color: #478ba2;">Client's zip: (${postDataJson.zip})<h3>
+    <h3 style="color: #478ba2;">Product name: (${postDataJson.titles})<h3>
     <h3 style="color: #478ba2;">Amount: (${postDataJson.amount})<h3>
     <h3 style="color: #478ba2;">Payment Id: (${payId})<h3>
     </div>
