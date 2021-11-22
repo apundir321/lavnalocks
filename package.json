@@ -8,5 +8,19 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apundir321/lavnalocks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/apundir321/lavnalocks/issues"
+  },
+  "homepage": "https://github.com/apundir321/lavnalocks#readme"
 }
