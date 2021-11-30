@@ -1,13 +1,4 @@
-/**
-* Template Name: Company - v2.2.1
-* Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #4d4643;
@@ -2269,3 +2260,115 @@ section {
 
 
 
+
+/* sm */
+/* @media (min-width: 768px) and (max-width: 991px) {
+  .services .icon-box a img{ 
+    width: 50%;
+    float: left;
+    height:auto;
+  }
+  .services .icon-box h4 {
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+    font-size: 22px;
+    margin-top: 24px;
+  }
+  
+  .services .icon-box p {
+    font-size: 14px;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+  .services .icon-box .desc{
+    text-align: justify;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+.services .icon-box {
+  text-align: left;
+ }
+ .services .icon-box .btn{
+  width: 100% !important;
+ }
+}  */
+
+/* xs */
+@media (max-width: 767px) {
+  .services .icon-box a img{ 
+    width: 50%;
+    float: left;
+    height:auto;
+  }
+  .services .icon-box h4 {
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+    font-size: 22px;
+    margin-top: 24px;
+  }
+  
+  .services .icon-box p {
+    /* line-height: 0px; */
+    font-size: 14px;
+    margin-bottom: 0;
+    opacity: 0.8;
+  }
+  .services .icon-box .desc{
+    text-align: justify;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+.services .icon-box {
+  text-align: left;
+ }
+ .services .icon-box .btn{
+  width: 100% !important;
+ }
+}
+
+
+
+#circle:before,
+#circle:after {
+  content:'';
+  display:block;
+  position:absolute;
+  top:0; right:0; bottom:0; left:0;
+  border-radius:50%;
+  border:1px solid #25D366;
+}
+
+#circle:before {
+  -webkit-animation: ripple 2s linear infinite;
+  animation: ripple 2s linear infinite;
+}
+#circle:after {
+  -webkit-animation: ripple 2s linear 1s infinite;
+  animation: ripple 2s linear 1s infinite;
+}
+
+#circle:hover:before,
+#circle:hover:after {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@-webkit-keyframes ripple{
+  0% {-webkit-transform:scale(1); }
+  75% {-webkit-transform:scale(1.75); opacity:1;}
+  100% {-webkit-transform:scale(2); opacity:0;}
+}
+
+@keyframes ripple{
+  0% {transform:scale(1); }
+  75% {transform:scale(1.75); opacity:1;}
+  100% {transform:scale(2); opacity:0;}
+}
