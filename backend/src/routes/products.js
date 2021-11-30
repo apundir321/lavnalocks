@@ -43,9 +43,14 @@ router.get('/:name',async (req, res) => {
   console.log(req.params.name+"   ****");
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
   // console.log(foundProduct.count());
+  if(foundProduct){
   res.render("products",{
     product:foundProduct
   });
+}else
+{
+  res.redirect("/");
+}
 })
 
 router.get("/checkout/:name", async (req, res) => {
