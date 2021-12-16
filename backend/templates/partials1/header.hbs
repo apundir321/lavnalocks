@@ -8,7 +8,7 @@
   <title>Digital Fingerprint Lock- Lavna Locks</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <meta name="facebook-domain-verification" content="3er7wt7vyv94dfx9mximt97ij0j6t3" />
 
 <link href="/prod-details/css/all.min.css">
   <!-- Favicons -->
@@ -56,7 +56,7 @@
   <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  {{!-- <link href="/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"> --}}
   <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -75,8 +75,20 @@
 <link href="node_modules/whatsapp-button.js/dist/wpp_css/whatsappButton.css" rel="stylesheet" />
 <script src="node_modules/whatsapp-button.js/dist/wpp_js/whatsappButton.js"></script>
 
+{{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css"> --}}
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-212799731-4"></script>
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -101,13 +113,14 @@
         padding: 100px;
     }
     .contactform{
-        padding: 65px 50px;
+        padding: 20px 30px;
         background: #fff;
         box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-        max-width: 550px;
+        max-width: 450px;
         margin-top: 10px;
         /* margin-left: 300px; */
-        margin-left: auto ;
+        
+        margin: 0 auto;
     }
     .contactform h3{
         color: #111;
@@ -201,8 +214,7 @@ footer{
 .socials{
     list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+ 
     margin: 1rem 0 3rem 0;
 }
 .socials li{
@@ -739,6 +751,37 @@ dex}
     background: #31708f;
 }
   </style>
+
+  <style>
+  .swiper-container {
+	 width: 100%;
+	 height: 100%;
+}
+ .pagination-bottom {
+	 font-size: 0px;
+}
+ .pagination-top {
+	 position: absolute;
+	 top: 10px;
+	 right: 10px;
+	 margin: 0;
+}
+ .pagination-top .swiper-pagination-bullet {
+	 width: auto;
+	 border-radius: 0px;
+	 height: auto;
+	 background-color: #fff;
+	 padding: 5px;
+	 color: #000;
+	 opacity: 1;
+	 background: rgba(0, 0, 0, 0.2);
+}
+ .pagination-top .swiper-pagination-bullet-active {
+	 color: #fff;
+	 background: #007aff;
+}
+ 
+</style>
 </head>
 
 <body>
