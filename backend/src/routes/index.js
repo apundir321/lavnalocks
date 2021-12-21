@@ -86,6 +86,10 @@ router.get('/shop', (req, res) => {
   res.render("shop");
 })
 
+router.get('/privacypolicy', (req, res) => {
+  res.render("privacypolicy");
+})
+
 
 router.get('/faq', (req, res) => {
   res.render("faq");

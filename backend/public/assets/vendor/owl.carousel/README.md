@@ -36,7 +36,7 @@ Add jQuery via the "webpack.ProvidePlugin" to your webpack configuration:
 Load the required stylesheet and JS:
 
 ```js
-import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 ```
 
