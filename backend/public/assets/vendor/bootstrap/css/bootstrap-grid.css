@@ -1,9 +1,4 @@
-/*!
- * Bootstrap Grid v4.6.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -1235,10 +1230,13 @@ html {
     display: inline-flex !important;
   }
 }
-
+.d-lg-none li a{
+  text-transform: uppercase;
+}
 @media (min-width: 992px) {
   .d-lg-none {
     display: none !important;
+    margin-top: 15px;
   }
   .d-lg-inline {
     display: inline !important;
@@ -3177,6 +3175,12 @@ html {
   .ml-md-auto,
   .mx-md-auto {
     margin-left: auto !important;
+  }
+}
+@media (min-width: 992px){
+  .d-lg-block {
+      display: block!important;
+      margin-top: 13px;
   }
 }
 

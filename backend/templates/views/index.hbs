@@ -59,12 +59,11 @@
 }
 
 </style>
+
 <style>
   .products a{
     text-decoration: none;
   }
-
-
 
   #about h2{
       color: #000000;
@@ -76,7 +75,8 @@
   }
  
   .swiper{
-    overflow: hidden;
+    overflow: inherit;
+    padding: 30px;
   }
   .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
     left: -35px;
@@ -86,13 +86,36 @@
   }
   #top-slider .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
       right: 0px;
+      background: #fff;
+      padding: 32px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
   }
    #top-slider .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
     left: 0px;
+      background: #fff;
+      padding: 32px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
   }
   #top-slider .swiper{
     width: 100%;
   }
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-weight: bold;
+    font-size: 36px;
+}
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-weight: bold;
+    font-size: 36px;
+}
+
 
 
   /* xs */
@@ -102,6 +125,9 @@
   }
   .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
     right: -7px;
+  }
+  #householder .box{
+    min-height: 170px !important;
   }
 }
 
@@ -143,35 +169,231 @@
     width: 100%;
     height: 100%;
 }
+input{
+  border-radius: 10px;
+}
+textarea{
+  border-radius: 10px;
+}
+
+
+
+#trusted{
+  background-color: rgb(236, 215, 235);
+  padding: 50px;
+}
+#trusted .box{
+  padding: 18px 28px;
+   overflow: hidden; 
+   background-color: #ffffff;
+   border-radius: 5px;
+  transition: 0.3s;
+  min-height: 110px;
+  height: auto;
+}
+
+#trusted .box:hover {
+  transform: scale(1.1);
+}
+
+#trusted .box h1{
+    color: green;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+#trusted .box img{
+  text-align: center;
+  align-items: center;
+}
+
+
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 7px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+.icon-box a{
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+#testimonial{
+    background-color: #D2D2E0;
+}
+#testimonial h6{
+    color: #00858A;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+  }
+#testimonial h2{
+      color: #000000;
+      font-size: 30px;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+      margin-top: 22px;
+      line-height: 38px;
+      margin-bottom: 50px;
+  }
+
+  #testimonial .box{
+      background-color: #f5efef;
+      padding: 30px;
+      border-radius: 12px;
+  }
+#testimonial .box span{
+    color: #00858A;
+    font-size: 50px;
+    font-weight: bold;
+}
+#testimonial .box p{
+    color: #5F5F5F;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    margin-top: -30px;
+    line-height: 30px;
+}
+#testimonial .box-small img{
+    float: left;
+    margin-right: 20px;
+}
+#testimonial .box-small h3{
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    /* margin-left: 20px !important; */
+    width: 100%;
+}
+#testimonial .box-small h6{
+    color: #A3A3A3;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+#testimonial .fa-star{
+    float: right !important;
+    color: #FFDA16 !important;
+}
+
+
+
+
+.modal-content{
+  border-radius: 0px;
+}
+.modal h3{
+  font-family: serif;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 22px;
+}
+.modal img{
+  width: 100%;
+  transition: 0.3s;
+}
+.modal-body .send{
+  border: none;
+  padding: 8px 20px 8px 20px;
+  background-color: royalblue;
+  box-shadow: 0 0 10px 0 rgb(161, 161, 161);
+  color: #fff;
+  float: right;
+}
+.modal-body button span{
+  font-size: 29px;
+}
+.modal img:hover {
+  transform: scale(1.1);
+}
+#review{
+  background-color: #fff;
+}
+#review .swiper-slide{
+  background-color: #fff;
+}
+
+#review-1{
+  padding: 0px;
+  background-color: #fff;
+}
+#review-1 .swiper_main{
+    background-color: #fff;
+}
+#review-1 .swiper-button-next{
+  background-color: #fff;
+  padding: 30px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+}
+#review-1 .swiper-button-prev{
+  background-color: #fff;
+  padding: 27px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+
+#householder .box{
+  padding: 20px;
+  min-height: 280px;
+  min-width: 350px;
+}
+#householder .box img{
+  width: 50%;
+}
+#householder .shadow{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.35)!important;
+}
+
+.modal{
+  top: 10%;
+}
+
 </style>
 
+    <section id="review-1">
+      <div class="container">
 
-  <section id="top-slider" class="top-sec">
-    <div class="container-fluid top-slides">
-      <!-- Slider main container -->
-     <div class="swiper mySwiper" id="mainsid">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-           <img src="assets/img/LA24 New Model (2).jpg">
+  
+        <!-- Slider main container -->
+        <div class="swiper_main" style="position: relative;">
+          <div class="swiper mySwiper" id="client-swiip3">
+              <div class="swiper-wrapper" id="testimonial">
+                <div class="swiper-slide">
+                    <img width="100%" src="assets/img/LA24 New Model (2).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img width="100%" src="assets/img/e50 new.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img width="100%" src="assets/img/Support.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-button-next shadow"></div>
+              <div class="swiper-button-prev shadow"></div>
+            </div>
         </div>
-        <div class="swiper-slide">
-             <img src="assets/img/e50 new.jpg" alt="">
-        </div>
-        <div class="swiper-slide">
-           {{!-- <img width="100%" src="assets/img/banner1.jpg" alt=""> --}}
-            <img width="100%" src="assets/img/Support.jpg" alt="">
-        </div>
-        {{!-- <div class="swiper-slide">Slide 4</div> --}}
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-
-    </div>
-  </section>
-
-
-
+    </section>
+      
 
 <!--Jquery-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -187,36 +409,32 @@
   <main id="main">
 
 
-    <section class="sec-tpadding-2 section-light" id="contact" style="margin-top: -1.5rem; background:#f7f7f7;">
+    <section class="sec-tpadding-2 section-light" id="contact" style="background:#e3dede;">
       <div class="container">
-        {{!-- <div class="section-title">
-          <h2>CONTACT US</strong></h2><br>
-          <p style="font-size: 1.5rem;">Feel Free To Contact Us.</p>
-        </div> --}}
-        <div class="row text-center">
-          <div class="col-12 text-center">
+        <div class="row text-center d-flex align-item-center">
+          <div class="col-lg-6" data-aos="fade-left">
+            <img width="80%" class="floating" src="assets/img/en.png" alt="">
+          </div>
+          <div class="col-lg-6 mt-4 text-center" style="margin-top: 20px;">
             <form action="sendemail.php" class="contactform" method="POST" data-aos="fade-right">
                 <h2 style="font-size: 26px; font-weight: 600; margin-bottom:22px;">Enquire Now</h2><br>
                 <div class="error"></div>
                 <div class="inputbox">
-                    <input id="name" type="text" name="name" placeholder="Name*" required >
+                    <input id="name" type="text" name="name" placeholder="Name*" pattern="[A-Za-z. ]+" data-error="First Name is required." required >
                 </div>
                 <div class="inputbox">
-                    <input id="email" type="email" name="email" placeholder="Email*" required >
+                    <input id="email" type="email" name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required data-error="Valid email is required.">
                 </div>
                 <div class="inputbox">
-                  <input id="mob" type="text" name="phone" placeholder="Phone*" required ><br>
+                  <input id="mob" type="text" name="phone" placeholder="Phone*" pattern="[1-9]+[0-9]{9}" required data-error="Contact no is required."><br>
                   <span id="msg" style="color: red;"></span>
                 </div>
                 <div class="inputbox">
                     <textarea id="textarea" name="message"  placeholder="Type a Message*" required ></textarea>
                 </div>
                 <div class="inputbox">
-                    <!-- <input type="submit" value="Send"> -->
                     <!-- <button class="btn btn-primary" value="submit">SEND</button> -->
-                    <button style="font-size: 1.5rem;" class="btn btn-primary shadow" type="submit">SEND</button>
-                    
-                    <!-- <a type="submit" class="ms-layer sbut11 blue btn-xround" href="#">SEND</a>  -->
+                    <button style="font-size: 1.5rem; padding: 8px 26px 8px 25px;" class="btn btn-primary shadow" type="submit">SEND</button>
                 </div>
             </form>
             <div class="clearfix"></div>
@@ -226,6 +444,7 @@
     </section>
 
 
+   
 
     <!-- ======= Shop Section ======= -->
    <section id="services" class="services section-bg">
@@ -259,7 +478,7 @@
               <h4>FOR WOODEN DOORS</h4><br>
               <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹9,199</b>  <del>₹14,200</del> Save <b>₹5,001</b></p>
               <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-                Meet The 6 in 1 Digital Fingerprint Lock From LAVNA Locks, Which You Can Access From Your Fingerprint, RFID Card, PIN, Bluetooth Unlocking, OTP Unlocking and Key.</p></a><br>
+                Meet the 6 in 1 digital fingerprint lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP unlocking and Key.</p></a><br>
                 <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
             </div>
           </div>
@@ -272,7 +491,7 @@
                <h4>FOR WOODEN DOORS</h4><br>
               <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹7,799</b> <del>₹8,999</del> Save <b>₹1,200</b></p>
               <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-                Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.</p></a><br>
+                Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP unlocking and Key.</p></a><br>
                 <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
             </div>
           </div>
@@ -314,7 +533,7 @@
              <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹8,599</b> <del>₹13,900</del> Save <b>₹5,301</b></p>
              <p class="desc" style="text-align: justify; font-size: 14px;"><br>
                
-              Meet the 4 in 1 Glass door security lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN and remote</p><br></a>
+              Meet the 4 in 1 Glass door security lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN and Remote</p><br></a>
                 <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
             </div>
           </div>
@@ -329,6 +548,20 @@
              <p class="desc" style="text-align: justify; font-size: 14px;"><br>
                
               Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.</p><br></a>
+                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
+            </div>
+          </div>
+
+           <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
+            <div id="6" class="icon-box iconbox-teal shadow">
+             <a href="/products/L-H300(Encoder)"> <img src="assets/img/L-H300.jpg"><br><br>
+
+              <p style="font-size: 1.9rem;">L-H300<span style="font-weight:600">(With Encoder)</span></p>
+             <h4>FOR COMMERCIAL <b style="bold:900; font-size:2.5rem;">/</b> RESIDENTIAL DOORS</h4><br>
+             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹3,800</b> <del>₹7,500</del> Save <b>₹3700</b></p>
+             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
+               
+              Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.</p><br></a>
                 <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
             </div>
           </div>
@@ -360,23 +593,11 @@
             </div>
           </div> --}}
 
-          <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
-            <div id="6" class="icon-box iconbox-teal shadow">
-             <a href="/products/L-H300(Encoder)"> <img src="assets/img/L-H300.jpg"><br><br>
-
-              <p style="font-size: 1.9rem;">L-H300<span style="font-weight:600">(With Encoder)</span></p>
-             <h4>FOR COMMERCIAL <b style="bold:900; font-size:2.5rem;">/</b> RESIDENTIAL DOORS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹3,800</b> <del>₹7,500</del> Save <b>₹3700</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               
-              Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.</p><br></a>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
+         
         </div>
 
       </div>
-    </section>
+   </section>
 
     <div class="container">  
  
@@ -408,183 +629,6 @@
 
 
 
-    <!-- ======= About Us Section ======= -->
-    {{!-- <section id="about-us" class="about-us">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About Us</strong></h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6 " data-aos="fade-right">
-            <img class="float shadow" style="width: 100%; height: 100%;" src="assets/img/lavna_about.jpg">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-            <p class="img-responsive" style="text-align: justify; font-size: 1.8rem !important; line-height: 3rem;">
-              Welcome to Lavna Digital Locks, a destination that promises security solutions equipped with the latest technology. Established in 2008, the company is running under Bhagwan Shri Computers in India. Our locks have set a benchmark in renovating your place with a stylish touch while keeping up the high-quality safety standards. We are on a journey of equipping PAN India with keyless digital locks that will have the maximum level of security to ensure peace of mind. Everything that is locked is meant to be safe and Lavna locks have a futuristic management team who are browsing and working to make that happen.
-             We at Lavna locks believe that one is enough. No other outsider can enter your safe place without your permission. Our locks are meant for people who believe that “it’s your home and only you should have access to your heaven”.
-              You care about your assets, we care about your place. 
-              
-          </p>
-          </div>
-        </div>
-
-      </div>
-    </section> --}}
-    <!-- End About Us Section -->
-
-
-
-{{!-- <section id="faq" class="faq">
-<div class="container" data-aos="fade-up">
-
-
-  <div class="section-title">
-       <h2>FAQ'S</strong></h2>
-  </div>
-
-
-  <button class="accordion"><b>CAN I OPERATE THIS DOOR LOCK WITH ALEXA?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">No, it can’t be connected to external devices.</p>
-  </div>
-
-  <button class="accordion"><b>WHAT IS EMERGENCY ENTRANCE OTP?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">Emergency entrance otp is generated via app
-At any time.</p>
-  </div>
-
-  <button class="accordion"><b>WHO WILL INSTALL THIS? WILL THE COMPANY SEND PEOPLE ALONG WITH THE PURCHASE ON AMAZON?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">Carpenter can easily install this lock
-Company will assist you if any problem occure and provide complete solution.</p>
-  </div>
-
-  <button class="accordion"><b>WHAT IS THE SIZE OF BATTERY & NUMBER OF BATTERIES?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">4 AA size battery recommended dueracell ( ultra).</p>
-  </div>
-
-  <button class="accordion"><b>DOES IT HAS RFID CHARGER/ ACTIVATOR WITH IT?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">In case where  battery stop working you can use 9v battery to start it again
-In the bottom of outer unit just touch the 9v batter at given point and it will start working.</p>
-  </div>
-
-  <button class="accordion"><b>IS IT AUTOMATICALLY GET LOCK AFTER SOMETIME IF I FORGOT TO LOCK IT WHILE GOING OUTSIDE?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">In a condition where you forget to lock, in that condition your home is safe…
-Without fingerprint or pin or RFID card you can’t access your lavna digital locks.</p>
-  </div>
-
-  <button class="accordion"><b>CAN IT BE EXPOSED TO RAIN?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">No, it’s splash resistant not water resistant.</p>
-  </div>
-
-  <button class="accordion"><b>WHAT IS THE DEPTH OF THE INNER LOCK MECHANISM AND WHAT IS THE WIDTH?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">The depth of inner lock is 9 cm
-And width is 1.8 cm.</p>
-  </div>
-
-  <button class="accordion"><b>HOW TO ORDER LEFT HANDED LOCK FOR INSIDE OPENING DOOR?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">These lock comes with universal settings
-You can set lock Handel according to your door
-Like left handed inside door.</p>
-  </div>
-</div>
-
-</section> --}}
-
-
-
-{{!-- <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script> --}}
-
-
-
-{{!-- 
- <section class="blog-area section-gap" id="blog">
-    <div class="section-title">
-      <h2>BLOGS</strong></h2>
-    </div>
-
-    <div class="container" style="text-align: justify !important;">
-      <div class="row justify-content-center mb-5 pb-5">
-        <div class="col-lg-4 col-md-8 single-blog" data-aos="zoom-in" data-aos-delay="300">
-          <div class="thumb shadow">
-            <img style="width: 100%; height: 27rem;" src="assets/img/blog1.jpg">
-            <div class="card-body">
-              <div class="news-content">
-                <a style="font-size: 2rem;" href="https://www.facebook.com/lavnadigitallocks"><i style="color: blue !important;" class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a style="font-size: 2rem;" href="https://www.instagram.com/lavnalocks/"><i style="color:rgb(142, 173, 31) !important;" class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a style="font-size: 2rem;" href="https://api.whatsapp.com/send?phone=+91-9971427608"><i class="fa fa-whatsapp"></i></a>
-                <p style="font-size: 1.7rem;">
-                    The new technology that makes up a digital lock for the house is the new digital keyless door locks that can help to make a home or office more secure. This type of door lock is not just a feature that will help to keep people from being able to get into the home.
-                </p>
-                <!-- <a href="#" class="btn btn-primary">Read More</a> -->
-            </div>
-            </div>
-          </div>
-       </div>
-
-       <div class="col-lg-4 col-md-8 single-blog" data-aos="zoom-in" data-aos-delay="300">
-        <div class="thumb shadow">
-          <img style="width: 100%; height: 27rem;" src="assets/img/blog3.jpg">
-          <div class="card-body">
-            <div class="news-content">
-              <a style="font-size: 2rem;"  href="https://www.facebook.com/lavnadigitallocks"><i style="color: blue !important;" class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a style="font-size: 2rem;"  href="https://www.instagram.com/lavnalocks/"><i style="color:rgb(142, 173, 31) !important;" class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <a style="font-size: 2rem;"  href="https://api.whatsapp.com/send?phone=+91-9971427608"><i class="fa fa-whatsapp"></i></a>
-              <p style="font-size: 1.7rem;">
-                  The new technology that makes up a digital lock for the house is the new digital keyless door locks that can help to make a home or office more secure. This type of door lock is not just a feature that will help to keep people from being able to get into the home.
-              </p>
-              <!-- <a href="#" class="btn btn-primary">Read More</a> -->
-          </div>
-          </div>
-        </div>
-     </div>
-
-     <div class="col-lg-4 col-md-8 single-blog" data-aos="zoom-in" data-aos-delay="300">
-      <div class="thumb shadow">
-        <img style="width: 100%; height: 27rem;" src="assets/img/blog2.jpeg">
-        <div class="card-body">
-          <div class="news-content">
-            <a style="font-size: 2rem;"  href="https://www.facebook.com/lavnadigitallocks"><i style="color: blue !important;" class="fa fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="font-size: 2rem;"  href="https://www.instagram.com/lavnalocks/"><i style="color:rgb(142, 173, 31) !important;" class="fa fa-instagram"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a style="font-size: 2rem;"  href="https://api.whatsapp.com/send?phone=+91-9971427608"><i class="fa fa-whatsapp"></i></a>
-            <p style="font-size: 1.7rem;">
-                The new technology that makes up a digital lock for the house is the new digital keyless door locks that can help to make a home or office more secure. This type of door lock is not just a feature that will help to keep people from being able to get into the home.
-            </p>
-            <!-- <a href="#" class="btn btn-primary">Read More</a> -->
-        </div>
-        </div>
-      </div>
-   </div>
-      </div>
-    </div>
-    <div class="text-center">
-      <button style="font-size: 1.8rem;" class="btn btn-primary"><a style="color: white !important; margin: 1rem; padding: rem;" href="/blog">Read More</a></button>
-    </div>
-  </section>   <br><br><br><br><br> --}}
-
   <script>
     function myfunc(){
       var a =document.getElementById("mob").value;
@@ -606,7 +650,7 @@ for (i = 0; i < acc.length; i++) {
   
       <!-- ======= trusted client Section ======= -->
           
-          <section>
+          <section id="trusted">
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
@@ -616,39 +660,28 @@ for (i = 0; i < acc.length; i++) {
                 </div>
               </div>
         
-              <!-- Slider main container -->
-              <div class="swiper_main" style="position: relative;">
-                <div class="swiper mySwiper" id="client-swiip">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                          <img class="shadow" width="95%" src="assets/img/aiims.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
-                      </div>
-                    
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+              <div class="row mt-4">
+                <div class="col-lg-4">
+                  <div class="box shadow">
+                    <img class="inner-img" width="95%" src="assets/img/airindia.png" alt="">
                   </div>
+                </div>
+                 <div class="col-lg-4">
+                  <div class="box shadow">
+                    <img class="inner-img" width="95%" src="assets/img/aiims.png" alt="">
+                  </div>
+                </div>
+                 <div class="col-lg-4">
+                  <div class="box shadow">
+                    <h1 class="inner-img">Krishi Bhawan</h1>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
         
 
-          {{!-- <section>
+          <section id="householder">
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
@@ -658,8 +691,32 @@ for (i = 0; i < acc.length; i++) {
                 </div>
               </div>
         
+              <div class="row mt-4">
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-right">
+                    <img data-aos="zoom-in" src="assets/img/householder/brigade-group-logo.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-left">
+                    <img style="margin-top: 10%;" data-aos="zoom-out" src="assets/img/householder/logo-black.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-right">
+                    <img style="margin-top: 17%;" data-aos="zoom-out" src="assets/img/householder/omaxe-realty.jpg.crdownload.jpeg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-left">
+                    <img data-aos="zoom-in" src="assets/img/householder/supertech-logo-250x250.png" alt="">
+                  </div>
+                </div>
+              </div>
               <!-- Slider main container -->
-              <div class="swiper_main" style="position: relative;">
+              {{!-- <div class="swiper_main" style="position: relative;">
                 <div class="swiper mySwiper" id="client-swiip">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
@@ -685,13 +742,12 @@ for (i = 0; i < acc.length; i++) {
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                   </div>
-              </div>
+              </div> --}}
             </div>
           </section>
 
 
-
-          <section>
+          {{!-- <section>
             <div class="container">
               <div class="row">
                 <div class="col-lg-12">
@@ -731,9 +787,113 @@ for (i = 0; i < acc.length; i++) {
               </div>
             </div>
           </section> --}}
+
+          <section id="review">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                   <div class="section-title">
+                    <h2>Customer Reviews From Amazon</strong></h2>
+                   </div>
+                </div>
+              </div>
+        
+              <!-- Slider main container -->
+              <div class="swiper_main" style="position: relative;">
+                <div class="swiper mySwiper" id="client-swiip2">
+                    <div class="swiper-wrapper" id="testimonial">
+                      <div class="swiper-slide">
+                         <img width="95%" src="assets/img/R1 (1).png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R2.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R3.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R5.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R6.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R7.png" alt="">
+                      </div>
+                       <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R8.png" alt="">
+                      </div>
+                       <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R9.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R10.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R11.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R12.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R13.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R14.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R15.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R17.png" alt="">
+                      </div>
+                    
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+              </div>
+            </div>
+          </section>
       
       <!-- End trusted client Section -->
     
+
+<!-- Button trigger modal -->
+{{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> --}}
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6">
+            <img src="https://st2.depositphotos.com/4177785/45675/v/380/depositphotos_456758100-stock-illustration-fingerprint-scanner-keyless-door-lock.jpg?forcejpeg=true" alt="space rocket">
+          </div>
+          <div class="col-lg-6">
+            <h3> Subscribe to <span style="color:royalblue">Lavna Locks</span></h3>
+            <form action="">
+              <div class="form-group">
+                <input class="form-control" type="text" name="name" id="name" placeholder="Your Name" pattern="[A-Za-z. ]+" data-error="First Name is required." required>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="email" name="email" id="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required data-error="Valid email is required.">
+              </div>
+              <button class="btn send" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <script>
   const swiper = new Swiper('#client-swiip', {
@@ -768,7 +928,6 @@ for (i = 0; i < acc.length; i++) {
         }
   },
 
-  // Navigation arrows
   navigation: {
           nextEl: "#client-swiip .swiper-button-next",
           prevEl: "#client-swiip .swiper-button-prev",
@@ -780,15 +939,123 @@ for (i = 0; i < acc.length; i++) {
 
 });
 
+  new Swiper('#client-swiip2', {
+
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  pagination: {
+    el: '#client-swiip2 .swiper-pagination',
+  },
+
+  breakpoints: {
+          250: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 40
+        },
+        992:{
+          slidesPerView: 1,
+          spaceBetween: 40
+        }
+  },
+
+  navigation: {
+          nextEl: "#client-swiip2 .swiper-button-next",
+          prevEl: "#client-swiip2 .swiper-button-prev",
+        },
+
+  autoplay: {
+    delay: 3000,
+  },
+
+});
+
+
+  new Swiper('#client-swiip3', {
+
+  loop: true,
+  slidesPerView: 1.3,
+  spaceBetween: 30,
+  pagination: {
+    el: '#client-swiip3 .swiper-pagination',
+  },
+
+  breakpoints: {
+          250: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        },
+        640: {
+          slidesPerView: 1.3,
+          spaceBetween: 40
+        },
+        992:{
+          slidesPerView: 1.3,
+          spaceBetween: 40
+        }
+  },
+
+  navigation: {
+          nextEl: "#client-swiip3 .swiper-button-next",
+          prevEl: "#client-swiip3 .swiper-button-prev",
+        },
+
+  autoplay: {
+    delay: 3000,
+  },
+
+});
+
+
 new Swiper("#mainsid", {
+   slidesPerView: 1.4,
+  spaceBetween: 30,
+    autoplay:true,
+    loop: true,
+    speed: 2000,
         navigation: {
           nextEl: "#mainsid .swiper-button-next",
           prevEl: "#mainsid .swiper-button-prev",
         },
       });
+
+    new Swiper("#top-slider", {
+      autoplay:true,
+      navigation: {
+      nextEl: "#top-slider .swiper-button-next",
+      prevEl: "#top-slider .swiper-button-prev",
+    },
+  })
   </script>
   
 
+  <script>
+    $(document).ready(function() {
+      setTimeout(function () {
+        $("#exampleModalCenter").modal('show');
+      }, 10000);
+    });
+  </script>
  
   </main><!-- End #main -->
 
@@ -827,7 +1094,7 @@ new Swiper("#mainsid", {
            <div class="col-lg-4 links">
            <h4>Contact Us</h4>
             <ul>
-              <li><span>Address:</span> <a href="">G-29/205, Pocket 28, Sector 3, Rohini, New Delhi, Delhi 110085</a></li><br>
+              {{!-- <li><span>Address:</span> <a href="">G-29/205, Pocket 28, Sector 3, Rohini, New Delhi, Delhi 110085</a></li><br> --}}
               <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
               <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
             </ul>
@@ -858,9 +1125,6 @@ new Swiper("#mainsid", {
 
   <!-- Template Main JS File -->
   <script src="/public/assets/js/main.js"></script>
-  {{!-- <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
-
-
 
 
 </body>

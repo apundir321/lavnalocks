@@ -7061,7 +7061,9 @@ button.bg-dark:focus {
     display: inline-flex !important;
   }
 }
-
+.d-lg-none li a{
+  text-transform: uppercase;
+}
 @media (min-width: 992px) {
   .d-lg-none {
     display: none !important;

@@ -23,26 +23,67 @@
   font-size: 17px;
   font-weight: 600;
 }
+
+#trusted{
+  background-color: rgb(236, 215, 235);
+}
+#trusted .box{
+  padding: 18px 28px;
+   overflow: hidden; 
+   background-color: #ffffff;
+   border-radius: 5px;
+  transition: 0.3s;
+  min-height: 110px;
+  height: auto;
+}
+
+#trusted .box:hover {
+  transform: scale(1.1);
+}
+
+#trusted .box h1{
+    color: green;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+}
+#trusted .box img{
+  text-align: center;
+  align-items: center;
+}
+
+
+#householder .box{
+  padding: 20px;
+  min-height: 280px;
+  min-width: 350px;
+}
+#householder .box img{
+  width: 50%;
+}
+#householder .shadow{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.35)!important;
+}
+
+@media (max-width: 767px) {
+  #householder .box{
+    min-height: 170px !important;
+  }
+}
+  .swiper{
+    overflow: inherit;
+    padding: 30px;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+}
 </style>
+
+ <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <main id="main">
 
-    
-    <!-- ======= Breadcrumbs ======= -->
-    {{!-- <section id="breadcrumbs" class="breadcrumbs" style="background-color: black !important;">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>About Us</h2>
-          <ol>
-            <li><a style="font-size: 16px;" href="/">Home</a></li>
-            <li style="font-size: 16px;">About</li>
-          </ol>
-        </div>
-
-      </div>
-    </section> --}}
-    <!-- End Breadcrumbs -->
 
   {{!-- <section id="about-us" class="about-us">
     <div class="container" data-aos="fade-up">
@@ -91,69 +132,344 @@
   </section>
 
 
-   <section id="faq" class="faq">
-<div class="container" data-aos="fade-up">
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
 
 
-  <div class="section-title">
-       <h2>FAQ'S</strong></h2>
-  </div>
+        <div class="section-title">
+            <h2>FAQ'S</strong></h2>
+        </div>
 
 
-  <button class="accordion"><b>CAN I OPERATE THIS DOOR LOCK WITH ALEXA?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">No, it can’t be connected to external devices.</p>
-  </div>
+        <button class="accordion"><b>CAN I OPERATE THIS DOOR LOCK WITH ALEXA?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">No, it can’t be connected to external devices.</p>
+        </div>
 
-  <button class="accordion"><b>WHAT IS EMERGENCY ENTRANCE OTP?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">Emergency entrance otp is generated via app
-At any time.</p>
-  </div>
+        <button class="accordion"><b>WHAT IS EMERGENCY ENTRANCE OTP?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">Emergency entrance otp is generated via app
+      At any time.</p>
+        </div>
 
-  <button class="accordion"><b>WHO WILL INSTALL THIS? WILL THE COMPANY SEND PEOPLE ALONG WITH THE PURCHASE ON AMAZON?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">Carpenter can easily install this lock
-Company will assist you if any problem occure and provide complete solution.</p>
-  </div>
+        <button class="accordion"><b>WHO WILL INSTALL THIS? WILL THE COMPANY SEND PEOPLE ALONG WITH THE PURCHASE ON AMAZON?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">Carpenter can easily install this lock
+      Company will assist you if any problem occure and provide complete solution.</p>
+        </div>
 
-  <button class="accordion"><b>WHAT IS THE SIZE OF BATTERY & NUMBER OF BATTERIES?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">4 AA size battery recommended dueracell ( ultra).</p>
-  </div>
+        <button class="accordion"><b>WHAT IS THE SIZE OF BATTERY & NUMBER OF BATTERIES?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">4 AA size battery recommended dueracell ( ultra).</p>
+        </div>
 
-  <button class="accordion"><b>DOES IT HAS RFID CHARGER/ ACTIVATOR WITH IT?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">In case where  battery stop working you can use 9v battery to start it again
-In the bottom of outer unit just touch the 9v batter at given point and it will start working.</p>
-  </div>
+        <button class="accordion"><b>DOES IT HAS RFID CHARGER/ ACTIVATOR WITH IT?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">In case where  battery stop working you can use 9v battery to start it again
+      In the bottom of outer unit just touch the 9v batter at given point and it will start working.</p>
+        </div>
 
-  <button class="accordion"><b>IS IT AUTOMATICALLY GET LOCK AFTER SOMETIME IF I FORGOT TO LOCK IT WHILE GOING OUTSIDE?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">In a condition where you forget to lock, in that condition your home is safe…
-Without fingerprint or pin or RFID card you can’t access your lavna digital locks.</p>
-  </div>
+        <button class="accordion"><b>IS IT AUTOMATICALLY GET LOCK AFTER SOMETIME IF I FORGOT TO LOCK IT WHILE GOING OUTSIDE?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">In a condition where you forget to lock, in that condition your home is safe…
+      Without fingerprint or pin or RFID card you can’t access your lavna digital locks.</p>
+        </div>
 
-  <button class="accordion"><b>CAN IT BE EXPOSED TO RAIN?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">No, it’s splash resistant not water resistant.</p>
-  </div>
+        <button class="accordion"><b>CAN IT BE EXPOSED TO RAIN?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">No, it’s splash resistant not water resistant.</p>
+        </div>
 
-  <button class="accordion"><b>WHAT IS THE DEPTH OF THE INNER LOCK MECHANISM AND WHAT IS THE WIDTH?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">The depth of inner lock is 9 cm
-And width is 1.8 cm.</p>
-  </div>
+        <button class="accordion"><b>WHAT IS THE DEPTH OF THE INNER LOCK MECHANISM AND WHAT IS THE WIDTH?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">The depth of inner lock is 9 cm
+      And width is 1.8 cm.</p>
+        </div>
 
-  <button class="accordion"><b>HOW TO ORDER LEFT HANDED LOCK FOR INSIDE OPENING DOOR?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">These lock comes with universal settings
-You can set lock Handel according to your door
-Like left handed inside door.</p>
-  </div>
-</div>
+        <button class="accordion"><b>HOW TO ORDER LEFT HANDED LOCK FOR INSIDE OPENING DOOR?</b></button>
+        <div class="panel">
+          <p style="font-size:1.8rem !important;">These lock comes with universal settings
+      You can set lock Handel according to your door
+      Like left handed inside door.</p>
+        </div>
+      </div>
+    </section>
 
-</section>
+
+      <!-- ======= trusted client Section ======= -->
+          
+          <section id="trusted">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                   <div class="section-title">
+                    <h2>Trusted By</strong></h2>
+                   </div>
+                </div>
+              </div>
+        
+              <div class="row mt-4">
+                <div class="col-lg-4">
+                  <div class="box shadow">
+                    <img class="inner-img" width="95%" src="assets/img/airindia.png" alt="">
+                  </div>
+                </div>
+                 <div class="col-lg-4">
+                  <div class="box shadow">
+                    <img class="inner-img" width="95%" src="assets/img/aiims.png" alt="">
+                  </div>
+                </div>
+                 <div class="col-lg-4">
+                  <div class="box shadow">
+                    <h1 class="inner-img">Krishi Bhawan</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+
+          <section id="householder">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                   <div class="section-title">
+                    <h2>Satisfied Householders Of</strong></h2>
+                   </div>
+                </div>
+              </div>
+        
+              <div class="row mt-4">
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-right">
+                    <img data-aos="zoom-in" src="assets/img/householder/brigade-group-logo.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-left">
+                    <img style="margin-top: 10%;" data-aos="zoom-out" src="assets/img/householder/logo-black.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-right">
+                    <img style="margin-top: 17%;" data-aos="zoom-out" src="assets/img/householder/omaxe-realty.jpg.crdownload.jpeg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <div class="box shadow text-center" data-aos="fade-left">
+                    <img data-aos="zoom-in" src="assets/img/householder/supertech-logo-250x250.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <!-- Slider main container -->
+              {{!-- <div class="swiper_main" style="position: relative;">
+                <div class="swiper mySwiper" id="client-swiip">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                          <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
+                      </div>
+                    
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+              </div> --}}
+            </div>
+          </section>
+
+
+          {{!-- <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                   <div class="section-title">
+                    <h2>Featured By</strong></h2>
+                   </div>
+                </div>
+              </div>
+        
+              <!-- Slider main container -->
+              <div class="swiper_main" style="position: relative;">
+                <div class="swiper mySwiper" id="client-swiip">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                          <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
+                      </div>
+                    
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+              </div>
+            </div>
+          </section> --}}
+
+          <section id="review">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                   <div class="section-title">
+                    <h2>Customer Reviews From Amazon</strong></h2>
+                   </div>
+                </div>
+              </div>
+        
+              <!-- Slider main container -->
+              <div class="swiper_main" style="position: relative;">
+                <div class="swiper mySwiper" id="client-swiip2">
+                    <div class="swiper-wrapper" id="testimonial">
+                      <div class="swiper-slide">
+                         <img width="95%" src="assets/img/R1 (1).png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R2.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R3.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R5.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R6.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R7.png" alt="">
+                      </div>
+                       <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R8.png" alt="">
+                      </div>
+                       <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R9.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R10.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R11.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R12.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R13.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R14.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R15.png" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <img width="95%" src="assets/img/R17.png" alt="">
+                      </div>
+                    
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+           <script>
+              const swiper = new Swiper('#client-swiip2', {
+              loop: true,
+              slidesPerView: 1,
+              spaceBetween: 30,
+              pagination: {
+                el: '#client-swiip2 .swiper-pagination',
+              },
+
+              breakpoints: {
+                      250: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    },
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20
+                    },
+                    480: {
+                      slidesPerView: 1,
+                      spaceBetween: 30
+                    },
+                    640: {
+                      slidesPerView: 1,
+                      spaceBetween: 40
+                    },
+                    992:{
+                      slidesPerView: 1,
+                      spaceBetween: 40
+                    }
+              },
+
+              navigation: {
+                      nextEl: "#client-swiip2 .swiper-button-next",
+                      prevEl: "#client-swiip2 .swiper-button-prev",
+                    },
+
+              autoplay: {
+                delay: 3000,
+              },
+
+            });
+
+            new Swiper("#mainsid", {
+              slidesPerView: 1.4,
+              spaceBetween: 30,
+                autoplay:true,
+                loop: true,
+                speed: 2000,
+                    navigation: {
+                      nextEl: "#mainsid .swiper-button-next",
+                      prevEl: "#mainsid .swiper-button-prev",
+                    },
+                  });
+
+                new Swiper("#top-slider", {
+                  autoplay:true,
+                  navigation: {
+                  nextEl: "#top-slider .swiper-button-next",
+                  prevEl: "#top-slider .swiper-button-prev",
+                },
+              })
+          </script>
+  
+      <!-- End trusted client Section -->
+    
 
 <script>
 var acc = document.getElementsByClassName("accordion");
@@ -205,7 +521,7 @@ for (i = 0; i < acc.length; i++) {
            <div class="col-lg-4 links">
            <h4>Contact Us</h4>
             <ul>
-              <li><span>Address:</span> <a href="">G-29/205, Pocket 28, Sector 3, Rohini, New Delhi, Delhi 110085</a></li><br>
+              {{!-- <li><span>Address:</span> <a href="">G-29/205, Pocket 28, Sector 3, Rohini, New Delhi, Delhi 110085</a></li><br> --}}
               <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
               <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
             </ul>
