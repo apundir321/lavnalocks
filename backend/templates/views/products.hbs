@@ -103,7 +103,16 @@
                   {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
                   {{>img_la24_black_wifi}}
                   {{/ifCond}}
+    
+                  {{!-- new entry --}}
+                  {{#ifCond product.features "features-L-A28-GOLD"}}
+                  {{>img_la28_gold_bluetooth}}
+                  {{/ifCond}}
 
+                  {{#ifCond product.features "features-L-A24-GOLD"}}
+                  {{>img_la24_gold_bluetooth}}
+                  {{/ifCond}}
+                  {{!-- new entry --}}
                   {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
                   {{>img_la24_black_bluetooth}}
                   {{/ifCond}}
@@ -119,7 +128,6 @@
                   {{#ifCond product.features "features-L-A28(Remote)"}}
                   {{>img_la28_gold_remote}}
                   {{/ifCond}}
-
 
                   {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
                   {{>img_la28_black_bluetooth}}
@@ -152,6 +160,10 @@
 
                   {{#ifCond product.features "features-L-H300(Encoder)"}}
                   {{>img_H300_encoder}}
+                  {{/ifCond}}
+
+                  {{#ifCond product.features "features-L-E50"}}
+                  {{>img_E50}}
                   {{/ifCond}}
 
 
@@ -234,6 +246,16 @@
                 {{#ifCond product.features "features-L-A24(Bluetooth)"}}
                 {{>features_la4bluetooth}}
                 {{/ifCond}} --}}
+
+                 {{!-- new entry --}}
+                  {{#ifCond product.features "features-L-A28-GOLD"}}
+                  {{>features_la28_gold}}
+                  {{/ifCond}}
+
+                  {{#ifCond product.features "features-L-A24-GOLD"}}
+                  {{>features_la24_gold}}
+                  {{/ifCond}}
+                  {{!-- new entry --}}
                  {{#ifCond product.features "features-L-A24(WI-FI)"}}
                    {{>features_la4wifi}}
                   {{/ifCond}}
@@ -295,6 +317,10 @@
                 {{#ifCond product.features "features-L-H300(Encoder)"}}
                 {{>features_h300_encoder}}
                 {{/ifCond}}
+
+                 {{#ifCond product.features "features-L-E50"}}
+                  {{>features_E50}}
+                  {{/ifCond}}
 
                 
 
