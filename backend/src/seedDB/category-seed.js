@@ -60,6 +60,7 @@ async function seedDB() {
   await seedCateg("L-S9",5900,"/assets/img/ls9/1.jpg",3180,"Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-S9");
   await seedCateg("L-A24(Bluetooth)",14200,"/assets/img/lavna4.jpg",8799,"Meet the 2 in 1 Lock for your doors from LAVNA Locks, which you can access from your fingerprint and PIN.",null,"features-L-A24(Bluetooth)");
   await seedCateg("L-A24(WI-FI)",15700,"/assets/img/la24/2.jpg",9499,"Meet the 5 in 1 Digital door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, WI-FI unlocking and manual key.",null,"features-L-A24(WI-FI)");
+  await seedCateg("L-A24-GOLD",14200,"/assets/img/lavna6.jpg",7600,"Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.",null,"features-L-A24-GOLD");
   await seedCateg("L-A24-Black(Bluetooth)",14200,"/assets/img/la24/1_bluetooth.jpg",9199,"Meet the 6 in 1 Digital door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.",null,"features-L-A24-Black(Bluetooth)");
   await seedCateg("L-A24-Black(WI-FI)",15700,"/assets/img/la24/3.jpg",8799,"Meet the 5 in 1 Digital door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, WI-FI unlocking.",null,"features-L-A24-Black(WI-FI)");
   await seedCateg("L-A28(Bluetooth)",8999,"/assets/img/lavna6.jpg",7699,"Meet the 6 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, Bluetooth unlocking and Manual Key.",null,"features-L-A28(Bluetooth)");
@@ -70,6 +71,7 @@ async function seedDB() {
   await seedCateg("L-A28-Black(Remote)",9999,"/assets/img/LA28_black/8.jpg",9000,"Meet the 5 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, Remote and Manual Key . ",null,"features-L-A28-Black(Remote)");
   
   await seedCateg("L-H300(Encoder)",7500,"/assets/img/LA28_black/8.jpg",3800,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-H300(Encoder)");
+  await seedCateg("L-E50",7500,"/assets/img/LE50/1.jpg",3800,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-E50");
 
   
   await closeDB();

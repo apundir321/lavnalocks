@@ -416,7 +416,8 @@ textarea{
             <img width="80%" class="floating" src="assets/img/en.png" alt="">
           </div>
           <div class="col-lg-6 mt-4 text-center" style="margin-top: 20px;">
-            <form action="sendemail.php" class="contactform" method="POST" data-aos="fade-right">
+            <form action="/contact-us" class="contactform" method="POST" data-aos="fade-right">
+              <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
                 <h2 style="font-size: 26px; font-weight: 600; margin-bottom:22px;">Enquire Now</h2><br>
                 <div class="error"></div>
                 <div class="inputbox">

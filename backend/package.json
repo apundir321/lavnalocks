@@ -8,7 +8,7 @@
     "start": "node src/app.js"
   },
   "styles": {
-    "css":"./node_modules/swiper/swiper-bundle.css"
+    "css": "./node_modules/swiper/swiper-bundle.css"
   },
   "keywords": [],
   "author": "",
