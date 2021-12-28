@@ -71,7 +71,7 @@ async function seedDB() {
   await seedCateg("L-A28-Black(Remote)",9999,"/assets/img/LA28_black/8.jpg",9000,"Meet the 5 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, Remote and Manual Key . ",null,"features-L-A28-Black(Remote)");
   
   await seedCateg("L-H300(Encoder)",7500,"/assets/img/LA28_black/8.jpg",3800,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-H300(Encoder)");
-  await seedCateg("L-E50",7500,"/assets/img/LE50/1.jpg",3800,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-E50");
+  await seedCateg("L-E50",7500,"/assets/img/LE50/1.jpg",6999,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-E50");
 
   
   await closeDB();
