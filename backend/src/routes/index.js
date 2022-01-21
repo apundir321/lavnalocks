@@ -52,6 +52,22 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/index.html", async (req, res) => {
+  try {
+    const products = await Product.find({})
+      .sort("-createdAt")
+      .populate("category");
+
+    res.render("index", {
+      pageName: "Home", products,
+      csrfToken: req.csrfToken()
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
 router.get("/cart", async (req, res) => {
   try {
 
