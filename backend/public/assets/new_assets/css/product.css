@@ -1,0 +1,19 @@
+
+#videos .box1 h5{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4A4848;
+    text-transform: uppercase;
+}
+#videos .box1 h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
+    /* text-shadow: 1px 1px #003399; */
+}
+
+#videos .box2 iframe{
+    border-radius:10px;
+}

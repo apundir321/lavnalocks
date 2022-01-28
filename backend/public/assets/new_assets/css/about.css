@@ -1,0 +1,221 @@
+#top_ban{
+    background-image: url('../../new_assets/img2/about-ban.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 2%;
+}
+#top_ban h1{
+    padding-top: 8%;
+    padding-bottom: 5%;
+    color: #fff;
+    font-size: 36px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+
+#about1{
+    padding: 90px 0;
+    padding-bottom: 130px;
+    background-color: #F4F4F5;
+}
+#about1 .box{
+    background-color: #003399;
+    width: 330px;
+    height: 470px;
+    /* margin-left: 50px; */
+}
+#about1 .box img{
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+#about1 .box1 h5{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4A4848;
+    text-transform: uppercase;
+}
+#about1 .box1 h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
+    /* text-shadow: 1px 1px #003399; */
+}
+#about1 .box1 p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #4A4848;
+    width: 90%;
+    margin-top: 20px;
+}
+#about1 .box1 .btn{
+    background-color: #003399;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    padding-right: 28px;
+    color: #fff;
+    border-radius: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+#about1 .box1 .btn:hover{
+    background-color: #6685C2;
+}
+
+
+#mission{
+    background-image: url('../../new_assets/img2/1 802.png');
+    background-size: 40% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 0.1rem;
+    background-color: #003399;
+}
+#mission .box{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#mission .box h5{
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#mission .box h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 18px;
+}
+#mission .box p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    line-height: 26px;
+    margin-left: 12px;
+}
+#mission .box span{
+    margin-left: -15px;
+}
+#mission .box .btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    margin-left: -6px;
+    margin-top: 30px;
+    transition: 0.3s ease;
+}
+#mission .box .btn:hover{
+    background-color: #fff;
+    color: #003399;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+
+
+#projects h5{
+    color: #4A4848;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+#projects .box h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+#projects .box p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4A4848;
+    line-height: 26px;
+}
+#projects .box1 h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #000;
+}
+
+
+
+#below_proj{
+    background-image: url('../../new_assets/img2/about-pg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#below_proj  h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #fff;
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+#below_proj  p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    line-height: 26px;
+}
+#below_proj h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #fff;
+    padding-bottom: 80px;
+}
+#below_proj .fa-circle{
+    font-size: 12px;
+    margin-top: -5px !important;
+}
+
+@media (max-width: 767px) {
+    #top_ban h1{
+        padding-top: 22%;
+    }
+    #about1 .box1 h5{
+        margin-top: 28%;
+    }
+    #mission {
+        background-image: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #about1 .box1 h5{
+        margin-top: 16%;
+    }
+    #top_ban h1{
+        padding-top: 12%;
+    }
+    #mission {
+        background-image: none;
+    }
+}
