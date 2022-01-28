@@ -1210,8 +1210,8 @@ var data = {
          'user_email':emailId,
          'user_mobile':mobile,
          'product':product,
-         'reply_to':'contact@flybunch.com', 
-         'owner_email': 'ps1089124@gmail.com',
+         'reply_to':'contact@lavnalocks.com', 
+         'owner_email': 'contact@lavnalocks.com',
          'company': 'Lavnalocks',
 		     'message':message,
    }
@@ -1275,7 +1275,7 @@ $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
    contentType: 'application/json'
 }).done(function(msg) {
   // alert(msg);
-  $('#submit-modal').html('Send');
+  $('#submit-modal2').html('Subscribe');
   swal("Thank You!", "Your have subscribe lavnalocks", "success");
 $('#closemodal').trigger('click');
 }).fail(function(error) {
@@ -1293,7 +1293,7 @@ var data = {
    template_params: {
          'user_email': emailId ,
          'reply_to':'contact@lavnalocks.com', 
-         'owner_email': 'ps1089124@gmail.com',
+         'owner_email': 'contact@lavnalocks.com',
          'company': 'Lavnalocks',
    }
 
