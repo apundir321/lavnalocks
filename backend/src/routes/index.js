@@ -52,6 +52,22 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/index.html", async (req, res) => {
+  try {
+    const products = await Product.find({})
+      .sort("-createdAt")
+      .populate("category");
+
+    res.render("index", {
+      pageName: "Home", products,
+      csrfToken: req.csrfToken()
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
 router.get("/cart", async (req, res) => {
   try {
 
@@ -522,8 +538,8 @@ router.post(
       secure: false,
       auth: {
         // company's email and password
-        user: "anuragpundir621@gmail.com",
-        pass: "khkdqfcbsacrmqhs",
+        user: "bhagwnshrilocks@gmail.com",
+        pass: "yuretciewpzuinxr",
       },
       tls: {
         rejectUnauthorized: false,
@@ -532,15 +548,15 @@ router.post(
 
     // email options
     const mailOpts = {
-      from: "anuragpundir621@gmail.com",
-      to: "anuragpundir631@gmail.com",
+      from: "bhagwnshrilocks@gmail.com",
+      to: "lavnalocks@gmail.com",
       subject: `Enquiry from ${req.body.name}`,
       html:
         `
       <div>
       <h2 style="color: #478ba2; text-align:center;">Client's name: ${req.body.name}</h2>
       <h3 style="color: #478ba2;">Client's email: (${req.body.email})<h3>
-      <h3 style="color: #478ba2;">Client's email: (${req.body.phone})<h3>
+      <h3 style="color: #478ba2;">Client's phone: (${req.body.phone})<h3>
       </div>
       <h3 style="color: #478ba2;">Client's message: </h3>
       <div style="font-size: 30;">
@@ -599,7 +615,7 @@ async function sendPaymentEmail(postDataJson,payId) {
     auth: {
       // company's email and password
       user: "bhagwnshrilocks@gmail.com",
-      pass: "yeltlvpzscdqcadn",
+      pass: "yuretciewpzuinxr",
     },
     tls: {
       rejectUnauthorized: false,

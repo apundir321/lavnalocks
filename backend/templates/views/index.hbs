@@ -1,1156 +1,1267 @@
-{{>header}}<!-- End Header -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Digital Fingerprint Lock - Lavna Locks</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+      </script>
+      <script src=
+  "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+      </script>
+      <script src=
+  "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+      </script>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style2.css" rel="stylesheet">
+  <link href="assets/css/style1.css" rel="stylesheet">
+  <link href="assets/css/new.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo me-auto"><a href="index.html">Mentor</a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto"><img src="assets/img2/Logo.jpg" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a target="_blank" href="https://www.lavnalocks.com/about">About</a></li>
+          <li><a href="https://www.lavnalocks.com/shop">Products</a></li>
+          <li><a href="index.html">Services</a></li>
+          <li><a href="index.html">Distributer</a></li>
+          <li><a href="index.html">Builder’s Project</a></li>
+          <!-- <li style="margin-right: -12px; padding-left: 10px;">
+            <form class="searchbox">
+              <input type="search" placeholder="Search......" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+              <input type="submit" class="searchbox-submit" value="GO">
+              <span class="searchbox-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+          </form>
+          </li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="tel:1800-313-4491" class="get-started-btn"><img src="assets/img2/bx_bxs-phone-call.svg">Customer care 1800-313-4491</a>
 
-
-<style>
-  #sync1 .item {
-  background: #0c83e7;
-  padding: 80px 0px;
-  margin: 5px;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-}
-
-#sync2 .item {
-  background: #C9C9C9;
-  padding: 10px 0px;
-  margin: 5px;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-  cursor: pointer;
-}
-#sync2 .item h1 {
-  font-size: 18px;
-}
-#sync2 .current .item {
-  background: #0c83e7;
-}
-
-.owl-theme .owl-nav {
-  /*default owl-theme theme reset .disabled:hover links */
-}
-.owl-theme .owl-nav [class*='owl-'] {
-  transition: all .3s ease;
-}
-.owl-theme .owl-nav [class*='owl-'].disabled:hover {
-  background-color: #D6D6D6;
-}
-
-#sync1.owl-theme {
-  position: relative;
-}
-#sync1.owl-theme .owl-next, #sync1.owl-theme .owl-prev {
-  width: 22px;
-  height: 40px;
-  margin-top: -20px;
-  position: absolute;
-  top: 50%;
-}
-#sync1.owl-theme .owl-prev {
-  left: 10px;
-}
-#sync1.owl-theme .owl-next {
-  right: 10px;
-}
-
-</style>
-
-<style>
-  .products a{
-    text-decoration: none;
-  }
-
-  #about h2{
-      color: #000000;
-      font-size: 30px;
-      font-weight: 600;
-      font-family: "Poppins", sans-serif;
-      margin-top: 26px;
-      line-height: 38px;
-  }
- 
-  .swiper{
-    overflow: inherit;
-    padding: 30px;
-  }
-  .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-    left: -35px;
-  }
-  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
-    right: -35px;
-  }
-  #top-slider .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
-      right: 0px;
-      background: #fff;
-      padding: 32px;
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-  }
-   #top-slider .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-    left: 0px;
-      background: #fff;
-      padding: 32px;
-      height: 50px;
-      width: 50px;
-      border-radius: 50px;
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-  }
-  #top-slider .swiper{
-    width: 100%;
-  }
-.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    content: 'next';
-    font-weight: bold;
-    font-size: 36px;
-}
-.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-    content: 'prev';
-    font-weight: bold;
-    font-size: 36px;
-}
-
-
-
-  /* xs */
-@media (max-width: 767px) {
-     .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-    left: -7px;
-  }
-  .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
-    right: -7px;
-  }
-  #householder .box{
-    min-height: 170px !important;
-  }
-  #trusted .box{
-    margin-top: 10px;
-  }
-  .modal img{
- display: none;
-  }
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    font-size: 22px !important;
-  }
-   .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
-    font-size: 22px !important;
-  }
-  #review-1 .swiper-button-next{
-    padding: 18px !important;
-  }
-   #review-1 .swiper-button-prev{
-    padding: 18px !important;
-  }
-
-}
-
-
-.links{
-  text-align: center;
-}
-.links ul li{
-  list-style: none;
-  line-height: 33px;
-}
-.links ul li a{
-  text-decoration: none;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 16px;
-}
-.links h4{
-  font-size: 23px;
-  margin-left: 40px;
-}
-.links span{
-  font-size: 17px;
-  font-weight: 600;
-}
-.top-slides {
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
-}
-.top-sec{
-  padding: 0;
-}
-.top-sec img{
-  width: 100%;
-}
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-input{
-  border-radius: 10px;
-}
-textarea{
-  border-radius: 10px;
-}
-
-
-
-#trusted{
-  background-color: rgb(236, 215, 235);
-  padding: 50px;
-}
-#trusted .box{
-  padding: 18px 28px;
-   overflow: hidden; 
-   background-color: #ffffff;
-   border-radius: 5px;
-  transition: 0.3s;
-  min-height: 110px;
-  height: auto;
-}
-
-#trusted .box:hover {
-  transform: scale(1.1);
-}
-
-#trusted .box h1{
-    color: green;
-    font-weight: bold;
-    align-items: center;
-    text-align: center;
-}
-#trusted .box img{
-  text-align: center;
-  align-items: center;
-}
-
-
-
-.floating {  
-    animation-name: floating;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 7px;
-}
-
-@keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 15px); }
-    to   { transform: translate(0, -0px); }    
-}
-.icon-box a{
-  text-decoration: none;
-  color: #000;
-}
-
-
-
-#testimonial{
-    background-color: #D2D2E0;
-}
-#testimonial h6{
-    color: #00858A;
-    font-size: 18px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-  }
-#testimonial h2{
-      color: #000000;
-      font-size: 30px;
-      font-weight: 600;
-      font-family: "Poppins", sans-serif;
-      margin-top: 22px;
-      line-height: 38px;
-      margin-bottom: 50px;
-  }
-
-  #testimonial .box{
-      background-color: #f5efef;
-      padding: 30px;
-      border-radius: 12px;
-  }
-#testimonial .box span{
-    color: #00858A;
-    font-size: 50px;
-    font-weight: bold;
-}
-#testimonial .box p{
-    color: #5F5F5F;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-    margin-top: -30px;
-    line-height: 30px;
-}
-#testimonial .box-small img{
-    float: left;
-    margin-right: 20px;
-}
-#testimonial .box-small h3{
-    color: #000;
-    font-size: 17px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-    /* margin-left: 20px !important; */
-    width: 100%;
-}
-#testimonial .box-small h6{
-    color: #A3A3A3;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: "Poppins", sans-serif;
-}
-#testimonial .fa-star{
-    float: right !important;
-    color: #FFDA16 !important;
-}
-
-
-
-
-.modal-content{
-  border-radius: 0px;
-}
-.modal h3{
-  font-family: serif;
-  font-weight: bold;
-  font-size: 34px;
-  margin-bottom: 22px;
-}
-.modal img{
-  width: 100%;
-  transition: 0.3s;
-}
-.modal-body .send{
-  border: none;
-  padding: 8px 20px 8px 20px;
-  background-color: royalblue;
-  box-shadow: 0 0 10px 0 rgb(161, 161, 161);
-  color: #fff;
-  float: right;
-}
-.modal-body button span{
-  font-size: 29px;
-}
-.modal img:hover {
-  transform: scale(1.1);
-}
-#review{
-  background-color: #fff;
-}
-#review .swiper-slide{
-  background-color: #fff;
-}
-
-#review-1{
-  padding: 0px;
-  background-color: #fff;
-}
-#review-1 .swiper_main{
-    background-color: #fff;
-}
-#review-1 .swiper-button-next{
-  background-color: #fff;
-  padding: 30px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50px;
-}
-#review-1 .swiper-button-prev{
-  background-color: #fff;
-  padding: 27px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50px;
-  font-weight: bold;
-}
-
-
-#householder .box{
-  padding: 20px;
-  min-height: 280px;
-  min-width: 350px;
-}
-#householder .box img{
-  width: 50%;
-}
-#householder .shadow{
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.35)!important;
-}
-
-.modal{
-  top: 10%;
-}
-#contact {
-  background-image: url('../../assets/img/BG-lavna.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-</style>
-
-    <section id="review-1">
-      <div class="container">
-
-  
-        <!-- Slider main container -->
-        <div class="swiper_main" style="position: relative;">
-          <div class="swiper mySwiper" id="client-swiip3">
-              <div class="swiper-wrapper" id="testimonial">
-                <div class="swiper-slide">
-                    <a href="/shop"><img width="100%" src="assets/img/LA24 New Model (2).jpg" alt=""></a>
-                </div>
-                <div class="swiper-slide">
-                  <img width="100%" src="assets/img/e50 new.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <a href="/faq"><img width="100%" src="assets/img/Support.jpg" alt=""></a>
-                </div>
-              </div>
-              <div class="swiper-button-next shadow"></div>
-              <div class="swiper-button-prev shadow"></div>
-            </div>
-        </div>
-      </div>
-    </section>
-      
-
-<!--Jquery-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<!--Floating WhatsApp css-->
-<link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
-<!--Floating WhatsApp javascript-->
-<script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
-
- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-
-  <main id="main">
-
-
-    <section class="sec-tpadding-2 section-light" id="contact">
-      <div class="container">
-        <div class="row text-center d-flex align-item-center">
-          <div class="col-lg-6" data-aos="fade-left">
-            <img width="80%" class="floating" src="assets/img/en.png" alt="">
-          </div>
-          <div class="col-lg-6 mt-4 text-center" style="margin-top: 20px;">
-            <form action="/contact-us" class="contactform" method="POST" data-aos="fade-right">
-              <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
-                <h2 style="font-size: 26px; font-weight: 600; margin-bottom:22px;">Enquire Now</h2><br>
-                <div class="error"></div>
-                <div class="inputbox">
-                    <input id="name" type="text" name="name" placeholder="Name*" pattern="[A-Za-z. ]+" data-error="First Name is required." required >
-                </div>
-                <div class="inputbox">
-                    <input id="email" type="email" name="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required data-error="Valid email is required.">
-                </div>
-                <div class="inputbox">
-                  <input id="mob" type="text" name="phone" placeholder="Phone*" pattern="[1-9]+[0-9]{9}" required data-error="Contact no is required."><br>
-                  <span id="msg" style="color: red;"></span>
-                </div>
-                <div class="inputbox">
-                    <textarea id="textarea" name="message"  placeholder="Type a Message*" required ></textarea>
-                </div>
-                <div class="inputbox">
-                    <!-- <button class="btn btn-primary" value="submit">SEND</button> -->
-                    <button style="font-size: 1.5rem; padding: 8px 26px 8px 25px;" class="btn btn-primary shadow" type="submit">SEND</button>
-                </div>
-            </form>
-            <div class="clearfix"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-   
-
-    <!-- ======= Shop Section ======= -->
-   <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Featured Listings</strong></h2>
-          <p style="font-size: 1.6rem;">Our Brand New Products</p>
-        </div>
-
-        <div class="row">
-          {{!-- <div  class="col-lg-4 col-md-6 d-flex align-items-stretch products" data-aos="zoom-in" data-aos-delay="100">
-            <div id="1" class="icon-box iconbox-blue">
-              <a href="/products/L-A8"><img style="width: 100%; width: 100%;" src="/assets/img/L-A8.jpg"><br><br></a>
-          
-              <P style="font-size: 1.5rem;">L-A8</P>
-              <h4>MAIN DOOR LOCK</h4><br>
-              <p style="font-size: 1.5rem;">M.R.P. 14,200</p>
-              <p style="text-align: justify;"><br>
-                Meet the 4 in 1 Digital gate lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, and Key.</p><br><br><br>
-                <button type="button" style="width: 70%; font-size: 1.5rem !important; font-weight: 600; background-color: rgb(93, 93, 197);" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Request Callback</button>
-            </div>
-            
-          </div> --}}
-
-          <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4  products" data-aos="zoom-in" data-aos-delay="200">
-            <div id="2" class="icon-box iconbox-orange shadow">
-              <a href="/products/L-A24-Black(Bluetooth)"><img src="assets/img/L-A24.jpg"><br><br>
-
-             <P style="font-size: 1.9rem;">L-A24(Bluetooth)</P>
-              <h4>FOR WOODEN DOORS</h4><br>
-              <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹9,199</b>  <del>₹14,200</del> Save <b>₹5,001</b></p>
-              <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-                Meet the 6 in 1 digital fingerprint lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP unlocking and Key.</p></a><br>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-          <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
-            <div id="3" class="icon-box iconbox-pink shadow">
-              <a href="/products/L-A28-Black(Bluetooth)"><img src="assets/img/L-A28.jpg"><br><br>
-
-               <P style="font-size: 1.9rem;">L-A28(Bluetooth)</P>
-               <h4>FOR WOODEN DOORS</h4><br>
-              <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹7,799</b> <del>₹8,999</del> Save <b>₹1,200</b></p>
-              <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-                Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP unlocking and Key.</p></a><br>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-          <div  class="col-lg-4 col-md-6 d-flex mt-4 align-items-stretch products" data-aos="zoom-in" data-aos-delay="200">
-            <div id="5" class="icon-box iconbox-red shadow">
-             <a href="/products/L-A15"> <img src="assets/img/L-A15.jpg"><br><br>
-
-              <P style="font-size: 1.9rem;">L-A15</P>
-             <h4>FOR WOODEN DOORS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹3899</b> <del>₹4999</del> Save <b>₹1,100</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               
-            Meet the 2 in 1 MOST Affordable Digital door lock from LAVNA Locks, which you can access from your fingerprint and Key.</p></a><br><br>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-          <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
-            <div id="6" class="icon-box iconbox-teal shadow">
-             <a href="/products/L-H300"> <img src="assets/img/L-H300.jpg"><br><br>
-
-              <p style="font-size: 1.9rem;">L-H300</p>
-             <h4>FOR COMMERCIAL <b style="bold:900; font-size:2.5rem;">/</b> RESIDENTIAL DOORS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹3850</b> <del>₹7500</del>  Save <b>₹3,650</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               
-              Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.</p><br></a>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
-            <div id="7" class="icon-box iconbox-teal shadow">
-             <a href="/products/L-A5">  <img src="assets/img/L-A5.jpg"><br><br>
-
-              <P style="font-size: 1.9rem;">L-A5</P>
-             <h4>FOR GLASS DOORS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹8,599</b> <del>₹13,900</del> Save <b>₹5,301</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               
-              Meet the 4 in 1 Glass door security lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN and Remote</p><br></a>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-          <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
-            <div id="8" class="icon-box iconbox-teal shadow">
-            <a href="/products/L-S9"> <img style="width:auto;" src="assets/img/LS9Front.jpg"><br><br> 
-
-              <P style="font-size: 1.9rem;">L-S9</P>
-             <h4>FOR CABINETS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹3180</b> <del>₹5,900</del> Save <b>₹2,720</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               
-              Meet the 2 in 1 Lock for your cabinets from LAVNA Locks, which you can access from your fingerprint and PIN.</p><br></a>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-           <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="300">
-            <div id="6" class="icon-box iconbox-teal shadow">
-             <a href="/products/L-H300(Encoder)"> <img src="assets/img/L-H300.jpg"><br><br>
-
-              <p style="font-size: 1.9rem;">L-H300<span style="font-weight:600">(With Encoder)</span></p>
-             <h4>FOR COMMERCIAL <b style="bold:900; font-size:2.5rem;">/</b> RESIDENTIAL DOORS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹3,800</b> <del>₹7,500</del> Save <b>₹3700</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               
-              Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.</p><br></a>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div>
-
-          {{!-- <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="200">
-            <div id="2" class="icon-box iconbox-orange shadow">
-              <a href="/products/L-A24(WI-FI)"><img  src="assets/img/L-A24.jpg"><br><br></a>
-
-             <P style="font-size: 1.9rem;">L-A24(Wi-Fi)</P>
-             <h4>FOR WOODEN <b style="bold:900; font-size:2.5rem;">/</b> METAL DOORS</h4><br>
-              <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹9,499</b> <del>₹15,700</del> Save <b>₹6,201</b></p>
-              <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-                Meet the 5 in 1 Digital fingerprint lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Wi-Fi unlocking and Key.</p><br>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div> --}}
-
-
-          {{!-- <div  class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 products" data-aos="zoom-in" data-aos-delay="100">
-            <div id="4" class="icon-box iconbox-yellow shadow">
-             <a href="/products/L-A28(WI-FI)"> <img src="assets/img/L-A28.jpg"><br><br></a>
-
-              <P style="font-size: 1.9rem;">L-A28(Wi-Fi)</P>
-              <h4>FOR WOODEN <b style="bold:900; font-size:2.5rem;">/</b> METAL DOORS</h4><br>
-             <p style="font-size: 1.8rem;"><b style="font-size: 28px; color:#e11717;">₹8,699</b> <del>₹9,999</del> Save <b>₹1,300</b></p>
-             <p class="desc" style="text-align: justify; font-size: 14px;"><br>
-               Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Wi-Fi unlocking, OTP Unlocking and Key.</p><br>
-                <a href="tel:+91 9971427608"><button type="button"  class="btn btn-info btn-lg callme shadow">Call Us Now</button></a>
-            </div>
-          </div> --}}
-
-         
-        </div>
-
-      </div>
-   </section>
-
-    <div class="container">  
- 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" role="dialog" style="margin-top: 10% !important;" >
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content " style="height: 28rem;">
-            <div class="text-center">
-              <h1 style="margin-left: 8rem; visibility: hidden; "><b>Request Callback</b></h1>
-              <h1 style="text-align: center;"><b>Request Callback</b></h1>
-              <button type="button" style="font-size: 5rem;   margin-top: -7rem !important;" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <form action="sendemail.php" onsubmit="return myfunc()"  class="text-center" style="width: 100% !important;" method="POST">
-                <input style="margin-left: 4%; border-top: none; border-left: none; border-right: none; width: 60%; font-size: 1.5rem !important;" type="text" name="name" placeholder="Name*" required><br><br>
-                <input style="margin-left: 4%; border-top: none; border-left: none; border-right: none; width: 60%; font-size: 1.5rem !important;" type="email"  name="email" placeholder="Email*" required><br><br>
-                <input style="margin-left: 4%; border-top: none; border-left: none; border-right: none; width: 60%; font-size: 1.5rem !important;" type="mobile" id="mob" name="phone" placeholder="Phone*" required><br>
-                <span id="msg" style="color: red;"></span>
-                <button style="letter-spacing:.1rem; background-color:#393185; color: white; font-size: 1.5rem !important; padding:1rem; margin:1.5rem; border-radius:1rem;" class="button"  type="submit">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      
     </div>
-    <!-- End Services Section -->
+  </header><!-- End Header -->
 
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- <h1>Lavna,<br>Smart Digital Locks <span>Unlocking Pleasure</span></h1>
+          <h2>Smart solution for your Hotels, Resorts, Hospitals and other Private Premises.</h2> -->
+          <a target="_blank" href="https://www.lavnalocks.com/shop" class="btn-get-started">Learn More</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="" alt="">
+        </div>
+      </div>
 
+    </div>
+  </section><!-- End Hero -->
 
-  <script>
-    function myfunc(){
-      var a =document.getElementById("mob").value;
-      if(isNaN(a)){
-        document.getElementById("msg").innerHTML ="<h4>*Enter Only Numeric Value</h4>";
-        return false;
-      }
-      if(a.length<10){
-        document.getElementById("msg").innerHTML ="<h4>*Mobile Number Must Be 10 Digits.</h4>";
-        return false;
-      }
-      if((a.charAt(0) != 9) && (a.charAt(0) != 8) && (a.charAt(0) != 7)){
-        document.getElementById("msg").innerHTML ="<h4>*Mobile Number Must Start With 9,8 and 7.</h4>";
-        return false;
-      }
-    }
-  </script>
-  
-  
-      <!-- ======= trusted client Section ======= -->
-          
-          <section id="trusted">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                   <div class="section-title">
-                    <h2>Trusted By</strong></h2>
-                   </div>
-                </div>
-              </div>
-        
-              <div class="row mt-4">
-                <div class="col-lg-4">
-                  <div class="box shadow">
-                    <img class="inner-img" width="95%" src="assets/img/airindia.png" alt="">
-                  </div>
-                </div>
-                 <div class="col-lg-4">
-                  <div class="box shadow">
-                    <img class="inner-img" width="95%" src="assets/img/aiims.png" alt="">
-                  </div>
-                </div>
-                 <div class="col-lg-4">
-                  <div class="box shadow">
-                    <h1 class="inner-img">Krishi Bhawan</h1>
-                  </div>
-                </div>
-              </div>
+  <div class="container" id="top_count" data-aos="zoom-out">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="box">
+          <div class="row">
+            <div class="col-lg-6 box_sm">
+              <h1>10,000+</h1>
+              <span>Satisfied Customers</span>
             </div>
-          </section>
-        
-
-          <section id="householder">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                   <div class="section-title">
-                    <h2>Satisfied Householders Of</strong></h2>
-                   </div>
-                </div>
-              </div>
-        
-              <div class="row mt-4">
-                <div class="col-lg-6 text-center">
-                  <div class="box shadow text-center" data-aos="fade-right">
-                    <img data-aos="zoom-in" src="assets/img/householder/brigade-group-logo.jpg" alt="">
-                  </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                  <div class="box shadow text-center" data-aos="fade-left">
-                    <img style="margin-top: 10%;" data-aos="zoom-out" src="assets/img/householder/logo-black.png" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-lg-6 text-center">
-                  <div class="box shadow text-center" data-aos="fade-right">
-                    <img style="margin-top: 17%;" data-aos="zoom-out" src="assets/img/householder/omaxe-realty.jpg.crdownload.jpeg" alt="">
-                  </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                  <div class="box shadow text-center" data-aos="fade-left">
-                    <img data-aos="zoom-in" src="assets/img/householder/supertech-logo-250x250.png" alt="">
-                  </div>
-                </div>
-              </div>
-              <!-- Slider main container -->
-              {{!-- <div class="swiper_main" style="position: relative;">
-                <div class="swiper mySwiper" id="client-swiip">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                          <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
-                      </div>
-                    
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
-              </div> --}}
+            <div class="col-lg-6 box_lg">
+              <h1>4,250+</h1>
+              <span>Completed Project</span>
             </div>
-          </section>
-
-
-          {{!-- <section>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                   <div class="section-title">
-                    <h2>Featured By</strong></h2>
-                   </div>
-                </div>
-              </div>
-        
-              <!-- Slider main container -->
-              <div class="swiper_main" style="position: relative;">
-                <div class="swiper mySwiper" id="client-swiip">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                          <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="95%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img class="shadow" width="100%" src="assets/img/airindia.png" alt="">
-                      </div>
-                    
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
-              </div>
-            </div>
-          </section> --}}
-
-          <section id="review">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                   <div class="section-title">
-                    <h2>Customer Reviews From Amazon</strong></h2>
-                   </div>
-                </div>
-              </div>
-        
-              <!-- Slider main container -->
-              <div class="swiper_main" style="position: relative;">
-                <div class="swiper mySwiper" id="client-swiip2">
-                    <div class="swiper-wrapper" id="testimonial">
-                      <div class="swiper-slide">
-                         <img width="95%" src="assets/img/R1 (1).png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R2.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R3.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R5.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R6.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R7.png" alt="">
-                      </div>
-                       <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R8.png" alt="">
-                      </div>
-                       <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R9.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R10.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R11.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R12.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R13.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R14.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R15.png" alt="">
-                      </div>
-                      <div class="swiper-slide">
-                        <img width="95%" src="assets/img/R17.png" alt="">
-                      </div>
-                    
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
-              </div>
-            </div>
-          </section>
-      
-      <!-- End trusted client Section -->
-    
-
-<!-- Button trigger modal -->
-{{!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button> --}}
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <div class="row d-flex align-items-center">
-          <div class="col-lg-6 text-center">
-            <img src="https://st2.depositphotos.com/4177785/45675/v/380/depositphotos_456758100-stock-illustration-fingerprint-scanner-keyless-door-lock.jpg?forcejpeg=true" alt="space rocket">
-          </div>
-          <div class="col-lg-6">
-            <h3> Subscribe to <span style="color:royalblue">Lavna Locks</span></h3>
-            <form action="">
-              <div class="form-group">
-                <input class="form-control" type="text" name="name" id="name" placeholder="Your Name" pattern="[A-Za-z. ]+" data-error="First Name is required." required>
-              </div>
-              <div class="form-group">
-                <input class="form-control" type="email" name="email" id="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required data-error="Valid email is required.">
-              </div>
-              <button class="btn send" type="submit">Send</button>
-            </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-6">
+            <div class="box" data-aos="fade-left" data-aos-delay="1000">
+              <img class="shadow" src="assets/img2/about_lavna.svg" alt="" data-aos="fade-right" data-aos-delay="1200">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="box1" data-aos="zoom-in">
+              <h5>Welcome to LAVNA &nbsp;<img width="15%" src="assets/img2/Line_about.svg"></h5>
+              <h1>About Us</h1>
+              <p>Catering the needs of smart security solutions.</p>
+
+              <p>Combining technology with experience, Lavna brings you a complete range of smart locks that fits your every need. Our premium locks won't let you compromise on security and looks. The high-end technology will go with  every kind of door, ranging from wooden, metal to glass cabinets. Over 3 years, we have proudly completed more than 4250+ projects and reached to thousands of people.</p>
+              <a target="_blank" href="https://www.lavnalocks.com/about" class="btn shadow">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-12">
+            <h5>WHY CHOOSE US <img src="assets/img2/Line_about.svg"></h5>
+            <h1>India's only smart security brand that provides<br> complete range of digital locks</h1>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-6 mt-4">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li data-aos="fade-right"><img src="assets/img2/Group (2).svg" alt=""> &nbsp;Wooden Door Lock</li>
+                  <li data-aos="fade-right"><img src="assets/img2/Group (2).svg" alt=""> &nbsp;Metal Door Lock</li>
+                  <li data-aos="fade-right"><img src="assets/img2/Group (2).svg" alt=""> &nbsp;Glass Door Lock</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li data-aos="fade-left"><img src="assets/img2/house.svg" alt=""> &nbsp;Residential Use</li>
+                  <li data-aos="fade-left"><img src="assets/img2/fa-solid_hotel.svg" alt=""> &nbsp;Hotel & Restro Use</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-lg-12">
+                <h6>Lock Performance</h6>
+                <div class="progress progress-striped active">
+                  <div class="progress-bar progress-bar-success"
+                      style="width:0%">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 mt-4">
+                <h6>Arrival Time</h6>
+                <div class="progress progress-striped active">
+                  <div id="progress-bar2" class="progress-bar progress-bar-success"
+                      style="width:0%">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12 mt-4">
+                <h6>Modern Technology</h6>
+                <div class="progress progress-striped active">
+                  <div id="progress-bar3" class="progress-bar progress-bar-success"
+                      style="width:0%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row row1-1 counters">
+              <div class="col-lg-6 row1 text-center">
+                <div class="box" data-aos="zoom-in">
+                  <img src="assets/img2/counter1.svg" alt="">
+                  <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Expert Team</p>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                <div class="box" data-aos="zoom-in">
+                  <img src="assets/img2/counter2.svg" alt="">
+                  <span data-purecounter-start="0" data-purecounter-end="4250" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Project Completed</p>
+                </div>
+              </div>
+            </div>
+            <div class="row counters">
+              <div class="col-lg-6 row2 text-center">
+                <div class="box" data-aos="zoom-in">
+                  <img src="assets/img2/counter3.svg" alt="">
+                  <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Setisfied Clients</p>
+                </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                <div class="box" data-aos="zoom-in">
+                  <img src="assets/img2/counter4.svg" alt="">
+                  <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                  <p>Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Students</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="64" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Courses</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="42" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Events</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Trainers</p>
+          </div>
+
+        </div> -->
+
+      </div>
+    </section><!-- End Counts Section -->
 
 
-  <script>
-  const swiper = new Swiper('#client-swiip', {
 
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: '#client-swiip .swiper-pagination',
-  },
-
-  breakpoints: {
-          250: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 30
-        },
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 40
-        },
-        992:{
-          slidesPerView: 3,
-          spaceBetween: 40
-        }
-  },
-
-  navigation: {
-          nextEl: "#client-swiip .swiper-button-next",
-          prevEl: "#client-swiip .swiper-button-prev",
-        },
-
-  autoplay: {
-    delay: 3000,
-  },
-
-});
-
-  new Swiper('#client-swiip2', {
-
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 30,
-  pagination: {
-    el: '#client-swiip2 .swiper-pagination',
-  },
-
-  breakpoints: {
-          250: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 30
-        },
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 40
-        },
-        992:{
-          slidesPerView: 1,
-          spaceBetween: 40
-        }
-  },
-
-  navigation: {
-          nextEl: "#client-swiip2 .swiper-button-next",
-          prevEl: "#client-swiip2 .swiper-button-prev",
-        },
-
-  autoplay: {
-    delay: 3000,
-  },
-
-});
-
-
-  new Swiper('#client-swiip3', {
-
-  loop: true,
-  slidesPerView: 1.3,
-  spaceBetween: 30,
-  pagination: {
-    el: '#client-swiip3 .swiper-pagination',
-  },
-
-  breakpoints: {
-          250: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        480: {
-          slidesPerView: 1,
-          spaceBetween: 30
-        },
-        640: {
-          slidesPerView: 1.3,
-          spaceBetween: 40
-        },
-        992:{
-          slidesPerView: 1.3,
-          spaceBetween: 40
-        }
-  },
-
-  navigation: {
-          nextEl: "#client-swiip3 .swiper-button-next",
-          prevEl: "#client-swiip3 .swiper-button-prev",
-        },
-
-  autoplay: {
-    delay: 3000,
-  },
-
-});
-
-
-new Swiper("#mainsid", {
-   slidesPerView: 1.4,
-  spaceBetween: 30,
-    autoplay:true,
-    loop: true,
-    speed: 2000,
-        navigation: {
-          nextEl: "#mainsid .swiper-button-next",
-          prevEl: "#mainsid .swiper-button-prev",
-        },
-      });
-
-    new Swiper("#top-slider", {
-      autoplay:true,
-      navigation: {
-      nextEl: "#top-slider .swiper-button-next",
-      prevEl: "#top-slider .swiper-button-prev",
-    },
-  })
-  </script>
+       <!-- ======= Why Us Section ======= -->
+       <section id="product_sec" class="why-us df_section ">
+        <div class="container" data-aos="fade-up">
+          <div class="row text-center ">
+            <div class="box1">
+              <h5>OUR PRODUCTS<img width="20%"  src="assets/img2/Line_about.svg"></h5>
+              <h1>Explore Range</h1>
+            
+            </div>
+          </div>
   
-
-  <script>
-    $(document).ready(function() {
-      setTimeout(function () {
-        $("#exampleModalCenter").modal('show');
-      }, 4000);
-    });
-  </script>
- 
-  </main><!-- End #main -->
-
-
   
+          <div class="col-12 col-md-12 mt-5">
+            <div class="row">
+              <div class="col-12 col-md-12">
+                <div class="card prod_card">
+                  <div class="col-md-12 pt-0 pb-0">
+                    <div class="row">
+  
+                    
+                    <div class="col-md-7 order-lg-1 order-md-1 order-sm-2 order-xs-2">
+                      <div class="content_box">
+                        <a target="_blank" class="ds_link" href="https://www.lavnalocks.com/products/L-A24-Black(Bluetooth)"><h3>L-A24-Black(Bluetooth)</h3></a>
+                        <p><del><span>RS. 14200</span></del> <span>RS. 9499</span></p>
+  
+                        <p class="desc">Meet the 6 in 1 Digital door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.</p>
+                     
+                    <a target="_blank" href="https://www.lavnalocks.com/products/L-A24-Black(Bluetooth)" class="btn btn-theme">Buy Now</a> 
+                      </div>
+                    </div>
+                    <div class="col-md-5 order-lg-2 order-md-2 order-sm-1 order-xs-1">
+                      <figure class="prod_img">
+                          <img id="pr_1_img" src="assets/images/p1.png"/>
+                      </figure>
+                    </div>
+  
+                  </div>
+  
+               
+                </div>
+              </div>
+  
+              <div class="row">
+                <div class="col-md-7"></div>
+                <div class="col-md-5 ">
+                  <div class="swiper mySwiper" id="prd_thumb">
+                    <div class="swiper-wrapper">
+                      
+  
+                      <div class="swiper-slide chn_img active" data-target="#pr_1_img" data-img="assets/images/LA24_1.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_1.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_2.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_2.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_3.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_3.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_4.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_4.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_5.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_5.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_6.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_6.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_7.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_7.jpg"/>
+                      </figure>
+                      </div>
+  
+                      <div class="swiper-slide chn_img" data-target="#pr_1_img" data-img="assets/images/LA24_8.jpg">
+                        <figure class="prod_img">
+                          <img src="assets/images/LA24_8.jpg"/>
+                      </figure>
+                      </div>
+                    
+                     
+                    </div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                  </div>
+              </div>
+              </div>
+            </div>
+  
+          
+  
+          </div>
+        </div>
+  
+  
+  
+  
+  
+  
+  
+  
+        <div class="col-12 col-md-12 mt-5">
+          <div class="row">
+            <div class="col-12 col-md-12">
+              <div class="card prod_card">
+                <div class="col-md-12 pt-0 pb-0">
+                  <div class="row">
+  
+                  
+                  <div class="col-md-7 order-lg-1 order-md-1 order-sm-2 order-xs-2">
+                    <div class="content_box">
+                      <a target="_blank" class="ds_link" href="https://www.lavnalocks.com/products/L-A24-GOLD"><h3>L-A24-Gold(Bluetooth)</h3></a>
+                      <p><del><span>RS. 14200</span></del> <span>RS. 9499</span></p>
+  
+                      <p class="desc">Meet the 6 in 1 Digital door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.</p>
+                   
+                  <a target="_blank" href="https://www.lavnalocks.com/products/L-A24-GOLD" class="btn btn-theme">Buy Now</a> 
+                    </div>
+                  </div>
+                  <div class="col-md-5 order-lg-2 order-md-2 order-sm-1 order-xs-1">
+                    <figure class="prod_img">
+                        <img id="pr_2_img" src="assets/images/LA24-gold_1.jpg"/>
+                    </figure>
+                  </div>
+  
+                </div>
+  
+             
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-md-7"></div>
+              <div class="col-md-5 ">
+                <div class="swiper mySwiper" id="prd_thumb">
+                  <div class="swiper-wrapper">
+                    
+  
+                    <div class="swiper-slide chn_img active" data-target="#pr_2_img" data-img="assets/images/LA24-gold_1.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_1.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_2.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_2.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_3.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_3.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_4.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_4.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_5.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_5.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_6.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_6.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_7.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_7.jpg"/>
+                    </figure>
+                    </div>
+  
+                    <div class="swiper-slide chn_img" data-target="#pr_2_img" data-img="assets/images/LA24-gold_8.jpg">
+                      <figure class="prod_img">
+                        <img src="assets/images/LA24-gold_8.jpg"/>
+                    </figure>
+                    </div>
+                  
+                   
+                  </div>
+                  <!-- <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div> -->
+                </div>
+            </div>
+            </div>
+          </div>
+  
+        
+  
+        </div>
+      </div>
+  
+  
+  
+  
+      
+  
+  
+  
+  
+      
+      <div class="col-12 col-md-12 mt-5">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <div class="card prod_card">
+              <div class="col-md-12 pt-0 pb-0">
+                <div class="row">
+  
+                
+                <div class="col-md-7 order-lg-1 order-md-1 order-sm-2 order-xs-2">
+                  <div class="content_box">
+                    <a target="_blank" class="ds_link" href="https://www.lavnalocks.com/products/L-A28-Black(Bluetooth)"><h3>L-A28-Black(Bluetooth)</h3></a>
+                    <p><del><span>RS. 8999</span></del> <span>RS. 7799</span></p>
+  
+                    <p class="desc">Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP unlocking and Key.
+  
+                    </p>
+                 
+                <a target="_blank" class="btn btn-theme" href="https://www.lavnalocks.com/products/L-A28-Black(Bluetooth)">Buy Now</a> 
+                  </div>
+                </div>
+                <div class="col-md-5 order-lg-2 order-md-2 order-sm-1 order-xs-1">
+                  <figure class="prod_img">
+                      <img id="pr_3_img" src="assets/images/LA28_1.jpg"/>
+                  </figure>
+                </div>
+  
+              </div>
+  
+           
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-7"></div>
+            <div class="col-md-5 ">
+              <div class="swiper mySwiper" id="prd_thumb">
+                <div class="swiper-wrapper">
+                  
+  
+                  <div class="swiper-slide chn_img active" data-target="#pr_3_img" data-img="assets/images/LA28_1.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_1.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_2.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_2.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_3.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_3.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_4.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_4.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_5.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_5.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_6.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_6.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_7.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_7.jpg"/>
+                  </figure>
+                  </div>
+  
+                  <div class="swiper-slide chn_img" data-target="#pr_3_img" data-img="assets/images/LA28_8.jpg">
+                    <figure class="prod_img">
+                      <img src="assets/images/LA28_8.jpg"/>
+                  </figure>
+                  </div>
+                
+                 
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+              </div>
+          </div>
+          </div>
+        </div>
+  
+      
+  
+      </div>
+    </div>
+  
+    <div class="row mt-4 prod-row text-center">
+      <div class="col-lg-12 mt-4">
+        <a target="_blank" href="https://www.lavnalocks.com/shop" class="btn"> View More</a>
+      </div>
+    </div>
+        </div>
+  
+  
+  
+    
+      </section><!-- End Why Us Section -->
 
-  <!-- ======= Footer ======= -->
-  <footer style="width: 100% !important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
 
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/lavnadigitallocks"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
+
+
+      <!-- <section class="AmazingFeatureSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class=" redbottom-border">
+                        <h3>Amazing <span>features</span></h3>
+                    </div>
+                    <div id="navigation" class="owl-carousel  amazingfeature-wrap owl-loaded owl-drag">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0.25s ease 0s; width: 2274px;"><div class="owl-item active current" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartPassword.png" class="default" alt="Smart Password" title="Smart Password">
+                                    <img loading="lazy" src="img/icon/SmartPassword1.png" class="deHover" alt="Smart Password" title="Smart Password">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartVoice.png" class="default" alt="Smart Voice" title="Smart Voice">
+                                    <img loading="lazy" src="img/icon/SmartVoice1.png" class="deHover" alt="Smart Voice" title="Smart Voice">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartEtiquettes.png" class="default" alt="Smart Etiquettes" title="Smart Etiquettes">
+                                    <img loading="lazy" src="img/icon/SmartEtiquettes1.png" class="deHover" alt="Smart Etiquettes - Talking Lock" title="Smart Etiquettes - Talking Lock">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartSecurity.png" class="default" alt="Smart Security" title="Smart Security">
+                                    <img loading="lazy" src="img/icon/SmartSecurity1.png" class="deHover" alt="Smart Security - Two Access Authentications" title="Smart Security - Two Access Authentications">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartVisitorImageCapture.png" class="default" alt="Smart Visitor Image Capture" title="Smart Visitor Image Capture">
+                                    <img loading="lazy" src="img/icon/SmartVisitorImageCapture1.png" class="deHover" alt="Smart Visitor Image Capture" title="Smart Visitor Image Capture">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartFreeze.png" class="default" alt="Smart Freeze" title="Smart Freeze">
+                                    <img loading="lazy" src="img/icon/SmartFreeze1.png" class="deHover" alt="Smart Freeze" title="Smart Freeze">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartIntruderCapture.png" class="default" alt="Smart Intruder Capture" title="Smart Intruder Capture">
+                                    <img loading="lazy" src="img/icon/SmartIntruderCapture1.png" class="deHover" alt="Smart Intruder Capture" title="Smart Intruder Capture">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartNightVision.png" class="default" alt="Smart Night Vision" title="Smart Night Vision">
+                                    <img loading="lazy" src="img/icon/SmartNightVision1.png" class="deHover" alt="Smart Night Vision" title="Smart Night Vision">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartVideoPhone.png" class="default" alt="Smart Video Phone**" title="Smart Video Phone**">
+                                    <img loading="lazy" src="img/icon/SmartVideoPhone1.png" class="deHover" alt="Smart Video Phone**" title="Smart Video Phone**">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartStorage.png" class="default" alt="Smart Storage" title="Smart Storage">
+                                    <img loading="lazy" src="img/icon/SmartStorage1.png" class="deHover" alt="Smart Storage" title="Smart Storage">
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 206.667px;"><div class="projectitem">
+                            <div class="iconBoxWRP">
+                                <div class="iconBox">
+                                    <img loading="lazy" src="img/icon/SmartMotionSensor.png" class="default" alt="Smart Motion Sensor" title="Smart Motion Sensor">
+                                    <img loading="lazy" src="img/icon/SmartMotionSensor1.png" class="deHover" alt="Smart Motion Sensor" title="Smart Motion Sensor">
+                                </div>
+                            </div>
+                        </div></div></div></div><div class="owl-nav"><div class="owl-prev disabled">prev</div><div class="owl-next">next</div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+                    <div id="slider" class="owl-carousel owl-loaded owl-drag">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    <div class="owl-stage-outer owl-height" style="height: 99px;"><div class="owl-stage" style="transform: translate3d(-7440px, 0px, 0px); transition: all 0.6s ease 0s; width: 28520px;"><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Freeze: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>The Häfele Digital Locks have a narrow tolerance for incorrect entries of access by way of a wrong password or unfamiliar ﬁngerprint – 5 to 10 wrong entries result in a lock-freeze for up to 5 minutes. This feature reduces the possibilities of unwanted break-ins.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Intruder Capture:</h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>RE-Veal, the face recognition lock by Häfele, not only enables the highest level of security for your home but also tells you if someone tried to disrupt this security. Its Smart Intruder Capture technology records the face of any unregistered user who has tried to break into your home. The lock can pull out up to 10 such images in case you want to do an instant check.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Night Vision:</h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>A feature unique to Hafele’s RE-Veal Face Recognition Lock and Hafele’s RE-Bell Video door Bell, Smart Night Vision uses infrared technology to recognize a visitor’s face even in pitch darkness. This feature comes most handy when you or your guests are trying to access your home in the dense hours of the night when the overall lights in your building corridors are dimmed out or completely turned off.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Video Phone:  </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Hafele’s RE-AL and RE-Place digital locks can be paired to an existing Video Door Phone using a simple radio frequency unit. Once connected, your Video Door Phone and Digital Lock work seamlessly together as one gadget allowing you the beneﬁts of interacting with a visitor at your doorstep while also enabling you to unlock the door to him through the key button on your video door phone; another feather of convenience to manage your door security system from a remote location. And in case you don’t have a Video Door Phone, you could consider Hafele’s RE-Bell video doorbell which acts individually as a video door phone and cohesively as a complete security solution when clubbed with any of our digital locks!</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Storage:  </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Häfele’s RE-Bell Video Doorbell comes with the added advantage of recoding video footage and that to for 24 hours continuously! This Smart Storage feature allows you to keep a historic perspective on who entered your home; not just through time logs but through actual videos. The only requirement is that your App-enabled phone (which is paired to the lock) should have an SD card as the videos recorded automatically get saved in the storage memory of an SD card.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Motion Sensor:  </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Häfele’s RE-Bell Video Doorbell comes with an intuitive smart motion sensor feature which when activated senses the presence of a person or any other moving object within 3 meters of the camera lens. Such a realization is then sent to you as a notiﬁcation on your App–enabled phone alerting you that someone or something was hovering around your main door; an ideal option to enable increased security for your home.</p>
+                            </div>
+                        </div></div><div class="owl-item active" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Password: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>The SMART PASSWORD technology allows you to hide your numeric password between random numbers. Let’s assume that your password is 12345678; the Smart Password function allows you to hide this password before, after or in between other random digits, for example: 9876123456784901. The password can be set up to 8 or 12 digits while the random cushioning numbers can be included up to 30 digits. The Smart Password function is helpful when you don’t want to reveal your password to a person standing next to you while you are accessing your home.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Voice: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Every Digital Lock from Häfele talks to you during the instances at which you engage with the lock. These interactive engagements could include step-by-step voice guidance by the lock while adding a user, setting a password or enabling a function/mode; or simple voice notiﬁcations from the lock about various operative modes or incorrect usage of the lock.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Etiquettes: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Since every digital lock from Häfele talks to you, it is pertinent to have the right etiquettes to adjust the volume of the lock voice. This technology allows you to seamlessly adjust the voice volume or put it on mute, especially when you are entering your home in the wee hours of morning ensuring that your neighbours are not jolted out of their sleep by your talking lock.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Security: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>With the different access modes available in the Häfele Digital Locks, you can enable additional security by combining two access authentications; for example, in case of a new house-help who is yet to earn your trust, it could be unsafe to just give her a numeric password access as you could be in danger of her sharing this password with an ally. In such situations adding a face-recognition access as the second authentication can ensure that the person entering your home is not an unwanted stranger.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Visitor Image Capture: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Hafele’s RE-Bell Video Doorbell allows you to know who had visited your home even when you were not around to receive them. Every visitor’s image and video call can be viewed live if you are around to receive it and is also recorded for you to see in your mobile App later.  In fact, even if you are in a no network zone or your phone is on ﬂight mode and during that time if a guest visits you, the bell clicks and saves the image of the guest on the server which can then be viewed in the app later. You can now be rest assured that no guest coming to your house goes unnoticed.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Freeze: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>The Häfele Digital Locks have a narrow tolerance for incorrect entries of access by way of a wrong password or unfamiliar ﬁngerprint – 5 to 10 wrong entries result in a lock-freeze for up to 5 minutes. This feature reduces the possibilities of unwanted break-ins.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Intruder Capture:</h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>RE-Veal, the face recognition lock by Häfele, not only enables the highest level of security for your home but also tells you if someone tried to disrupt this security. Its Smart Intruder Capture technology records the face of any unregistered user who has tried to break into your home. The lock can pull out up to 10 such images in case you want to do an instant check.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Night Vision:</h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>A feature unique to Hafele’s RE-Veal Face Recognition Lock and Hafele’s RE-Bell Video door Bell, Smart Night Vision uses infrared technology to recognize a visitor’s face even in pitch darkness. This feature comes most handy when you or your guests are trying to access your home in the dense hours of the night when the overall lights in your building corridors are dimmed out or completely turned off.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Video Phone:  </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Hafele’s RE-AL and RE-Place digital locks can be paired to an existing Video Door Phone using a simple radio frequency unit. Once connected, your Video Door Phone and Digital Lock work seamlessly together as one gadget allowing you the beneﬁts of interacting with a visitor at your doorstep while also enabling you to unlock the door to him through the key button on your video door phone; another feather of convenience to manage your door security system from a remote location. And in case you don’t have a Video Door Phone, you could consider Hafele’s RE-Bell video doorbell which acts individually as a video door phone and cohesively as a complete security solution when clubbed with any of our digital locks!</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Storage:  </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Häfele’s RE-Bell Video Doorbell comes with the added advantage of recoding video footage and that to for 24 hours continuously! This Smart Storage feature allows you to keep a historic perspective on who entered your home; not just through time logs but through actual videos. The only requirement is that your App-enabled phone (which is paired to the lock) should have an SD card as the videos recorded automatically get saved in the storage memory of an SD card.</p>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Motion Sensor:  </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Häfele’s RE-Bell Video Doorbell comes with an intuitive smart motion sensor feature which when activated senses the presence of a person or any other moving object within 3 meters of the camera lens. Such a realization is then sent to you as a notiﬁcation on your App–enabled phone alerting you that someone or something was hovering around your main door; an ideal option to enable increased security for your home.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Password: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>The SMART PASSWORD technology allows you to hide your numeric password between random numbers. Let’s assume that your password is 12345678; the Smart Password function allows you to hide this password before, after or in between other random digits, for example: 9876123456784901. The password can be set up to 8 or 12 digits while the random cushioning numbers can be included up to 30 digits. The Smart Password function is helpful when you don’t want to reveal your password to a person standing next to you while you are accessing your home.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Voice: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Every Digital Lock from Häfele talks to you during the instances at which you engage with the lock. These interactive engagements could include step-by-step voice guidance by the lock while adding a user, setting a password or enabling a function/mode; or simple voice notiﬁcations from the lock about various operative modes or incorrect usage of the lock.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Etiquettes: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Since every digital lock from Häfele talks to you, it is pertinent to have the right etiquettes to adjust the volume of the lock voice. This technology allows you to seamlessly adjust the voice volume or put it on mute, especially when you are entering your home in the wee hours of morning ensuring that your neighbours are not jolted out of their sleep by your talking lock.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Security: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>With the different access modes available in the Häfele Digital Locks, you can enable additional security by combining two access authentications; for example, in case of a new house-help who is yet to earn your trust, it could be unsafe to just give her a numeric password access as you could be in danger of her sharing this password with an ally. In such situations adding a face-recognition access as the second authentication can ensure that the person entering your home is not an unwanted stranger.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Visitor Image Capture: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>Hafele’s RE-Bell Video Doorbell allows you to know who had visited your home even when you were not around to receive them. Every visitor’s image and video call can be viewed live if you are around to receive it and is also recorded for you to see in your mobile App later.  In fact, even if you are in a no network zone or your phone is on ﬂight mode and during that time if a guest visits you, the bell clicks and saves the image of the guest on the server which can then be viewed in the app later. You can now be rest assured that no guest coming to your house goes unnoticed.</p>
+                            </div>
+                        </div></div><div class="owl-item cloned" style="width: 1240px;"><div class="projectitem">
+                            <div class="tbaDeasIN">
+                                <div class="project-title-wrap">
+                                    <h4>Smart Freeze: </h4>
+                                    <a href="product-feature" class="project-btn">View All</a>
+                                </div>
+                                <p>The Häfele Digital Locks have a narrow tolerance for incorrect entries of access by way of a wrong password or unfamiliar ﬁngerprint – 5 to 10 wrong entries result in a lock-freeze for up to 5 minutes. This feature reduces the possibilities of unwanted break-ins.</p>
+                            </div>
+                        </div></div></div></div><div class="owl-nav"><div class="owl-prev"><svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"></path></svg></div><div class="owl-next"><svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"></path></svg></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
+    </section> -->
+
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="video" class="why-us">
+      <div class="container-fluid" data-aos="fade-up">
+        <div class="row text-center">
+          <h5>Installation Videos <img src="assets/img2/Line_about.svg"></h5>
+          <h1>Watch Videos</h1>
+          <p>Explore the world the smart security solution without compromising on your security.</p>
+        </div>
+   
+        <div class="row" id="row">
+          <div class="col-lg-12 aos-init aos-animate" id="video" data-aos="zoom-out" data-aos-delay="100">
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/IaCOQMtg8eQ/vidid?modestbranding=1&amp;rel=0&amp;showinfo=0" allow="fullscreen;">
+            </iframe>
+            <div class="firstsection">
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+
+
+     <!-- ======= trusted Section ======= -->
+    <section id="trusted" class="why-us">
+      <div class="container" data-aos="fade-up">
+        <div class="row text-center">
+          <h5>Trusted by best brands <img src="assets/img2/Line_about.svg"></h5>
+          <h1>Trusted By</h1>
+          <p>Our premium quality and reliability has been trusted by industry leaders.</p>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-4">
+            <div class="box">
+              <img src="assets/img2/airindia.png" alt="" data-aos="fade-right">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="box">
+              <img src="assets/img2/aiims.png" alt="" data-aos="zoom-in">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="box">
+              <img src="assets/img2/krishibhawan.png" alt="" data-aos="fade-left">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End trusted Section -->
+
+
+
+        <!-- ======= Householders Section ======= -->
+      <section id="Householders" class="why-us">
+        <div class="container" data-aos="fade-up">
+          <div class="row text-center">
+            <h5>SATISFIED HOUSEHOLDERS OF <img src="assets/img2/Line_about.svg"></h5>
+            <h1>Householders</h1>
+            <p>Our brand stands on the solid ground of trust which makes us everyone’s household product.</p>
+          </div>
+          <div class="row mt-4 mb-4 text-center d-flex align-items-center">
+            <div class="col-lg-6 row1">
+              <div class="box text-center">
+                <img width="55%" src="assets/img2/omaxe-realty.jpg.crdownload.jpeg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box">
+                <img width="32%" src="assets/img2/brigade-group-logo.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4 text-center d-flex align-items-center">
+            <div class="col-lg-6 row2">
+              <div class="box">
+                <img width="30%" src="assets/img2/supertech-logo-250x250.png" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="box">
+                <img width="55%" src="assets/img2/logo-black.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><!-- End Householders Section -->
+
+      
+      
+      
+      <section id="offer">
+        <div class="container-fluid">
+          <img width="100%" src="assets/img2/offer 1.png" alt="">
+        </div>
+      </section>
+
+
+
+  
+<!-- review section -->
+
+<section style="padding: 0;" id="customer_rev" class="why-us df_section ">
+  
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="row text-center ">
+      <div class="box1">
+        <h5 style="margin-top: 80px;">CUSTOMER REVIEWS FROM AMAZON<img width="5%"  style="width:5% !important;" src="assets/img2/Line_about.svg"></h5>
+        <h1>Customer Review</h1>
+<p class="text-center"><small>we are making our customers life simpler and better. Read what they mention about us</small></p>
+
+<div class="rv_bx67">
+
+
+        <div class="row mt-5 pt-5">
+
+<div class="col-md-4">
+        <div class="rev_box w-100" style="min-height:600px;background: url(assets/images/Group\ 21.png); background-repeat: no-repeat; background-size: 100%">
+
+       <figure class="rev_cus lst1 vg"><img src="assets/images/unsplash_DMVD9RkZIwQ.png"/></figure>
+
+       <div class="content_bx_rev cnt_rev1" >
+         <h3>Kunal        </h3>
+
+         <img class="qtr" src="assets/images/clarity_block-quote-line.png"/>
+
+
+         <p>It's an amazing product at this price. Completely satisfied with the product and telephonic support from the technician for installation. I hardly bugged the support center for the installation, but whenever I've called them they have provided the best support with the direct video call. </p>
+       </div>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="col-md-4">
+        <div class="rev_box w-100" style="min-height:600px;background: url(assets/images/Group\ 23.png); background-repeat: no-repeat; background-size: 100%">
+
+       <figure class="rev_cus mindvg"><img src="assets/images/unsplash_cYrTvqPMATY.png"/></figure>
+
+       <div class="content_bx_rev cnt_rev2">
+         <h3>Manoj
+        </h3>
+
+         <img class="qtr" src="assets/images/clarity_block-quote-line.png"/>
+
+
+         <p>First I would like to say kudos to the service provided with the product, I got immediate reply on every call and manager was very polite and helpful. Now the product, its just awesome, beautiful lock with so many options to operate.</p>
+       </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="rev_box w-100" style="min-height:600px;background: url(assets/images/Group\ 22.png); background-repeat: no-repeat; background-size: 100%">
+
+       <figure class="rev_cus vg lstrv"><img src="assets/images/unsplash_mCnCAUZfapY.png"/></figure>
+
+       <div class="content_bx_rev cnt_rev3">
+         <h3>Rajesh Yajaman
+        </h3>
+
+         <img class="qtr" src="assets/images/clarity_block-quote-line.png"/>
+
+
+         <p>Firstly a thank you to Team Lavna lock for their pre and post sales support. I got this locking after confirming it can be fit on a 30mm width door. It can but you need anothet 2mm or 4mm mdf board to one side. The mortise lock cavity is 18mm in width.
+        </p>
+       </div>
+
+        </div>
+      </div>
+
+
+    </div>
+      </div>
+
+    </div>
+    </div>
+
+</section>
+
+<!-- review_sec -->
+
+ 
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row">
+          <div class="col-lg-12">
+          <a href="index.html" class="logo me-auto"><img width="20%" src="assets/img2/Logo.jpg" alt=""></a>
+          </div>
+        </div>    
+      </div>
+      <div class="footer-mid">
+        <div class="row mt-4">
+          <div class="col-lg-5">
+            <div class="box">
+              <h4>Subscribe to our newsletter</h4>
+              <form action="">
+                <input type="text" required><button type="submit">Subscribe Us</button>
+              </form>
+             
+            </div>
+            <!-- <div class="box1">
+              <h6><a href="#">Terms & Conditions </a></h6>
+            </div> -->
+          </div>
+          <div class="col-lg-4">
+            <h4 class="link">Links</h4>
             <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
+              <li><a target="_blank" href="https://www.lavnalocks.com/about">About Us</a></li>
+              <li><a target="_blank" href="https://www.lavnalocks.com/shop">Products</a></li>
+              <li><a href="tel:+91-9971427608">Contact Us</a></li>
             </ul>
-        </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="link">Help</h4>
             <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
+              <li>FAQ</li>
             </ul>
+            <ul class="lastul">
+              <li><a href="https://www.facebook.com/lavnadigitallocks"><img src="assets/img2/facebook (2).svg"></a></li>
+              <li><a href="https://www.instagram.com/lavnalocks/"><img src="assets/img2/instagram (1).svg"></a></li>
+              <li><a href="https://youtu.be/Yst8KW2Vm4M"><img src="assets/img2/Vector (13).png"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
-    </div>
-</footer>
 
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved by <a href="https://www.flybunch.com/">Flybunch</a>.
+        </div>
+        <!-- <div class="credits text-center">
+          Designed by <a href="https://www.flybunch.com/">Flybunch</a>
+        </div> -->
+      </div>
+      <!-- <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div> -->
+    </div>
+  </footer>
   <!-- End Footer -->
 
-  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Vendor JS Files -->
-  <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/public/assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/public/assets/js/main.js"></script>
+  <script src="assets/js/main1.js"></script>
+  
 
+  <script>
+    $(".progress-bar").animate({
+    width: "90%"
+  }, 2500);
+
+  $("#progress-bar2").animate({
+      width: "80%"
+  }, 2500);
+
+  $("#progress-bar3").animate({
+      width: "70%"
+  }, 2500);
+  </script>
+
+  <script>
+     $(document).ready(function(){
+            var submitIcon = $('.searchbox-icon');
+            var inputBox = $('.searchbox-input');
+            var searchBox = $('.searchbox');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    searchBox.addClass('searchbox-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    searchBox.removeClass('searchbox-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });  
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            searchBox.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.searchbox-icon').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            function buttonUp(){
+                var inputVal = $('.searchbox-input').val();
+                inputVal = $.trim(inputVal).length;
+                if( inputVal !== 0){
+                    $('.searchbox-icon').css('display','none');
+                } else {
+                    $('.searchbox-input').val('');
+                    $('.searchbox-icon').css('display','block');
+                }
+            }
+  </script>
+
+<script>
+  var swiper = new Swiper("#prd_thumb", {
+    slidesPerView: 5.5,
+    spaceBetween: 20,
+
+    navigation: {
+        nextEl: "#prd_thumb .swiper-button-next",
+        prevEl: "#prd_thumb .swiper-button-prev",
+      },
+   
+  });
+
+
+
+$(document).ready(function(){
+
+$('.chn_img').click(function(){
+debugger;
+$('.chn_img').removeClass('active');
+$(this).addClass('active');
+var target = $(this).attr('data-target');
+var src = $(this).attr('data-img');
+
+$(target).attr('src',src);
+
+});
+
+});
+
+</script>
 
 </body>
 
