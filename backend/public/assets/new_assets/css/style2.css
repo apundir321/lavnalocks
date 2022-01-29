@@ -971,12 +971,14 @@ width: 100%;
 
 #rms87{
     cursor: pointer;
-    width: 10%;
-    top: 4%;
+    width: 8%;
+    top: 5%;
     position: absolute;
     right: 5%;
 }
-
+#rms87.hide{
+    display: none;
+}
 .sdkjk{ 
      cursor: pointer;
 

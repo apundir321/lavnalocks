@@ -419,15 +419,15 @@ function onPlayerStateChange(event) {
 $('.sdkjk').click(function(){
 
     $('.nb-form').addClass('active');
+    $('#rms87').removeClass('hide');
 
 });
 
 $('#rms87').click(function(){
-
+    $('#rms87').addClass('hide');
     $('.nb-form').removeClass('active');
 
 });
-
 
 
 var swiper = new Swiper("#reviewSlides", {

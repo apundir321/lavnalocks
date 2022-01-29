@@ -1,3 +1,4 @@
+
 #top_count .box{
     background-color: #003399;
     padding: 24px;
@@ -41,6 +42,7 @@
 #about{
     padding: 90px 0;
     background-color: #F4F4F5;
+    position: relative;
 }
 #about .box{
     background-color: #003399;
@@ -97,6 +99,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 }
 #counts h5{
     font-family: 'Source Sans Pro', sans-serif;
@@ -164,7 +167,9 @@
 
 
 
-
+#video{
+    position: relative;
+}
 #video h5{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -191,6 +196,7 @@
 
 #trusted{
     background-color: #F4F5F6;
+    position: relative;
 }
 #trusted h5{
     font-family: 'Source Sans Pro', sans-serif;
@@ -214,7 +220,9 @@
     margin-top: 14px;
 }
 
-
+#Householders{
+    position: relative;
+}
 #Householders h5{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -354,7 +362,9 @@
     transition: width .6s ease;
 }
   
-  
+#offer{
+    position: relative;
+}
 #offer img{
     width: 100%;
 }
@@ -437,14 +447,17 @@
 
 
 @media (max-width: 767px) {
-    /* #top_count{
-        display: none;
-    } */
+    #counts .row1{
+        border-right: none;
+    }
+    #counts .row2{
+        border-right: none;
+    }
     #top_count .box .box_sm{
         border-right: none;
     }
     #about .box1 h5{
-        margin-top: 90px;
+        margin-top: 60px;
     }
     #counts .progress{
         width: 290px;
@@ -470,10 +483,10 @@
         text-align: center;
         position: absolute;
         z-index: 1;
-        bottom: 0% !important;
-        min-width: 340px;
+        min-width: 100%;
+        max-width: 100%;
         height:200px;
-        top:5px;
+        bottom:-50% !important;
         left: 0 !important;
     }
     #hero #my_img2{
@@ -489,13 +502,14 @@
     }
     #hero {
         background: none;
+        position: relative;
     }
     #hero .box1 img{
         display: none;
     }
     #hero .box img{
         width: 100% !important;
-        margin-top: 60px;
+        margin-top: 10%;
     
     }
     #hero .box h2{
@@ -512,20 +526,25 @@
         height: 100vh;
         background: url("../../new_assets/img2/mobile header.png") top center;
         background-size: cover;
-        background-position: center
+        /* background-position: center */
         position: relative;
-        margin-top: 60px;
+        /* margin-top: 60px; */
       }
       #hero .btn-get-started{
           margin-top: 25px !important;
       }
       #about .box{
         background-color: #003399;
-        width: 330px;
-        margin-top: 45%;
-        height: 390px;
+        min-width: 250px;
+        /* margin-top: 50%; */
+        height: auto;
+        min-height: 300px;
         margin-left: 50px;
+        width: auto;
       }
+      #top_count{
+        margin-top: 38%;
+    }
 }
 
 #hero .box{
@@ -754,7 +773,7 @@ nav #my_img:hover{
 }
 
 #f_bottom{
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     background-color: #003399;
     color: #fff;
@@ -787,8 +806,8 @@ nav #my_img:hover{
     position: fixed;
     width: 50px;
     height: 50px;
-    bottom: 8%;
-    right: 5%;
+    bottom: 9%;
+    right: 4% !important;
     background-color: #25D366;
     color: #FFF;
     border-radius: 50px;
