@@ -508,7 +508,7 @@
         display: none;
     }
     #hero .box img{
-        width: 100% !important;
+        width: 90% !important;
         margin-top: 10%;
     
     }
@@ -552,6 +552,7 @@
 }
 #hero .box img{
     width: 80%;
+    margin-left: 4%;
 }
 #hero .box h2{
     color: #000;
@@ -726,6 +727,28 @@ nav #my_img:hover{
     right: 11.5%;
 }
 
+@media (min-width: 450px) and (max-width: 767px) {
+    #hero{
+        width: 60%;
+        margin: 0 auto;
+        height: 100vh;
+        background: url("../../new_assets/img2/mobile header.png") top center;
+        background-size: cover;
+        position: relative;
+    }
+    #hero .box img{
+        margin-top: -20%;
+    }
+    #hero .box h2{
+        margin-top: -7%;
+    }
+    #counts ul li{
+        line-height: 40px;
+    }
+    #counts #line_wcu{
+        display: none;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 992px) {
     #hero{
@@ -824,3 +847,24 @@ nav #my_img:hover{
     color: #fff;
     box-shadow: 3px 3px 6px #999;
   }
+
+
+  .swiper_wrap{padding:0px 50px;height:100%;width: 100%;position: relative;display: block;text-align: left;}
+.swiper-button-next{
+margin-top: 0px;
+position: absolute;
+top: 50%;
+right: -10px;
+width: 45px;
+height: 45px;
+transform: translateY(-50%);
+}
+.swiper-button-prev{
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 45px;
+  height: 45px;
+  transform: translateY(-50%);
+  margin-top: 0px;
+}
