@@ -1,28 +1,31 @@
 {{>shop_header}}<br><br><br><br><br>
 
 <style>
-  
-.links{
-  text-align: center;
-}
-.links ul li{
-  list-style: none;
-  line-height: 33px;
-}
-.links ul li a{
-  text-decoration: none;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 16px;
-}
-.links h4{
-  font-size: 23px;
-  margin-left: 40px;
-}
-.links span{
-  font-size: 17px;
-  font-weight: 600;
-}
+  .links {
+    text-align: center;
+  }
+
+  .links ul li {
+    list-style: none;
+    line-height: 33px;
+  }
+
+  .links ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .links h4 {
+    font-size: 23px;
+    margin-left: 40px;
+  }
+
+  .links span {
+    font-size: 17px;
+    font-weight: 600;
+  }
 </style>
 <style>
   * {
@@ -60,7 +63,7 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.30)!important;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30) !important;
   }
 
   /* Position the "next button" to the right */
@@ -75,10 +78,10 @@
     background-color: #f1f1f1;
     color: black;
   }
-  .btn-dark:hover{
+
+  .btn-dark:hover {
     color: #fff;
   }
-
 </style>
 
 <!-- ****** Quick View Modal Area Start ****** -->
@@ -103,7 +106,7 @@
                   {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
                   {{>img_la24_black_wifi}}
                   {{/ifCond}}
-    
+
                   {{!-- new entry --}}
                   {{#ifCond product.features "features-L-A28-GOLD"}}
                   {{>img_la28_gold_bluetooth}}
@@ -170,109 +173,119 @@
                   <br>
 
 
-               <div class="col-12">
+                  <div class="col-12">
                     {{#ifCond product.features "features-L-A24-GOLD"}}
                     <div class="form-group">
-                     <label>Select Variants:-</label>
-                     <div class="mt-2 mb-2 pt-1 pb-1"> 
-                       <a href="/products/L-A24-Black(Bluetooth)" style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);padding:10px 10px 10px 10px; border-radius:10px; height:100px;">
-                     
-                      <div style="width: 30px;
+                      <label>Select Variants:-</label>
+                      <div class="mt-2 mb-2 pt-1 pb-1">
+                        <a href="/products/L-A24-Black(Bluetooth)"
+                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);padding:10px 10px 10px 10px; border-radius:10px; height:100px;">
+
+                          <div style="width: 30px;
     height: 40px;
     border-radius: 10px 0 0 10px;
     background: rgb(17, 17, 17);
     float: left;
     box-shadow: 0 0 20px 0 #0000001f;
     margin-top: -8px;
-    display: inline-block;"></div>  L-A24-Black(Bluetooth)</a></div>  
-                      
-                     </div>
-                  {{/ifCond}}
+    display: inline-block;"></div> L-A24-Black(Bluetooth)
+                        </a>
+                      </div>
+
+                    </div>
+                    {{/ifCond}}
 
 
-            {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
-                   <div class="form-group">
-                     <label>Select Variants:-</label>
-                     <div class="mt-2 mb-2 pt-1 pb-1"> <a href="/products/L-A24-GOLD" style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); padding:10px 10px 10px 10px; border-radius:0 10px 10px 0; height:100px; ">
-                     
-                      <span style="width: 30px;
+                    {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
+                    <div class="form-group">
+                      <label>Select Variants:-</label>
+                      <div class="mt-2 mb-2 pt-1 pb-1"> <a href="/products/L-A24-GOLD"
+                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); padding:10px 10px 10px 10px; border-radius:0 10px 10px 0; height:100px; ">
+
+                          <span style="width: 30px;
     height: 40px;
     border-radius: 10px 0 0 10px;
     background: rgb(255, 202, 86);
     float: left;
     box-shadow: 0 0 20px 0 #0000001f;
     margin-top: -8px;
-    display: inline-block;"></span> <span>L-A24-GOLD</span> </a></div>  
-                      
-                     </div>
-                  {{/ifCond}}
+    display: inline-block;"></span> <span>L-A24-GOLD</span> </a></div>
+
+                    </div>
+                    {{/ifCond}}
                   </div>
 
 
-                    <div class="col-12">
+                  <div class="col-12">
                     {{#ifCond product.features "features-L-A28-GOLD"}}
                     <div class="form-group">
-                     <label>Select Variants:-</label>
-                     <div class="mt-2 mb-2 pt-1 pb-1"> 
-                       <a href="/products/L-A28-Black(Bluetooth)" style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);padding:10px 10px 10px 10px; border-radius:10px; height:100px;">
-                     
-                      <div style="width: 30px;
+                      <label>Select Variants:-</label>
+                      <div class="mt-2 mb-2 pt-1 pb-1">
+                        <a href="/products/L-A28-Black(Bluetooth)"
+                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);padding:10px 10px 10px 10px; border-radius:10px; height:100px;">
+
+                          <div style="width: 30px;
     height: 40px;
     border-radius: 10px 0 0 10px;
     background: rgb(17, 17, 17);
     float: left;
     box-shadow: 0 0 20px 0 #0000001f;
     margin-top: -8px;
-    display: inline-block;"></div>  L-A28-Black(Bluetooth)</a></div>  
-                      
-                     </div>
-                  {{/ifCond}}
+    display: inline-block;"></div> L-A28-Black(Bluetooth)
+                        </a>
+                      </div>
+
+                    </div>
+                    {{/ifCond}}
 
 
 
 
- {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
-                   <div class="form-group">
-                     <label>Select Variants:-</label>
-                     <div class="mt-2 mb-2 pt-1 pb-1"> <a href="/products/L-A28-GOLD" style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); padding:10px 10px 10px 10px; border-radius:0 10px 10px 0; height:100px; ">
-                     
-                      <span style="width: 30px;
+                    {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
+                    <div class="form-group">
+                      <label>Select Variants:-</label>
+                      <div class="mt-2 mb-2 pt-1 pb-1"> <a href="/products/L-A28-GOLD"
+                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); padding:10px 10px 10px 10px; border-radius:0 10px 10px 0; height:100px; ">
+
+                          <span style="width: 30px;
     height: 40px;
     border-radius: 10px 0 0 10px;
     background: rgb(255, 202, 86);
     float: left;
     box-shadow: 0 0 20px 0 #0000001f;
     margin-top: -8px;
-    display: inline-block;"></span> <span>L-A28-GOLD</span> </a></div>  
-                      
-                     </div>
-                  {{/ifCond}}
+    display: inline-block;"></span> <span>L-A28-GOLD</span> </a></div>
+
+                    </div>
+                    {{/ifCond}}
                   </div>
 
-         
+                    {{#ifCond product.features "features-L-H300(Encoder)"}}
+
+                  <p class="is-available text-center" style="background-color: #d8191d;
+    width: 8em;
+    color: var(--ivory);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0.3em;
+    text-transform: uppercase;
+    margin-left:10px;">Out of Stock</p>
+
+
+                  {{else}}
+
+
+
 
 
                   {{#ifCond product.features "features-L-A24(WI-FI)"}}
 
 
 
-               
 
 
-                   <p class="is-available text-center" style="background-color: #d8191d;
-    width: 8em;
-    color: var(--ivory);
-    font-weight: bold;
-    font-size: 12px;
-    padding: 0.3em;
-    text-transform: uppercase;
-    margin-left:10px;">Out of Stock</p>
-    
 
-{{else}}
-
-{{#ifCond product.features "features-L-A5"}}
-                   <p class="is-available text-center" style="background-color: #d8191d;
+                  <p class="is-available text-center" style="background-color: #d8191d;
     width: 8em;
     color: var(--ivory);
     font-weight: bold;
@@ -282,20 +295,33 @@
     margin-left:10px;">Out of Stock</p>
 
 
-    {{else}}
+                  {{else}}
 
-{{!-- <div class="row" id="color">
-  <div class="col-lg-6">
-  Avialable Colors:-   <a href="" class="btn">Black</a>
-  </div>
-  <div class="col-lg-6">
-    <a href="" class="btn">Golden</a>
-  </div>
-</div> --}}
+                  {{#ifCond product.features "features-L-A5"}}
+                  <p class="is-available text-center" style="background-color: #d8191d;
+    width: 8em;
+    color: var(--ivory);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0.3em;
+    text-transform: uppercase;
+    margin-left:10px;">Out of Stock</p>
 
-<div class="row text-center">
-  <div class="col-lg-6">
-           <p class="is-available text-center" style="background-color: var(--green);
+
+                  {{else}}
+
+                  {{!-- <div class="row" id="color">
+                    <div class="col-lg-6">
+                      Avialable Colors:- <a href="" class="btn">Black</a>
+                    </div>
+                    <div class="col-lg-6">
+                      <a href="" class="btn">Golden</a>
+                    </div>
+                  </div> --}}
+
+                  <div class="row text-center">
+                    <div class="col-lg-6">
+                      <p class="is-available text-center" style="background-color: var(--green);
     width: 100%;
     color: var(--ivory);
     font-weight: bold;
@@ -305,30 +331,35 @@
     padding: 10px 20px 10px 20px;
     text-transform: uppercase;
  ">In stock</p>
-  </div>
-  <div class="col-lg-6">
-        <button type="button" class="btn btn-primary" style="padding:8px 20px 8px 20px; width:100%;" onclick="addToCart();">Add to
-          Shopping cart</button>
-  </div>
-</div>
-<div class="row text-center mt-4">
-  <div class="col-lg-12">
-      <div>
-        <button type="button" class="btn btn-dark" style="padding: 9px 20px 9px 20px; font-weight:600; width:100%; background: green;" onclick="checkout();">
-          Buy now</button>
-      </div>
-  </div>
-</div>
-                  
-                 
-{{/ifCond}}
-
-    
-{{/ifCond}}
+                    </div>
+                    <div class="col-lg-6">
+                      <button type="button" class="btn btn-primary" style="padding:8px 20px 8px 20px; width:100%;"
+                        onclick="addToCart();">Add to
+                        Shopping cart</button>
+                    </div>
+                  </div>
+                  <div class="row text-center mt-4">
+                    <div class="col-lg-12">
+                      <div>
+                        <button type="button" class="btn btn-dark"
+                          style="padding: 9px 20px 9px 20px; font-weight:600; width:100%; background: green;"
+                          onclick="checkout();">
+                          Buy now</button>
+                      </div>
+                    </div>
+                  </div>
 
 
+                  {{/ifCond}}
 
-  
+
+                  {{/ifCond}}
+
+                  {{/ifCond}}
+
+
+
+
                 </div>
                 {{!-- {{#ifCond product.features "features-L-A24(WI-FI)"}}
                 {{>features_la4wifi}}
@@ -338,30 +369,30 @@
                 {{>features_la4bluetooth}}
                 {{/ifCond}} --}}
 
-                 {{!-- new entry --}}
-                  {{#ifCond product.features "features-L-A28-GOLD"}}
-                  {{>features_la28_gold}}
-                  {{/ifCond}}
+                {{!-- new entry --}}
+                {{#ifCond product.features "features-L-A28-GOLD"}}
+                {{>features_la28_gold}}
+                {{/ifCond}}
 
-                  {{#ifCond product.features "features-L-A24-GOLD"}}
-                  {{>features_la24_gold}}
-                  {{/ifCond}}
-                  {{!-- new entry --}}
-                 {{#ifCond product.features "features-L-A24(WI-FI)"}}
-                   {{>features_la4wifi}}
-                  {{/ifCond}}
+                {{#ifCond product.features "features-L-A24-GOLD"}}
+                {{>features_la24_gold}}
+                {{/ifCond}}
+                {{!-- new entry --}}
+                {{#ifCond product.features "features-L-A24(WI-FI)"}}
+                {{>features_la4wifi}}
+                {{/ifCond}}
 
-                  {{#ifCond product.features "features-L-A24(Bluetooth)"}}
-                  {{>features_la4bluetooth}}
-                  {{/ifCond}}
+                {{#ifCond product.features "features-L-A24(Bluetooth)"}}
+                {{>features_la4bluetooth}}
+                {{/ifCond}}
 
-                  {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
-                  {{>features_la4wifi}}
-                  {{/ifCond}}
+                {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
+                {{>features_la4wifi}}
+                {{/ifCond}}
 
-                  {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
-                  {{>features_la4bluetooth}}
-                  {{/ifCond}}
+                {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
+                {{>features_la4bluetooth}}
+                {{/ifCond}}
 
 
                 {{#ifCond product.features "features-L-A28(Bluetooth)"}}
@@ -409,11 +440,11 @@
                 {{>features_h300_encoder}}
                 {{/ifCond}}
 
-                 {{#ifCond product.features "features-L-E50"}}
-                  {{>features_E50}}
-                  {{/ifCond}}
+                {{#ifCond product.features "features-L-E50"}}
+                {{>features_E50}}
+                {{/ifCond}}
 
-                
+
 
               </div>
             </div>
@@ -430,48 +461,55 @@
 
 
 <!-- ****** Quick View Modal Area End ****** -->
-  <footer style="width: 100% !important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
+<footer style="width: 100% !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 text-left align-left">
+        <div class="footer-content img-responsive">
+          <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
 
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
-            <ul>
-               <li><a href="index.html">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
-            </ul>
-        </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
-            <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
-            </ul>
+          <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
+          <ul class="socials">
+            <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;"
+                  class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;"
+                  class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;"
+                  class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;"
+                  class="fa fa-whatsapp"></i></a></li>
+          </ul>
+          <p style="color:white;">Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a>
+          </p>
         </div>
       </div>
+      <div class="col-lg-4 links">
+        <h4>Useful links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li><a href="/faq">Faq's</a></li>
+          <li><a href="/blog">Blogs</a></li>
+          <li><a href="/privacypolicy">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 links">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
+          <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
+          <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
+        </ul>
+      </div>
     </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
-    </div>
+  </div>
+
+  <div class="footer-bottom img-responsive"
+    style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
+    <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">
+      &copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
+  </div>
 </footer>
 
 
