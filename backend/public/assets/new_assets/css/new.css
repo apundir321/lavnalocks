@@ -67,7 +67,6 @@
     font-weight: bold;
     font-size: 36px;
     color: #003399;
-    /* text-shadow: 1px 1px #003399; */
 }
 #about .box1 p{
     font-family: 'Source Sans Pro', sans-serif;
@@ -81,21 +80,21 @@
     background-color: #003399;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 34px;
+    padding-right: 34px;
     color: #fff;
     border-radius: 25px;
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 16px;
 }
 #about .box1 .btn:hover{
-    background-color: #6685C2;
+    background-color: #011c52;
 }
 
 
 #counts{
-    background-image: url('../../new_assets/img2/choose_lavna.png');
+    background-image: url('/assets/new_assets/img2/choose_lavna.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -182,12 +181,11 @@
     font-weight: bold;
     font-size: 42px;
     color: #003399;
-    /* text-shadow: 1px 1px #003399; */
 }
 #video p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: #707784;
     margin-top: 14px;
 }
@@ -210,12 +208,11 @@
     font-weight: bold;
     font-size: 42px;
     color: #003399;
-    /* text-shadow: 1px 1px #003399; */
 }
 #trusted p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: #707784;
     margin-top: 14px;
 }
@@ -235,12 +232,11 @@
     font-weight: bold;
     font-size: 42px;
     color: #003399;
-    /* text-shadow: 1px 1px #003399; */
 }
 #Householders p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: #707784;
     margin-top: 14px;
 }
@@ -282,7 +278,6 @@
     min-width:50px;
     width:0;
     height:40px;
-    /* float:right; */
     overflow:hidden;
     -webkit-transition: width 0.3s;
     -moz-transition: width 0.3s;
@@ -391,14 +386,13 @@
 }
 #footer .footer-mid button{
     border: none;
-    background-color: #003399;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 28px;
-    padding-right: 28px;
+    background-color: rgb(0, 51, 153);
+    padding: 10px 32px;
     border-radius: 22px;
-    color: #fff;
+    color: rgb(255, 255, 255);
     margin-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
 }
 .footer-mid ul li {
     list-style: none;
@@ -434,11 +428,12 @@
 .prod-row .btn{
     padding-top: 9px;
     padding-bottom: 9px;
-    padding-left: 28px;
-    padding-right:28px;
+    padding-left: 34px;
+    padding-right:34px;
     border: 2px solid #003399;
     border-radius: 24px;
     color: #003399;
+    font-weight: 500;
 }
 
 
@@ -524,11 +519,9 @@
     #hero {
         width: 100%;
         height: 100vh;
-        background: url("../../new_assets/img2/mobile header.png") top center;
+        background: url("/assets/new_assets/img2/mobile header.png") top center;
         background-size: cover;
-        /* background-position: center */
         position: relative;
-        /* margin-top: 60px; */
       }
       #hero .btn-get-started{
           margin-top: 25px !important;
@@ -536,7 +529,6 @@
       #about .box{
         background-color: #003399;
         min-width: 250px;
-        /* margin-top: 50%; */
         height: auto;
         min-height: 300px;
         margin-left: 50px;
@@ -544,6 +536,20 @@
       }
       #top_count{
         margin-top: 38%;
+    }
+    .badge{
+        position: absolute !important;
+        left: 24px;
+        top: -5px !important;
+        background: red !important;
+        z-index: 0 !important;
+    }
+    nav #my_img{
+        z-index: 1;
+    }
+    #navbar .fa-user{
+        margin-right: -58%;
+        margin-left: 0;
     }
 }
 
@@ -571,7 +577,7 @@
 
 
 
- .button {
+ .button_unique {
     position: relative;
     border: 2px solid #FFF;
     overflow: hidden;
@@ -594,7 +600,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.button span {
+.button_unique span {
     -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
     -o-transition: 0.6s;
@@ -605,11 +611,10 @@
     transition-delay: 0.2s;
 }
 
-.button:before,
-.button:after {
+.button_unique:before,
+.button_unique:after {
     content: '';
     position: absolute;
-    /* top: 0.67em; */
     left: 0%;
     width: 100%;
     text-align: center;
@@ -622,7 +627,7 @@
 
 /* :before */
 
-.button:before {
+.button_unique:before {
     content: attr(data-hover);
     -webkit-transform: translate(-150%,0);
     -moz-transform: translate(-150%,0);
@@ -633,7 +638,7 @@
 
 /* :after */
 
-.button:after {
+.button_unique:after {
     content: attr(data-active);
     -webkit-transform: translate(150%,0);
     -moz-transform: translate(150%,0);
@@ -644,8 +649,8 @@
 
 /* Span on :hover and :active */
 
-.button:hover span,
-.button:active span {
+.button_unique:hover span,
+.button_unique:active span {
     opacity: 0;
     -webkit-transform: scale(0.3);
     -moz-transform: scale(0.3);
@@ -654,13 +659,9 @@
     transform: scale(0.2);
 }
 
-/*  
-    We show :before pseudo-element on :hover 
-    and :after pseudo-element on :active 
-*/
 
-.button:hover:before,
-.button:active:after {
+.button_unique:hover:before,
+.button_unique:active:after {
     opacity: 1;
     -webkit-transform: translate(0,0);
     -moz-transform: translate(0,0);
@@ -678,7 +679,7 @@
   We hide :before pseudo-element on :active
 */
 
-.button:active:before {
+.button_unique:active:before {
     -webkit-transform: translate(-150%,0);
     -moz-transform: translate(-150%,0);
     -ms-transform: translate(-150%,0);
@@ -689,7 +690,7 @@
     -o-transition-delay: 0s;
     transition-delay: 0s;
 }
-.button span img{
+.button_unique span img{
     width: 17%;
     margin-left: -12px;
     margin-top: -3px;
@@ -701,7 +702,7 @@ nav #my_img{
 }
 
 nav #my_img:hover{
-    content: url('../../new_assets/img2/cart-2.svg');
+    content: url('/assets/new_assets/img2/cart-2.svg');
 }
 #hero .box1 img{
     float: left !important;
@@ -732,7 +733,7 @@ nav #my_img:hover{
         width: 60%;
         margin: 0 auto;
         height: 100vh;
-        background: url("../../new_assets/img2/mobile header.png") top center;
+        background: url("/assets/new_assets/img2/mobile header.png") top center;
         background-size: cover;
         position: relative;
     }
@@ -796,7 +797,6 @@ nav #my_img:hover{
 }
 
 #f_bottom{
-    /* padding: 0; */
     margin: 0;
     background-color: #003399;
     color: #fff;
@@ -817,12 +817,6 @@ nav #my_img:hover{
     }
 }
 
-/* @media (min-width: 1200px) {
-    #counts #line_wcu{
-        width: 30% !important;
-        right: 16.5%;
-    }
-} */
 
 .whats-app {
 
@@ -836,7 +830,6 @@ nav #my_img:hover{
     border-radius: 50px;
     text-align: center;
     font-size: 35px;
-    /* box-shadow: 2px 2px 3px #999; */
     z-index: 100000;
     text-decoration: none;
     border: none;
@@ -849,22 +842,157 @@ nav #my_img:hover{
   }
 
 
-  .swiper_wrap{padding:0px 50px;height:100%;width: 100%;position: relative;display: block;text-align: left;}
-.swiper-button-next{
-margin-top: 0px;
-position: absolute;
-top: 50%;
-right: -10px;
-width: 45px;
-height: 45px;
-transform: translateY(-50%);
+
+.modal-header{
+    justify-content: center;
+    border-bottom: none;
 }
-.swiper-button-prev{
-  position: absolute;
-  top: 50%;
-  left: -10px;
-  width: 45px;
-  height: 45px;
-  transform: translateY(-50%);
-  margin-top: 0px;
+.modal-footer{
+    border-top: none;
+    justify-content: center;
+}
+.modal-header button{
+    position: absolute;
+    right: -16px;
+    top: -16px;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    font-size: 22px;
+    border: none;
+    background: #003399;
+    color: #fff;
+    font-weight: 600;
+    justify-content: center;
+    padding-top: -5px !important;
+}
+.modal-title{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #003399;
+}
+.modal form .form-control {  
+    color: #000 !important;
+    background-color: #fff;
+    border: 1px solid #003399 !important;
+    border-radius: 50px !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* ================== Badge Overlay CSS ========================*/
+.badge-overlay {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 100;
+    -webkit-transition: width 1s ease, height 1s ease;
+    -moz-transition: width 1s ease, height 1s ease;
+    -o-transition: width 1s ease, height 1s ease;
+    transition: width 0.4s ease, height 0.4s ease
+}
+
+.badge1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    padding: 11px 35px;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    line-height: normal;
+    text-transform: uppercase;
+    background: #003399;
+}
+.badge {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+    border-radius: 50px;
+    line-height: normal;
+    text-transform: uppercase;
+    align-items: center;
+    background: red;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -4px;
+    right: 1px;
+    z-index: -1;
+}
+
+/* .badge::before, .badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    margin: 0 -1px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    min-width: 55px
+} */
+
+.badge::before {
+    right: 100%
+}
+
+.badge::after {
+    left: 100%
+}
+
+/* ================== Badge Position CSS ========================*/
+.top-left {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    -ms-transform: translateX(-30%) translateY(0%) rotate(-45deg);
+    -webkit-transform: translateX(-30%) translateY(0%) rotate(-45deg);
+    transform: translateX(-30%) translateY(0%) rotate(-45deg);
+    -ms-transform-origin: top right;
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+}
+.modal form label{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.modal form::placeholder{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.modal .btn_getcode{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #003399;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 50px;
+    margin-right: -8px;
+}
+.modal .box{
+    padding-right: 8%;
+    padding-left: 8%;
+}
+.modal .moodal-footer{
+    justify-content: center;
+}
+.modal h6{
+    font-size: 10px;
+}
+
+
+.cart h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: #003399;
 }

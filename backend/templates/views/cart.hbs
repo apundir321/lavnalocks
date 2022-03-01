@@ -1,39 +1,18 @@
-{{>header}}<br><br><br><br><br>
+{{>header}}
 
 <style>
-  
-.links{
-  text-align: center;
+  .btn:hover {
+    color: #d6dce1;
 }
-.links ul li{
-  list-style: none;
-  line-height: 33px;
-}
-.links ul li a{
-  text-decoration: none;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 16px;
-}
-.links h4{
-  font-size: 23px;
-  margin-left: 40px;
-}
-.links span{
-  font-size: 17px;
-  font-weight: 600;
-}
+
 </style>
-
-
-    <div class="container cart">
-  {{!-- {{#if (cart != null && !cart.paid ) }} --}}
+{{!-- <div class="container cart">
   {{#if cart}}
   <div class="row">
     <div class="col-md-11 col-sm-12 m-auto table-responsive">
       <table class="table text-center">
         <thead>
-          <tr >
+          <tr>
             <th>Product</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
@@ -48,54 +27,41 @@
           {{#each products}}
           <tr class="my-auto">
             <td>
-              <a
-              href="/products/{{this.title}}"
-            >
-              <img src="{{this.image}}" class="img-small image-fluid" alt="image thumbnail" style="width: 200px;
+              <a href="/products/{{this.title}}">
+                <img src="{{this.image}}" class="img-small image-fluid" alt="image thumbnail" style="width: 200px;
     margin-left: -50px;" />
               </a>
             </td>
             <td>
               <div class="float-left mb-3">
-                <a class="title-link"
-                href="/products/{{this.title}}"
-              >
-                <h6 class="text-left" style="
+                <a class="title-link" href="/products/{{this.title}}">
+                  <h6 class="text-left" style="
     font-size: 20px;
     margin-top: 2px;
-">{{ this.title}}</h6> 
-                {{!-- <p class="text-left">Product No: {{ this.productCode}}</p> --}}
+">{{ this.title}}</h6>
               </div>
-              
+
               </a>
             </td>
             <td class="text-center">
-              <a href="/add-to-cart/{{ this.title}}"
-                ><i class="fa fa-plus-square" aria-hidden="true" style="
-    font-size: x-large;"></i
-              > </a>
+              <a href="/add-to-cart/{{ this.title}}"><i class="fa fa-plus-square" aria-hidden="true" style="
+    font-size: x-large;"></i> </a>
             </td>
             <td class="text-center">
               <p class="qty-display pt-1" style="font-size: 16px;">
-              {{ this.qty}}
-            </p>
-          </td>
-            <td class="text-center" >
-              <a href="/reduce/{{ this.title}}"
-                ><i class="fa fa-minus-square" aria-hidden="true" style="
-    font-size: x-large;"></i
-              ></a>
+                {{ this.qty}}
+              </p>
+            </td>
+            <td class="text-center">
+              <a href="/reduce/{{ this.title}}"><i class="fa fa-minus-square" aria-hidden="true" style="
+    font-size: x-large;"></i></a>
             </td>
             <td style="font-size: 16px;">{{this.sellingPrice }}</td>
             <td style="font-size: 16px;">{{ this.totalPrice}}</td>
             <td>
-              <a
-                href="/removeAll/{{ this.title}}"
-                class="btn btn-danger btn-sm button-style-danger" style="
+              <a href="/removeAll/{{ this.title}}" class="btn btn-danger btn-sm button-style-danger" style="
     font-size: 15px;
-    margin-top: -4px;"
-                >Remove</a
-              >
+    margin-top: -4px;">Remove</a>
             </td>
           </tr>
           {{/each}}
@@ -103,107 +69,615 @@
       </table>
     </div>
   </div>
-<hr>
+  <hr>
   <div class="row mt-4 mr-auto">
     <div class="col-md-11 col-sm-12 m-auto">
-      {{!-- <strong>Total: <i class="fa fa-rupee"></i>{{cart.totalCost}} </strong> --}}
     </div>
   </div>
   <div class="row mt-2 mr-auto">
     <div class="col-md-11 col-sm-12 m-auto">
-      
+
       <span style=" float:left;
 		 padding-top:10px;
 		 margin-right:10px;"> Total price: <i class="fa fa-rupee"></i><b>{{cart.totalCost}}</b></span>
-    <a href="/checkout" class="btn btn-success pull-right">Checkout</a>
+      <a href="/checkout" class="btn btn-success pull-right">Checkout</a>
     </div>
   </div>
   {{else}}
   <div class="row text-center">
     <div class="col-md-9 col-sm-9 m-auto">
-      <h2>No items in the cart</h2>
+      <h2>No items in the cart <img id="my_img" width="4%" style="margin-top: -5px;" src="../../public/assets/new_assets/img2/cart-1.svg" alt=""></h2>
     </div>
   </div>
 
- {{/if}}
-</div>
-   <br><br><br><br>
+  {{/if}}
+</div> --}}
 
-  
-  
-        <!-- ****** Quick View Modal Area End ****** -->
-  <footer style="width: 100% !important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
 
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
+
+  <section id="cart-section">
+      <div class="container">
+        {{#if cart}}
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="row cart">
+              <div class="box-your-cart">
+                <h3>Your Cart</h3>
+              </div>
             </div>
-        </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
-            </ul>
-        </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
-            <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
-            </ul>
+            <div class="slide-cart">
+              {{#each products}}
+
+              <div class="row set-bottom mt-4">
+                <div class="col-lg-4 col-4">
+                  <div class="box-img">
+                    <a href="/products/{{this.title}}">
+                      <img class="img-small image-fluid" src="{{this.image}}" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-8">
+                  <div class="product-name">
+                    <h3> <a class="title-link" href="/products/{{this.title}}"> <strong>{{ this.title}}</strong></a> </h3>
+                    <h3 class="set-margin"><strong><span>M.R.P.</span> <del><span>{{this.sellingPrice }}</span></del> <span>{{this.totalPrice }}</span></strong> </h3>
+                    <h3 class="quantity">Quantity : <span style="float: right;">
+                      
+                      <a href="/add-to-cart/{{ this.title}}"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                      
+                        {{ this.qty}}
+
+                      <a href="/reduce/{{ this.title}}"><i class="fa fa-minus" aria-hidden="true"></i></a>
+                      </span>
+                    </h3>
+                    
+                    {{!-- <h3 class="quantity">Color: <span style="float: right;">Black</span></h3> --}}
+                  </div>
+                  <div class="row mt-4">
+                    {{!-- <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Edit</button>
+                      </div>
+                    </div> --}}
+                    <div class="col-4">
+                      <div>
+                        <a class="btn buy edit" href="/removeAll/{{ this.title}}">Remove</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {{/each}}
+
+              {{!-- <div class="row set-bottom mt-3">
+                <div class="col-lg-3 col-3">
+                  <div class="box-img">
+                    <img src="../../public/assets/new_assets/images/LA24_1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-8 col-8">
+                  <div class="product-name">
+                    <h3 class="set-size"><strong>L-A24-Black(Bluetooth)</strong> </h3>
+                    <h3 class="set-margin set-size"><strong><span>M.R.P.</span> <del><span>14200</span></del> <span>9499</span></strong> </h3>
+                    <h3 class="quantity">Quantity : <span style="float: right;">2</span></h3>
+                    
+                    <h3 class="quantity">Color: <span style="float: right;">Black</span></h3>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Edit</button>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row set-bottom mt-3">
+                <div class="col-lg-3 col-3">
+                  <div class="box-img">
+                    <img src="../../public/assets/new_assets/images/LA24_1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-8 col-8">
+                  <div class="product-name">
+                    <h3><strong>L-A24-Black(Bluetooth)</strong> </h3>
+                    <h3 class="set-margin"><strong><span>M.R.P.</span> <del><span>14200</span></del> <span>9499</span></strong> </h3>
+                    <h3 class="quantity">Quantity : <span style="float: right;">3</span></h3>
+                    
+                    <h3 class="quantity">Color: <span style="float: right;">Black</span></h3>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Edit</button>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row set-bottom mt-3">
+                <div class="col-lg-3 col-3">
+                  <div class="box-img">
+                    <img src="../../public/assets/new_assets/images/LA24_1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-8 col-8">
+                  <div class="product-name">
+                    <h3><strong>L-A24-Black(Bluetooth)</strong> </h3>
+                    <h3 class="set-margin"><strong><span>M.R.P.</span> <del><span>14200</span></del> <span>9499</span></strong> </h3>
+                    <h3 class="quantity">Quantity : <span style="float: right;">2</span></h3>
+                    
+                    <h3 class="quantity">Color: <span style="float: right;">Black</span></h3>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Edit</button>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div>
+                        <button class="btn buy edit">Remove</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> --}}
+            </div>
+          </div>
+
+          <div class="col-lg-4 summary">
+            <div class="set-checkout">
+              <p class="double">Summary</p>
+              {{!-- <div class="row">
+                <div class="col-6">
+                  <p class="subtotal">Subtotal</p>
+                </div>
+                <div style="text-align: end;" class="col-6">
+                  <p class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>{{cart.totalCost}}</p>
+                </div>
+              </div> --}}
+
+              {{!-- <hr>
+
+              <div class="row">
+                <div class="col-6">
+                  <p class="subtotal">Shipping Charge</p>
+                </div>
+                <div style="text-align: end;" class="col-6">
+                  <p class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>0</p>
+                </div>
+              </div> --}}
+
+              {{!-- <hr>
+
+              <div class="row">
+                <div class="col-6">
+                  <p style="color:darkgray" class="subtotal">Tax</p>
+                </div>
+                <div style="text-align: end;" class="col-6">
+                  <p style="color:darkgray" class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>450</p>
+                </div>
+              </div> --}}
+
+              <hr>
+
+              <div class="row">
+                <div class="col-6">
+                  <p class="subtotal double1">Total</p>
+                </div>
+                <div style="text-align: end;" class="col-6">
+                  <p class="double1"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>{{cart.totalCost}}</p>
+                </div>
+              </div>
+              <div class="checkout-btn-set">
+                <a class="btn buy full-btn" href="/checkout">Place Order</a>
+              </div>
+            </div>
+            
+          </div>
+            {{else}}
+            <div class="row text-center">
+              <div class="col-md-9 col-sm-9 m-auto">
+                <h2>No items in the cart <img id="my_img" width="4%" style="margin-top: -5px;" src="../../public/assets/new_assets/img2/cart-1.svg" alt=""></h2>
+              </div>
+            </div>
+
+            {{/if}}
+
         </div>
       </div>
-    </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
-    </div>
-</footer>
+    </section>
+
+
+   <div class="nb-form">
+            <p class="title sdkjk">Enquire Now</p>
+            <img id="rms87" src="assets/new_assets/img2/times5.png" class="hide" alt="" >
+                  
+            <form id="contact-form">
+              <input type="text" name="cpname" id="name" placeholder="Name" pattern="[A-Za-z. ]+" data-error="Name is required." min-length="3" required>
+              <input type="email" name="cpemail" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-error="Valid email is required." required>
+              <input type="text" name="cpphone" id="mobile" placeholder="Phone" pattern="[1-9]+[0-9]{9}" data-error="Contact no is required." required>
+              <select name="product" id="product" required>
+                 <option value="" selected>Select Product</option>
+                <option>L-A24(Bluetooth)</option>
+                <option>L-A28(Bluetooth)</option>
+                <option>L-A15</option>
+                <option>L-E50</option>
+                <option>L-A5</option>
+                <option>L-S9</option>
+                <option>L-H300(With Encoder)</option>
+              </select>
+              <textarea name="cpmessage" id="message" placeholder="Message" required></textarea>
+              <input id="submit-modal2" type="submit" value="Send message">
+            </form>
+        </div>
+
+
+
+   <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+      <div class="footer-top">
+          <div class="row">
+          <div class="col-lg-12">
+          <a href="index.html" class="logo me-auto"><img width="20%" src="../../public/assets/new_assets/img2/Logo.jpg" alt=""></a>
+          </div>
+          </div>    
+      </div>
+      <div class="footer-mid">
+          <div class="row mt-4">
+          <div class="col-lg-5">
+              <div class="box">
+              <h4>Subscribe to our newsletter</h4>
+              <form id="contact-form2">
+                  <input type="email" name="email" id="emailsb" placeholder="Enter Your Email" required><button type="submit" id="submit-modal2">Subscribe Us</button>
+              </form>
+              
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <h4 class="link">Links</h4>
+              <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/shop">Products</a></li>
+              <li><a href="/builder">Builder’s Project</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="link">Contact Us</h4>
+            <ul>
+            <li><a href="tel:+91-18003134491"><i class="fa fa-phone"></i>  +91-18003134491</a></li>
+            <li> <a href="mailto:sales@lavnalocks.com"><i class="fa fa-envelope"></i> sales@lavnalocks.com</a></li>
+            </ul>
+              <ul class="lastul">
+              <li><a target="_blank" href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><img src="../../public/assets/new_assets/img2/facebook (2).svg"></a></li>
+              <li><a target="_blank" href="https://www.instagram.com/lavnalocks/"><img src="../../public/assets/new_assets/img2/instagram (1).svg"></a></li>
+              <li><a target="_blank" href="https://youtu.be/Yst8KW2Vm4M"><img src="../../public/assets/new_assets/img2/Vector (13).png"></a></li>
+              </ul>
+          </div>
+          </div>
+      </div>
+      </div>
+
+
+      <div id="f_bottom" class="container-fluid">
+      <div class="row text-center">
+          <div class="col-lg-12 footer-bottom">
+          <div class="copyright">
+              &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.
+          </div>
+          </div>
+      </div>
+      </div>
+  </footer>
+    <!-- End Footer -->
 
 <script>
-    function addToCart()
-    {
-        window.location.href = "/checkout";
-    }
+  function addToCart() {
+    window.location.href = "/checkout";
+  }
 </script>
 
 
-  <!-- End Footer -->
-
-  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
-
-  <!-- Vendor JS Files -->
-  <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/public/assets/vendor/aos/aos.js"></script>
-   
+<!-- End Footer -->
+<!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/public/assets/js/main.js"></script>
-  {{!-- <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/owl.min.js"></script>  
+  <script src="assets/js/custom.js"></script>  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+  </script>
+
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_mTjMBBP092bpZsnZTyLfp");
+   })();
+</script>
+  
+
+  <script>
+      $(".progress-bar").animate({
+      width: "90%"
+    }, 2500);
+
+    $("#progress-bar2").animate({
+        width: "80%"
+    }, 2500);
+
+    $("#progress-bar3").animate({
+        width: "70%"
+    }, 2500);
+  </script>
+
+  <script>
+     $(document).ready(function(){
+            var submitIcon = $('.searchbox-icon');
+            var inputBox = $('.searchbox-input');
+            var searchBox = $('.searchbox');
+            var isOpen = false;
+            submitIcon.click(function(){
+                if(isOpen == false){
+                    searchBox.addClass('searchbox-open');
+                    inputBox.focus();
+                    isOpen = true;
+                } else {
+                    searchBox.removeClass('searchbox-open');
+                    inputBox.focusout();
+                    isOpen = false;
+                }
+            });  
+             submitIcon.mouseup(function(){
+                    return false;
+                });
+            searchBox.mouseup(function(){
+                    return false;
+                });
+            $(document).mouseup(function(){
+                    if(isOpen == true){
+                        $('.searchbox-icon').css('display','block');
+                        submitIcon.click();
+                    }
+                });
+        });
+            function buttonUp(){
+                var inputVal = $('.searchbox-input').val();
+                inputVal = $.trim(inputVal).length;
+                if( inputVal !== 0){
+                    $('.searchbox-icon').css('display','none');
+                } else {
+                    $('.searchbox-input').val('');
+                    $('.searchbox-icon').css('display','block');
+                }
+            }
+  </script>
+
+<script>
+  var swiper = new Swiper("#prd_thumb", {
+    slidesPerView: 5.5,
+    spaceBetween: 20,
+
+    navigation: {
+        nextEl: "#prd_thumb .swiper-button-next",
+        prevEl: "#prd_thumb .swiper-button-prev",
+      },
+   
+  });
+
+
+    $(document).ready(function(){
+
+    $('.chn_img').click(function(){
+
+    $('.chn_img').removeClass('active');
+    $(this).addClass('active');
+    var target = $(this).attr('data-target');
+    var src = $(this).attr('data-img');
+
+    $(target).attr('src',src);
+
+    });
+
+    });
+
+</script>
+
+
+<script>
+	$(document).ready(function(){
+		$("#contact-form").submit(function(e) {
+      
+      $('#submit-modal').html('Sending...');
+    			e.preventDefault();
+
+			var Name = document.getElementById("name").value;
+			var emailId = document.getElementById("email").value;
+			var mobile = document.getElementById("mobile").value;
+      var product = document.getElementById("product").value;
+      var message = document.getElementById("message").value;
+
+			if(Name ==='' || Name == undefined )
+			{
+				return;
+			}
+			if(emailId ==='' || emailId == undefined )
+			{
+				return;
+			}
+			if(mobile==='' || mobile == undefined )
+			{
+				return;
+			}
+      if(product==='' || product == undefined )
+			{
+				return;
+			}
+      if(message==='' || message == undefined )
+			{
+				return;
+			}
+
+      var Body ='Name: '+Name+'<br>Email: '+emailId+'<br>Mobile: '+mobile+'<br>Product: '+product+'<br>Message: '+message;
+      $('#name').val('');
+      $('#email').val('');
+      $('#mobile').val('');
+      $('#product').val('');
+      $('#message').val('');
+
+      sendMailToOwner(Body, Name, emailId, mobile, product,message );
+			});
+
+		});
+ 
+
+  function sendMailToOwner(Body, Name, emailId, mobile, product,message){
+
+    var data = {
+      service_id: 'service_8zp4yhp',
+      template_id: 'template_r8bl13q',
+      user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+      template_params: {
+            'from_name': Name,
+            'user_name':Name,
+            'user_email':emailId,
+            'user_mobile':mobile,
+            'product':product,
+            'reply_to':'contact@flybunch.com', 
+            'owner_email': 'ps1089124@gmail.com',
+            'company': 'Lavnalocks',
+        'message':message,
+      }
+    };
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+      type: 'POST',
+      data: JSON.stringify(data),
+      contentType: 'application/json'
+    }).done(function() {
+      $('#submit-modal').html('Send');
+    $('#closemodal').trigger('click');
+    }).fail(function(error) {
+      alert('Oops... ' + JSON.stringify(error));
+    });
+
+    }
+
+</script>
+
+<script>
+var owl = $('.screenshot_slider').owlCarousel({
+    loop: true,
+    responsiveClass: true,
+    nav: true,
+    margin: 0,    
+    autoplayTimeout: 4000,
+    smartSpeed: 400,
+    center: true,
+    navText: ['&#8592;', '&#8594;'],
+    responsive: {
+        0: {
+            items: 1,
+        },
+        600: {
+            items: 5
+        },
+        1200: {
+            items: 5
+        }
+    }
+});
+
+/****************************/
+
+jQuery(document.documentElement).keydown(function (event) {    
+
+    // var owl = jQuery("#carousel");
+
+    // handle cursor keys
+    if (event.keyCode == 37) {
+       // go left
+      owl.trigger('prev.owl.carousel', [400]);
+      //owl.trigger('owl.prev');
+    } else if (event.keyCode == 39) {
+       // go right
+        owl.trigger('next.owl.carousel', [400]);
+       //owl.trigger('owl.next');
+    }
+
+});
+
+</script>
+
+<script>
+   $('.knw').click(function(){
+
+  var dtm = $(this).attr('data-more');
+
+
+
+  if( $(this).text()=='View More'){
+    $(dtm).addClass('active');
+    $(this).text('View Less');
+  }else{
+    $(dtm).removeClass('active');
+    $(this).text('View More');
+  }
+
+
+ });
+</script>
+
+<script>
+  $(document).ready(function(){
+      $('.center-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: true,
+        dots: false,
+        speed: 300,
+        centerPadding: '20px',
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        breakpoint:{
+          320:{
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+          520:{
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+          720:{
+            slidesToShow: 5,
+            slidesToScroll: 1,
+          }
+        }
+      });
+    });
+</script>
 
 </body>
 

@@ -6,6 +6,7 @@ const Category = require("../models/category");
 const LawnaProduct = require("../models/lavnaproduct");
 var moment = require("moment");
 const csrfProtection = csrf();
+const middleware = require("../middleware");
 router.use(csrfProtection);
 
 // // GET: display all products
@@ -42,20 +43,24 @@ router.use(csrfProtection);
 router.get('/:name',async (req, res) => {
   console.log(req.params.name+"   ****");
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
-  // console.log(foundProduct.count());
+  console.log(foundProduct);
   res.render("products",{
     product:foundProduct
   });
+  console.log(foundProduct)
 })
 
-router.get("/checkout/:name", async (req, res) => {
+router.get("/checkout/:name",  middleware.isLoggedIn, async (req, res) => {
   console.log("checking out");
   console.log(req.params.name+"   ****");
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
+  if(!Object.keys(foundProduct).length){
+    res.redirect('/');
+  }
   console.log(foundProduct);
   //load the cart with the session's cart's id from the db
       res.render("single_checkout", {
-      product:foundProduct,
+      products:foundProduct,
       total: foundProduct.sellingPrice,
       totalAmount: foundProduct.sellingPrice*100,
       csrfToken: req.csrfToken(),

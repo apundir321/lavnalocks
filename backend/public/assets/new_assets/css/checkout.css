@@ -1,0 +1,169 @@
+.cart {
+    background: #003399;
+    padding: 2%;
+}
+.box-your-cart h3 {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 34px;
+    
+}
+
+.box-img img {
+    width: 80%;
+    height: 100%;
+}
+.product-name{
+    padding: 10px;
+}
+.product-name h3 {
+    font-size: 17px;
+}
+.buy {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #003399;
+  
+    
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 22px;
+    color: #fff;
+    
+}
+.set-bottom {
+    border-bottom: 1px solid grey;
+    padding-bottom: 15px;
+    width: inherit;
+}
+.double {
+    width: auto !important;
+}
+.set-checkout {
+    background: #191919;
+    padding: 5%;
+}
+.set-checkout p {
+    color: #fff;
+}
+.full-btn {
+    width: 100%;
+}
+.slide-cart {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 500px;
+}
+.checkout-btn-set {
+    margin-top: 45%;
+}
+.set-bottom1 {
+    border-bottom: 1px solid grey;
+}
+
+.edit {
+    width: 100%;
+}
+.set-margin {
+    padding-bottom: 6px;
+    color: #003399 !important;
+}
+
+#cart-section {
+    background: beige;
+}
+.set-bottom {
+    background: #fff !important;
+}
+.slide-cart {
+    background: #fff !important;
+}
+.double {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 1px solid grey;
+    padding-bottom: 12px;
+}
+.subtotal {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0px;
+    line-height: 40px;
+}
+.double1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.quantity {
+    width: 34%;
+}
+.fa-plus{
+    background: #003399;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3%;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    text-align: center;
+    margin-right: 5px;
+}
+.fa-minus{
+    background: #003399;
+    color: #fff;
+    border-radius: 50px;
+    padding: 3%;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    text-align: center;
+    margin-left: 5px;
+}
+
+
+
+@media (max-width:767px) {
+    .summary {
+        margin-top: 5%;
+    }
+    .set-checkout {
+        /* width: 50%; */
+        margin: 0 auto;
+    }
+    .buy {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .quantity {
+        width: 100%;
+    }
+    .checkout-btn-set{
+        margin-top: 24%;
+    }
+}
+@media (max-width:526px) {
+    .buy {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .summary {
+        margin-top: 5%;
+    }
+    .set-checkout {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .quantity {
+        width: 100%;
+    }
+}

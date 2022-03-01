@@ -1,25 +1,98 @@
- <div class="slideshow-container">     
-    <div class="mySlides1">
-      <img src="/assets/img/LE50/1.jpg" class="product-image">
-    </div>
-    <div class="mySlides1">
-      <img src="/assets/img/LE50/2.jpg" class="product-image">
-    </div>
-    <div class="mySlides1">
-      <img src="/assets/img/LE50/3.jpg" class="product-image">
-    </div>
-    <div class="mySlides1">
-      <img src="/assets/img/LE50/4.jpg" class="product-image">
-    </div>
-    <div class="mySlides1">
-      <img src="/assets/img/LE50/5.jpg" class="product-image">
-    </div>
-    <div class="mySlides1">
-      <img src="/assets/img/LE50/6.jpg" class="product-image">
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+{{!-- <div class="_product-images">
+  <div class="picZoomer">
+    <img class="my_img" src="../../public/assets/new_assets/images/LE50/1.jpg" alt="" class="img-fluid">
+  </div>
 </div>
+<div class="zoom-thumb" id="thumb-id">
+  <ul class="piclist">
+    <li class="img1  active1"><img src="../../public/assets/new_assets/images/LE50/1.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LE50/2.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LE50/3.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LE50/4.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LE50/5.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LE50/6.jpg" alt=""></li>
+  </ul>
+</div> --}}
 
-                
+
+    <section id="services" class="services section-bg">
+        <div class="container">
+          
+           <div class="row row-sm">
+              <div class=" col-lg-6 col-md-6 _boxzoom">
+              
+                <div class="_product-images">
+                    <div class="picZoomer">
+                        <img class="my_img" src="../../public/assets/new_assets/images/LE50/1.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="zoom-thumb" id="thumb-id">
+                    <ul class="piclist">
+                        <li class="img1  active1"><img src="../../public/assets/new_assets/images/LE50/1.jpg" alt=""></li>
+                        <li class="img1"><img src="../../public/assets/new_assets/images/LE50/2.jpg" alt=""></li>
+                        <li class="img1"><img src="../../public/assets/new_assets/images/LE50/3.jpg" alt=""></li>
+                        <li class="img1"><img src="../../public/assets/new_assets/images/LE50/4.jpg" alt=""></li>
+                        <li class="img1"><img src="../../public/assets/new_assets/images/LE50/5.jpg" alt=""></li>
+                        <li class="img1"><img src="../../public/assets/new_assets/images/LE50/6.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <p class="mrp">  <span class="mrp1">M.R.P.</span> <del><span><i class="fa fa-rupee"></i> {{product.price}}</span></del> <span class="number ml-2"><i class="fa fa-rupee"></i> {{product.sellingPrice}}</span></p>
+                </div>
+                  
+                 <div class="row purchase">
+                     {{!-- <div class="col-lg-3 col-12">
+                        <div class="number1">
+                            <span class="minus">-</span>
+                            <input type="text" class="count" value="1"/>
+                            <span class="plus">+</span>
+                        </div>
+                     </div> --}}
+                   
+                   
+                     <div class="col-lg-5 col-6">
+                        <div class="cart-add">
+                           {{!-- <a target="_blank" href="/products/L-A24-Black(Bluetooth)" class="btn btn-theme">Add To Cart</a> --}}
+                            <a type="button" onclick="addToCart();" class="btn btn-theme">Add To Cart</a>
+                        </div>
+                    </div>
+                      <div class="col-lg-5 col-6">
+                         <div class="buy-now">
+                            {{!-- <a target="_blank" href="/products/L-A24-Black(Bluetooth)" class="btn btn-theme1">Buy Now</a> --}}
+                              <a type="button" onclick="checkout();" class="btn btn-theme1">Buy Now</a>
+                         </div>
+                     </div>
+                  
+                 </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                 <div class="detail-box">
+                     <h1 id="productTitle">{{product.title}}</h1>
+                 
+                     <p class="sensor">Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.</p>
+                     <p class="sensor des">Description</p>
+                     <p>LAVNA LOCKS, COMPLETE DIGITAL DOOR LOCK COLLECTION.</p>
+                     <p>Smart Solution for your Hotels, Resorts, Hospital and other Private premises. This lock is suitable for Hotels and Commercial areas. This Lock makes your unlocking very easy. This handle door lock will eliminate so many things like manual locking. The security lock is suitable for Wooden Doors and it is universal and simple to install, this lock comes with all side left and right of the door & both opening indoor and outdoor. But before placing your order please tell them which side you need. <br> <br>
+    
+                        It is advised to get it installed after watching our installation video on our YouTube Channel. You can also contact us to know if installation services will be available at your location and cost for the same.<br><br>
+                     
+                        If you require any further information, feel free to contact us.  <br>
+                         <a href="tel:18003134491"><i class="fa fa-phone" style="transform: rotate(15deg); font-size: 14px;"></i> 18003134491 </a>  <br>
+                         <a href="https://api.whatsapp.com/send?phone=+919667771077"> <i class="bx bxl-whatsapp what1" style="font-size: 20px;"></i> <span class="number-digit"> 9667771077</span> </a> 
+                    </p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+
+     <script>
+      function addToCart() {
+        var title = document.getElementById("productTitle").innerHTML;
+        window.location.href = "/add-to-cart/" + title;
+      }
+      function checkout() {
+        var title = document.getElementById("productTitle").innerHTML;
+        window.location.href = "/products/checkout/" + title;
+      }
+    </script>

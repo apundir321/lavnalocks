@@ -1,310 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
 {{>header}}
-<style>
-  
-.links{
-  text-align: center;
-}
-.links ul li{
-  list-style: none;
-  line-height: 33px;
-}
-.links ul li a{
-  text-decoration: none;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 16px;
-}
-.links h4{
-  font-size: 23px;
-  margin-left: 40px;
-}
-.links span{
-  font-size: 17px;
-  font-weight: 600;
-}
-</style>
-  <style>
-    
- nav{
-    font-size: 20px !important;
-    margin-left: 20% !important;
-    }
-
-    
-
-         
-    .contact{
-        background-size: cover;
-        background: center;
-        width: 100%;
-        padding: 100px;
-    }
-    .contactform{
-        padding: 20px 30px;
-        background: #fff;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-        max-width: 450px;
-        margin-top: 10px;
-        /* margin-left: 300px; */
-        margin: 0 auto;
-    }
-    .contactform h3{
-        color: #111;
-        font-size: 1.2em;
-        margin-bottom: 20px;
-        font-weight: 500;
-        
-    }
-    .contactform .inputbox{
-        position: relative;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .contactform .inputbox input,
-    .contactform .inputbox textarea{
-        width: 100%;
-        border: 1px solid #555;
-        padding: 10px;
-        color: #111;
-        outline: none;
-        font-size: 16px;
-        font-weight: 300;
-        resize: none;
-    }
-    .contactform .inputbox input[type="submit"]
-    {
-        font-size: 1em;
-        color: #fff;
-        background: blueviolet;
-        display: inline-block;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 2px;
-        transition: 0.5s;
-        max-width: 100px;
-        font-weight: 500;
-        border: none;
-        cursor: pointer;
-    }
-    #cont{
-        align-items: center;
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;
-        color: #fff;
-    }
-    #cont1{
-        font-size: 14px;
-        align-items: center;
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        flex-direction: column;
-        color: #fff;
-    }
-    #raleway{
-      padding-top: 70px;
-    
-    
-      
-    }
-
-    
-
-
-
-footer{
-    background-color: black;
-    height: auto;
-    width: 100vw;
-    font-family: sans-serif;
-    padding-top: 40px;
-    color: white;
-    overflow: hidden;
-}
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-    color: white;
-}
-.socials{
-    list-style: none;
-    display: flex;
-
-    margin: 1rem 0 3rem 0;
-}
-.socials li{
-    margin: 0 15px;
-    padding: 5px;
-}
-.socials a{
-    text-decoration: none;
-    color: white;
-    
-}
-.socials a i{
-    font-size: 1.1rem;
-    transition: color .4s ease;
-}
-.socials a:hover i{
-    color: blueviolet;
-}
-.footer-bottom{
-    background: black;
-    width: 100vw;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer-bottom p{
-    color: white;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-}
-.footer-content img{
-    width: 220px;
-
-}
-
-
-.whatsapp h5{
-            color: white;
-            background: #205a19;
-            padding: 8px;
-            margin: 8px;
-            /* border-radius: 5%; */
-            height: 50px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            width: 250px;
-            top: -10%;
-            box-sizing: border-box;
-        }
-        .whatsapp{
-            position: fixed;
-            right: 4%;
-            bottom: 1%;
-            /* font-size: 40px; */
-        }
-
-  </style>
-   <style>
-    body {font-family: Arial, Helvetica, sans-serif;}
-    * {box-sizing: border-box}
-    
-    /* Full-width input fields */
-    input[type=text],   input[type=email], input[type=password] {
-      width: 100%;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      display: inline-block;
-      border: none;
-      background: #f1f1f1;
-    }
-    
-    input[type=text]:focus, input[type=password]:focus {
-      background-color: #ddd;
-      outline: none;
-    }
-    
-    hr {
-      border: 1px solid #f1f1f1;
-      margin-bottom: 25px;
-    }
-    
-    /* Set a style for all buttons */
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      opacity: 0.9;
-    }
-    
-    button:hover {
-      opacity:1;
-    }
-    
-    /* Extra styles for the cancel button */
-    .cancelbtn {
-      padding: 14px 20px;
-      background-color: #f44336;
-    }
-    
-    /* Float cancel and signup buttons and add an equal width */
-    .cancelbtn, .signupbtn {
-      float: left;
-      width: 50%;
-    }
-    
-    /* Add padding to container elements */
-    .container {
-      padding: 16px;
-    }
-    
-    /* Clear floats */
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    
-    /* Change styles for cancel button and signup button on extra small screens */
-    @media screen and (max-width: 300px) {
-      .cancelbtn, .signupbtn {
-         width: 100%;
-      }
-    }
-    </style>
-   
-</head>
-
-<body>
-  
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <a href="/" class="logo" style="width: 60rem !important;"><img class="img-fluid" style="margin-left: -1rem; height: 200rem !important;" src="/assets/img/Logo.jpg"></a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-  {{>navbar}}
-
-      <!-- <div class="header-social-links" style="width: 15rem;">
-        <a style="font-size: 1.5rem;" href="https://www.facebook.com/lavnadigitallocks" class="facebook"><i style="color: blue; font-size: 17px;" class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;
-        <a style="font-size: 1.5rem;" href="https://www.instagram.com/lavnalocks/" class="instagram"><i style="color: white; border-radius: 12%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;" class="icofont-instagram"></i></a>&nbsp;
-        <a style="font-size: 1.5rem;" href="https://www.instagram.com/lavnalocks/" class="instagram"><i style="color: red;" class="fa fa-youtube-play" aria-hidden="true"></i></a>&nbsp;
-        <a style="font-size: 1.5rem;" href="https://api.whatsapp.com/send?phone=+91-9971427608" class="instagram"><i style="color: green;" class="fa fa-whatsapp" aria-hidden="true"></i></a>&nbsp;
-        <div id="WhatsApp" class="fa fa-3x"></div>
-       
-      </div> -->
-
-    </div>
-    
-  
-
-
-  </header><!-- End Header --><br><br><br><br><br><br><br>
 
 {{#if errorMsg }}
       <div id="flash-msg" class="alert alert-danger">
@@ -313,131 +7,612 @@ footer{
       {{/if}}
 
   
-  <form action="/user/signup" method="POST" style="border:1px solid #ccc" id="reg-form">
-    <div class="container">
-      <h1>Sign Up</h1>
-     
-      <hr>
-  
-      <label for="name"><b><h2>Your Name</h2></b></label>
-      <input style="font-size: 1.4rem;" type="text" placeholder="Enter Your Name" name="firstname" id="firstname" required>
+   <section id="signin3">
+        <div class="container" id="container">
+            <input type="checkbox" id="flip">
+            <div class="cover">
+                <div class="front">
+                    <img id="bg" class="front_cl" src="../../public/assets/new_assets/img2/sign-in.jpg" alt="">
+                 
+                </div>
+                <div class="back">
+                  <img class="backImg" src="../../public/assets/new_assets/img2/sign-up.jpg" alt="">
+                </div>
+            </div>
+             <form action="/user/signup" method="POST">
+                <div class="form-content">
+                   <div class="signup-form">
+                        <div class="title">Signup</div>
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fa fa-user"></i>
+                                <input type="text" placeholder="Enter Your Name" name="firstname" id="firstname" required>
+                            </div>
+                            <div class="input-box">
+                                <i class="fa fa-envelope"></i>
+                                <input type="email" placeholder="Enter Email" name="email" id="email" required>
+                            </div>
+                            <div class="input-box">
+                                <i class="fa fa-key"></i>
+                                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                            </div>
+                            <div class="input-box">
+                              <i class="fa fa-key"></i>
+                              <input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" required="">
+                            </div>
+                            <div class="button input-box">
+                               <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+                                <button type="submit" value="submit" class="signupbtn">Sign Up</button>
+                                {{!-- <input type="submit" value="Submit"> --}}
+                            </div>
+                            <div class="text signup-text">Already have an account? <a href="/user/signin">Login now</a></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
 
-      <label for="email"><b><h2>Email</h2></b></label>
-      <input style="font-size: 1.4rem;" type="email" placeholder="Enter Email" name="email" id="email" required>
-  
-      <label for="psw"><b><h2>Password</h2></b></label>
-      <input style="font-size: 1.4rem;" type="password" placeholder="Enter Password" name="password" id="password" required>
-  
-      <label for="psw-repeat"><b><h2>Confirm Password</h2></b></label>
-      <input style="font-size: 1.4rem;" type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword" required>
-      
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px; font-size: 1.6rem;"> Remember me
-      </label>
-      
-      <p style="font-size: 1.4rem;">By creating an account you agree to our <a style="font-size: 1.4rem;" href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-  
-      <div class="clearfix">
-        <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
-        <button style="font-size: 1.6rem;" type="submit" value="submit" class="signupbtn">Sign Up</button>
-      </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+    <div class="footer-top">
+        <div class="row">
+        <div class="col-lg-12">
+        <a href="index.html" class="logo me-auto"><img width="20%" src="../../public/assets/new_assets/img2/Logo.jpg" alt=""></a>
+        </div>
+        </div>    
     </div>
-  </form>
-
-
-  {{!-- <script>
-    const form = document.getElementById('reg-form');
-    form.addEventListner('submit', registerUser)
-
-    async function registerUser(event){
-      event.preventDefault()
-      const username = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('psw').value;
-      const confirm-password = document.getElementById('cnfm-psw').value;
-
-      const result = await fetch('api/register', {
-        method: POST,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify{
-          name,
-          email,
-          psw,
-          cnfm-psw
-        }
-      }).then((res) => res.json())
-
-      console.log(result);
-    }
-  </script> --}}
-
-
-
-  <footer style="width: 100% !important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
-
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
+    <div class="footer-mid">
+        <div class="row mt-4">
+        <div class="col-lg-5">
+            <div class="box">
+            <h4>Subscribe to our newsletter</h4>
+            <form id="contact-form2">
+                <input type="email" name="email" id="emailsb" placeholder="Enter Your Email" required><button type="submit" id="submit-modal2">Subscribe Us</button>
+            </form>
+            
             </div>
         </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
+        <div class="col-lg-4">
+            <h4 class="link">Links</h4>
             <ul>
-               <li><a href="index.html">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Products</a></li>
+            <li><a href="/builder">Builder’s Project</a></li>
             </ul>
         </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
-            <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
+        <div class="col-lg-3">
+          <h4 class="link">Contact Us</h4>
+          <ul>
+          <li><a href="tel:+91-18003134491"><i class="fa fa-phone"></i>  +91-18003134491</a></li>
+          <li> <a href="mailto:sales@lavnalocks.com"><i class="fa fa-envelope"></i> sales@lavnalocks.com</a></li>
+          </ul>
+            <ul class="lastul">
+            <li><a target="_blank" href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><img src="../../public/assets/new_assets/img2/facebook (2).svg"></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/lavnalocks/"><img src="../../public/assets/new_assets/img2/instagram (1).svg"></a></li>
+            <li><a target="_blank" href="https://youtu.be/Yst8KW2Vm4M"><img src="../../public/assets/new_assets/img2/Vector (13).png"></a></li>
             </ul>
         </div>
-      </div>
+        </div>
     </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2021 A Unit of PRS Neurosciences and Mechatronics Research Institute Pvt. Ltd.All rights reserved.Powered by MGC</p>
+    </div>
+
+
+    <div id="f_bottom" class="container-fluid">
+    <div class="row text-center">
+        <div class="col-lg-12 footer-bottom">
+        <div class="copyright">
+            &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.
+        </div>
+        </div>
+    </div>
     </div>
 </footer>
-
   <!-- End Footer -->
 
-  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+<div id="preloader"></div>
+<script src="../../public/assets/new_assets/js/jquery.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
+<!-- Vendor JS Files -->
+<script src="../../public/assets/new_assets/vendor/aos/aos.js"></script>
+<script src="../../public/assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script src="../../public/assets/new_assets/js/main.js"></script>
+<script src="../../public/assets/new_assets/js/owl.min.js"></script>  
+<script src="../../public/assets/new_assets/js/custom.js"></script>  
+
+
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+</script>
+
+
+
+<script type="text/javascript">
+(function(){
+  emailjs.init("user_mTjMBBP092bpZsnZTyLfp");
+})();
+
+</script>
+
+<script>
+   // Wrapper Area
+const wrapper__Area = document.querySelector('#wrapper_Area');
+
+// Login & Sing-Up Forms
+const loginForm = document.querySelector('#loginForm');
+const signUpForm = document.querySelector('#signUpForm');
+
+// All Login And Sing-Up Forms Inputs 
+const allLoginFormFields = Array.from(document.querySelectorAll('#loginForm .input__group .field input'));
+const allSignUpFormFields = Array.from(document.querySelectorAll('#signUpForm .input__group:not(.confirm__group) .field input'));
+
+// Password And Confirm Password Fileds
+const passwordField = document.querySelector('#signUpPassword');
+const confirmPassword = document.querySelector('#signUpConfirmPassword');
+
+// Login % Sign-Up Submit Buttons
+const loginFormSubmitBtn = document.querySelector('#loginSubmitBtn');
+const signUpFormSubmitBtn = document.querySelector('#signUpSubmitBtn');
+
+// Show Hide Password Element
+const showHidePassDom = Array.from(document.querySelectorAll('.showHide__Icon i'));
+
+// Pattrens Regex
+const patterns = { // All This Regex Code Is For Demo You Can Add Your Own Regex Code :)
+  username: /^[a-z]+\d?/,
+  email: /^[^\W\d\.-_]+\w\d?@[a-z0-9]+\.([a-z0-9]{2,6})(\.[a-z0-9]{2,6})?$/,
+  password: /^[^\d\W]\w+\d?\W?\w?/i,
+};
+
+// Aside Area
+const aside__Area = document.querySelector('#aside_Area');
+
+// Aside Sing-Up & Sign In Buttons
+const aside__SignUp_Button = document.querySelector('#aside_signUp_Btn');
+const aside__SignIn_Button = document.querySelector('#aside_signIn_Btn');
+
+// - - - - -  Events - - - - - //
+
+// When Submitting On Login & Sign-Up Forms
+loginForm.addEventListener('submit', (e) => {
+  // Stop Form Submission
+  e.preventDefault();
+  // Call Login Form Validation Function
+  loginFormValidation();
+});
+signUpForm.addEventListener('submit', (e) => {
+  // Stop Form Submission
+  e.preventDefault();
+  // Call Sign-Up Form Validation Function
+  signUpFormValidation();
+});
+
+// Every Time Click On Aside Sign-Up & Sing-In Buttons. Call Function Chnage Form Mode
+aside__Area.addEventListener('click', chnageFormMode);
+aside__Area.addEventListener('click', chnageFormMode);
+
+// - - - - -  Functions - - - - - //
+
+// Change Form Mode Function
+function chnageFormMode(e) {
+  // Check. If The Target Element Is Aside Sign-Up Button
+  if(e.target === aside__SignUp_Button){
+    // Add Class [ Sign Up Mode Active ] On Wrapper Area
+    wrapper__Area.classList.add('sign-up__Mode-active');
+  };
+  // Check. If The Target Element Is Aside Sign-In Button
+  if(e.target === aside__SignIn_Button){
+    // Remove Class [ Sign Up Mode Active ] From Wrapper Area
+    wrapper__Area.classList.remove('sign-up__Mode-active');
+  };
+};
+
+// Function Show Hide Password
+(function showHidePass() {
+  // Loop On All The Show Hide Password Icon
+  showHidePassDom.forEach(icon =>{
+    // When Click On Any Show Hide Icon...
+    icon.addEventListener('click', () => {
+      // Select The Target Password Input
+      const targetAreaInput = icon.parentElement.parentElement.querySelector('.field input');
+      // If The Target Icon Has Hide-icon
+      if(icon.className === 'bx bx-hide'){
+        // Change The Target Icon Class
+        icon.className = 'bx bx-show';
+        // Change The Target Input Area Type
+        targetAreaInput.setAttribute('type', 'text');
+      }else{ // else
+        // Change The Target Icon Class
+        icon.className = 'bx bx-hide';
+        // Change The Target Input Area Type
+        targetAreaInput.setAttribute('type', 'password');
+      };
+    });
+  });
+})();
+
+// Login Form Validation Function
+function loginFormValidation() {
+  // Loop On All The Inputs
+  allLoginFormFields.forEach(input => {
+    // Input Targte Field Name Value
+    const inputAttribueValueName = input.attributes.name.value;
+    // Input Value Without Spaces
+    const inputValue = input.value.trim();
+    // Input Regex Validation Response [ True || False ] :)
+    const inputRegex = patterns[inputAttribueValueName].test(inputValue);
+
+    // Check If The Input Value Is Empty
+    if(inputValue === ''){
+      // Call Function Set Error For
+      setErrorFor(input, `${inputAttribueValueName} is required. Please enter your response.`);
+    }else if(inputRegex === false){ // Else If: If The InputRegext Response Is False
+      // Call Function Set Error For
+      setErrorFor(input, `${inputAttribueValueName} Is Invalid .`);
+    }else{ // Else
+      // Call Function Set Success For
+      setSuccessFor(input);
+    };
+  });
+};
+
+// Sign-Up Form Validation Function
+function signUpFormValidation() {
+  // Loop On All The Inputs
+  allSignUpFormFields.forEach(input => {
+    // Password And Confirm Password Fileds Values Without Spaces
+    const passwordFieldValue = passwordField.value.trim();
+    const conifrmPassValue = confirmPassword.value.trim();
+    // Input Targte Field Name Value
+    const inputAttribueValueName = input.attributes.name.value;
+    // Input Value Without Spaces
+    const inputValue = input.value.trim();
+    // Input Regex Validation Response [ True || False ] :)
+    const inputRegex = patterns[inputAttribueValueName].test(inputValue);
+
+    // Check If The Input Value Is Empty
+    if(inputValue === ''){
+      // Call Function Set Error For
+      setErrorFor(input, `${inputAttribueValueName} is required. Please enter your response.`);
+    }else if(inputRegex === false){ // Else If: If The InputRegext Response Is False
+      // Call Function Set Error For
+      setErrorFor(input, `${inputAttribueValueName} Is Invalid .`);
+    }else{ // Else
+      // Call Function Set Success For
+      setSuccessFor(input);
+    };
+
+    // Validation The Confirm Password
+    if(conifrmPassValue === ''){ // Check If The Confirm Password Value Is Empty
+      // Call Function Set Error For
+      setErrorFor(confirmPassword, `Confirm password is required. Please enter your response.`);
+    }else if(conifrmPassValue !== passwordFieldValue){ // Check If The Confirm Password Value Is Dose Not Match The Password Filed
+      // Call Function Set Error For
+      setErrorFor(confirmPassword, `Confirm password does not match`);
+    }else{ // Eles
+      // Call Function Set Success For
+      setSuccessFor(confirmPassword);
+    };
+
+  });
+};
+
+// Set Error For Function
+function setErrorFor(input, message){
+  // Select The Target Parent Target Input Group
+  const targetParentInput = input.parentElement.parentElement;
+  // Select The Target Input Error Message
+  const targetErrorMessage = targetParentInput.querySelector('.input__error_message');
+
+  // Remove Class FormSucess From The Parent Target
+  targetParentInput.classList.remove('formSuccess');
+  // Add Class Success On Target ParentElement
+  targetParentInput.classList.add('formError');
+  // Set The Message Inside The Target Error Message
+  targetErrorMessage.innerHTML = message;
+};
+
+// Set Success For Function
+function setSuccessFor(input){
+  // Select The Target Parent Target Input Group
+  const targetParentInput = input.parentElement.parentElement;
+  // Select The Target Input Error Message
+  const targetErrorMessage = targetParentInput.querySelector('.input__error_message');
+
+  // Remove Class FormError From The Parent Target
+  targetParentInput.classList.remove('formError');
+  // Add Class Success On Target ParentElement
+  targetParentInput.classList.add('formSuccess');
+  // Empty The Error Message
+  targetErrorMessage.innerHTML = '';
+};
+</script>
+
+<script>
+  $(function() {
+  $('.login-text').click(function(){
+    $("#bg").addClass("intro");
+    $(".intro").attr('src',"../../public/assets/new_assets/img2/sign-up.jpg");
+   
+    $("#bg").css('transform', 'scaleX(-1)');
+    
+  });
+});
+$(function() {
+  $('.signup-text').click(function(){
+    $("#bg").removeClass("intro");
+    $(".front_cl").attr('src',"../../public/assets/new_assets/img2/sign-in.jpg");
+    $("#bg").css('transform', 'scaleX(1)');
+  });
+});
+
+</script>
+
+<script>
+  $(".progress-bar").animate({
+  width: "92%"
+}, 2500);
+
+$("#progress-bar2").animate({
+    width: "84%"
+}, 2500);
+
+$("#progress-bar3").animate({
+    width: "88%"
+}, 2500);
+</script>
+
+<script>
+ $(document).ready(function(){
+        var submitIcon = $('.searchbox-icon');
+        var inputBox = $('.searchbox-input');
+        var searchBox = $('.searchbox');
+        var isOpen = false;
+        submitIcon.click(function(){
+            if(isOpen == false){
+                searchBox.addClass('searchbox-open');
+                inputBox.focus();
+                isOpen = true;
+            } else {
+                searchBox.removeClass('searchbox-open');
+                inputBox.focusout();
+                isOpen = false;
+            }
+        });  
+         submitIcon.mouseup(function(){
+                return false;
+            });
+        searchBox.mouseup(function(){
+                return false;
+            });
+        $(document).mouseup(function(){
+                if(isOpen == true){
+                    $('.searchbox-icon').css('display','block');
+                    submitIcon.click();
+                }
+            });
+    });
+        function buttonUp(){
+            var inputVal = $('.searchbox-input').val();
+            inputVal = $.trim(inputVal).length;
+            if( inputVal !== 0){
+                $('.searchbox-icon').css('display','none');
+            } else {
+                $('.searchbox-input').val('');
+                $('.searchbox-icon').css('display','block');
+            }
+        }
+</script>
+
+<script>
+var swiper = new Swiper("#prd_thumb", {
+slidesPerView: 5.5,
+spaceBetween: 20,
+
+navigation: {
+    nextEl: "#prd_thumb .swiper-button-next",
+    prevEl: "#prd_thumb .swiper-button-prev",
+  },
+
+});
+
+
+
+$(document).ready(function(){
+
+$('.chn_img').click(function(){
+
+$('.chn_img').removeClass('active');
+$(this).addClass('active');
+var target = $(this).attr('data-target');
+var src = $(this).attr('data-img');
+
+$(target).attr('src',src);
+
+});
+
+});
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $("#contact-form").submit(function(e) {
+  $('#submit-modal').html('Sending...');
+            e.preventDefault();
+
+        var Name = document.getElementById("name").value;
+        var emailId = document.getElementById("email").value;
+        var mobile = document.getElementById("mobile").value;
+  var product = document.getElementById("product").value;
+  var message = document.getElementById("message").value;
+
+        if(Name ==='' || Name == undefined )
+        {
+            return;
+        }
+        if(emailId ==='' || emailId == undefined )
+        {
+            return;
+        }
+        if(mobile==='' || mobile == undefined )
+        {
+            return;
+        }
+  if(product==='' || product == undefined )
+        {
+            return;
+        }
+  if(message==='' || message == undefined )
+        {
+            return;
+        }
+
+  var Body ='Name: '+Name+'<br>Email: '+emailId+'<br>Mobile: '+mobile+'<br>Product: '+product+'<br>Message: '+message;
+  $('#name').val('');
+  $('#email').val('');
+  $('#mobile').val('');
+  $('#product').val('');
+  $('#message').val('');
+
+  sendMailToOwner(Body, Name, emailId, mobile, product,message );
+        });
+
+    });
+
+
+function sendMailToOwner(Body, Name, emailId, mobile, product,message){
+
+var data = {
+service_id: 'service_8zp4yhp',
+template_id: 'template_r8bl13q',
+user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+template_params: {
+    'from_name': Name,
+      'user_name':Name,
+     'user_email':emailId,
+     'user_mobile':mobile,
+     'product':product,
+     'reply_to':'contact@flybunch.com', 
+     'owner_email': 'ps1089124@gmail.com',
+     'company': 'Lavnalocks',
+         'message':message,
+}
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+type: 'POST',
+data: JSON.stringify(data),
+contentType: 'application/json'
+}).done(function() {
+$('#submit-modal').html('Send');
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $("#contact-form2").submit(function(e) {
+  $('#submit-modal2').html('Sending...');
+            e.preventDefault();
+        var emailId = document.getElementById("emailsb").value;
+        if(emailId ==='' || emailId == undefined )
+        {
+            return;
+        }
+        var Body ='Email: '+emailId;
+  $('#emailsb').val('');
+
+  sendMailToUser(emailId);
+  sendMailToOwner(Body, emailId);
+        });
+
+    });
+
+
+function sendMailToUser(emailId){
+
+var data = {
+service_id: 'service_8zp4yhp',
+template_id: 'template_kvsj7kk',
+user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+template_params: {
+    'user_email':emailId,
+    'reply_to':'contact@lavnalocks.com',
+        'company':"Lavnalocks",
+
+}
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+type: 'POST',
+data: JSON.stringify(data),
+contentType: 'application/json'
+}).done(function(msg) {
+// alert(msg);
+$('#submit-modal').html('Send');
+swal("Thank You!", "Your have subscribe lavnalocks", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+alert('Oops... user mail failed' + JSON.stringify(error));
+});
+
+}
+
+
+function sendMailToOwner(Body, emailId){
+var data = {
+service_id: 'service_8zp4yhp',
+template_id: 'template_mxovugp',
+user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+template_params: {
+     'user_email': emailId ,
+     'reply_to':'contact@lavnalocks.com', 
+     'owner_email': 'ps1089124@gmail.com',
+     'company': 'Lavnalocks',
+}
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+type: 'POST',
+data: JSON.stringify(data),
+contentType: 'application/json'
+}).done(function() {
+$('#submit-modal').html('Send');
+swal("Thank You!", "Your Query has been submitted!", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
+</script>
+
+<script>
+$('.swiper-button-next').click(
+  function(e){
+        $(this).parents('.swiper-container').find('.xnext').trigger('click');
+});    
+
+$('.swiper-button-prev').click(function(e){$(this).parents('.swiper-container').find('.xprev').trigger('click');});
+</script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
-
 </html>

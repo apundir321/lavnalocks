@@ -1,17 +1,22 @@
 #top_ban{
-    background-image: url('../../new_assets/img2/about-ban.png');
+    background-image: url('/assets/new_assets/img2/about-ban.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 2%;
 }
 #top_ban h1{
     padding-top: 8%;
-    padding-bottom: 5%;
     color: #fff;
     font-size: 36px;
     font-family: 'Playfair Display', serif;
     font-weight: 600;
+}
+#top_ban h4{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 5%;
 }
 
 
@@ -24,7 +29,6 @@
     background-color: #003399;
     width: 330px;
     height: 470px;
-    /* margin-left: 50px; */
 }
 #about1 .box img{
     width: 100%;
@@ -43,12 +47,11 @@
     font-weight: bold;
     font-size: 36px;
     color: #003399;
-    /* text-shadow: 1px 1px #003399; */
 }
 #about1 .box1 p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 16px;
     color: #4A4848;
     width: 90%;
     margin-top: 20px;
@@ -71,16 +74,27 @@
 
 
 #mission{
-    background-image: url('../../new_assets/img2/1 802.png');
-    background-size: 40% 100%;
-    background-repeat: no-repeat;
-    background-position: right;
     padding: 0.1rem;
     background-color: #003399;
+    min-height: 565px !important;
+    padding-right: 0;
+    margin-right: 0;
+    position: relative;
 }
 #mission .box{
     padding-top: 60px;
     padding-bottom: 60px;
+}
+#mission .box1{
+    padding: 0;
+    margin: 0;
+    right: 0;
+    padding-right: 0;
+    position: absolute;
+    top: 0;
+}
+#mission .row{
+    padding-right: 0;
 }
 #mission .box h5{
     color: #fff;
@@ -100,7 +114,7 @@
 #mission .box p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
     line-height: 26px;
     margin-left: 12px;
@@ -111,14 +125,14 @@
 #mission .box .btn{
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 34px;
+    padding-left: 34px;
     border-radius: 50px;
     background: transparent;
     border: 1px solid #fff;
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 16px;
     color: #fff;
     margin-left: -6px;
     margin-top: 30px;
@@ -147,10 +161,19 @@
     margin-top: 17px;
     margin-bottom: 20px;
 }
+#projects .box img{
+    padding: 10px;
+}
+#projects .box #proj_box1{
+    margin-left: 60%;
+}
+#projects .box #proj_box2{
+    margin-right: 60%;
+}
 #projects .box p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: #4A4848;
     line-height: 26px;
 }
@@ -164,7 +187,7 @@
 
 
 #below_proj{
-    background-image: url('../../new_assets/img2/about-pg.png');
+    background-image: url('/assets/new_assets/img2/about-pg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -180,7 +203,7 @@
 #below_proj  p{
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
     line-height: 26px;
 }
@@ -195,6 +218,17 @@
     font-size: 12px;
     margin-top: -5px !important;
 }
+#below_proj #first_h4{
+    margin-left: 50%;
+}
+#below_proj #third_h4{
+    margin-right: 50%;
+}
+
+
+
+
+
 
 @media (max-width: 767px) {
     #top_ban h1{
@@ -205,6 +239,51 @@
     }
     #mission {
         background-image: none;
+    }
+    #projects .box #proj_box1{
+        margin-left: 0%;
+    }
+    #projects .box #proj_box2{
+        margin-right: 0%;
+    }
+    #home_design .box{
+        text-align: center;
+    }
+    #home_design #uni_design{
+        display: none;
+    }
+    #home_design h1{
+        margin-bottom: 20px;
+    }
+    #below_proj #first_h4{
+        margin-left: 0%;
+    }
+    #below_proj #third_h4{
+        margin-right: 0%;
+    }
+    #below_proj h4 {
+        margin-bottom: -58px;
+    }
+    #featured_on .box img{
+        margin-top: 25px;
+    }
+    #about1 {
+        padding: 50px 0;
+        padding-bottom: 30px;
+        background-color: #F4F4F5;
+    }
+    #below_proj h1{
+        padding-top: 18px;
+    }
+    #home_design h1{
+        margin-bottom: 18px !important;
+    }
+    #weuse h4{
+        margin-bottom: 45px;
+        margin-top: -10px;
+    }
+    #mission .box1{
+        display: none;
     }
 }
 
@@ -218,4 +297,175 @@
     #mission {
         background-image: none;
     }
+    #projects .box #proj_box1{
+        margin-left: 0%;
+    }
+    #projects .box #proj_box2{
+        margin-right: 0%;
+    }
+    #home_design .box img{
+        text-align: center;
+    }
+    #home_design h1{
+        margin-bottom: 20px;
+    }
+    #below_proj #first_h4{
+        margin-left: 0%;
+    }
+    #below_proj #third_h4{
+        margin-right: 0%;
+    }
+    #mission .box1{
+        display: none;
+    }
+}
+
+
+#home_design #check{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #003399;
+    padding: 15px;
+    clip-path: polygon(0 0, 100% 0%, 87% 100%, 0% 100%);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.20)!important;
+}
+#home_design i{
+    font-size: 40px;
+    margin-left: 10px;
+    color: #003399;
+}
+
+#home_design h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
+    margin-top: 17px;
+    margin-bottom: 60px;
+}
+#home_design{
+    position: relative;
+}
+#uni_design{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    top: 30%;
+    width: 610px;
+    height: 397px !important;
+}
+
+#home_design p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #4A4848;
+    line-height: 26px;
+}
+
+
+
+
+
+
+#tdc{
+    background-color: #003399;
+    margin-top: 5%;
+}
+#tdc h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+#tdc .box, .box1, .box2{
+    padding: 30px;
+}
+#tdc img{
+    margin-bottom: 15px;
+}
+#tdc p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+
+
+#featured_on h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
+    margin-bottom: 20px;
+}
+#featured_on .box img:hover{
+    margin-top: -12px;
+    transition: 0.3s ease;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
+}
+#featured_on .box img{
+    transition: 0.3s ease;
+}
+
+
+
+
+
+#weuse h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
+    margin-bottom: 20px;
+}
+#weuse img{
+    width: 90%;
+    margin-bottom: 30px;
+    transform: scale(1);
+    transition: 0.3s ease;
+}
+#weuse img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.20)!important;
+    transition: 0.3s ease;
+}
+#weuse h4{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #4A4848;
+    text-transform: uppercase;
+}
+
+#extra h1{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #003399;
+    margin-bottom: 30px;
+}
+#extra h1 span{
+    font-weight: bold;
+}
+#extra .btn{
+    background: #003399;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 50px;
+    margin-top: 30px;
 }

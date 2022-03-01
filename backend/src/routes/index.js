@@ -93,6 +93,10 @@ router.get('/about', (req, res) => {
   res.render("about");
 })
 
+router.get('/builder', (req, res) => {
+  res.render("builder");
+})
+
 router.get('/products', (req, res) => {
   res.render("products");
 })
@@ -169,11 +173,11 @@ router.get("/add-to-cart/:id", async (req, res) => {
     }
     req.session.cart = cart;
     req.flash("success", "Item added to the shopping cart");
-    res.redirect(req.headers.referer);
+    res.redirect("/shopping-cart");
     // res.redirect("/products/"+productId);
   } catch (err) {
     console.log(err.message);
-    res.redirect("/products/" + productId);
+    res.redirect("/shopping-cart");
   }
 });
 
@@ -301,7 +305,7 @@ router.get("/removeAll/:id", async function (req, res, next) {
 });
 
 // GET: checkout form with csrf token
-router.get("/checkout", async (req, res) => {
+router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   console.log("checking out");
   if (!req.isAuthenticated()) {
     console.log("authenticated");

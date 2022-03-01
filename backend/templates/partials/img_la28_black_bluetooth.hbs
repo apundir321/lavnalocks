@@ -1,28 +1,145 @@
- <div class="slideshow-container">
-                    <div class="mySlides1">
-    <iframe width="100%" height="400px" allowfullscreen src="https://www.youtube.com/embed/rEB37N0YaXQ">
-    </iframe>
-  </div>
-                    <div class="mySlides1">
-                      <img src="/assets/img/LA28B/1.jpg" class="product-image">
-                    </div>
-                    <div class="mySlides1">
-                      <img src="/assets/img/LA28B/2.jpg" class="product-image">
-                    </div>
-                    <div class="mySlides1">
-                      <img src="/assets/img/LA28B/3.jpg" class="product-image">
-                    </div>
-                    <div class="mySlides1">
-                      <img src="/assets/img/LA28B/5.jpg" class="product-image">
-                    </div>
-                    <div class="mySlides1">
-                      <img src="/assets/img/LA28B/6.jpg" class="product-image">
-                    </div>
-                    <div class="mySlides1">
-                      <img src="/assets/img/LA28B/7.jpg" class="product-image">
-                    </div>
+{{!-- <div class="_product-images " id="prd_zoomer">
 
-                     
-                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-                  </div>
+  <div class="vid_box">
+    <iframe style="width: 100%; height:100%;" src="https://www.youtube.com/embed/rEB37N0YaXQ"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+
+  <div class="picZoomer ">
+    <img class="my_img" src="../../public/assets/new_assets/images/LA28_1.jpg" alt="" class="img-fluid">
+  </div>
+
+</div>
+<div class="zoom-thumb" id="thumb-id">
+  <ul class="piclist">
+    <li class="img1 active1 vidOpener" data-type="1">
+      <img src="../../public/assets/new_assets/images/LA28_1.jpg" alt="">
+      <span class="playIcon"><i class="fa fa-play-circle"></i></span>
+
+    </li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_1.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_2.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_3.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_4.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_5.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_6.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_7.jpg" alt=""></li>
+    <li class="img1"><img src="../../public/assets/new_assets/images/LA28_8.jpg" alt=""></li>
+  </ul>
+</div> --}}
+
+
+
+ <section id="services" class="services section-bg">
+        <div class="container">
+          
+           <div class="row row-sm">
+              <div class=" col-lg-6 col-md-6 _boxzoom">
+              
+                <div class="_product-images " id="prd_zoomer">
+
+                    <div class="vid_box">
+                        <iframe style="width: 100%; height:100%;" src="https://www.youtube.com/embed/rEB37N0YaXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                     </div>
+                    
+                    <div class="picZoomer ">
+                       <img class="my_img" src="../../public/assets/new_assets/images/LA28_1.jpg" alt="" class="img-fluid">
+                    </div>
+             
+                </div>
+                 <div class="zoom-thumb" id="thumb-id">
+                    <ul class="piclist">
+                        <li class="img1 active1 vidOpener" data-type="1" >
+                            <img src="../../public/assets/new_assets/images/LA28_1.jpg" alt="">
+                            <span class="playIcon"><i class="fa fa-play-circle"></i></span>
+                            
+                        </li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_1.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_2.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_3.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_4.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_5.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_6.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_7.jpg" alt=""></li>
+                      <li class="img1"><img src="../../public/assets/new_assets/images/LA28_8.jpg" alt=""></li>
+                    </ul>
+                   </div>
+                   <div class="row">
+                    <p class="mrp">  <span class="mrp1">M.R.P.</span> <del><span><i class="fa fa-rupee"></i> {{product.price}}</span></del> <span class="number ml-2"><i class="fa fa-rupee"></i> {{product.sellingPrice}}</span></p> 
+                   </div>
+                   <div class="row">
+                    <div class="col-lg-12 variant-gold">
+                        <div class="col-lg-1">
+                            <h2>Color:</h2>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="color">
+                                <a href="/products/L-A28-Black(Bluetooth)"><div class="blackish">
+                                    <div class="black-1">Black</div>
+                                </div></a>
+                                
+                                <a href="/products/L-A28-GOLD" class="active-golden"> <div class="goledn mr-3">
+                                    <div class="golden">Golden</div>
+                                </div></a>
+                             
+                                
+                            </div>
+                         
+                        </div>
+                       
+                     </div>
+                   </div>
+                 <div class="row purchase">
+                     {{!-- <div class="col-lg-3 col-12">
+                        <div class="number1">
+                            <span class="minus">-</span>
+                            <input type="text" class="count" value="1"/>
+                            <span class="plus">+</span>
+                        </div>
+                     </div> --}}
+                   
+                   
+                     <div class="col-lg-5 col-6">
+                        <div class="cart-add">
+                           <a type="button" onclick="addToCart();" class="btn btn-theme">Add To Cart</a>
+                        </div>
+                    </div>
+                      <div class="col-lg-5 col-6">
+                         <div class="buy-now">
+                            <a type="button" onclick="checkout();" class="btn btn-theme1">Buy Now</a>
+                         </div>
+                     </div>
+                  
+                 </div>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                 <div class="detail-box">
+                     <h1 id="productTitle">{{product.title}}</h1>
+                 
+                     <p class="sensor"> Meet the 6 in 1 smart door  Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, Bluetooth unlocking and Manual Key.</p>
+                     <p class="sensor des">Description</p>
+                     <p>Introducing you all new Smart Solution for your Home, Office, Shop, Hotels or other Private premises, most importantly this is a High-tech Fingerprint Digital Door Lock with strong features and simple to use. Minimum door thickness required 30mm. <br> <br>
+    
+                        This biometric Fingerprint door Lock makes your unlocking very easy and you can say that your finger, your key & no one can take your key beside this the security lock will eliminate so many things like manual locking, making multiple keys for family members, no need to carry your key when you go out and so on. This digital lock is suitable for wooden & metal door, this smart lock is universal and simple to use, it can be installed on both the side Left or Right of the door & both opening Indoor and Outdoor. It is advised to get it installed after watching our installation video on our YouTube Channel moreover you can also contact us to know if installation services is available at your location and cost for the same. <br><br>
+                        If you require any further information, feel free to contact us.  <br>
+                         <a href="tel:18003134491"><i class="fa fa-phone" style="transform: rotate(15deg);font-size: 12px;"></i> 18003134491 </a>  <br>
+                         <a href="https://api.whatsapp.com/send?phone=+919667771077"> <i class="bx bxl-whatsapp what1" style="font-size: 20px;"></i> <span class="number-digit"> 9667771077</span> </a> 
+                    </p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+
+      <script>
+        function addToCart() {
+          var title = document.getElementById("productTitle").innerHTML;
+          window.location.href = "/add-to-cart/" + title;
+        }
+        function checkout() {
+          var title = document.getElementById("productTitle").innerHTML;
+          window.location.href = "/products/checkout/" + title;
+        }
+      </script>

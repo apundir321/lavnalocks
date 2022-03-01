@@ -16,6 +16,14 @@ router.get("/about-us", (req, res) => {
   });
 });
 
+
+//GET: display builder's page
+router.get("/builder", (req, res) => {
+  res.render("pages/builder", {
+    pageName: "builder",
+  });
+});
+
 //GET: display shipping policy page
 router.get("/shipping-policy", (req, res) => {
   res.render("pages/shipping-policy", {

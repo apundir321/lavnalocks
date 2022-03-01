@@ -1,578 +1,974 @@
-{{>shop_header}}<br><br><br><br><br>
-
-<style>
-  .links {
-    text-align: center;
-  }
-
-  .links ul li {
-    list-style: none;
-    line-height: 33px;
-  }
-
-  .links ul li a {
-    text-decoration: none;
-    color: #FFF;
-    font-weight: 500;
-    font-size: 16px;
-  }
-
-  .links h4 {
-    font-size: 23px;
-    margin-left: 40px;
-  }
-
-  .links span {
-    font-size: 17px;
-    font-weight: 600;
-  }
-</style>
-<style>
-  * {
-    box-sizing: border-box
-  }
-
-  .mySlides1,
-  .mySlides2 {
-    display: none
-  }
-
-  img {
-    vertical-align: middle;
-  }
-
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    font-weight: bold;
-    font-size: 30px;
-    background-color: #fff;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .30) !important;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a grey background color */
-  .prev:hover,
-  .next:hover {
-    background-color: #f1f1f1;
-    color: black;
-  }
-
-  .btn-dark:hover {
-    color: #fff;
-  }
-</style>
-
-<!-- ****** Quick View Modal Area Start ****** -->
-<div class="container">
-  <div>
-    <div>
-      <div>
-        <div>
-          <div>
-            <div class="container">
-              <div class="row">
-                <div class="col-12 col-lg-5">
-                  {{#ifCond product.features "features-L-A24(WI-FI)"}}
-                  {{>img_la24_gold_wifi}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A24(Bluetooth)"}}
-                  {{>img_la24_gold_bluetooth}}
-                  {{/ifCond}}
-
-
-                  {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
-                  {{>img_la24_black_wifi}}
-                  {{/ifCond}}
-
-                  {{!-- new entry --}}
-                  {{#ifCond product.features "features-L-A28-GOLD"}}
-                  {{>img_la28_gold_bluetooth}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A24-GOLD"}}
-                  {{>img_la24_gold_bluetooth}}
-                  {{/ifCond}}
-                  {{!-- new entry --}}
-                  {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
-                  {{>img_la24_black_bluetooth}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A28(Bluetooth)"}}
-                  {{>img_la28_gold_bluetooth}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A28(WI-FI)"}}
-                  {{>img_la28_gold_wifi}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A28(Remote)"}}
-                  {{>img_la28_gold_remote}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
-                  {{>img_la28_black_bluetooth}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A28-Black(WI-FI)"}}
-                  {{>img_la28_black_wifi}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A28-Black(Remote)"}}
-                  {{>img_la28_black_remote}}
-                  {{/ifCond}}
-
-
-                  {{#ifCond product.features "features-L-A15"}}
-                  {{>img_la15}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-A5"}}
-                  {{>img_la5}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-H300"}}
-                  {{>img_H300}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-S9"}}
-                  {{>img_s9}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-H300(Encoder)"}}
-                  {{>img_H300_encoder}}
-                  {{/ifCond}}
-
-                  {{#ifCond product.features "features-L-E50"}}
-                  {{>img_E50}}
-                  {{/ifCond}}
-
-
-                  <br>
-
-
-                  <div class="col-12">
-                    {{#ifCond product.features "features-L-A24-GOLD"}}
-                    <div class="form-group">
-                      <label>Select Variants:-</label>
-                      <div class="mt-2 mb-2 pt-1 pb-1">
-                        <a href="/products/L-A24-Black(Bluetooth)"
-                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);padding:10px 10px 10px 10px; border-radius:10px; height:100px;">
-
-                          <div style="width: 30px;
-    height: 40px;
-    border-radius: 10px 0 0 10px;
-    background: rgb(17, 17, 17);
-    float: left;
-    box-shadow: 0 0 20px 0 #0000001f;
-    margin-top: -8px;
-    display: inline-block;"></div> L-A24-Black(Bluetooth)
-                        </a>
-                      </div>
-
-                    </div>
-                    {{/ifCond}}
-
-
-                    {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
-                    <div class="form-group">
-                      <label>Select Variants:-</label>
-                      <div class="mt-2 mb-2 pt-1 pb-1"> <a href="/products/L-A24-GOLD"
-                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); padding:10px 10px 10px 10px; border-radius:0 10px 10px 0; height:100px; ">
-
-                          <span style="width: 30px;
-    height: 40px;
-    border-radius: 10px 0 0 10px;
-    background: rgb(255, 202, 86);
-    float: left;
-    box-shadow: 0 0 20px 0 #0000001f;
-    margin-top: -8px;
-    display: inline-block;"></span> <span>L-A24-GOLD</span> </a></div>
-
-                    </div>
-                    {{/ifCond}}
-                  </div>
-
-
-                  <div class="col-12">
-                    {{#ifCond product.features "features-L-A28-GOLD"}}
-                    <div class="form-group">
-                      <label>Select Variants:-</label>
-                      <div class="mt-2 mb-2 pt-1 pb-1">
-                        <a href="/products/L-A28-Black(Bluetooth)"
-                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11);padding:10px 10px 10px 10px; border-radius:10px; height:100px;">
-
-                          <div style="width: 30px;
-    height: 40px;
-    border-radius: 10px 0 0 10px;
-    background: rgb(17, 17, 17);
-    float: left;
-    box-shadow: 0 0 20px 0 #0000001f;
-    margin-top: -8px;
-    display: inline-block;"></div> L-A28-Black(Bluetooth)
-                        </a>
-                      </div>
-
-                    </div>
-                    {{/ifCond}}
-
-
-
-
-                    {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
-                    <div class="form-group">
-                      <label>Select Variants:-</label>
-                      <div class="mt-2 mb-2 pt-1 pb-1"> <a href="/products/L-A28-GOLD"
-                          style="font-size:18px;box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.11); padding:10px 10px 10px 10px; border-radius:0 10px 10px 0; height:100px; ">
-
-                          <span style="width: 30px;
-    height: 40px;
-    border-radius: 10px 0 0 10px;
-    background: rgb(255, 202, 86);
-    float: left;
-    box-shadow: 0 0 20px 0 #0000001f;
-    margin-top: -8px;
-    display: inline-block;"></span> <span>L-A28-GOLD</span> </a></div>
-
-                    </div>
-                    {{/ifCond}}
-                  </div>
-
-                    {{#ifCond product.features "features-L-H300(Encoder)"}}
-
-                  <p class="is-available text-center" style="background-color: #d8191d;
-    width: 8em;
-    color: var(--ivory);
-    font-weight: bold;
-    font-size: 12px;
-    padding: 0.3em;
-    text-transform: uppercase;
-    margin-left:10px;">Out of Stock</p>
-
-
-                  {{else}}
-
-
-
-
-
-                  {{#ifCond product.features "features-L-A24(WI-FI)"}}
-
-
-
-
-
-
-                  <p class="is-available text-center" style="background-color: #d8191d;
-    width: 8em;
-    color: var(--ivory);
-    font-weight: bold;
-    font-size: 12px;
-    padding: 0.3em;
-    text-transform: uppercase;
-    margin-left:10px;">Out of Stock</p>
-
-
-                  {{else}}
-
-                  {{#ifCond product.features "features-L-A5"}}
-                  <p class="is-available text-center" style="background-color: #d8191d;
-    width: 8em;
-    color: var(--ivory);
-    font-weight: bold;
-    font-size: 12px;
-    padding: 0.3em;
-    text-transform: uppercase;
-    margin-left:10px;">Out of Stock</p>
-
-
-                  {{else}}
-
-                  {{!-- <div class="row" id="color">
-                    <div class="col-lg-6">
-                      Avialable Colors:- <a href="" class="btn">Black</a>
-                    </div>
-                    <div class="col-lg-6">
-                      <a href="" class="btn">Golden</a>
-                    </div>
-                  </div> --}}
-
-                  <div class="row text-center">
-                    <div class="col-lg-6">
-                      <p class="is-available text-center" style="background-color: var(--green);
-    width: 100%;
-    color: var(--ivory);
-    font-weight: bold;
-    font-size: 12px;
-    border-radius:6px;
-    padding: 0.6em;
-    padding: 10px 20px 10px 20px;
-    text-transform: uppercase;
- ">In stock</p>
-                    </div>
-                    <div class="col-lg-6">
-                      <button type="button" class="btn btn-primary" style="padding:8px 20px 8px 20px; width:100%;"
-                        onclick="addToCart();">Add to
-                        Shopping cart</button>
-                    </div>
-                  </div>
-                  <div class="row text-center mt-4">
-                    <div class="col-lg-12">
-                      <div>
-                        <button type="button" class="btn btn-dark"
-                          style="padding: 9px 20px 9px 20px; font-weight:600; width:100%; background: green;"
-                          onclick="checkout();">
-                          Buy now</button>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  {{/ifCond}}
-
-
-                  {{/ifCond}}
-
-                  {{/ifCond}}
-
-
-
-
-                </div>
-                {{!-- {{#ifCond product.features "features-L-A24(WI-FI)"}}
-                {{>features_la4wifi}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A24(Bluetooth)"}}
-                {{>features_la4bluetooth}}
-                {{/ifCond}} --}}
-
-                {{!-- new entry --}}
-                {{#ifCond product.features "features-L-A28-GOLD"}}
-                {{>features_la28_gold}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A24-GOLD"}}
-                {{>features_la24_gold}}
-                {{/ifCond}}
-                {{!-- new entry --}}
-                {{#ifCond product.features "features-L-A24(WI-FI)"}}
-                {{>features_la4wifi}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A24(Bluetooth)"}}
-                {{>features_la4bluetooth}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
-                {{>features_la4wifi}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
-                {{>features_la4bluetooth}}
-                {{/ifCond}}
-
-
-                {{#ifCond product.features "features-L-A28(Bluetooth)"}}
-                {{>features_la28bluetooth}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A28(WI-FI)"}}
-                {{>features_la28wifi}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A28(Remote)"}}
-                {{>features_la28remote}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
-                {{>features_la28bluetooth}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A28-Black(WI-FI)"}}
-                {{>features_la28wifi}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A28-Black(Remote)"}}
-                {{>features_la28remote}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A15"}}
-                {{>features_la15}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-A5"}}
-                {{>features_la5}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-H300"}}
-                {{>features_h300}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-S9"}}
-                {{>features_s9}}
-                {{/ifCond}}
-
-
-                {{#ifCond product.features "features-L-H300(Encoder)"}}
-                {{>features_h300_encoder}}
-                {{/ifCond}}
-
-                {{#ifCond product.features "features-L-E50"}}
-                {{>features_E50}}
-                {{/ifCond}}
-
-
-
+{{>shop_header}}
+
+<main id="main">
+  <section id="services" class="services section-bg">
+    <div class="container">
+      
+      <div class="row row-sm">
+        <div class=" col-lg-12 col-md-12 _boxzoom">
+
+          {{#ifCond product.features "features-L-A24(WI-FI)"}}
+          {{>img_la24_gold_wifi}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A24(Bluetooth)"}}
+          {{>img_la24_gold_bluetooth}}
+          {{/ifCond}}
+
+
+          {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
+          {{>img_la24_black_wifi}}
+          {{/ifCond}}
+
+          {{!-- new entry --}}
+          {{#ifCond product.features "features-L-A28-GOLD"}}
+          {{>img_la28_gold_bluetooth}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A24-GOLD"}}
+          {{>img_la24_gold_bluetooth}}
+          {{/ifCond}}
+          {{!-- new entry --}}
+          {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
+          {{>img_la24_black_bluetooth}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A28(Bluetooth)"}}
+          {{>img_la28_gold_bluetooth}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A28(WI-FI)"}}
+          {{>img_la28_gold_wifi}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A28(Remote)"}}
+          {{>img_la28_gold_remote}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
+          {{>img_la28_black_bluetooth}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A28-Black(WI-FI)"}}
+          {{>img_la28_black_wifi}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A28-Black(Remote)"}}
+          {{>img_la28_black_remote}}
+          {{/ifCond}}
+
+
+          {{#ifCond product.features "features-L-A15"}}
+          {{>img_la15}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-A5"}}
+          {{>img_la5}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-H300"}}
+          {{>img_H300}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-S9"}}
+          {{>img_s9}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-H300(Encoder)"}}
+          {{>img_H300_encoder}}
+          {{/ifCond}}
+
+          {{#ifCond product.features "features-L-E50"}}
+          {{>img_E50}}
+          {{/ifCond}}
+          {{!-- <div class="row">
+            <p class="mrp"> <span class="mrp1">M.R.P.</span> <del><span><i class="fa fa-rupee"></i>
+                  {{product.price}}</span></del> <span class="number ml-2"><i class="fa fa-rupee"></i>
+                {{product.sellingPrice}}</span></p>
+          </div> --}}
+          <div class="row">
+          </div>
+          <div class="row purchase">
+            {{!-- <div class="col-lg-3 col-12">
+              <div class="number1">
+                <span class="minus">-</span>
+                <input type="text" class="count" value="1" />
+                <span class="plus">+</span>
               </div>
+            </div> --}}
+
+            {{!-- <div class="col-lg-5 col-6">
+              <div class="cart-add">
+                <button type="button" onclick="addToCart();"
+                  class="btn btn-theme">Add To Cart</button>
+              </div>
+            </div>
+            <div class="col-lg-5 col-6">
+              <div class="buy-now">
+                <a type="button" onclick="checkout();"
+                  class="btn btn-theme1">Buy Now</a>
+              </div>
+            </div> --}}
+
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          {{!-- <div class="detail-box">
+            <h1 id="productTitle">{{product.title}}</h1>
+
+            <p class="sensor">Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from
+              your RFID Card and Key.</p>
+            <p class="sensor des">Description</p>
+            <p>LAVNA LOCKS, COMPLETE DIGITAL DOOR LOCK COLLECTION.</p>
+            <p>Smart Solution for your Hotels, Resorts, Hospital and other Private premises. This lock is suitable for
+              Hotels and Commercial areas. This Lock makes your unlocking very easy. This handle door lock will
+              eliminate so many things like manual locking. The security lock is suitable for Wooden Doors and it is
+              universal and simple to install, this lock comes with all side left and right of the door & both opening
+              indoor and outdoor. But before placing your order please tell them which side you need. <br> <br>
+
+              It is advised to get it installed after watching our installation video on our YouTube Channel. You can
+              also contact us to know if installation services will be available at your location and cost for the
+              same.<br><br>
+
+              If you require any further information, feel free to contact us. <br>
+              <a href="tel:18003134491"><i class="fa fa-phone" style="transform: rotate(15deg);font-size: 14px;"></i>
+                18003134491 </a> <br>
+              <a href="https://api.whatsapp.com/send?phone=+919667771077"> <i class="bx bxl-whatsapp what1"
+                  style="font-size: 20px;"></i><span class="number-digit"> 9667771077</span> </a>
+            </p>
+          </div> --}}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  {{!-- <section id="icon-section">
+    <div class="container">
+      <div class="row">
+        <div class="box-guide">
+          <h1>Features</h1>
+        </div>
+      </div> --}}
+
+      {{!-- {{#ifCond product.features "features-L-A24(WI-FI)"}}
+      {{>features_la4wifi}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A24(Bluetooth)"}}
+      {{>features_la4bluetooth}}
+      {{/ifCond}} --}}
+
+      {{!-- new entry --}}
+      {{#ifCond product.features "features-L-A28-GOLD"}}
+      {{>features_la28_gold}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A24-GOLD"}}
+      {{>features_la24_gold}}
+      {{/ifCond}}
+      {{!-- new entry --}}
+      {{#ifCond product.features "features-L-A24(WI-FI)"}}
+      {{>features_la4wifi}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A24(Bluetooth)"}}
+      {{>features_la4bluetooth}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A24-Black(WI-FI)"}}
+      {{>features_la4wifi}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A24-Black(Bluetooth)"}}
+      {{>features_la4bluetooth}}
+      {{/ifCond}}
+
+
+      {{#ifCond product.features "features-L-A28(Bluetooth)"}}
+      {{>features_la28bluetooth}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A28(WI-FI)"}}
+      {{>features_la28wifi}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A28(Remote)"}}
+      {{>features_la28remote}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A28-Black(Bluetooth)"}}
+      {{>features_la28bluetooth}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A28-Black(WI-FI)"}}
+      {{>features_la28wifi}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A28-Black(Remote)"}}
+      {{>features_la28remote}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A15"}}
+      {{>features_la15}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-A5"}}
+      {{>features_la5}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-H300"}}
+      {{>features_h300}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-S9"}}
+      {{>features_s9}}
+      {{/ifCond}}
+
+
+      {{#ifCond product.features "features-L-H300(Encoder)"}}
+      {{>features_h300_encoder}}
+      {{/ifCond}}
+
+      {{#ifCond product.features "features-L-E50"}}
+      {{>features_E50}}
+      {{/ifCond}}
+
+      {{!--
+    </div>
+  </section>
+
+
+  <section id="features-table">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-center M-3">Product Details</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="table-col-3">
+            <div class="sticky-top table-sticky-header overflow-scroll d-flex align-items-center feature py-3">
+              <div class="h3 m-0 px-3">Specifications</div>
+              <div class="h4 m-0 text-center px-3"></div>
+
+            </div>
+            <div class="table-responsive table-sticky">
+              <table class="table table-bordered table-striped">
+                <thead class="visually-hidden">
+                  <tr>
+                    <th scope="col">Specifications</th>
+                    <th scope="col"></th>
+
+                  </tr>
+                </thead>
+                <tbody class="text-center align-middle">
+                  <tr>
+                    <th class="text-start p-3" scope="row">RFID Card</th>
+                    <td><span class="fa fa-check text-success"></span></td>
+
+                  </tr>
+
+                  <tr>
+                    <th class="text-start p-3" scope="row">RFID Capacity</th>
+                    <td>Up to 50</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Recognition Speed</th>
+                    <td>
+                      < 0.5s</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Power Supply</th>
+                    <td>3.7 V Output Power</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Working Current</th>
+                    <td>300 mAh</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Emergency</th>
+                    <td>Only Key</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Color</th>
+                    <td>Silver</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Weight</th>
+                    <td>2.6kg</td>
+
+                  </tr>
+
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="table-col-3">
+            <div class="sticky-top table-sticky-header overflow-scroll d-flex align-items-center feature py-3">
+              <div class="h3 m-0 px-3">Specifications</div>
+              <div class="h4 m-0 text-center px-3"></div>
+
+            </div>
+            <div class="table-responsive table-sticky">
+              <table class="table table-bordered table-striped">
+                <thead class="visually-hidden">
+                  <tr>
+                    <th scope="col">Specifications</th>
+                    <th scope="col"></th>
+
+                  </tr>
+                </thead>
+                <tbody class="text-center align-middle">
+
+                  <tr>
+                    <th class="text-start p-3" scope="row">Box Dimension</th>
+                    <td> H-12 cm, L-18.8 cm, W-34.8 cm</td>
+
+                  </tr>
+
+                  <tr>
+                    <th class="text-start p-3" scope="row">Door Thickness</th>
+                    <td>32 to 100 mm</td>
+
+                  </tr>
+
+                  <tr>
+                    <th class="text-start p-3" scope="row">Mortise Dimension</th>
+                    <td>H-20cm, L-2.2cm, W-9cm</td>
+
+                  </tr>
+                  <tr>
+                    <th class="text-start p-3" scope="row">Applicable on</th>
+                    <td>Hotel & Commercial Doors</td>
+
+                  </tr>
+
+                  <tr>
+                    <th class="text-start p-3" scope="row">Box Contains</th>
+                    <td>
+                      <ul class="main-lock">
+                        <li>Main Lock</li>
+                        <li>1 Indoor Unit</li>
+                        <li>1 Outdoor Unit</li>
+                        <li>Side Panel</li>
+                        <li>Suitable Screw Packet</li>
+                        <li>2 Mechanical Key</li>
+                        <li>2 RFID card</li>
+
+
+                      </ul>
+                    </td>
+
+                  </tr>
+
+
+
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section> --}}
 
+
+
+
+
+  <div class="nb-form">
+    <p class="title sdkjk">Enquire Now</p>
+    <img id="rms87" src="../../public/assets/new_assets/img2/times5.png" class="hide" alt="">
+
+    <form id="contact-form">
+      <input type="text" name="cpname" id="name" placeholder="Name" pattern="[A-Za-z. ]+" data-error="Name is required."
+        min-length="3" required>
+      <input type="email" name="cpemail" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        data-error="Valid email is required." required>
+      <input type="text" name="cpphone" id="mobile" placeholder="Phone" pattern="[1-9]+[0-9]{9}"
+        data-error="Contact no is required." required>
+      <select name="product" id="product" required>
+        <option value="" selected>Select Product</option>
+        <option>L-A24(Bluetooth)</option>
+        <option>L-A28(Bluetooth)</option>
+        <option>L-A15</option>
+        <option>L-E50</option>
+        <option>L-A5</option>
+        <option>L-S9</option>
+        <option>L-H300(With Encoder)</option>
+      </select>
+      <textarea name="cpmessage" id="message" placeholder="Message" required></textarea>
+      <input id="submit-modal" type="submit" value="Send message">
+    </form>
   </div>
-</div>
-
-<br><br><br><br>
 
 
+</main>
 
-<!-- ****** Quick View Modal Area End ****** -->
-<footer style="width: 100% !important;">
+<!-- ======= Footer ======= -->
+<footer id="footer">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-4 text-left align-left">
-        <div class="footer-content img-responsive">
-          <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
-
-          <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-          <ul class="socials">
-            <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;"
-                  class="fa fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;"
-                  class="fa fa-instagram"></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;"
-                  class="fa fa-youtube" aria-hidden="true"></i></a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;"
-                  class="fa fa-whatsapp"></i></a></li>
-          </ul>
-          <p style="color:white;">Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a>
-          </p>
+    <div class="footer-top">
+      <div class="row">
+        <div class="col-lg-12">
+          <a href="index.html" class="logo me-auto"><img width="20%" src="../../public/assets/new_assets/img2/Logo.jpg"
+              alt=""></a>
         </div>
       </div>
-      <div class="col-lg-4 links">
-        <h4>Useful links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/shop">Shop</a></li>
-          <li><a href="/faq">Faq's</a></li>
-          <li><a href="/blog">Blogs</a></li>
-          <li><a href="/privacypolicy">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-4 links">
-        <h4>Contact Us</h4>
-        <ul>
-          <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-          <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-          <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
-        </ul>
+    </div>
+    <div class="footer-mid">
+      <div class="row mt-4">
+        <div class="col-lg-5">
+          <div class="box">
+            <h4>Subscribe to our newsletter</h4>
+            <form id="contact-form2">
+              <input type="email" name="email" id="emailsb" placeholder="Enter Your Email" required><button
+                type="submit" id="submit-modal2">Subscribe Us</button>
+            </form>
+
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="link">Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Products</a></li>
+            <li><a href="/builder">Builder’s Project</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h4 class="link">Contact Us</h4>
+          <ul>
+            <li><a href="tel:+91-18003134491"><i class="fa fa-phone"></i> +91-18003134491</a></li>
+            <li> <a href="mailto:sales@lavnalocks.com"><i class="fa fa-envelope"></i> sales@lavnalocks.com</a></li>
+          </ul>
+          <ul class="lastul">
+            <li><a target="_blank" href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><img
+                  src="../../public/assets/new_assets/img2/facebook (2).svg"></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/lavnalocks/"><img
+                  src="../../public/assets/new_assets/img2/instagram (1).svg"></a></li>
+            <li><a target="_blank" href="https://youtu.be/Yst8KW2Vm4M"><img
+                  src="../../public/assets/new_assets/img2/Vector (13).png"></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="footer-bottom img-responsive"
-    style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-    <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">
-      &copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
+
+  <div id="f_bottom" class="container-fluid">
+    <div class="row text-center">
+      <div class="col-lg-12 footer-bottom">
+        <div class="copyright">
+          &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
+<!-- End Footer -->
+
+<div id="preloader"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<!-- Vendor JS Files -->
+<script src="../../public/assets/new_assets/vendor/purecounter/purecounter.js"></script>
+<script src="../../public/assets/new_assets/vendor/aos/aos.js"></script>
+<script src="../../public/assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../public/assets/new_assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="../../public/assets/new_assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="../../public/assets/new_assets/js/main.js"></script>
+<script src="../../public/assets/new_assets/js/owl.min.js"></script>
+<script src="../../public/assets/new_assets/js/custom.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+</script>
 
 
 <script>
   function addToCart() {
     var title = document.getElementById("productTitle").innerHTML;
-
     window.location.href = "/add-to-cart/" + title;
   }
-
   function checkout() {
     var title = document.getElementById("productTitle").innerHTML;
-
     window.location.href = "/products/checkout/" + title;
   }
 </script>
 
 
 <script>
-  var slideIndex = [1, 1];
-  var slideId = ["mySlides1", "mySlides2"]
-  showSlides(1, 0);
-  showSlides(1, 1);
+  var btnContainer = document.getElementById("thumb-id");
 
-  function plusSlides(n, no) {
-    showSlides(slideIndex[no] += n, no);
+  // Get all buttons with class="btn" inside the container
+  var btns = btnContainer.getElementsByClassName("img1");
+
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active1");
+
+      // If there's no active class
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active1", "");
+      }
+
+      // Add the active class to the current/clicked button
+      this.className += " active1";
+    });
+  }
+</script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init("user_mTjMBBP092bpZsnZTyLfp");
+  })();
+</script>
+
+<script>
+  function syncScroll(el1, el2) {
+    el1.scrollLeft = el2.scrollLeft;
   }
 
-  function showSlides(n, no) {
-    var i;
-    var x = document.getElementsByClassName(slideId[no]);
-    if (n > x.length) { slideIndex[no] = 1 }
-    if (n < 1) { slideIndex[no] = x.length }
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
+  var scrollStickyTable = document.querySelector('.table-sticky'),
+    scrollStickyTableHeader = document.querySelector(".table-sticky-header");
+
+  scrollStickyTable.addEventListener('scroll', function (e) {
+    syncScroll(scrollStickyTableHeader, scrollStickyTable);
+  });
+
+  scrollStickyTableHeader.addEventListener('scroll', function (e) {
+    syncScroll(scrollStickyTable, scrollStickyTableHeader);
+  });
+</script>
+
+<script>
+  $(".progress-bar").animate({
+    width: "90%"
+  }, 2500);
+
+  $("#progress-bar2").animate({
+    width: "80%"
+  }, 2500);
+
+  $("#progress-bar3").animate({
+    width: "70%"
+  }, 2500);
+</script>
+
+<script>
+  $(document).ready(function () {
+    var submitIcon = $('.searchbox-icon');
+    var inputBox = $('.searchbox-input');
+    var searchBox = $('.searchbox');
+    var isOpen = false;
+    submitIcon.click(function () {
+      if (isOpen == false) {
+        searchBox.addClass('searchbox-open');
+        inputBox.focus();
+        isOpen = true;
+      } else {
+        searchBox.removeClass('searchbox-open');
+        inputBox.focusout();
+        isOpen = false;
+      }
+    });
+    submitIcon.mouseup(function () {
+      return false;
+    });
+    searchBox.mouseup(function () {
+      return false;
+    });
+    $(document).mouseup(function () {
+      if (isOpen == true) {
+        $('.searchbox-icon').css('display', 'block');
+        submitIcon.click();
+      }
+    });
+  });
+  function buttonUp() {
+    var inputVal = $('.searchbox-input').val();
+    inputVal = $.trim(inputVal).length;
+    if (inputVal !== 0) {
+      $('.searchbox-icon').css('display', 'none');
+    } else {
+      $('.searchbox-input').val('');
+      $('.searchbox-icon').css('display', 'block');
     }
-    x[slideIndex[no] - 1].style.display = "block";
   }
 </script>
 
-<!-- End Footer -->
+<script>
+  var swiper = new Swiper("#prd_thumb", {
+    slidesPerView: 5.5,
+    spaceBetween: 20,
 
-<!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+    navigation: {
+      nextEl: "#prd_thumb .swiper-button-next",
+      prevEl: "#prd_thumb .swiper-button-prev",
+    },
 
-<!-- Vendor JS Files -->
-{{!--
-<script src="/public/assets/vendor/jquery/jquery.min.js"></script> --}}
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-<script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="/public/assets/vendor/php-email-form/validate.js"></script>
-<script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-<script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="/public/assets/vendor/venobox/venobox.min.js"></script>
-<script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="/public/assets/vendor/aos/aos.js"></script>
+  });
 
 
-<!-- Template Main JS File -->
-<script src="/public/assets/js/main.js"></script>
-<script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  $(document).ready(function () {
+
+    $('.chn_img').click(function () {
+
+      $('.chn_img').removeClass('active');
+      $(this).addClass('active');
+      var target = $(this).attr('data-target');
+      var src = $(this).attr('data-img');
+
+      $(target).attr('src', src);
+
+    });
+
+  });
+
+</script>
+
+<script>
+  $(document).ready(function () {
+    $("#contact-form").submit(function (e) {
+
+      $('#submit-modal').html('Sending...');
+      e.preventDefault();
+
+      var Name = document.getElementById("name").value;
+      var emailId = document.getElementById("email").value;
+      var mobile = document.getElementById("mobile").value;
+      var product = document.getElementById("product").value;
+      var message = document.getElementById("message").value;
+
+      if (Name === '' || Name == undefined) {
+        return;
+      }
+      if (emailId === '' || emailId == undefined) {
+        return;
+      }
+      if (mobile === '' || mobile == undefined) {
+        return;
+      }
+      if (product === '' || product == undefined) {
+        return;
+      }
+      if (message === '' || message == undefined) {
+        return;
+      }
+
+      var Body = 'Name: ' + Name + '<br>Email: ' + emailId + '<br>Mobile: ' + mobile + '<br>Product: ' + product + '<br>Message: ' + message;
+      $('#name').val('');
+      $('#email').val('');
+      $('#mobile').val('');
+      $('#product').val('');
+      $('#message').val('');
+
+      sendMailToOwner(Body, Name, emailId, mobile, product, message);
+    });
+
+  });
+
+
+  function sendMailToOwner(Body, Name, emailId, mobile, product, message) {
+
+    var data = {
+      service_id: 'service_8zp4yhp',
+      template_id: 'template_r8bl13q',
+      user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+      template_params: {
+        'from_name': Name,
+        'user_name': Name,
+        'user_email': emailId,
+        'user_mobile': mobile,
+        'product': product,
+        'reply_to': 'contact@flybunch.com',
+        'owner_email': 'ps1089124@gmail.com',
+        'company': 'Lavnalocks',
+        'message': message,
+      }
+    };
+
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+      type: 'POST',
+      data: JSON.stringify(data),
+      contentType: 'application/json'
+    }).done(function () {
+      $('#submit-modal').html('Send');
+      $('#closemodal').trigger('click');
+    }).fail(function (error) {
+      alert('Oops... ' + JSON.stringify(error));
+    });
+
+  }
+
+</script>
+
+<script>
+  var owl = $('.screenshot_slider').owlCarousel({
+    loop: true,
+    responsiveClass: true,
+    nav: true,
+    margin: 0,
+    autoplayTimeout: 4000,
+    smartSpeed: 400,
+    center: true,
+    navText: ['&#8592;', '&#8594;'],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 5
+      },
+      1200: {
+        items: 5
+      }
+    }
+  });
+
+  /****************************/
+
+  jQuery(document.documentElement).keydown(function (event) {
+
+    // var owl = jQuery("#carousel");
+
+    // handle cursor keys
+    if (event.keyCode == 37) {
+      // go left
+      owl.trigger('prev.owl.carousel', [400]);
+      //owl.trigger('owl.prev');
+    } else if (event.keyCode == 39) {
+      // go right
+      owl.trigger('next.owl.carousel', [400]);
+      //owl.trigger('owl.next');
+    }
+
+  });
+
+</script>
+
+<script>
+  $('.knw').click(function () {
+
+    var dtm = $(this).attr('data-more');
+
+
+
+    if ($(this).text() == 'View More') {
+      $(dtm).addClass('active');
+      $(this).text('View Less');
+    } else {
+      $(dtm).removeClass('active');
+      $(this).text('View More');
+    }
+
+
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('.center-slider').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      centerMode: true,
+      arrows: true,
+      dots: false,
+      speed: 300,
+      centerPadding: '20px',
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: true,
+      breakpoint: {
+        320: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+        520: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+        720: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  (function ($) {
+    $.fn.picZoomer = function (options) {
+      var opts = $.extend({}, $.fn.picZoomer.defaults, options),
+        $this = this,
+        $picBD = $('<div class="picZoomer-pic-wp"></div>').css({ 'width': opts.picWidth + 'px', 'height': opts.picHeight + 'px' }).appendTo($this),
+        $pic = $this.children('img').addClass('picZoomer-pic').appendTo($picBD),
+        $cursor = $('<div class="picZoomer-cursor"><i class="f-is picZoomCursor-ico"></i></div>').appendTo($picBD),
+        cursorSizeHalf = { w: $cursor.width() / 2, h: $cursor.height() / 2 },
+        $zoomWP = $('<div class="picZoomer-zoom-wp"><img src="" alt="" class="picZoomer-zoom-pic"></div>').appendTo($this),
+        $zoomPic = $zoomWP.find('.picZoomer-zoom-pic'),
+        picBDOffset = { x: $picBD.offset().left, y: $picBD.offset().top };
+
+
+      opts.zoomWidth = opts.zoomWidth || opts.picWidth;
+      opts.zoomHeight = opts.zoomHeight || opts.picHeight;
+      var zoomWPSizeHalf = { w: opts.zoomWidth / 2, h: opts.zoomHeight / 2 };
+
+      //初始化zoom容器大小
+      $zoomWP.css({ 'width': opts.zoomWidth + 'px', 'height': opts.zoomHeight + 'px' });
+      $zoomWP.css(opts.zoomerPosition || { top: 0, left: opts.picWidth + 30 + 'px' });
+      //初始化zoom图片大小
+      $zoomPic.css({ 'width': opts.picWidth * opts.scale + 'px', 'height': opts.picHeight * opts.scale + 'px' });
+
+      //初始化事件
+      $picBD.on('mouseenter', function (event) {
+        $cursor.show();
+        $zoomWP.show();
+        $zoomPic.attr('src', $pic.attr('src'))
+      }).on('mouseleave', function (event) {
+        $cursor.hide();
+        $zoomWP.hide();
+      }).on('mousemove', function (event) {
+        var x = event.pageX - picBDOffset.x,
+          y = event.pageY - picBDOffset.y;
+
+        $cursor.css({ 'left': x - cursorSizeHalf.w + 'px', 'top': y - cursorSizeHalf.h + 'px' });
+        $zoomPic.css({ 'left': -(x * opts.scale - zoomWPSizeHalf.w) + 'px', 'top': -(y * opts.scale - zoomWPSizeHalf.h) + 'px' });
+
+      });
+      return $this;
+
+    };
+    $.fn.picZoomer.defaults = {
+      picHeight: 460,
+      scale: 2.5,
+      zoomerPosition: { top: '0', left: '380px' },
+
+      zoomWidth: 400,
+      zoomHeight: 460
+    };
+  })(jQuery);
+
+
+
+  $(document).ready(function () {
+    $('.picZoomer').picZoomer();
+    $('.piclist li').on('click', function (event) {
+      var $pic = $(this).find('img');
+      $('.picZoomer-pic').attr('src', $pic.attr('src'));
+    });
+
+    var owl = $('#recent_post');
+    owl.owlCarousel({
+      margin: 20,
+      dots: false,
+      nav: true,
+      navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+      ],
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 2
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        },
+        1200: {
+          items: 4
+        }
+      }
+    });
+
+    $('.decrease_').click(function () {
+      decreaseValue(this);
+    });
+    $('.increase_').click(function () {
+      increaseValue(this);
+    });
+    function increaseValue(_this) {
+      var value = parseInt($(_this).siblings('input#number').val(), 10);
+      value = isNaN(value) ? 0 : value;
+      value++;
+      $(_this).siblings('input#number').val(value);
+    }
+
+    function decreaseValue(_this) {
+      var value = parseInt($(_this).siblings('input#number').val(), 10);
+      value = isNaN(value) ? 0 : value;
+      value < 1 ? value = 1 : '';
+      value--;
+      $(_this).siblings('input#number').val(value);
+    }
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('.minus').click(function () {
+      var $input = $(this).parent().find('input');
+      var count = parseInt($input.val()) - 1;
+      count = count < 1 ? 1 : count;
+      $input.val(count);
+      $input.change();
+      return false;
+    });
+    $('.plus').click(function () {
+      var $input = $(this).parent().find('input');
+      $input.val(parseInt($input.val()) + 1);
+      $input.change();
+      return false;
+    });
+  });
+</script>
+
+
+</script>
+<script>
+
+  $('.img1').click(function () {
+
+    if ($(this).attr('data-type') == 1) {
+
+      $('.vid_box').removeClass('hide');
+
+    }
+    else {
+      $('.vid_box').addClass('hide');
+
+    }
+
+
+
+  });
+
+</script>
+
 
 </body>
 

@@ -1,10 +1,3 @@
-  {{!-- <style>
-    body { margin-top:20px; }
-  .panel-title {display: inline;font-weight: bold;}
-  .checkbox.pull-right { margin: 0; }
-  .pl-ziro { padding-left: 0px; }
-  </style> --}}
-
 
 {{>header}}<br><br><br><br>
 
@@ -90,144 +83,195 @@
 <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
 <script type="text/javascript" src="/javascripts/checkout.js"></script>
 
-{{!-- <div class="container" style="margin-top: 2%;" >
-    <div class="row">
-        <div class="col-xs-12 col-md-4" style="
-    margin-left: 30%;">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        Payment Details
-                    </h3>
-                    <div class="checkbox pull-right">
-                        <label>
-                            <input type="checkbox" />
-                            Remember
-                        </label>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <form role="form">
-                    <div class="form-group">
-                        <label for="cardNumber">
-                            CARD NUMBER</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
-                                required autofocus />
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-7 col-md-7">
-                            <div class="form-group">
-                                <label for="expityMonth">
-                                    EXPIRY DATE</label>
-                                <div class="col-xs-6 col-lg-6 pl-ziro">
-                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM" required />
-                                </div>
-                                <div class="col-xs-6 col-lg-6 pl-ziro">
-                                    <input type="text" class="form-control" id="expityYear" placeholder="YY" required /></div>
-                            </div>
-                        </div>
-                        <div class="col-xs-5 col-md-5 pull-right">
-                            <div class="form-group">
-                                <label for="cvCode">
-                                    CV CODE</label>
-                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active" style="width: 100%;"><a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
-                </li>
-            </ul>
-            <br/>
-            <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
-        </div>
-    </div>
-</div> --}}
 
-
-<br><br><br><br>
-
-  
-  
-        <!-- ****** Quick View Modal Area End ****** -->
-  <footer style="width: 100% !important;">
+ <!-- ======= Footer ======= -->
+   <footer id="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
-
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
+    <div class="footer-top">
+        <div class="row">
+        <div class="col-lg-12">
+        <a href="index.html" class="logo me-auto"><img width="20%" src="assets/new_assets/img2/Logo.jpg" alt=""></a>
+        </div>
+        </div>    
+    </div>
+    <div class="footer-mid">
+        <div class="row mt-4">
+        <div class="col-lg-5">
+            <div class="box">
+            <h4>Subscribe to our newsletter</h4>
+            <form id="contact-form2">
+                <input type="email" name="email" id="emailsb" placeholder="Enter Your Email" required><button type="submit" id="submit-modal2">Subscribe Us</button>
+            </form>
+            
             </div>
         </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
+        <div class="col-lg-4">
+            <h4 class="link">Links</h4>
             <ul>
-             <li><a href="index.html">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/shop">Products</a></li>
+            <li><a href="/builder">Builder’s Project</a></li>
             </ul>
         </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
-            <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
+        <div class="col-lg-3">
+          <h4 class="link">Contact Us</h4>
+          <ul>
+          <li><a href="tel:+91-18003134491"><i class="fa fa-phone"></i>  +91-18003134491</a></li>
+          <li> <a href="mailto:sales@lavnalocks.com"><i class="fa fa-envelope"></i> sales@lavnalocks.com</a></li>
+          </ul>
+            <ul class="lastul">
+            <li><a target="_blank" href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><img src="assets/new_assets/img2/facebook (2).svg"></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/lavnalocks/"><img src="assets/new_assets/img2/instagram (1).svg"></a></li>
+            <li><a target="_blank" href="https://youtu.be/Yst8KW2Vm4M"><img src="assets/new_assets/img2/Vector (13).png"></a></li>
             </ul>
         </div>
-      </div>
+        </div>
     </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
     </div>
-</footer>
 
 
-
-
+    <div id="f_bottom" class="container-fluid">
+    <div class="row text-center">
+        <div class="col-lg-12 footer-bottom">
+        <div class="copyright">
+            &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.
+        </div>
+        </div>
+    </div>
+    </div>
+  </footer>
   <!-- End Footer -->
 
-  <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+  <div id="preloader"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- Vendor JS Files -->
-  {{!-- <script src="/public/assets/vendor/jquery/jquery.min.js"></script> --}}
-     <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
-  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/public/assets/vendor/aos/aos.js"></script>
-   
+  <script src="assets/new_assets/vendor/aos/aos.js"></script>
+  <script src="assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/new_assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/public/assets/js/main.js"></script>
-  {{!-- <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
+  <script src="assets/new_assets/js/main.js"></script>
+  <script src="assets/new_assets/js/owl.min.js"></script>  
+  <script src="assets/new_assets/js/custom.js"></script>  
+
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+  </script>
+
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_mTjMBBP092bpZsnZTyLfp");
+   })();
+</script>
+  
+ 
+<script>
+  
+
+
+
+$(document).ready(function(){
+
+$('.chn_img').click(function(){
+
+$('.chn_img').removeClass('active');
+$(this).addClass('active');
+var target = $(this).attr('data-target');
+var src = $(this).attr('data-img');
+
+$(target).attr('src',src);
+
+});
+
+});
+
+</script>
+
+
+<script>
+	$(document).ready(function(){
+		$("#contact-form").submit(function(e) {
+      
+      $('#submit-modal').html('Sending...');
+    			e.preventDefault();
+
+			var Name = document.getElementById("name").value;
+			var emailId = document.getElementById("email").value;
+			var mobile = document.getElementById("mobile").value;
+      var product = document.getElementById("product").value;
+      var message = document.getElementById("message").value;
+
+			if(Name ==='' || Name == undefined )
+			{
+				return;
+			}
+			if(emailId ==='' || emailId == undefined )
+			{
+				return;
+			}
+			if(mobile==='' || mobile == undefined )
+			{
+				return;
+			}
+      if(product==='' || product == undefined )
+			{
+				return;
+			}
+      if(message==='' || message == undefined )
+			{
+				return;
+			}
+
+      var Body ='Name: '+Name+'<br>Email: '+emailId+'<br>Mobile: '+mobile+'<br>Product: '+product+'<br>Message: '+message;
+      $('#name').val('');
+      $('#email').val('');
+      $('#mobile').val('');
+      $('#product').val('');
+      $('#message').val('');
+
+      sendMailToOwner(Body, Name, emailId, mobile, product,message );
+			});
+
+		});
+ 
+
+  function sendMailToOwner(Body, Name, emailId, mobile, product,message){
+
+var data = {
+   service_id: 'service_8zp4yhp',
+   template_id: 'template_r8bl13q',
+   user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+   template_params: {
+        'from_name': Name,
+	      'user_name':Name,
+         'user_email':emailId,
+         'user_mobile':mobile,
+         'product':product,
+         'reply_to':'contact@flybunch.com', 
+         'owner_email': 'ps1089124@gmail.com',
+         'company': 'Lavnalocks',
+		 'message':message,
+   }
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function() {
+  $('#submit-modal').html('Send');
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
+</script>
 
 </body>
 
