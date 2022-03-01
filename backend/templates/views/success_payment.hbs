@@ -1,881 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
+{{>header}}
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Fingerprint Lock- Lavna Locks</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-    <link href="/assets/img/lavnalogo.jpg" rel="icon">
-    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
-
-    <link rel="stylesheet" type="text/css" href="/public/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"
-        integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/91abd10b8f.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-
-
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="/assets/vendor/venobox/venobox.css" rel="stylesheet">
-    <link href="/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Template Main CSS File -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link href="products.json">
-
-   <style>
-  
-.links{
-  text-align: center;
-}
-.links ul li{
-  list-style: none;
-  line-height: 33px;
-}
-.links ul li a{
-  text-decoration: none;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 16px;
-}
-.links h4{
-  font-size: 23px;
-  margin-left: 40px;
-}
-.links span{
-  font-size: 17px;
-  font-weight: 600;
-}
-</style>
-    <style>
-        nav {
-            font-size: 20px !important;
-            margin-left: 20% !important;
-        }
-
-
-        .contact {
-            background-size: cover;
-            background: center;
-            width: 100%;
-            padding: 100px;
-        }
-
-        .contactform {
-           padding: 20px 30px;
+<style>
+    .payment{
+        border: 1px solid #003399;
+        border-radius: 10px;
+    }
+    .payment .check{
+        text-align: center;
+        background: #003399;
+        padding: 10px;
+        border-radius: 7px;
+    }
+    .check .fa-check{
         background: #fff;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-        max-width: 450px;
-        margin-top: 10px;
-        /* margin-left: 300px; */
-        margin: 0 auto;
-        }
-
-        .contactform h3 {
-            color: #111;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            font-weight: 500;
-
-        }
-
-        .contactform .inputbox {
-            position: relative;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .contactform .inputbox input,
-        .contactform .inputbox textarea {
-            width: 100%;
-            border: 1px solid #555;
-            padding: 10px;
-            color: #111;
-            outline: none;
-            font-size: 16px;
-            font-weight: 300;
-            resize: none;
-        }
-
-        .contactform .inputbox input[type="submit"] {
-            font-size: 1em;
-            color: #fff;
-            background: blueviolet;
-            display: inline-block;
-            text-transform: uppercase;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: 0.5s;
-            max-width: 100px;
-            font-weight: 500;
-            border: none;
-            cursor: pointer;
-        }
-
-        #cont {
-            align-items: center;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            flex-direction: column;
-            color: #fff;
-        }
-
-        #cont1 {
-            font-size: 14px;
-            align-items: center;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            flex-direction: column;
-            color: #fff;
-        }
-
-        #raleway {
-            padding-top: 70px;
-
-
-
-        }
-
-        footer {
-            background-color: black;
-            height: auto;
-            width: 100vw;
-            font-family: sans-serif;
-            padding-top: 40px;
-            color: white;
-            overflow: hidden;
-        }
-
-        .footer-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .footer-content p {
-            max-width: 500px;
-            margin: 10px auto;
-            line-height: 28px;
-            font-size: 14px;
-            color: white;
-        }
-
-        .socials {
-            list-style: none;
-            display: flex;
-      
-            margin: 1rem 0 3rem 0;
-        }
-
-        .socials li {
-            margin: 0 15px;
-            padding: 5px;
-        }
-
-        .socials a {
-            text-decoration: none;
-            color: white;
-
-        }
-
-        .socials a i {
-            font-size: 1.1rem;
-            transition: color .4s ease;
-        }
-
-        .socials a:hover i {
-            color: blueviolet;
-        }
-
-        .footer-bottom {
-            background: black;
-            width: 100vw;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer-bottom p {
-            color: white;
-            font-size: 14px;
-            word-spacing: 2px;
-            text-transform: capitalize;
-        }
-
-        .footer-content img {
-            width: 220px;
-        }
-
-        .whatsapp h5 {
-            color: white;
-            background: #205a19;
-            padding: 8px;
-            margin: 8px;
-            /* border-radius: 5%; */
-            height: 50px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            width: 250px;
-            top: -10%;
-            box-sizing: border-box;
-        }
-
-        .whatsapp {
-            position: fixed;
-            right: 4%;
-            bottom: 1%;
-            /* font-size: 40px; */
-        }
-
-        #span {
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            text-align: center;
-            margin-top: -4rem;
-        }
-    </style>
-
-    <script>
-        $("#payment_form").submit(function (event) {
-            alert("Handler for .submit() called.");
-        });
-    </script>
-</head>
-
-<body>
-
-
-    <!-- ======= Header ======= -->
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-        <div class="container d-flex align-items-center">
-
-            <a href="/" class="logo"><img class="img-fluid"
-                    style="margin-left: -1rem; height: 100rem !important; width: 30rem;"
-                    src="/assets/img/Logo.jpg"></a>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-            <nav class="nav-menu d-none d-lg-block">
-                <ul>
-                    <li><a style="font-size: 1.5rem;" href="/">HOME</a></li>
-                    <li><a style="font-size: 1.5rem;" href="/about">ABOUT US</a></li>
-                    <li><a style="font-size: 1.5rem;" href="/shop">SHOP</a></li>
-                    <li><a style="font-size: 1.5rem;" href="/faq">FAQ's</a></li>
-                    <li><a style="font-size: 1.5rem;" href="/blog">Blog</a></li>
-                    {{!-- <li><a style="font-size: 1.5rem;" href="/contact">Contact US</a></li> --}}
-                    {{#if login}}
-                    <li>
-                        <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false" style="font-size: 14px;">
-                            <i class="fas fa-user"></i> Welcome
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/user/profile">Orders</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/user/logout">Logout</a>
-                        </div>
-                    </li>
-
-                    {{else}}
-                    <li>
-                        <a style="font-size: 1.5rem;" href="/user/signup"> Sign Up</a>
-                    </li>
-                    <li>
-                        <a style="font-size: 1.5rem;" href="/user/signin"> Sign In</a>
-                    </li>
-                    {{/if}}
-                    <li>
-                        <a href="/shopping-cart">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
-                                class="bi bi-cart" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                            </svg> {{#if session.cart}}
-                            <span class="badge badge-pill badge-info" style="background-color: #007bff;">
-                                {{session.cart.totalQty}}</span>
-                            {{else}}
-                            <span class="badge badge-pill badge-info" style="background-color: #007bff;">0</span>
-                            {{/if}}
-                        </a>
-                    </li>
-
-                </ul>
-            </nav><!-- .nav-menu -->
-
-            {{!-- <div class="header-social-links">
-                <a style="font-size: 1.5rem;" href="https://www.facebook.com/lavnadigitallocks" class="facebook"><i
-                        style="color: blue; font-size: 17px;" class="fa fa-facebook-square"
-                        aria-hidden="true"></i></a>&nbsp;&nbsp;
-                <a style="font-size: 1.5rem;" href="https://www.instagram.com/lavnalocks/" class="instagram"><i
-                        style="color: white; border-radius: 12%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;"
-                        class="icofont-instagram"></i></a>&nbsp;&nbsp;
-                <!-- <a style="font-size: 1.5rem;" href="https://api.whatsapp.com/send?phone=+91-9971427608" class="whatsapp"><i class="icofont-whatsapp"></i></i></a> -->
-            </div> --}}
-
-        </div>
-
-
-        {{!-- <a href="https://api.whatsapp.com/send?phone=+91-9971427608" class="whatsapp_float shadow "
-            target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a> --}}
-
-
-    </header> <br><br><br><br>
-
-    <style>
-        html,
-        body,
-        .wrapper {
-            background: #f7f7f7;
-        }
-
-        .steps {
-            margin-top: -41px;
-            display: inline-block;
-            float: right;
-            font-size: 16px
-        }
-
-        .step {
-            float: left;
-            background: white;
-            padding: 7px 13px;
-            border-radius: 1px;
-            text-align: center;
-            width: 100px;
-            position: relative
-        }
-
-        .step_line {
-            margin: 0;
-            width: 0;
-            height: 0;
-            border-left: 16px solid #fff;
-            border-top: 16px solid transparent;
-            border-bottom: 16px solid transparent;
-            z-index: 1008;
-            position: absolute;
-            left: 99px;
-            top: 1px
-        }
-
-        .step_line.backline {
-            border-left: 20px solid #f7f7f7;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            z-index: 1006;
-            position: absolute;
-            left: 99px;
-            top: -3px
-        }
-
-        .step_complete {
-            background: #357ebd
-        }
-
-        .step_complete a.check-bc,
-        .step_complete a.check-bc:hover,
-        .afix-1,
-        .afix-1:hover {
-            color: #eee;
-        }
-
-        .step_line.step_complete {
-            background: 0;
-            border-left: 16px solid #357ebd
-        }
-
-        .step_thankyou {
-            float: left;
-            background: white;
-            padding: 7px 13px;
-            border-radius: 1px;
-            text-align: center;
-            width: 100px;
-        }
-
-        .step.check_step {
-            margin-left: 5px;
-        }
-
-        .ch_pp {
-            text-decoration: underline;
-        }
-
-        .ch_pp.sip {
-            margin-left: 10px;
-        }
-
-        .check-bc,
-        .check-bc:hover {
-            color: #222;
-        }
-
-        .SuccessField {
-            border-color: #458845 !important;
-            -webkit-box-shadow: 0 0 7px #9acc9a !important;
-            -moz-box-shadow: 0 0 7px #9acc9a !important;
-            box-shadow: 0 0 7px #9acc9a !important;
-            background: #f9f9f9 url(../images/valid.png) no-repeat 98% center !important
-        }
-
-        .btn-xs {
-            line-height: 28px;
-        }
-
-        /*login form*/
-        .login-container {
-            margin-top: 30px;
-        }
-
-        .login-container input[type=submit] {
-            width: 100%;
-            display: block;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .login-container input[type=text],
-        input[type=password] {
-            height: 44px;
-            font-size: 16px;
-            width: 100%;
-            margin-bottom: 10px;
-            -webkit-appearance: none;
-            background: #fff;
-            border: 1px solid #d9d9d9;
-            border-top: 1px solid #c0c0c0;
-            /* border-radius: 2px; */
-            padding: 0 8px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-        }
-
-        .login-container input[type=text]:hover,
-        input[type=password]:hover {
-            border: 1px solid #b9b9b9;
-            border-top: 1px solid #a0a0a0;
-            -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-            -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .login-container-submit {
-            /* border: 1px solid #3079ed; */
-            border: 0px;
-            color: #fff;
-            text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-            background-color: #357ebd;
-            /*#4d90fe;*/
-            padding: 17px 0px;
-            font-family: roboto;
-            font-size: 14px;
-            /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
-        }
-
-        .login-container-submit:hover {
-            /* border: 1px solid #2f5bb7; */
-            border: 0px;
-            text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-            background-color: #357ae8;
-            /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
-        }
-
-        .login-help {
-            font-size: 12px;
-        }
-
-        .asterix {
-            background: #f9f9f9 url(../images/red_asterisk.png) no-repeat 98% center !important;
-        }
-
-        /* images*/
-        ol,
-        ul {
-            list-style: none;
-        }
-
-        .hand {
-            cursor: pointer;
-            cursor: pointer;
-        }
-
-        .cards {
-            padding-left: 0;
-        }
-
-        .cards li {
-            -webkit-transition: all .2s;
-            -moz-transition: all .2s;
-            -ms-transition: all .2s;
-            -o-transition: all .2s;
-            transition: all .2s;
-            background-image: url('//c2.staticflickr.com/4/3713/20116660060_f1e51a5248_m.jpg');
-            background-position: 0 0;
-            float: left;
-            height: 32px;
-            margin-right: 8px;
-            text-indent: -9999px;
-            width: 51px;
-        }
-
-        .cards .mastercard {
-            background-position: -51px 0;
-        }
-
-        .cards li {
-            -webkit-transition: all .2s;
-            -moz-transition: all .2s;
-            -ms-transition: all .2s;
-            -o-transition: all .2s;
-            transition: all .2s;
-            background-image: url('//c2.staticflickr.com/4/3713/20116660060_f1e51a5248_m.jpg');
-            background-position: 0 0;
-            float: left;
-            height: 32px;
-            margin-right: 8px;
-            text-indent: -9999px;
-            width: 51px;
-        }
-
-        .cards .amex {
-            background-position: -102px 0;
-        }
-
-        .cards li {
-            -webkit-transition: all .2s;
-            -moz-transition: all .2s;
-            -ms-transition: all .2s;
-            -o-transition: all .2s;
-            transition: all .2s;
-            background-image: url('//c2.staticflickr.com/4/3713/20116660060_f1e51a5248_m.jpg');
-            background-position: 0 0;
-            float: left;
-            height: 32px;
-            margin-right: 8px;
-            text-indent: -9999px;
-            width: 51px;
-        }
-
-        .cards li:last-child {
-            margin-right: 0;
-        }
-
-        /* images end */
-
-
-
-        /*
- * BOOTSTRAP
- */
-        .container {
-            border: none;
-        }
-
-        .panel-footer {
-            background: #fff;
-        }
-
-        .btn {
-            border-radius: 1px;
-        }
-
-        .btn-sm,
-        .btn-group-sm>.btn {
-            border-radius: 1px;
-        }
-
-        .input-sm,
-        .form-horizontal .form-group-sm .form-control {
-            border-radius: 1px;
-        }
-
-        .panel-info {
-            border-color: #999;
-        }
-
-        .panel-heading {
-            border-top-left-radius: 1px;
-            border-top-right-radius: 1px;
-        }
-
-        .panel {
-            border-radius: 1px;
-        }
-
-        .panel-info>.panel-heading {
-            color: #eee;
-            border-color: #999;
-        }
-
-        .panel-info>.panel-heading {
-            background-image: linear-gradient(to bottom, #555 0px, #888 100%);
-        }
-
-        hr {
-            border-color: #999 -moz-use-text-color -moz-use-text-color;
-        }
-
-        .panel-footer {
-            border-bottom-left-radius: 1px;
-            border-bottom-right-radius: 1px;
-            border-top: 1px solid #999;
-        }
-
-        .btn-link {
-            color: #888;
-        }
-
-        hr {
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-
-        /** MEDIA QUERIES **/
-        @media only screen and (max-width: 989px) {
-            .span1 {
-                margin-bottom: 15px;
-                clear: both;
-            }
-        }
-
-        @media only screen and (max-width: 764px) {
-            .inverse-1 {
-                float: right;
-            }
-        }
-
-        @media only screen and (max-width: 586px) {
-            .cart-titles {
-                display: none;
-            }
-
-            .panel {
-                margin-bottom: 1px;
-            }
-        }
-
-        .form-control {
-            border-radius: 1px;
-        }
-
-        @media only screen and (max-width: 486px) {
-            .col-xss-12 {
-                width: 100%;
-            }
-
-            .cart-img-show {
-                display: none;
-            }
-
-            .btn-submit-fix {
-                width: 100%;
-            }
-
-        }
-
-        /*
-@media only screen and (max-width: 777px){
-    .container{
-        overflow-x: hidden;
+        padding: 10px;
+        border-radius: 50px;
     }
-}*/
-    </style>
-
-    <style type="text/css">
-
-    body
-    {
-        background:#f2f2f2;
+    .payment .content{
+        padding: 20px;
+        text-align: center;
     }
-
-    .payment
-	{
-		border:1px solid #f2f2f2;
-		height:280px;
-        border-radius:20px;
-        background:#fff;
-	}
-   .payment_header
-   {
-	   background:#28a745;
-	   padding:20px;
-       border-radius:20px 20px 0px 0px;
-	   
-   }
-   
-   .check
-   {
-	   margin:0px auto;
-	   width:50px;
-	   height:50px;
-	   border-radius:100%;
-	   background:#fff;
-	   text-align:center;
-   }
-   
-   .check i
-   {
-	   vertical-align:middle;
-	   line-height:50px;
-	   font-size:30px;
-   }
-
-    .content 
-    {
-        text-align:center;
-    }
-
-    .content  h1
-    {
-        font-size:25px;
-        padding-top:25px;
-    }
-
-    .content a
-    {
-        width:200px;
-        height:35px;
-        color:#fff;
-        border-radius:30px;
-        padding:5px 10px;
-        background:rgb(197, 8, 8);
-        transition:all ease-in-out 0.3s;
-    }
-
-    .content a:hover
-    {
-        text-decoration:none;
-        background:#000;
-    }
-   
+     .payment .content a{
+         background-color: #003399;
+         color: #fff;
+         padding-top: 9px;
+         padding-bottom: 9px;
+         padding-left: 30px;
+         padding-right: 30px;
+         border-radius: 10px;
+         font-family: 'Source Sans Pro', sans-serif;
+     }
+       .payment .content h1{
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: #003399;
+            margin-top: 15px;
+            margin-bottom: 15px;
+       }
 </style>
-    <div class="container">
-   <div class="row">
-      <div class="col-md-6 mx-auto mt-5">
-         <div class="payment">
-            <div class="payment_header">
-               <div class="check"><i class="fa fa-check" aria-hidden="true"></i></div>
-            </div>
-            <div class="content">
-               <h1>Payment Success !</h1>
-               <p>Your order has been successfully placed! we will revert back to you shortly. </p>
-               <a href="/">Go to Home</a>
-            </div>
-            
-         </div>
-      </div>
-   </div>
-</div>
-    {{!--
-    <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
-    <script type="text/javascript" src="/javascripts/checkout.js"></script> --}}
-     <footer style="width: 100% !important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg"></a>
 
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mx-auto mt-5">
+            <div class="payment">
+                <div class="payment_header">
+                    <div class="check"><i class="fa fa-check" aria-hidden="true"></i></div>
+                </div>
+                <div class="content">
+                    <h1>Payment Success !</h1>
+                    <p>Your order has been successfully placed! we will revert back to you shortly. </p>
+                    <a href="/">Go to Home</a>
+                </div>
+
             </div>
         </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
-            </ul>
-        </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
-            <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
-            </ul>
-        </div>
-      </div>
     </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
+</div>
+
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="index.html" class="logo me-auto"><img width="20%" src="assets/new_assets/img2/Logo.jpg"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="row mt-4">
+                <div class="col-lg-5">
+                    <div class="box">
+                        <h4>Subscribe to our newsletter</h4>
+                        <form id="contact-form2">
+                            <input type="email" name="email" id="emailsb" placeholder="Enter Your Email"
+                                required><button type="submit" id="submit-modal2">Subscribe Us</button>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="link">Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/shop">Products</a></li>
+                        <li><a href="/builder">Builder’s Project</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="link">Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+91-18003134491"><i class="fa fa-phone"></i> +91-18003134491</a></li>
+                        <li> <a href="mailto:sales@lavnalocks.com"><i class="fa fa-envelope"></i>
+                                sales@lavnalocks.com</a></li>
+                    </ul>
+                    <ul class="lastul">
+                        <li><a target="_blank" href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><img
+                                    src="assets/new_assets/img2/facebook (2).svg"></a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/lavnalocks/"><img
+                                    src="assets/new_assets/img2/instagram (1).svg"></a></li>
+                        <li><a target="_blank" href="https://youtu.be/Yst8KW2Vm4M"><img
+                                    src="assets/new_assets/img2/Vector (13).png"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="f_bottom" class="container-fluid">
+        <div class="row text-center">
+            <div class="col-lg-12 footer-bottom">
+                <div class="copyright">
+                    &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
+<!-- End Footer -->
 
-    <!-- End Footer -->
+<div id="preloader"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+<!-- Vendor JS Files -->
+<script src="assets/new_assets/vendor/aos/aos.js"></script>
+<script src="assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/new_assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/new_assets/js/main.js"></script>
+<script src="assets/new_assets/js/owl.min.js"></script>
+<script src="assets/new_assets/js/custom.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+</script>
+
+
+<script type="text/javascript">
+    (function () {
+        emailjs.init("user_mTjMBBP092bpZsnZTyLfp");
+    })();
+</script>
+
+<script>
+    $(".progress-bar").animate({
+        width: "90%"
+    }, 2500);
+
+    $("#progress-bar2").animate({
+        width: "80%"
+    }, 2500);
+
+    $("#progress-bar3").animate({
+        width: "70%"
+    }, 2500);
+</script>
+
+<script>
+    $(document).ready(function () {
+        var submitIcon = $('.searchbox-icon');
+        var inputBox = $('.searchbox-input');
+        var searchBox = $('.searchbox');
+        var isOpen = false;
+        submitIcon.click(function () {
+            if (isOpen == false) {
+                searchBox.addClass('searchbox-open');
+                inputBox.focus();
+                isOpen = true;
+            } else {
+                searchBox.removeClass('searchbox-open');
+                inputBox.focusout();
+                isOpen = false;
+            }
+        });
+        submitIcon.mouseup(function () {
+            return false;
+        });
+        searchBox.mouseup(function () {
+            return false;
+        });
+        $(document).mouseup(function () {
+            if (isOpen == true) {
+                $('.searchbox-icon').css('display', 'block');
+                submitIcon.click();
+            }
+        });
+    });
+    function buttonUp() {
+        var inputVal = $('.searchbox-input').val();
+        inputVal = $.trim(inputVal).length;
+        if (inputVal !== 0) {
+            $('.searchbox-icon').css('display', 'none');
+        } else {
+            $('.searchbox-input').val('');
+            $('.searchbox-icon').css('display', 'block');
+        }
+    }
+</script>
+
+<script>
+    var swiper = new Swiper("#prd_thumb", {
+        slidesPerView: 5.5,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: "#prd_thumb .swiper-button-next",
+            prevEl: "#prd_thumb .swiper-button-prev",
+        },
+
+    });
+
+
+
+    $(document).ready(function () {
+
+        $('.chn_img').click(function () {
+
+            $('.chn_img').removeClass('active');
+            $(this).addClass('active');
+            var target = $(this).attr('data-target');
+            var src = $(this).attr('data-img');
+
+            $(target).attr('src', src);
+
+        });
+
+    });
+
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#contact-form2").submit(function (e) {
+            $('#submit-modal2').html('Sending...');
+            e.preventDefault();
+            var emailId = document.getElementById("emailsb").value;
+            if (emailId === '' || emailId == undefined) {
+                return;
+            }
+            var Body = 'Email: ' + emailId;
+            $('#emailsb').val('');
+
+            sendMailToUser(emailId);
+            sendMailToOwner(Body, emailId);
+        });
+
+    });
+
+
+    function sendMailToUser(emailId) {
+
+        var data = {
+            service_id: 'service_8zp4yhp',
+            template_id: 'template_kvsj7kk',
+            user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+            template_params: {
+                'user_email': emailId,
+                'reply_to': 'contact@lavnalocks.com',
+                'company': "Lavnalocks",
+
+            }
+
+        };
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function (msg) {
+            // alert(msg);
+            $('#submit-modal2').html('Subscribe');
+            swal("Thank You!", "Your have subscribe lavnalocks", "success");
+            $('#closemodal').trigger('click');
+        }).fail(function (error) {
+            alert('Oops... user mail failed' + JSON.stringify(error));
+        });
+
+    }
+
+
+    function sendMailToOwner(Body, emailId) {
+        var data = {
+            service_id: 'service_8zp4yhp',
+            template_id: 'template_mxovugp',
+            user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+            template_params: {
+                'user_email': emailId,
+                'reply_to': 'contact@lavnalocks.com',
+                'owner_email': 'sales@lavnalocks.com',
+                'company': 'Lavnalocks',
+            }
+
+        };
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function () {
+            $('#submit-modal').html('Send');
+            swal("Thank You!", "Your Query has been submitted!", "success");
+            $('#closemodal').trigger('click');
+        }).fail(function (error) {
+            alert('Oops... ' + JSON.stringify(error));
+        });
+
+    }
+
+</script>
 
 </body>
 

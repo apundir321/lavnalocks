@@ -417,80 +417,84 @@
 
 </script>
 
-
 <script>
-    $(document).ready(function () {
-        $("#contact-form").submit(function (e) {
+	$(document).ready(function(){
+		$("#contact-form2").submit(function(e) {
+      $('#submit-modal2').html('Sending...');
+    			e.preventDefault();
+			var emailId = document.getElementById("emailsb").value;
+			if(emailId ==='' || emailId == undefined )
+			{
+				return;
+			}
+			var Body ='Email: '+emailId;
+      $('#emailsb').val('');
 
-            $('#submit-modal').html('Sending...');
-            e.preventDefault();
+      sendMailToUser(emailId);
+      sendMailToOwner(Body, emailId);
+			});
 
-            var Name = document.getElementById("name").value;
-            var emailId = document.getElementById("email").value;
-            var mobile = document.getElementById("mobile").value;
-            var product = document.getElementById("product").value;
-            var message = document.getElementById("message").value;
-
-            if (Name === '' || Name == undefined) {
-                return;
-            }
-            if (emailId === '' || emailId == undefined) {
-                return;
-            }
-            if (mobile === '' || mobile == undefined) {
-                return;
-            }
-            if (product === '' || product == undefined) {
-                return;
-            }
-            if (message === '' || message == undefined) {
-                return;
-            }
-
-            var Body = 'Name: ' + Name + '<br>Email: ' + emailId + '<br>Mobile: ' + mobile + '<br>Product: ' + product + '<br>Message: ' + message;
-            $('#name').val('');
-            $('#email').val('');
-            $('#mobile').val('');
-            $('#product').val('');
-            $('#message').val('');
-
-            sendMailToOwner(Body, Name, emailId, mobile, product, message);
-        });
-
-    });
+		});
 
 
-    function sendMailToOwner(Body, Name, emailId, mobile, product, message) {
+function sendMailToUser(emailId){
 
-        var data = {
-            service_id: 'service_8zp4yhp',
-            template_id: 'template_r8bl13q',
-            user_id: 'user_mTjMBBP092bpZsnZTyLfp',
-            template_params: {
-                'from_name': Name,
-                'user_name': Name,
-                'user_email': emailId,
-                'user_mobile': mobile,
-                'product': product,
-                'reply_to': 'contact@flybunch.com',
-                'owner_email': 'ps1089124@gmail.com',
-                'company': 'Lavnalocks',
-                'message': message,
-            }
-        };
+var data = {
+   service_id: 'service_8zp4yhp',
+   template_id: 'template_kvsj7kk',
+   user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+   template_params: {
+        'user_email':emailId,
+        'reply_to':'contact@lavnalocks.com',
+  		  'company':"Lavnalocks",
 
-        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-            type: 'POST',
-            data: JSON.stringify(data),
-            contentType: 'application/json'
-        }).done(function () {
-            $('#submit-modal').html('Send');
-            $('#closemodal').trigger('click');
-        }).fail(function (error) {
-            alert('Oops... ' + JSON.stringify(error));
-        });
+   }
 
-    }
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function(msg) {
+  // alert(msg);
+  $('#submit-modal2').html('Subscribe');
+  swal("Thank You!", "Your have subscribe lavnalocks", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... user mail failed' + JSON.stringify(error));
+});
+
+}
+    
+
+  function sendMailToOwner(Body, emailId){
+var data = {
+   service_id: 'service_8zp4yhp',
+   template_id: 'template_mxovugp',
+   user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+   template_params: {
+         'user_email': emailId ,
+         'reply_to':'contact@lavnalocks.com', 
+         'owner_email': 'sales@lavnalocks.com',
+         'company': 'Lavnalocks',
+   }
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function() {
+  $('#submit-modal').html('Send');
+  swal("Thank You!", "Your Query has been submitted!", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... ' + JSON.stringify(error));
+});
+
+}
 
 </script>
 

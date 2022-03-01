@@ -415,7 +415,7 @@
 
 </script>
 
-
+{{!-- 
 <script>
     $(document).ready(function () {
         $("#contact-form").submit(function (e) {
@@ -490,7 +490,89 @@
 
     }
 
+</script> --}}
+
+<script>
+$(document).ready(function(){
+    $("#contact-form2").submit(function(e) {
+  $('#submit-modal2').html('Sending...');
+            e.preventDefault();
+        var emailId = document.getElementById("emailsb").value;
+        if(emailId ==='' || emailId == undefined )
+        {
+            return;
+        }
+        var Body ='Email: '+emailId;
+  $('#emailsb').val('');
+
+  sendMailToUser(emailId);
+  sendMailToOwner(Body, emailId);
+        });
+
+    });
+
+
+function sendMailToUser(emailId){
+
+var data = {
+service_id: 'service_8zp4yhp',
+template_id: 'template_kvsj7kk',
+user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+template_params: {
+    'user_email':emailId,
+    'reply_to':'contact@lavnalocks.com',
+        'company':"Lavnalocks",
+
+}
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+type: 'POST',
+data: JSON.stringify(data),
+contentType: 'application/json'
+}).done(function(msg) {
+// alert(msg);
+$('#submit-modal').html('Send');
+swal("Thank You!", "Your have subscribe lavnalocks", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+alert('Oops... user mail failed' + JSON.stringify(error));
+});
+
+}
+
+
+function sendMailToOwner(Body, emailId){
+var data = {
+service_id: 'service_8zp4yhp',
+template_id: 'template_mxovugp',
+user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+template_params: {
+     'user_email': emailId ,
+     'reply_to':'contact@lavnalocks.com', 
+     'owner_email': 'sales@lavnalocks.com',
+     'company': 'Lavnalocks',
+}
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+type: 'POST',
+data: JSON.stringify(data),
+contentType: 'application/json'
+}).done(function() {
+$('#submit-modal').html('Send');
+swal("Thank You!", "Your Query has been submitted!", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
 </script>
+
 
 </body>
 
