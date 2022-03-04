@@ -130,6 +130,24 @@ router.get("/dashboard", middleware.isLoggedIn, async (req, res) => {
     allOrders = await Order.find({ user: req.user });
     allOrders.userName = req.user.firstname;
     console.log(allOrders);
+      for(let order of allOrders){
+        console.log(order.cart.items);
+        for(let item of order.cart.items)
+        {
+        let foundProduct =await Product.findOne({ title: item.title}).exec();
+        console.log(foundProduct.image);
+        order.url =  foundProduct.image;
+          if(order.Delivered == true){
+            order.status = "Delivered";
+          }else{
+            order.status = "Dispatched";
+          }
+          console.log(order.status);
+        }
+        console.log("hi",order,order.cart.items);
+        orderProducts.push(order);
+
+      }
     res.render("dashboard", {
       orders: allOrders,      
       pageName: "User Profile",

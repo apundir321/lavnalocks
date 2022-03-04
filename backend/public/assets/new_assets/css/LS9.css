@@ -1172,5 +1172,8 @@ display: none;
     #services{
         padding: 15px 0 !important;
     }
+    .piclist{
+        margin-top: -26px;
+    }
   
   }

@@ -1102,6 +1102,12 @@ display: none;
     .set-img-la24- img{
         width: 10% !important;
     }
+    .piclist{
+        margin-top: -26px;
+    }
+    .vid_box iframe{
+        height: 325px !important;
+    }
   }
 
   .line{
