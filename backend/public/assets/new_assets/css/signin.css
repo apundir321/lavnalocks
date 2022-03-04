@@ -9,11 +9,11 @@
     padding: 40px 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0, 0.2);
 }
-@media (max-width:767px){
+/* @media (max-width:767px){
     #signin3 #container{
         width: 94%;
     }
-}
+} */
 #container{
     position: relative;
     perspective: 2700px;

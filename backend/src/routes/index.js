@@ -15,16 +15,16 @@ router.use(csrfProtection);
 const nodemailer = require("nodemailer");
 var Razorpay = require('razorpay');
 const { body } = require("express-validator");
-var instance = new Razorpay({
-  key_id: 'rzp_live_AesJaVZnibvAwT',
-  key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
-})
-
-
 // var instance = new Razorpay({
-//   key_id: 'rzp_test_sRwu7f4GZLZbMr',
-//   key_secret: 'bWZ29nGeMawqkCPhzuWGp8V7'
+//   key_id: 'rzp_live_AesJaVZnibvAwT',
+//   key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
 // })
+
+
+var instance = new Razorpay({
+  key_id: 'rzp_test_DTRatZbmdR7EnW',
+  key_secret: 'ZotkGhgBTy9mNNLl3350LNWe'
+})
 
 let price = 2000,
   currency = 'INR',
@@ -324,8 +324,8 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       totalAmount: cart.totalCost*100,
       csrfToken: req.csrfToken(),
       errorMsg,
-      key: "rzp_live_AesJaVZnibvAwT",
-      // key: "rzp_test_sRwu7f4GZLZbMr",
+      // key: "rzp_live_AesJaVZnibvAwT",
+      key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)
@@ -340,8 +340,8 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       csrfToken: req.csrfToken(),
       errorMsg,
       
-      key: "rzp_live_AesJaVZnibvAwT",
-      // key: "rzp_test_sRwu7f4GZLZbMr",
+      // key: "rzp_live_AesJaVZnibvAwT",
+      key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)
@@ -431,6 +431,7 @@ router.post("/confirmOrder", async(req, res) => {
     console.log(req.body.postDataJson);
     let body = req.body.order_id + "|" + req.body.order_pay_id;
     console.log(body);
+    console.log(req.session.cart);
     const cart = await Cart.findById(req.session.cart._id);
     console.log(cart);
     // var expectedSignature = crypto
@@ -462,10 +463,10 @@ router.post("/confirmOrder", async(req, res) => {
         console.log("sending email");
         // allOrders = await Order.find({ user: req.user });
         // req.flash("success", "Successfully purchased");
-        let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+        // let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
         
         console.log(req.body.postDataJson);
-      console.log(emailRes);  
+      // console.log(emailRes);  
         req.session.cart = null;
         var response = { status: "SUCCESS" };
         res.send(response);
@@ -484,9 +485,9 @@ router.post("/confirmGuestOrder", async(req, res) => {
     console.log(req.body.postDataJson);
     req.session.cart = null;
     var response = { status: "SUCCESS" };
-    let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+    // let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
     console.log("sending email");
-    console.log(emailRes);
+    // console.log(emailRes);
     res.send(response);
   } catch (error) {
     console.log(error);
@@ -593,13 +594,14 @@ router.post(
 
 // create products array to store the info of each product in the cart
 async function productsFromCart(cart) {
-  console.log(cart.items)
+  // console.log(cart.items)
   let products = []; // array of objects
   for (const item of cart.items) {
+    console.log(item.title);
     // console.log(item);
     let foundProduct =
       await Product.findOne({ title: item.title }).exec();
-    // console.log(foundProduct);
+    console.log(foundProduct);
     if (item.qty) {
       foundProduct["qty"] = item.qty;
     }

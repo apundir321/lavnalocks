@@ -55,6 +55,9 @@ const orderSchema = Schema({
   Delivered: {
     type: Boolean,
     default: false,
+  }, url: {
+    type: String,
+    required: false,
   },
 });
 

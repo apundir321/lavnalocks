@@ -54,7 +54,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 100%;
+   
 }
 .piclist li{
     display: inline-block;
@@ -1030,6 +1030,10 @@ display: none;
         margin: 0 auto;
         bottom: 0;
     }
+    #services{
+        padding: 15px 0 !important;
+    }
+
     ._boxzoom{
         text-align: center;
     }

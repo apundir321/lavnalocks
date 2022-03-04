@@ -244,22 +244,22 @@
                 <div class="row mt-4 d-flex align-items-center">
                     <div class="col-lg-12">
                         <div class="box" data-aos="fade-right">
-                            <form>
+                            <form id="builder_form">
                                 <div class="form-group">
                                     <label for="name">Name*</label>
-                                    <input class="form-control" type="text" name="cpname" id="name" placeholder="Your Name*" pattern="[A-Za-z. ]+" data-error="Name is required." min-length="3" required>
+                                    <input class="form-control" type="text" name="name" id="name" placeholder="Your Name*" pattern="[A-Za-z. ]+" data-error="Name is required." min-length="3" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="mt-4" for="email">Email*</label>
-                                    <input class="form-control" type="email" name="cpemail" id="email" placeholder="Your Email*"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-error="Valid email is required." required>
+                                    <input class="form-control" type="email" name="email" id="email" placeholder="Your Email*"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-error="Valid email is required." required>
                                 </div>
                                 <div class="form-group">
                                     <label class="mt-4" for="mobile">Mobile*</label>
-                                    <input class="form-control" type="text" name="cpphone" id="mobile" placeholder="Your Mobile No*"  pattern="[1-9]+[0-9]{9}" data-error="Contact no is required." required>
+                                    <input class="form-control" type="text" name="mobile" id="mobile" placeholder="Your Mobile No*"  pattern="[1-9]+[0-9]{9}" data-error="Contact no is required." required>
                                 </div>
                                 <div class="form-group">
                                     <label class="mt-4" for="select">How many locks do you need ?</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" name="locks" id="locks" aria-label="Default select example" required>
                                         <option value="" selected>0 - 10</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -272,7 +272,7 @@
                                         <option value="9">9</option>
                                         <option value="10">10</option>
                                         <option value="10+">More than 10</option>
-                                      </select>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label class="mt-4" for="mobile">City*</label>
@@ -283,7 +283,7 @@
                                     <textarea class="form-control" id="message" name="message" rows="2" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn shadow mt-4" type="submit">Apply Now</button>
+                                    <button id="builder_submit" class="btn shadow mt-4" type="submit">Apply Now</button>
                                 </div>
                             </form>
                         </div>
@@ -418,47 +418,6 @@ $("#progress-bar3").animate({
 }, 2500);
 </script>
 
-<script>
-    $(document).ready(function(){
-        var submitIcon = $('.searchbox-icon');
-        var inputBox = $('.searchbox-input');
-        var searchBox = $('.searchbox');
-        var isOpen = false;
-        submitIcon.click(function(){
-            if(isOpen == false){
-                searchBox.addClass('searchbox-open');
-                inputBox.focus();
-                isOpen = true;
-            } else {
-                searchBox.removeClass('searchbox-open');
-                inputBox.focusout();
-                isOpen = false;
-            }
-        });  
-            submitIcon.mouseup(function(){
-                return false;
-            });
-        searchBox.mouseup(function(){
-                return false;
-            });
-        $(document).mouseup(function(){
-                if(isOpen == true){
-                    $('.searchbox-icon').css('display','block');
-                    submitIcon.click();
-                }
-            });
-    });
-        function buttonUp(){
-            var inputVal = $('.searchbox-input').val();
-            inputVal = $.trim(inputVal).length;
-            if( inputVal !== 0){
-                $('.searchbox-icon').css('display','none');
-            } else {
-                $('.searchbox-input').val('');
-                $('.searchbox-icon').css('display','block');
-            }
-        }
-</script>
 
 <script>
   var swiper = new Swiper("#prd_thumb", {
@@ -572,6 +531,98 @@ $('#closemodal').trigger('click');
 }
 
 </script>
+
+
+<script>
+	$(document).ready(function(){
+        debugger;
+		$("#builder_form").submit(function(e) {
+        $('#builder_submit').html('Sending...');
+    		e.preventDefault();
+            var name = document.getElementById("name").value;
+			var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var locks = document.getElementById("locks").value;
+            var city = document.getElementById("city").value;
+            var message = document.getElementById("message").value;
+
+
+			if(name ==='' || name == undefined )
+			{
+				return;
+			}
+            if(email ==='' || email == undefined )
+			{
+				return;
+			}
+            if(mobile ==='' || mobile == undefined )
+			{
+				return;
+			}
+            if(locks ==='' || locks == undefined )
+			{
+				return;
+			}
+            if(city ==='' || city == undefined )
+			{
+				return;
+			}
+            if(message ==='' || message == undefined )
+			{
+				return;
+			}
+
+			var Body ='Name: '+name+'<br>Email: '+email+'<br>Mobile: '+mobile+'<br>locks: '+locks+'<br>city: '+city+'<br>Message: '+message;
+          
+
+            sendMailToOwner(Body, name, email, mobile, locks, city, message );
+              $('#name').val('');
+            $('#email').val('');
+            $('#mobile').val('');
+            $('#locks').val('');
+            $('#city').val('');
+            $('#message').val('');
+			});
+
+		});
+
+
+  function sendMailToOwner(Body, name, email, mobile, locks, city, message ){
+      debugger
+    var data = {
+    service_id: 'service_8zp4yhp',
+    template_id: 'template_xcrbexa',
+    user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+        template_params: {
+            'reply_to':'contact@lavnalocks.com', 
+            'owner_email': 'sales@lavnalocks.com',
+            'name': name,
+            'email': email,
+            'mobile': mobile,
+            'locks': locks,
+            'city': city,
+            'message': message,
+            'company': 'Lavnalocks',
+        }
+
+    };
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function() {
+  $('#submit-modal').html('Send');
+  swal("Thank You!", "Your Query has been submitted!", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
+</script>
+
 
 <script>
     $('.swiper-button-next').click(

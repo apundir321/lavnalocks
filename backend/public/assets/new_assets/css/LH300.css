@@ -59,7 +59,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 100%;
+  
 }
 .piclist li{
     display: inline-block;
@@ -1194,6 +1194,10 @@ display: none;
     .set-img-lh3001{
         width: 14%;
     }
+    #services{
+        padding: 15px 0 !important;
+    }
+
 
 
   }

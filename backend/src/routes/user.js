@@ -2,10 +2,12 @@ const express = require("express");
 const router = express.Router();
 const csrf = require("csurf");
 var passport = require("passport");
+var user=require("../models/user");
 var LocalStrategy = require("passport-local").Strategy;
-const Product = require("../models/product");
+const Product = require("../models/lavnaproduct");
 const Order = require("../models/order");
 const Cart = require("../models/cart");
+
 const middleware = require("../middleware");
 const {
   userSignUpValidationRules,
@@ -117,7 +119,8 @@ router.post(
 );
 
 // GET: display user's profile
-router.get("/profile", middleware.isLoggedIn, async (req, res) => {
+// GET: display user's dashboard
+router.get("/dashboard", middleware.isLoggedIn, async (req, res) => {
   // console.log(req.flash("success"));
   // console.log(req.flash("success").length);
   // const successMsg = req.flash("success")[0];
@@ -125,7 +128,50 @@ router.get("/profile", middleware.isLoggedIn, async (req, res) => {
   try {
     // find all orders of this user
     allOrders = await Order.find({ user: req.user });
-    res.render("profile", {
+    allOrders.userName = req.user.firstname;
+    console.log(allOrders);
+    res.render("dashboard", {
+      orders: allOrders,      
+      pageName: "User Profile",
+    });
+  } catch (err) {
+    console.log(err);
+    return res.redirect("/");
+  }
+});
+
+
+// GET: display user's orders
+router.get("/orders", middleware.isLoggedIn, async (req, res) => {
+  // console.log(req.flash("success"));
+  // console.log(req.flash("success").length);
+  // const successMsg = req.flash("success")[0];
+  // const errorMsg = req.flash("error")[0];
+  try {
+    // find all orders of this user
+    allOrders = await Order.find({ user: req.user });
+    allOrders.userName = req.user.firstname
+    let orderProducts = []; 
+    for(let order of allOrders){
+      console.log(order.cart.items);
+      for(let item of order.cart.items)
+      {
+      let foundProduct =await Product.findOne({ title: item.title}).exec();
+      console.log(foundProduct.image);
+      order.url =  foundProduct.image;
+        if(order.Delivered == true){
+          order.status = "Delivered";
+        }else{
+          order.status = "Dispatched";
+        }
+        console.log(order.status);
+      }
+      console.log("hi",order,order.cart.items);
+      orderProducts.push(order);
+
+    }
+    console.log(allOrders);
+    res.render("orders", {
       orders: allOrders,
       
       pageName: "User Profile",
@@ -135,6 +181,27 @@ router.get("/profile", middleware.isLoggedIn, async (req, res) => {
     return res.redirect("/");
   }
 });
+
+
+router.get("/settings", middleware.isLoggedIn, async (req, res) => {
+  // console.log(req.flash("success"));
+  // console.log(req.flash("success").length);
+  // const successMsg = req.flash("success")[0];
+  // const errorMsg = req.flash("error")[0];
+  try {
+    // find all orders of this user
+    allOrders = await Order.find({ user: req.user });
+    res.render("settings", {
+      orders: allOrders,
+      
+      pageName: "User Profile",
+    });
+  } catch (err) {
+    console.log(err);
+    return res.redirect("/");
+  }
+});
+
 
 // GET: logout
 router.get("/logout", middleware.isLoggedIn, (req, res) => {

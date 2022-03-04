@@ -59,11 +59,11 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 100%;
+    
 }
 .piclist li{
     display: inline-block;
-    width: 42px;
+    width: 37px;
    
     border: 1px solid #eee;
     margin-left: 6px;
@@ -1183,6 +1183,10 @@ display: none;
     .line{
         display: none !important;
     }
+    #services{
+        padding: 15px 0 !important;
+    }
+
   
 
 

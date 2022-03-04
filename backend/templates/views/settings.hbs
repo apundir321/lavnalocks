@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lavna - Dashboard</title>
+
+    <!-- Favicons -->
+    <link href="../../public/assets/new_assets/img2/fevicon_lavana.png" rel="icon">
+    <link href="../../public/assets/new_assets/img2/fevicon_lavana.png" rel="apple-touch-icon">
+
+    <!-- Custom fonts-->
+    <link href="../../public/assets/new_assets/vendor2/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom styles -->
+    <link href="../../public/assets/new_assets/css/dashboard.css" rel="stylesheet">
+    <link href="../../public/assets/new_assets/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        @media (max-width:767px){
+            .content{
+                display: none;
+            }
+            #content .box img{
+                position: relative !important;
+                 width: 45% !important;
+            }
+        }
+
+        #content .box{
+            position: relative;
+        }
+        #content .box_image{
+            position: absolute;
+        }
+        #content .box img{
+            height: 110px;
+            width: 110px;
+        }
+    </style>
+
+    <style>
+        .contact-us{
+            background-color: #ffffff47;
+            padding: 20px;
+            border-radius: 31px !important;
+
+        }
+        .contact-us .btn{
+            padding: 2px;
+            font-size: 13px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: #06185A;
+            color: white;
+            border-radius: 31px !important;
+        }
+        .contact-us p{
+            margin-bottom: 0px;
+        }
+        .contact-us .img{
+            text-align: end;
+        }
+        .block-section{
+            background-color: #fff;
+            height: auto;
+            min-height: 660px;
+            padding: 20px;
+            border-radius: 50px;
+        
+        }
+        .box-details-1 {
+            padding-top: 35px;
+        }
+        .box-icon {
+            float: right;
+        }
+        .box-name {
+            /* float: right; */
+            margin-left: 14px;
+            margin-top: 10px;
+        }
+        .box-image {
+            width: 60px !important;
+        }
+
+        .box-dashboard-content-1 {
+            padding: 5%;
+            border-radius: 20px;
+        }
+        .all-a a {
+            color: #000 !important;
+        }
+
+        .box-complete-meeting h4 {
+            color: #fff !important;
+            padding: 8px 15px 2px 18px;
+            text-align: center;
+            height: auto;
+            
+        }
+        .box-complete-meeting {
+        
+            background-color: #FB8358;
+            padding: 1%;
+            border-radius: 20px;
+        }
+
+
+
+        .row-top3 {
+            margin-top: 5%;
+        }
+        .row-top3 h4{
+        color: #000 !important;
+        }
+        .btn {
+            background-color: #FB8358;
+            color: #fff;
+            border-radius: 20px;
+
+        }
+        .box-calls {
+            padding: 5%;
+        }
+        .box-whatsapp span {
+            color: #B0A7A7;
+        }
+        .btn:hover {
+            color: #000;
+        }
+        .box-updated-meeting {
+            padding: 5%;
+        }
+        .box-updated-meeting2 h4 {
+            color: #DFE0EB !important;
+        }
+        .btn:hover {
+            background-color: #FB8358 !important;
+            color: #fff !important;
+        }
+
+        .active{
+            background-color: white;
+            color: #FB6D3A;
+        }
+        .dashboard-icon img.active{
+            background-color: #FB6D3A;
+
+        }
+        .dashboard-icon .img-fluid{
+            margin-right: 10px !important;
+        }
+        .contact{
+            font-size: 12px !important;
+            color: white !important;
+            font-weight: 400;
+            padding-bottom: 10px !important;
+        }
+        .support{
+            font-weight: bold !important;
+        }
+
+
+
+
+
+        /* user-1 */
+        .box-final .nav-link {
+            border: none;
+            background-color: #fff;
+            color: #000;
+            box-shadow: none;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #FB8358 !important;
+        }
+        .fontAwesome {
+            font-family: Helvetica, 'FontAwesome', sans-serif;
+            box-shadow: none !important;
+        }
+        .nav-item1 {
+            
+            margin-right: 20px;
+        }
+        .nav-item1 a:hover {
+            color: #FB8358 !important;
+            
+        }
+        .box-header {
+            float: right;
+        }
+        .side {
+            padding-left: 100px;
+        }
+        .tab-1 {
+            color: #06185A !important;
+        }
+        .box-date-specific h3,p {
+            color: #FB8358 !important;
+            font-size: 25px !important;
+            font-weight: 700;
+        }
+        .box-meeting-detail-1 {
+            padding: 2%;
+        }
+        .box-date-specific1 h3 {
+            color: #000 !important;
+            font-size: 25px !important;
+            font-weight: 700;
+        
+        }
+        .box-meeting-detail-1 {
+            background-color: #F5F6FA;
+            border-radius: 16px;
+        }
+
+        /* end  */
+
+        /* user-2 */
+        .box-remedies h3 {
+            color: #FB6D3A !important;
+            font-weight: 700 !important;
+            font-size: 25px !important;
+        }
+        .box-remedies p {
+            color: #FB6D3A !important;
+            font-weight: 400 !important;
+            font-size: 13px !important;
+        }
+        .box-remedies-detail p {
+            color: #545454 !important;
+            font-weight: 700 !important;
+            font-size: 13px !important;
+        }
+        .box-remedies-detail {
+            padding: 5%;
+            background-color: #F5F6FA;
+        }
+        .box-remedies-detail1 .btn {
+            box-shadow: none;
+            background-color: #06185A;
+            color: #fff;
+            border-radius: 8px;
+        }
+        /* end */
+
+        /* user-3 */
+        .box-no-remedies {
+            text-align: center;
+            padding-top: 3%;
+            width: 50%;
+            margin: 0 auto;
+        }
+        .box-no-remedies p {
+            color: #AAB2C8 !important;
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            padding-top: 2%;
+        }
+        .box-no-remedies .btn {
+            box-shadow: none;
+            background-color: #06185F;
+            color: #fff;
+        }
+        /* end */
+
+        /* user5 */
+        .box-setting h3 {
+            color: #FB6D3A !important;
+            font-size: 24px !important;
+            font-weight: 700 !important;
+        }
+        .circle-wrap {
+        
+            width: 116px;
+            height: 116px;
+            
+            border-radius: 50%;
+            border: 1px solid #cdcbd0;
+            border: none;
+        }
+        .circle-wrap .circle .mask,
+        .circle-wrap .circle .fill {
+            width: 116px;
+            height: 116px;
+        position: absolute;
+        border-radius: 50%;
+        }
+
+        .mask .fill {
+        clip: rect(0px, 75px, 150px, 0px);
+        background-color: #fff;
+        }
+        .circle-wrap .circle .mask {
+            clip: rect(0px, 150px, 150px, 75px);
+        }
+        
+        .mask.full,
+        .circle .fill {
+            animation: fill ease-in-out 3s;
+            transform: rotate(135deg);
+        }
+        
+        @keyframes fill{
+            0% {
+            transform: rotate(0deg);
+            }
+            100% {
+            transform: rotate(135deg);
+            }
+        }
+        .circle-wrap .inside-circle {
+                width: 108px;
+                height: 108px;
+                border-radius: 50%;
+                background: #06185A;
+            
+                text-align: center;
+                margin-top: 4px;
+                margin-left: 4px;
+                color: #fff;
+                position: absolute;
+                z-index: 100;
+                font-weight: 700;
+                font-size: 2em;
+        }
+        .box {
+            background-color: #06185A;
+            padding: 5%;
+            border-radius: 10px;
+        }
+        .box-progress-bae-content h3 {
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            color: #fff !important;
+        }
+        .box-progress-bae-content p {
+            font-size: 13px !important;
+            font-weight: 700 !important;
+            color: #fff !important;
+        }
+        .box-progress-bae-content .btn {
+            background-color: #fff !important;
+            color: #FB6D3A !important;
+            box-shadow: none !important;
+        }
+        .box-progress-bae-content .btn:hover {
+            background-color: #FB6D3A !important;
+            color: #fff !important;
+        }
+        .box-user-detail h3 {
+            color: #000022 !important;
+        }
+        .box2 {
+            background-color: #F5F6FA;
+            padding: 5%;
+        }
+        .accordion-button::after {
+        border: 2px solid #FA7546 !important;
+            border-radius: 50% !important;
+            background-size: 15px !important;
+            background-position: center 3px;
+            margin-top: 0px;
+            padding: 10px;
+            background-color: #FA7546;
+        }
+        .accordion-item:first-of-type .accordion-button {
+        box-shadow: none;
+        }
+        .accordion-button:not(.collapsed) {
+        color: #000022 !important;
+        font-weight: 700;
+        background-color: #F5F6FA;
+        }
+        .accordion-item:first-of-type .accordion-button {
+        font-weight: 700;
+        }
+        button:focus:not(:focus-visible) {
+        box-shadow: none !important;
+        
+        }
+        #password-font {
+        font-weight: 700 !important;
+        }
+        .accordion-body h3 {
+        color: #000022 !important;
+        font-size: 12px !important;
+        }
+        .box-name-details-12 {
+        padding: 7%;
+        } 
+        .box-input-shift {
+        margin-bottom: 12px;
+        }
+        .form-control {
+        box-shadow: none !important;
+        }
+        .accordion-body .btn {
+        background-color: #06185A !important;
+        color: #fff !important;
+        }
+        .accordion-body .btn:hover {
+        background-color: #FA7546 !important;
+        color: #fff !important;
+        }
+        .form-check-input:checked {
+        border-color: #FB6D3A !important;
+            background-color: #FB6D3A !important;
+        }
+        .form-check-input {
+        border-color: grey !important;
+        box-shadow: none !important;
+        }
+        /* end */
+        .dashboard{
+            background-color: white;
+            color: black;
+        }
+        .percent{
+            line-height: 3.5;
+        }
+        .contact-us .btn{
+            padding-left: 34px;
+            padding-right: 34px;
+        }
+
+
+        @media(max-width :984px){
+            
+            .content-box{
+                padding-left: 17px !important;
+                padding-right: 17px !important;
+            }
+        }
+
+
+        #prf_pic{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            padding:10px;
+
+        }
+        .choosefile{
+            margin-top: 10px;
+        
+            padding-left: 0px;
+            background-color: #FB6D3A;
+            color: white;
+            border-radius: 30px;
+        }
+
+        .loader{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.562);
+            z-index: 1;text-align: center;
+            left:0;
+            top:0;
+        }
+
+        .loader img{
+            width: 20%;
+            margin-top: 0%;
+
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+    
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <li id="top-li" class="nav-item mt-4">
+                <a class="nav-link" href="/user/dashboard">
+                    <i class="fa fa-tachometer"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/user/orders">
+                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span>Your Order</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/user/settings">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <span>Settings</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+        <!-- Content Wrapper -->
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" >
+
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link mobile-nav rounded-circle mr-3 collapsible1">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <div class="sidebar-brand-text"><a href="/"><img width="70%" src="../../public/assets/new_assets/dashboard_img/Logo.jpg"></a></div>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-nav ml-auto content">
+                       
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow nav-home"><a href="/">Home</a></li>
+                        <li class="nav-item dropdown no-arrow nav-home"><a href="/about">About Us</a></li>
+                        <li class="nav-item dropdown no-arrow nav-home"><a href="/shop">Products</a></li>
+                        <li class="nav-item dropdown no-arrow nav-home"><a href="/builder">Builder's Project</a></li>
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <li class="nav-item dropdown no-arrow main-pro1">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Parth Soni</span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../public/assets/new_assets/dashboard_img/db-profile.png">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="/user/logout">
+                                    <i class="fa fa-sign-out mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    
+                    <div id="main_pro">
+                        <li class="nav-item dropdown no-arrow main-pro">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Parth Soni</span>
+                                <img class="img-profile rounded-circle"
+                                    src="../../public/assets/new_assets/dashboard_img/db-profile.png">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="/user/logout">
+                                    <i class="fa fa-sign-out fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                   <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 id="heading" class="h3 mb-0 text-gray-800">Your Orders</h1>
+                    </div>
+                    
+                    <div class="box-content block-section">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="box-setting">
+                                    <h3>Settings</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-lg-6">
+                                <div class="box shadow">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                    <div class="box-progreess-bar">
+                                        <!-- <img [src]="imgURL" height="200" *ngIf="imgURL" id="prf_pic" /> -->
+                                        <img src="" height="200"  id="prf_pic"/> 
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                    <div class="box-progress-bae-content">
+                                        <h3></h3>
+                                        <p>Date Of Birth: </p>
+                                        <p>Your Zodiac: </p>
+                                        <!-- <button type="button" class="btn">Change Profile Picture</button> -->
+
+                                        <input  type="file" accept='image/*' class="choosefile"  />
+                                        <!-- <button class="btn btn-primary">Upload Profile</button> -->
+                                    
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="box2">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                    <div class="box-user-detail">
+                                        <h3>User Management</h3>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                    <div class="box-accordian shadow">
+                                        <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Profile
+                                            </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <form action="" [formGroup]="userProfileForm" >
+                                
+                                                <div class="col-lg-9">
+                                                <div class="box-name-details-12">
+                                                    <div class="form-group">
+                                                    
+                                                    <label for="">First Name:</label>
+                                                    <input type="text" class="form-control box-input-shift" id="exampleInputEmail1" formControlName="firstName" aria-describedby="emailHelp" value="{{userData[1].value}}" placeholder="Enter name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Last Name:</label>
+                                                    <input type="text" autocomplete="off"  class="form-control box-input-shift" id="exampleInputEmail2" aria-describedby="emailHelp" formControlName="lastName" value="{{userData[2].value}}" placeholder="Enter last name">
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                    <label for="">Email ID:</label>
+                                                    <input type="email" class="form-control mb-2" formControlName="email" id="exampleInputEmail3" aria-describedby="emailHelp" value="{{userData[3].value}}" placeholder="Enter email">
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                    <label for="">Enter Mobile :</label>
+                                                    <input type="text" class="form-control mb-2" formControlName="mobile" id="exampleInputEmail4" aria-describedby="emailHelp" value="{{userData[5].value}}" placeholder="Enter Mobile">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Enter gender :</label>
+                                                    <input type="text" class="form-control mb-2" formControlName="gender" id="exampleInputEmail4" aria-describedby="emailHelp" value="{{userData[5].value}}" placeholder="Enter Gender">
+                                                    </div>
+                                                
+                                                    <div class="form-group">
+                                                    <label for="">Enter DOB:</label>
+                                                    <input type="date" class="form-control" formControlName="dob" id="exampleInputEmail4" aria-describedby="emailHelp"  placeholder="Enter DOB">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Enter Country:</label>
+                                                    <input type="text" class="form-control" formControlName="country" id="exampleInputEmail4" aria-describedby="emailHelp" value="{{userData[11].value}}" placeholder="Enter Country">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Enter Place Of Birth:</label>
+                                                    <!-- <input type="text" class="form-control" formControlName="pol" id="exampleInputEmail4" aria-describedby="emailHelp" value="{{userData[7].value}}" placeholder="Enter Place Of Birth"> -->
+                                                    <input class="form-control" ngx-google-places-autocomplete  #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)"/>
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">Enter Time Of Birth:</label>
+                                                    <input type="time" class="form-control" formControlName="tob" id="exampleInputEmail4" aria-describedby="emailHelp" value="{{userData[10].value}}" placeholder="Enter Time Of Birth">
+                                                    </div>
+                                                    <div class="form-group">
+                                                    <label for="">About Me</label>
+                                                    <textarea class="form-control" formControlName="aboutme">{{userData[4].value}} </textarea>
+                                                    </div>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn" (click)="UpdateProfile()">Update Profile</button>
+                                            </div>
+                                            </form > 
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" id="password-font" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Password
+                                            </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <h3>Your email address is<span>17egjcs059@gmail.com</span></h3>
+                                                <div class="row">
+                                                <form action="" [formGroup]="userPasswordForm">
+                                                    <div class="col-lg-12">
+                                                    <div *ngIf="message!='' && error==true" class="alert alert-danger w-100" role="alert">
+                                                        {{message}}
+                                                    </div>
+
+                                                    <div *ngIf="message!='' && error!=true" class="alert alert-success w-100" role="alert">
+                                                        {{message}}
+                                                    </div>
+
+                                                    </div> 
+                                                <div class="col-lg-9">
+                                                <div class="box-name-details-12">
+                                                    <input type="password" class="form-control  box-input-shift" formControlName="currentP"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Current password">
+                                                    <input type="password" class="form-control box-input-shift" formControlName="newP"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="New password">
+                                                    <input type="password" class="form-control box-input-shift" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Confirm password">
+                                                    </div>
+                                                </div>
+                                                </form>
+                                                </div>
+                                                <button type="button" class="btn" (click)="updatePassword()">Update password</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" id="password-font" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Notification
+                                            </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                            <h3>Rate it will send you notifications</h3>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                <label class="form-check-label" for="defaultCheck1">
+                                                Receive weekly digest mails
+                                                </label>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+             </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span> &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../public/assets/new_assets/vendor2/jquery/jquery.min.js"></script>
+     <script src="../../public/assets/new_assets/vendor2/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../../public/assets/new_assets/vendor2/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../public/assets/new_assets/js/sb-admin-2.js"></script>
+    <script src="../../public/assets/new_assets/js/sb-admin-2.min.js"></script>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible1");
+        var a = document.getElementsByClassName('main-pro');
+
+        $('.collapsible1').click(function(){
+           
+            $(this).toggleClass('active');
+
+            if($('.content').css('display')=='none'){
+                $('.content').css('display', 'block')
+            }
+            else{
+                $('.content').css('display', 'none')
+            }
+        });
+        
+    </script>
+
+    <script>
+        (function($) {
+        "use strict"; // Start of use strict
+
+        // Toggle the side navigation
+        $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
+            $("body").toggleClass("sidebar-toggled");
+            $(".sidebar").toggleClass("toggled");
+            if ($(".sidebar").hasClass("toggled")) {
+            $('.sidebar .collapse').collapse('hide');
+            };
+        });
+
+        // Close any open menu accordions when window is resized below 768px
+        $(window).resize(function() {
+            if ($(window).width() < 768) {
+            $('.sidebar .collapse').collapse('hide');
+            };
+            
+            // Toggle the side navigation when window is resized below 480px
+            if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
+            $("body").addClass("sidebar-toggled");
+            $(".sidebar").addClass("toggled");
+            $('.sidebar .collapse').collapse('hide');
+            };
+        });
+
+        // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+        $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
+            if ($(window).width() > 768) {
+            var e0 = e.originalEvent,
+                delta = e0.wheelDelta || -e0.detail;
+            this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+            e.preventDefault();
+            }
+        });
+
+        // Scroll to top button appear
+        $(document).on('scroll', function() {
+            var scrollDistance = $(this).scrollTop();
+            if (scrollDistance > 100) {
+            $('.scroll-to-top').fadeIn();
+            } else {
+            $('.scroll-to-top').fadeOut();
+            }
+        });
+
+        // Smooth scrolling using jQuery easing
+        $(document).on('click', 'a.scroll-to-top', function(e) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top)
+            }, 1000, 'easeInOutExpo');
+            e.preventDefault();
+        });
+
+        })(jQuery); // End of use strict
+
+    </script>
+
+</body>
+
+</html>

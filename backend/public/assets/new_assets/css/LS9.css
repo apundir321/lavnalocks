@@ -59,7 +59,7 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 100%;
+  
 }
 .piclist li{
     display: inline-block;
@@ -1156,11 +1156,11 @@ display: none;
     }
     .play-position-ls9 h6{
         position: absolute;
-        top: 5px;
+        top: 10px;
         left: 70px;
     }
-    .img-detail-ls9{
-
+    .set-img-ls9{
+        margin-left: -18px;
     }
     .number1{
         justify-content: center;
@@ -1169,6 +1169,8 @@ display: none;
     .line{
         display: none !important;
     }
-
-
+    #services{
+        padding: 15px 0 !important;
+    }
+  
   }
