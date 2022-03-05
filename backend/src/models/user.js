@@ -17,6 +17,10 @@ const employeeSchema = new mongoose.Schema({
     confirmpassword : {
         type: String
     },
+    userimage: {
+      type: String,
+      url: "../../public/assets/new_assets/dashboard_img/db-profile.png"
+    }
 
 })
 

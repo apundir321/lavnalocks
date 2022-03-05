@@ -64,8 +64,8 @@ router.get("/checkout/:name",  middleware.isLoggedIn, async (req, res) => {
       total: foundProduct.sellingPrice,
       totalAmount: foundProduct.sellingPrice*100,
       csrfToken: req.csrfToken(),
-      // key: "rzp_live_AesJaVZnibvAwT"
-      key: "rzp_test_DTRatZbmdR7EnW"
+      key: "rzp_live_AesJaVZnibvAwT"
+      // key: "rzp_test_DTRatZbmdR7EnW"
     });
   });
 

@@ -123,7 +123,7 @@
                 <div class="col-lg-8 col-8">
                   <div class="product-name">
                     <h3> <a class="title-link" href="/products/{{this.title}}"> <strong>{{ this.title}}</strong></a> </h3>
-                    <h3 class="set-margin"><strong><span>M.R.P.</span> <del><span><i class="fa fa-rupee"></i> {{this.sellingPrice }}</span></del> <span><i class="fa fa-rupee"></i> {{this.totalPrice }}</span></strong> </h3>
+                    <h3 class="set-margin"><strong><span>M.R.P.</span> <del><span><i class="fa fa-rupee"></i> {{this.price}}</span></del> <span><i class="fa fa-rupee"></i> {{this.totalPrice }}</span></strong> </h3>
                     <h3 class="quantity">Quantity : <span style="float: right;">
                       
                       <a href="/add-to-cart/{{ this.title}}"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -243,36 +243,36 @@
           <div class="col-lg-4 summary">
             <div class="set-checkout">
               <p class="double">Summary</p>
-              {{!-- <div class="row">
+              <div class="row">
                 <div class="col-6">
                   <p class="subtotal">Subtotal</p>
                 </div>
                 <div style="text-align: end;" class="col-6">
-                  <p class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>{{cart.totalCost}}</p>
+                  <p class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>{{cart.subTotal}}</p>
                 </div>
-              </div> --}}
+              </div>
 
-              {{!-- <hr>
+              <hr>
 
               <div class="row">
                 <div class="col-6">
                   <p class="subtotal">Shipping Charge</p>
                 </div>
                 <div style="text-align: end;" class="col-6">
-                  <p class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>0</p>
+                  <p class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>250</p>
                 </div>
-              </div> --}}
+              </div>
 
-              {{!-- <hr>
+              <hr>
 
               <div class="row">
                 <div class="col-6">
                   <p style="color:darkgray" class="subtotal">Tax</p>
                 </div>
                 <div style="text-align: end;" class="col-6">
-                  <p style="color:darkgray" class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>450</p>
+                  <p style="color:darkgray" class="subtotal"><i style="padding-right: 5px;" class="fa-solid fa-indian-rupee-sign"></i>{{cart.tax}}</p>
                 </div>
-              </div> --}}
+              </div>
 
               <hr>
 

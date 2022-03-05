@@ -15,16 +15,16 @@ router.use(csrfProtection);
 const nodemailer = require("nodemailer");
 var Razorpay = require('razorpay');
 const { body } = require("express-validator");
-// var instance = new Razorpay({
-//   key_id: 'rzp_live_AesJaVZnibvAwT',
-//   key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
-// })
-
-
 var instance = new Razorpay({
-  key_id: 'rzp_test_DTRatZbmdR7EnW',
-  key_secret: 'ZotkGhgBTy9mNNLl3350LNWe'
+  key_id: 'rzp_live_AesJaVZnibvAwT',
+  key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
 })
+
+
+// var instance = new Razorpay({
+//   key_id: 'rzp_test_DTRatZbmdR7EnW',
+//   key_secret: 'ZotkGhgBTy9mNNLl3350LNWe'
+// })
 
 let price = 2000,
   currency = 'INR',
@@ -196,6 +196,12 @@ router.get("/shopping-cart", async (req, res) => {
     if (req.user && cart_user) {
       console.log(" ****");
       req.session.cart = cart_user;
+
+      tax = ((cart_user.totalCost-250)/118)*18
+      subtotal = cart_user.totalCost - 250 - tax
+      cart_user.subTotal = subtotal.toFixed(2);
+      cart_user.tax = tax.toFixed(2);
+      console.log(cart_user);
       return res.render("cart", {
         cart: cart_user,
         pageName: "Shopping Cart",
@@ -213,6 +219,11 @@ router.get("/shopping-cart", async (req, res) => {
       });
     }
     // otherwise, load the session's cart
+    tax = ((req.session.cart.totalCost-250)/118)*18
+    subtotal = req.session.cart.totalCost - 250 - tax
+    req.session.cart.subTotal = subtotal.toFixed(2);
+    req.session.cart.tax = tax.toFixed(2);
+    console.log(req.session.cart);
     return res.render("cart", {
       cart: req.session.cart,
       pageName: "Shopping Cart",
@@ -324,8 +335,8 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       totalAmount: cart.totalCost*100,
       csrfToken: req.csrfToken(),
       errorMsg,
-      // key: "rzp_live_AesJaVZnibvAwT",
-      key: "rzp_test_DTRatZbmdR7EnW",
+      key: "rzp_live_AesJaVZnibvAwT",
+      // key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)
@@ -340,8 +351,8 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       csrfToken: req.csrfToken(),
       errorMsg,
       
-      // key: "rzp_live_AesJaVZnibvAwT",
-      key: "rzp_test_DTRatZbmdR7EnW",
+      key: "rzp_live_AesJaVZnibvAwT",
+      // key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)

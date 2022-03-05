@@ -121,33 +121,18 @@ router.post(
 // GET: display user's profile
 // GET: display user's dashboard
 router.get("/dashboard", middleware.isLoggedIn, async (req, res) => {
-  // console.log(req.flash("success"));
-  // console.log(req.flash("success").length);
-  // const successMsg = req.flash("success")[0];
-  // const errorMsg = req.flash("error")[0];
   try {
-    // find all orders of this user
+    console.log(req.user);
     allOrders = await Order.find({ user: req.user });
     allOrders.userName = req.user.firstname;
-    console.log(allOrders);
-      for(let order of allOrders){
-        console.log(order.cart.items);
-        for(let item of order.cart.items)
-        {
+    for(let order of allOrders){
+      for(let item of order.cart.items){
         let foundProduct =await Product.findOne({ title: item.title}).exec();
         console.log(foundProduct.image);
         order.url =  foundProduct.image;
-          if(order.Delivered == true){
-            order.status = "Delivered";
-          }else{
-            order.status = "Dispatched";
-          }
-          console.log(order.status);
-        }
-        console.log("hi",order,order.cart.items);
-        orderProducts.push(order);
-
       }
+    }
+    console.log(allOrders)
     res.render("dashboard", {
       orders: allOrders,      
       pageName: "User Profile",
@@ -209,6 +194,7 @@ router.get("/settings", middleware.isLoggedIn, async (req, res) => {
   try {
     // find all orders of this user
     allOrders = await Order.find({ user: req.user });
+    allOrders.userName = req.user.firstname
     res.render("settings", {
       orders: allOrders,
       
