@@ -52,6 +52,12 @@ const orderSchema = Schema({
     type: Date,
     default: Date.now,
   },
+  estDate: {
+    type: Date
+  },
+  estimatedString:{
+    type: String
+  },
   Delivered: {
     type: Boolean,
     default: false,

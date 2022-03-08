@@ -191,16 +191,18 @@ router.get("/shopping-cart", async (req, res) => {
     if (req.user) {
       cart_user = await Cart.findOne({ user: req.user._id });
     }
-    // console.log(cart_user);
+    console.log(cart_user);
     // if user is signed in and has cart, load user's cart from the db
     if (req.user && cart_user) {
       console.log(" ****");
       req.session.cart = cart_user;
-
-      tax = ((cart_user.totalCost-250)/118)*18
-      subtotal = cart_user.totalCost - 250 - tax
+      let shippingCharge = await calculateShippingCharge(cart_user)
+      console.log(shippingCharge)
+      tax = ((cart_user.totalCost-shippingCharge)/118)*18
+      subtotal = cart_user.totalCost - shippingCharge - tax
       cart_user.subTotal = subtotal.toFixed(2);
       cart_user.tax = tax.toFixed(2);
+      cart_user.shippingCharge = shippingCharge;
       console.log(cart_user);
       return res.render("cart", {
         cart: cart_user,
@@ -384,57 +386,60 @@ router.post("/createOrder", async (req, res) => {
 });
 
 // POST: handle checkout logic and payment using Stripe
-router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
+// router.post("/checkout", middleware.isLoggedIn, async (req, res) => {
 
-  console.log("checking out 2");
-  if (!req.session.cart) {
-    return res.redirect("/shopping-cart");
-  }
-  const cart = await Cart.findById(req.session.cart._id);
-  stripe.charges.create(
-    {
+//   console.log("checking out 2");
+//   if (!req.session.cart) {
+//     return res.redirect("/shopping-cart");
+//   }
+//   const cart = await Cart.findById(req.session.cart._id);
+//   stripe.charges.create(
+//     {
 
-      amount: cart.totalCost * 100,
-      currency: "usd",
-      source: req.body.stripeToken,
-      description: "Test charge",
-    },
-    function (err, charge) {
-      if (err) {
-        req.flash("error", err.message);
-        console.log(err);
-        return res.redirect("/checkout");
-      }
-      const order = new Order({
-        user: req.user,
-        cart: {
-          totalQty: cart.totalQty,
-          totalCost: cart.totalCost,
-          items: cart.items,
-        },
-        address: req.body.address,
-        paymentId: charge.id,
-      });
-      order.save(async (err, newOrder) => {
-        if (err) {
-          console.log(err);
-          return res.redirect("/checkout");
-        }
-        await cart.save();
-        await Cart.findByIdAndDelete(cart._id);
-        // allOrders = await Order.find({ user: req.user });
-        // req.flash("success", "Successfully purchased");
-        req.session.cart = null;
-        allOrders = await Order.find({ user: req.user });
-        res.render("profile", {
-          orders: allOrders,
-          successMsg: "Successfully purchased",
-          pageName: "User Profile",
-        });
-      });
-    }
-  );
-});
+//       amount: cart.totalCost * 100,
+//       currency: "usd",
+//       source: req.body.stripeToken,
+//       description: "Test charge",
+//     },
+//     function (err, charge) {
+//       if (err) {
+//         req.flash("error", err.message);
+//         console.log(err);
+//         return res.redirect("/checkout");
+//       }
+//       var tomorrow = new Date();
+//       tomorrow.setDate(tomorrow.getDate()+4);
+//       const order = new Order({
+//         user: req.user,
+//         cart: {
+//           totalQty: cart.totalQty,
+//           totalCost: cart.totalCost,
+//           items: cart.items,
+//         },
+//         address: req.body.address,
+//         paymentId: charge.id,
+//         estDate: tommorow
+//       });
+//       order.save(async (err, newOrder) => {
+//         if (err) {
+//           console.log(err);
+//           return res.redirect("/checkout");
+//         }
+//         await cart.save();
+//         await Cart.findByIdAndDelete(cart._id);
+//         // allOrders = await Order.find({ user: req.user });
+//         // req.flash("success", "Successfully purchased");
+//         req.session.cart = null;
+//         allOrders = await Order.find({ user: req.user });
+//         res.render("profile", {
+//           orders: allOrders,
+//           successMsg: "Successfully purchased",
+//           pageName: "User Profile",
+//         });
+//       });
+//     }
+//   );
+// });
 
 router.post("/confirmOrder", async(req, res) => {
   try {
@@ -453,6 +458,10 @@ router.post("/confirmOrder", async(req, res) => {
     // console.log("sig" + expectedSignature);
     
     // if (expectedSignature === req.body.order_sig) {
+            let tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate()+4);
+      console.log("****s");
+      console.log(tomorrow);
       const order = new Order({
         user: req.user,
         cart: {
@@ -462,6 +471,7 @@ router.post("/confirmOrder", async(req, res) => {
         },
         address: "Gurgaon",
         paymentId: req.body.order_pay_id,
+        estDate : tomorrow
       });
       order.save(async (err, newOrder) => {
         if (err) {
@@ -675,6 +685,20 @@ async function sendPaymentEmail(postDataJson,payId) {
       return response.send({ status: "ERROR" });
     }
   });
+}
+
+async function calculateShippingCharge(cartItem){
+  const productTitle = ['L-A15','L-S9']
+  let totalCharge=0;
+  for(let x of cartItem.items){
+      if(productTitle.includes(x.title)){
+        totalCharge += 150*x.qty
+        continue
+      }
+      totalCharge +=250*x.qty
+  }
+
+  return totalCharge;
 }
 
 module.exports = router;

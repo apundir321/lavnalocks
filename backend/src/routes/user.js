@@ -7,6 +7,7 @@ var LocalStrategy = require("passport-local").Strategy;
 const Product = require("../models/lavnaproduct");
 const Order = require("../models/order");
 const Cart = require("../models/cart");
+const fs = require("fs");
 
 const middleware = require("../middleware");
 const {
@@ -125,16 +126,19 @@ router.get("/dashboard", middleware.isLoggedIn, async (req, res) => {
     console.log(req.user);
     allOrders = await Order.find({ user: req.user });
     allOrders.userName = req.user.firstname;
+    allOrders.estDate = req.user.estDate;
+    console.log(allOrders.estDate);
     for(let order of allOrders){
       for(let item of order.cart.items){
         let foundProduct =await Product.findOne({ title: item.title}).exec();
         console.log(foundProduct.image);
         order.url =  foundProduct.image;
+        order.estimatedString = order.estDate.toLocaleString();
       }
     }
     console.log(allOrders)
     res.render("dashboard", {
-      orders: allOrders,      
+    orders: allOrders,      
       pageName: "User Profile",
     });
   } catch (err) {
@@ -169,6 +173,7 @@ router.get("/orders", middleware.isLoggedIn, async (req, res) => {
         }
         console.log(order.status);
       }
+      order.estimatedString = order.estDate.toLocaleString();
       console.log("hi",order,order.cart.items);
       orderProducts.push(order);
 
@@ -195,15 +200,114 @@ router.get("/settings", middleware.isLoggedIn, async (req, res) => {
     // find all orders of this user
     allOrders = await Order.find({ user: req.user });
     allOrders.userName = req.user.firstname
+    allOrders.email = req.user.email
+    allOrders.password = req.user.password
+    console.log("hiiiiiiiiii", allOrders.userName);
+    console.log("your email:", allOrders.email);
+    console.log(allOrders.password);
+    console.log(req.csrfToken());
+    let msg = req.query.msg;
+    console.log(msg+" &&&&");
+    if(!msg)
+    {
+      msg = "";
+    }else if(msg==="success"){
+      msg = "Profile Updated"
+    }else if(msg==="invalid"){
+      msg = "Password invalid please try again with correct password"
+    }
     res.render("settings", {
       orders: allOrders,
-      
+      userInfo:req.user,
+      csrfToken:req.csrfToken(),
       pageName: "User Profile",
+      msg: msg
     });
   } catch (err) {
     console.log(err);
     return res.redirect("/");
   }
+});
+
+// router.post("/uploadImage", middleware.isLoggedIn, async (req, res) => {
+//   console.log(req.body.avatar);
+//   console.log(req);
+//   return res.redirect("/user/settings");
+// }
+// )
+
+
+router.post("/profileUpdate",  middleware.isLoggedIn, async (req, res) => {
+  console.log("In profileUpdate this route");
+  const { name, email, ct_pass, nw_pass, cf_nw_pass } = req.body;
+  console.log(name);
+ console.log(req.user);
+  user.findOne({ _id: req.user._id})
+    .then((user) => {
+      if (!user) {
+        req.flash("error_msg", "user not found");
+        res.redirect("/users/profileUpdate");
+      }
+      console.log(user);
+      if (typeof name !== "undefined") {
+        user.firstname = name;
+        console.log(user.name);
+      }
+      console.log(user);
+
+      // user.save().then((User) => {
+      //   req.flash("success_msg", "details updated successfully");
+      //   res.redirect("/users/profileUpdate");
+      // });
+
+      user.save(function (err, resolve) {
+        if(err)
+          console.log('db error', err)
+         });
+        return res.redirect('/user/settings?msg=success')
+    })
+    .catch((err) => console.log(err));
+});
+
+
+router.post("/passUpdate",  middleware.isLoggedIn, async (req, res) => {
+  // console.log("In passUpdate this route");
+  const { ct_pass, nw_pass, cf_nw_pass } = req.body;
+//  console.log(req.user);
+  user.findOne({ _id: req.user._id})
+    .then((user) => {
+      
+      if (!user) {
+        req.flash("error_msg", "user not found");
+        res.redirect("/users/passUpdate");
+      }
+      console.log(user.validPassword(ct_pass));
+      if (typeof nw_pass == "undefined" || !user.validPassword(ct_pass) || nw_pass != cf_nw_pass) {
+        console.log('password not update');
+        return res.redirect('/user/settings?msg=invalid');
+
+        // console.log(user.nw_pass);
+      }
+      user.password = user.encryptPassword(nw_pass)
+      console.log(user);
+        user.save(function (err, resolve) {
+          if(err)
+            console.log('db error', err)
+           });
+          //  console.log("succesfully compared!");           
+        return res.redirect('/user/settings?msg=success');
+        
+
+
+      // user.save().then((User) => {
+      //   req.flash("success_msg", "details updated successfully");
+      //   res.redirect("/users/profileUpdate");
+      // });
+
+  
+    })
+    .catch((err) => console.log(err));
+    
 });
 
 

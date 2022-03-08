@@ -32,11 +32,18 @@
             .content{
                 display: none;
             }
-            #content .box img{
+           #content .box_image{
                 position: relative !important;
                  width: 45% !important;
             }
         }
+
+        @media (min-width: 1400px){
+            #content .boxx .boxx-1{
+                padding: 5%;
+            }
+        }
+
         #content .box{
             position: relative;
         }
@@ -46,6 +53,12 @@
         #content .box img{
             height: 110px;
             width: 110px;
+        }
+        .boxx{
+            background-color: #003399;
+            min-height: 200px;
+            border-radius: 20px;
+            height: auto;
         }
     </style>
 
@@ -132,7 +145,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{orders.userName}}</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../../public/assets/new_assets/dashboard_img/db-profile.png">
+                                    src="../../public/assets/new_assets/img2/lavna_dp_2.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -161,7 +174,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{orders.userName}}</span>
                                 <img class="img-profile rounded-circle"
-                                    src="../../public/assets/new_assets/dashboard_img/db-profile.png">
+                                    src="../../public/assets/new_assets/img2/lavna_dp_2.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -196,9 +209,11 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-12">
                             <div class="boxx">
-                                <img class="img1" src="../../public/assets/new_assets/dashboard_img/dashbo-bg.png">
+                                {{!-- <img class="img1" src="../../public/assets/new_assets/dashboard_img/dashbo-bg.png"> --}}
                                 <div class="boxx-1">
-                                    <img src="../../public/assets/new_assets/dashboard_img/db-profile.png">
+                                    <div>
+                                        <img style="width: 72px; height: 72px;" src="../../public/assets/new_assets/img2/lavna_dp.png">
+                                    </div>
                                     <h1>Hi, {{orders.userName}}</h1>
                                     <h6>Welcome to Lavna Locks</h6>
                                 </div>
@@ -236,6 +251,7 @@
                             {{#each orders}}
                                
                                 <div class="box mt-4 shadow">
+                                    <h5>Est. delivery :- {{this.estimatedString}}</h5>
                                     <div class="box_image">
                                         <img src="{{this.url}}">
                                     </div>
