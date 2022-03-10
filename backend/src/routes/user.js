@@ -3,6 +3,7 @@ const router = express.Router();
 const csrf = require("csurf");
 var passport = require("passport");
 var user=require("../models/user");
+var url  = require('url');
 var LocalStrategy = require("passport-local").Strategy;
 const Product = require("../models/lavnaproduct");
 const Order = require("../models/order");
@@ -68,7 +69,14 @@ router.post(
 // GET: display the signin form with csrf token
 router.get("/signin", middleware.isNotLoggedIn, async (req, res) => {
   var errorMsg = req.flash("error");
+  // console.log(req.body.title,req)
+  var url_parts = url.parse(req.url, true);
+  var query = url_parts.query;
+  console.log(query);
+
+  console.log(query); //{Object}
   res.render("login", {
+    title:query.title??null,
     csrfToken: req.csrfToken(),
     errorMsg,
     pageName: "Sign In",
@@ -88,8 +96,8 @@ router.post(
     }),
   ],
   async (req, res) => {
-    
     try {
+      console.log("hi",req.body)
       // cart logic when the user logs in
       let cart = await Cart.findOne({ user: req.user._id });
       // if there is a cart session and user has no cart, save it to the user's cart in db
@@ -109,7 +117,9 @@ router.post(
         req.session.oldUrl = null;
         res.redirect(oldUrl);
       } else {
-        res.redirect("/");
+        if(!req.body.title)
+          res.redirect("/");
+        res.redirect(`/products/checkout/${req.body.title}`);
       }
     } catch (err) {
       console.log(err);

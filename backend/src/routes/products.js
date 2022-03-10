@@ -50,12 +50,12 @@ router.get('/:name',async (req, res) => {
   console.log(foundProduct)
 })
 
-router.get("/checkout/:name",  middleware.isLoggedIn, async (req, res) => {
+router.get("/checkout/:name",  middleware.isProductCheckout, async (req, res) => {
   console.log("checking out");
   console.log(req.params.name+"   ****");
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
   if(!Object.keys(foundProduct).length){
-    res.redirect('/');
+    res.redirect(`/`);
   }
   console.log(foundProduct);
   //load the cart with the session's cart's id from the db
@@ -67,6 +67,7 @@ router.get("/checkout/:name",  middleware.isLoggedIn, async (req, res) => {
       key: "rzp_live_AesJaVZnibvAwT"
       // key: "rzp_test_DTRatZbmdR7EnW"
     });
+
   });
 
 

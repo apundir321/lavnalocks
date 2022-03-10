@@ -81,36 +81,7 @@
           {{#ifCond product.features "features-L-E50"}}
           {{>img_E50}}
           {{/ifCond}}
-          {{!-- <div class="row">
-            <p class="mrp"> <span class="mrp1">M.R.P.</span> <del><span><i class="fa fa-rupee"></i>
-                  {{product.price}}</span></del> <span class="number ml-2"><i class="fa fa-rupee"></i>
-                {{product.sellingPrice}}</span></p>
-          </div> --}}
-          <div class="row">
-          </div>
-          <div class="row purchase">
-            {{!-- <div class="col-lg-3 col-12">
-              <div class="number1">
-                <span class="minus">-</span>
-                <input type="text" class="count" value="1" />
-                <span class="plus">+</span>
-              </div>
-            </div> --}}
-
-            {{!-- <div class="col-lg-5 col-6">
-              <div class="cart-add">
-                <button type="button" onclick="addToCart();"
-                  class="btn btn-theme">Add To Cart</button>
-              </div>
-            </div>
-            <div class="col-lg-5 col-6">
-              <div class="buy-now">
-                <a type="button" onclick="checkout();"
-                  class="btn btn-theme1">Buy Now</a>
-              </div>
-            </div> --}}
-
-          </div>
+       
         </div>
         <div class="col-lg-6 col-md-6">
           {{!-- <div class="detail-box">
@@ -145,21 +116,6 @@
 
 
 
-  {{!-- <section id="icon-section">
-    <div class="container">
-      <div class="row">
-        <div class="box-guide">
-          <h1>Features</h1>
-        </div>
-      </div> --}}
-
-      {{!-- {{#ifCond product.features "features-L-A24(WI-FI)"}}
-      {{>features_la4wifi}}
-      {{/ifCond}}
-
-      {{#ifCond product.features "features-L-A24(Bluetooth)"}}
-      {{>features_la4bluetooth}}
-      {{/ifCond}} --}}
 
       {{!-- new entry --}}
       {{#ifCond product.features "features-L-A28-GOLD"}}
@@ -236,157 +192,7 @@
       {{>features_E50}}
       {{/ifCond}}
 
-      {{!--
-    </div>
-  </section>
-
-
-  <section id="features-table">
-    <div class="container">
-      <div class="row">
-        <h1 class="text-center M-3">Product Details</h1>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="table-col-3">
-            <div class="sticky-top table-sticky-header overflow-scroll d-flex align-items-center feature py-3">
-              <div class="h3 m-0 px-3">Specifications</div>
-              <div class="h4 m-0 text-center px-3"></div>
-
-            </div>
-            <div class="table-responsive table-sticky">
-              <table class="table table-bordered table-striped">
-                <thead class="visually-hidden">
-                  <tr>
-                    <th scope="col">Specifications</th>
-                    <th scope="col"></th>
-
-                  </tr>
-                </thead>
-                <tbody class="text-center align-middle">
-                  <tr>
-                    <th class="text-start p-3" scope="row">RFID Card</th>
-                    <td><span class="fa fa-check text-success"></span></td>
-
-                  </tr>
-
-                  <tr>
-                    <th class="text-start p-3" scope="row">RFID Capacity</th>
-                    <td>Up to 50</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Recognition Speed</th>
-                    <td>
-                      < 0.5s</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Power Supply</th>
-                    <td>3.7 V Output Power</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Working Current</th>
-                    <td>300 mAh</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Emergency</th>
-                    <td>Only Key</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Color</th>
-                    <td>Silver</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Weight</th>
-                    <td>2.6kg</td>
-
-                  </tr>
-
-
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="table-col-3">
-            <div class="sticky-top table-sticky-header overflow-scroll d-flex align-items-center feature py-3">
-              <div class="h3 m-0 px-3">Specifications</div>
-              <div class="h4 m-0 text-center px-3"></div>
-
-            </div>
-            <div class="table-responsive table-sticky">
-              <table class="table table-bordered table-striped">
-                <thead class="visually-hidden">
-                  <tr>
-                    <th scope="col">Specifications</th>
-                    <th scope="col"></th>
-
-                  </tr>
-                </thead>
-                <tbody class="text-center align-middle">
-
-                  <tr>
-                    <th class="text-start p-3" scope="row">Box Dimension</th>
-                    <td> H-12 cm, L-18.8 cm, W-34.8 cm</td>
-
-                  </tr>
-
-                  <tr>
-                    <th class="text-start p-3" scope="row">Door Thickness</th>
-                    <td>32 to 100 mm</td>
-
-                  </tr>
-
-                  <tr>
-                    <th class="text-start p-3" scope="row">Mortise Dimension</th>
-                    <td>H-20cm, L-2.2cm, W-9cm</td>
-
-                  </tr>
-                  <tr>
-                    <th class="text-start p-3" scope="row">Applicable on</th>
-                    <td>Hotel & Commercial Doors</td>
-
-                  </tr>
-
-                  <tr>
-                    <th class="text-start p-3" scope="row">Box Contains</th>
-                    <td>
-                      <ul class="main-lock">
-                        <li>Main Lock</li>
-                        <li>1 Indoor Unit</li>
-                        <li>1 Outdoor Unit</li>
-                        <li>Side Panel</li>
-                        <li>Suitable Screw Packet</li>
-                        <li>2 Mechanical Key</li>
-                        <li>2 RFID card</li>
-
-
-                      </ul>
-                    </td>
-
-                  </tr>
-
-
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> --}}
-
-
-
-
+  
 
   <div class="nb-form">
     <p class="title sdkjk">Enquire Now</p>
@@ -486,11 +292,9 @@
 
 
 <!-- Vendor JS Files -->
-<script src="../../public/assets/new_assets/vendor/purecounter/purecounter.js"></script>
 <script src="../../public/assets/new_assets/vendor/aos/aos.js"></script>
 <script src="../../public/assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../../public/assets/new_assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="../../public/assets/new_assets/vendor/php-email-form/validate.js"></script>
 
 <!-- Template Main JS File -->
 <script src="../../public/assets/new_assets/js/main.js"></script>
@@ -560,19 +364,6 @@
   });
 </script>
 
-<script>
-  $(".progress-bar").animate({
-    width: "90%"
-  }, 2500);
-
-  $("#progress-bar2").animate({
-    width: "80%"
-  }, 2500);
-
-  $("#progress-bar3").animate({
-    width: "70%"
-  }, 2500);
-</script>
 
 
 <script>
@@ -725,53 +516,7 @@
 
 </script>
 
-<script>
-  $('.knw').click(function () {
 
-    var dtm = $(this).attr('data-more');
-
-    if ($(this).text() == 'View More') {
-      $(dtm).addClass('active');
-      $(this).text('View Less');
-    } else {
-      $(dtm).removeClass('active');
-      $(this).text('View More');
-    }
-
-
-  });
-</script>
-
-<script>
-  $(document).ready(function () {
-    $('.center-slider').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      centerMode: true,
-      arrows: true,
-      dots: false,
-      speed: 300,
-      centerPadding: '20px',
-      infinite: true,
-      autoplaySpeed: 5000,
-      autoplay: true,
-      breakpoint: {
-        320: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-        520: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-        720: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-        }
-      }
-    });
-  });
-</script>
 
 <script>
   (function ($) {

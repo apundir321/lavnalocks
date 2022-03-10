@@ -16,4 +16,14 @@ middlewareObject.isLoggedIn = (req, res, next) => {
   res.redirect("/user/signin");
 };
 
+middlewareObject.isProductCheckout = (req,res,next)=>{
+  if (req.isAuthenticated()) {
+    console.log("i am here at product middleware")
+    return next();
+  }
+  res.redirect(`/user/signin/?title=${req.params.name}`);
+}
+
+
+
 module.exports = middlewareObject;

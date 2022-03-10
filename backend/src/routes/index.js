@@ -97,6 +97,10 @@ router.get('/builder', (req, res) => {
   res.render("builder");
 })
 
+router.get('/distributor', (req, res) => {
+  res.render("distributor");
+})
+
 router.get('/products', (req, res) => {
   res.render("products");
 })
