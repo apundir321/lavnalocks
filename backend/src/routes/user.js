@@ -76,7 +76,7 @@ router.get("/signin", middleware.isNotLoggedIn, async (req, res) => {
 
   console.log(query); //{Object}
   res.render("login", {
-    title:query.title??null,
+    title:query.title,
     csrfToken: req.csrfToken(),
     errorMsg,
     pageName: "Sign In",
