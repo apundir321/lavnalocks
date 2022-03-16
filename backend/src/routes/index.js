@@ -430,6 +430,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
     if(req.query.coupon != "LAVNA799"){
       popup = 2;
     }
+  }
     let shippingCharge = await calculateShippingCharge(cart)
       console.log(shippingCharge)
       tax = ((cart.totalCost-shippingCharge)/118)*18
@@ -457,7 +458,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       products: await productsFromCart(cart),
       popup : popup
     });
-  }}
+  }
   else {
     cart = req.session.cart;
     res.render("guest_checkout", {
