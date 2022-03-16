@@ -387,6 +387,10 @@ router.get("/removeAll/:id", async function (req, res, next) {
   }
 });
 
+router.get("/offers/l-a24", async function (req, res, next) {
+  res.render("offer_l-a24");
+});
+
 // GET: checkout form with csrf token
 router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   console.log("checking out");
