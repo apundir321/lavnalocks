@@ -218,7 +218,7 @@ router.get("/add-to-cart-product/:id",middleware.isLoggedIn, async (req, res) =>
       cart.items[itemIndex].qty =  updatedQuantity + quantity;
       cart.items[itemIndex].price = cart.items[itemIndex].qty * product.sellingPrice;
       cart.totalQty += quantity;
-      cart.totalCost += product.sellingPrice;
+      cart.totalCost += product.sellingPrice * quantity;
     } else {
       // if product does not exists in cart, find it in the db to retrieve its price and add new item
       cart.items.push({
