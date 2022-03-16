@@ -149,6 +149,8 @@ router.get("/add-to-cart/:id", async (req, res) => {
       cart = user_cart;
     }
     console.log(cart);
+    let quantity = req.query.quantity;
+    console.log(quantity+" %%%%%");
     // add the product to the cart
     const product = await Product.findOne({ title: productId }).exec();
     const itemIndex = cart.items.findIndex((p) => p.title == productId);
@@ -168,6 +170,65 @@ router.get("/add-to-cart/:id", async (req, res) => {
       });
       cart.totalQty++;
       cart.totalCost += product.sellingPrice;
+    }
+
+    // if the user is logged in, store the user's id and save cart to the db
+    if (req.user) {
+      cart.user = req.user._id;
+      await cart.save();
+    }
+    req.session.cart = cart;
+    req.flash("success", "Item added to the shopping cart");
+    res.redirect("/shopping-cart");
+    // res.redirect("/products/"+productId);
+  } catch (err) {
+    console.log(err.message);
+    res.redirect("/shopping-cart");
+  }
+});
+
+router.get("/add-to-cart-product/:id",middleware.isLoggedIn, async (req, res) => {
+  const productId = req.params.id;
+  try {
+    // get the correct cart, either from the db, session, or an empty cart.
+    let user_cart;
+    if (req.user) {
+      user_cart = await Cart.findOne({ user: req.user._id });
+    }
+    let cart;
+    if (
+      (req.user && !user_cart && req.session.cart) ||
+      (!req.user && req.session.cart)
+    ) {
+      cart = await new Cart(req.session.cart);
+    } else if (!req.user || !user_cart) {
+      cart = new Cart({});
+    } else {
+      cart = user_cart;
+    }
+    console.log(cart);
+    let quantity = parseInt(req.query.quantity);
+    console.log(quantity+" %%%%%");
+    // add the product to the cart
+    const product = await Product.findOne({ title: productId }).exec();
+    const itemIndex = cart.items.findIndex((p) => p.title == productId);
+    if (itemIndex > -1) {
+      // if product exists in the cart, update the quantity
+      let updatedQuantity = parseInt(cart.items[itemIndex].qty);
+      cart.items[itemIndex].qty =  updatedQuantity + quantity;
+      cart.items[itemIndex].price = cart.items[itemIndex].qty * product.sellingPrice;
+      cart.totalQty += quantity;
+      cart.totalCost += product.sellingPrice;
+    } else {
+      // if product does not exists in cart, find it in the db to retrieve its price and add new item
+      cart.items.push({
+        productId: product._id,
+        qty: quantity,
+        price: product.sellingPrice * quantity,
+        title: product.title
+      });
+      cart.totalQty += quantity;
+      cart.totalCost += product.sellingPrice * quantity;
     }
 
     // if the user is logged in, store the user's id and save cart to the db

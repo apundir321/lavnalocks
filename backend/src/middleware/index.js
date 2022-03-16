@@ -13,7 +13,8 @@ middlewareObject.isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect("/user/signin");
+ req.session.oldUrl = req.url;
+  res.redirect("/user/signin?returnUrl="+req.url);
 };
 
 middlewareObject.isProductCheckout = (req,res,next)=>{
