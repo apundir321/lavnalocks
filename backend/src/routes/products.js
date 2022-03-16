@@ -62,7 +62,7 @@ router.get("/checkout/:name",  middleware.isProductCheckout, async (req, res) =>
   let shippingCharge = await calculateShippingCharge(foundProduct);
   let couponApply = false;
   let popup = 0;
-  if(req?.query.coupon == "LAVNA799" && foundProduct.title == "L-A24-Black(Bluetooth)"){ 
+  if(req.query.coupon == "LAVNA799" && foundProduct.title == "L-A24-Black(Bluetooth)"){ 
     couponApply = true;
     popup = 1;
   }

@@ -408,7 +408,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
     cart = await Cart.findById(req.session.cart._id);
     console.log(cart);
     let popup = 0;
-    if(req?.query.coupon == "LAVNA799"){ 
+    if(req.query.coupon == "LAVNA799"){ 
 
       popup = 1;
       console.log(req.body);
@@ -419,7 +419,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
 
       for(let item of cart.items){
         if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-Gold(Bluetooth)'){
-          if(req?.query.coupon == "LAVNA799"){
+          if(req.query.coupon == "LAVNA799"){
               cart.totalCost = cart.totalCost - 799;
               cart.couponStatus = true;
               break;
@@ -427,7 +427,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
         }
       }
   
-    if(req?.query.coupon != "LAVNA799"){
+    if(req.query.coupon != "LAVNA799"){
       popup = 2;
     }
     let shippingCharge = await calculateShippingCharge(cart)
