@@ -73,6 +73,42 @@
         }
     }
 
+    .pop_box{
+        background-color: rgb(33, 143, 33, 0.9);
+        float: right;
+        padding: 26px;
+        border-radius: 4px;
+         box-shadow: 2px 3px 2px 2px rgba(109, 82, 82, 0.3);
+         position: absolute;
+         right: 3%;
+         top: 15%;
+         z-index: 10000;
+        
+    }
+    .pop_box2{
+        background-color: rgba(204, 28, 42, 0.9);
+        float: right;
+        padding: 26px;
+        border-radius: 4px;
+         box-shadow: 2px 3px 2px 2px rgba(109, 82, 82, 0.3);
+         position: absolute;
+         right: 3%;
+         top: 15%;
+         z-index: 10000;
+    }
+    .pop_box #text h5{
+        color: #fff;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .pop_box2 #text h5{
+        color: #fff;
+        font-family: 'Source Sans Pro', sans-serif !important;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
 </style>
 
 <section>
@@ -237,8 +273,8 @@
                             </div>
                         </div>
                         <div>
-                            <form id="coupon_form" method="post" action="applyCopon">
-                                <input type="hidden" name="_csrf" value="{{ csrfToken }}" />
+                            <form id="coupon_form" method="get" action="/checkout">
+                                {{!-- <input type="hidden" name="_csrf" value="{{ csrfToken }}" /> --}}
                                 {{!-- <input type="text" value="{{cart._id}}"> --}}
                                 <input type="text" name="coupon" id="coupon" required>
                                 <button class="coupon_button shadow" type="submit">Apply Coupon</button>
@@ -618,7 +654,7 @@ $('#closemodal').trigger('click');
     }
 </script>
 
-<script>
+{{!-- <script>
   function applyDiscount(){
     let coupon = document.getElementById('coupon').value;
     console.log(coupon);
@@ -627,7 +663,32 @@ $('#closemodal').trigger('click');
         
     }
   }
+</script> --}}
+
+<script>
+    if({{popup}} == 1){
+        document.getElementById("popup").innerHTML = `<div class="pop_box">
+                <div id="text">
+                    <h5>Coupon Successfully Applied</h5>
+                </div>
+            </div> `
+    setTimeout(()=>{
+       document.getElementById("popup").innerHTML = ``
+    },1000)
+    }
+
+    if({{popup}} == 2){
+        document.getElementById("popup").innerHTML = `<div class="pop_box2">
+                <div id="text">
+                    <h5>Invalid Coupon</h5>
+                </div>
+            </div> `
+    setTimeout(()=>{
+       document.getElementById("popup").innerHTML = ``
+    },1000)
+    }
 </script>
+
 </body>
 
 </html>

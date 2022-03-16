@@ -342,6 +342,29 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   if (req.user) {
     cart = await Cart.findById(req.session.cart._id);
     console.log(cart);
+    let popup = 0;
+    if(req?.query.coupon == "LAVNA799"){ 
+
+      popup = 1;
+      console.log(req.body);
+      cart = await Cart.findById(req.session.cart._id);
+      if(cart.couponStatus){
+        return res.redirect('/checkout');
+      }
+
+      for(let item of cart.items){
+        if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-Gold(Bluetooth)'){
+          if(req?.query.coupon == "LAVNA799"){
+              cart.totalCost = cart.totalCost - 799;
+              cart.couponStatus = true;
+              break;
+            }
+        }
+      }
+  
+    if(req?.query.coupon != "LAVNA799"){
+      popup = 2;
+    }
     let shippingCharge = await calculateShippingCharge(cart)
       console.log(shippingCharge)
       tax = ((cart.totalCost-shippingCharge)/118)*18
@@ -366,9 +389,10 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       // key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
-      products: await productsFromCart(cart)
+      products: await productsFromCart(cart),
+      popup : popup
     });
-  }
+  }}
   else {
     cart = req.session.cart;
     res.render("guest_checkout", {
