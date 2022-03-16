@@ -255,6 +255,11 @@ router.get("/reduce/:id", async function (req, res, next) {
     }
 
     // find the item with productId
+    if(cart.couponStatus){
+      cart.totalCost = cart.totalCost + 799;
+      cart.couponStatus = false;
+      cart = cart.save();
+    }
     let itemIndex = cart.items.findIndex((p) => p.title == productId);
     if (itemIndex > -1) {
       // find the product to find its price
@@ -324,6 +329,7 @@ router.get("/removeAll/:id", async function (req, res, next) {
 // GET: checkout form with csrf token
 router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   console.log("checking out");
+
   if (!req.isAuthenticated()) {
     console.log("authenticated");
   }
@@ -335,10 +341,25 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   //load the cart with the session's cart's id from the db
   if (req.user) {
     cart = await Cart.findById(req.session.cart._id);
+    console.log(cart);
+    let shippingCharge = await calculateShippingCharge(cart)
+      console.log(shippingCharge)
+      tax = ((cart.totalCost-shippingCharge)/118)*18
+      subtotal = cart.totalCost - shippingCharge - tax
+      console.log("print",{subtotal,tax})
+      
       res.render("checkout1", {
+
+        // tax = ((cart_user.totalCost-shippingCharge)/118)*18,
+        // subtotal = cart_user.totalCost - shippingCharge - tax,
+
       cart: cart,
-      total: cart.totalCost,
+      total: cart.couponStatus?cart.totalCost+799:cart.totalCost,
+      couponDiscount: cart.couponStatus?799:0,
       totalAmount: cart.totalCost*100,
+      tax:tax.toFixed(2),
+      subTotal : subtotal.toFixed(2),
+      shippingCharge:shippingCharge,
       csrfToken: req.csrfToken(),
       errorMsg,
       key: "rzp_live_AesJaVZnibvAwT",
@@ -365,6 +386,29 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
     });
   }
   const errMsg = req.flash("error")[0];
+});
+
+router.post("/applyCopon",middleware.isLoggedIn,async (req,res) =>{
+  console.log(req.body);
+  cart = await Cart.findById(req.session.cart._id);
+  if(cart.couponStatus){
+    return res.redirect('/checkout');
+  }
+
+  for(let item of cart.items){
+    if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-Gold(Bluetooth)'){
+        if(req.body.coupon == "LAVNA799"){
+          cart.totalCost = cart.totalCost - 799;
+          cart.couponStatus = true;
+          break;
+        }
+    }
+  }
+
+  cart.save();
+
+  console.log("cart after apply coupon --------",cart)
+  return res.redirect('/checkout');
 });
 
 router.get("/successpayment", async (req, res) => {

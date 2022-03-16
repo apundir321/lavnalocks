@@ -45,6 +45,10 @@ const cartSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  couponStatus:{
+    type:Boolean,
+    default:false,
+  }
 });
 
 module.exports = mongoose.model("Cart", cartSchema);
