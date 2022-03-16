@@ -311,7 +311,8 @@
 <script>
   function addToCart() {
     var title = document.getElementById("productTitle").innerHTML;
-    window.location.href = "/add-to-cart/" + title;
+   var quantity = document.getElementById("quantity").value;
+    window.location.href = "/add-to-cart-product/" + title+"?quantity="+quantity;
   }
   function checkout() {
     var title = document.getElementById("productTitle").innerHTML;

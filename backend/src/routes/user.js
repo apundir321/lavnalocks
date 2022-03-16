@@ -96,6 +96,7 @@ router.post(
     }),
   ],
   async (req, res) => {
+    console.log(req.session.oldUrl+" ****");
     try {
       console.log("hi",req.body)
       // cart logic when the user logs in
@@ -118,8 +119,16 @@ router.post(
         res.redirect(oldUrl);
       } else {
         if(!req.body.title)
+        {
+          if(req.query.returnUrl)
+          {
+            res.redirect(req.query.returnUrl);
+          }
           res.redirect("/");
+        }else
+        {
         res.redirect(`/products/checkout/${req.body.title}`);
+        }
       }
     } catch (err) {
       console.log(err);

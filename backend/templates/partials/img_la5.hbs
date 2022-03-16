@@ -78,7 +78,7 @@
                      {{!-- <div class="col-lg-3 col-12">
                         <div class="number1">
                             <span class="minus">-</span>
-                            <input type="text" class="count" value="1"/>
+                            <input type="text" id="quantity" class="count" value="1"/>
                             <span class="plus">+</span>
                         </div>
                      </div> --}}
@@ -122,15 +122,3 @@
            </div>
         </div>
      </section>
-
-
-     <script>
-      function addToCart() {
-        var title = document.getElementById("productTitle").innerHTML;
-        window.location.href = "/add-to-cart/" + title;
-      }
-      function checkout() {
-        var title = document.getElementById("productTitle").innerHTML;
-        window.location.href = "/products/checkout/" + title;
-      }
-    </script>
