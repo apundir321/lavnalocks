@@ -272,7 +272,7 @@
 
                 var url = "/createOrder"
                 var params = {
-                    amount: "{{totalAmount}}",
+                    amount: "{{total}}00",
                     currency: "INR",
                     receipt: "lavna_recipt"
                 };
@@ -343,7 +343,7 @@
                     "zip": zip,
                     "email": email,
                     "titles": result.substring(0, result.length - 2),
-                    "amount": "{{total}}"
+                    "amount": "{{total}}00"
                 }
                 var options = {
                     "key": "{{key}}",
