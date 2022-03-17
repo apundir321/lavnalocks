@@ -622,12 +622,16 @@ router.post("/confirmOrder", async(req, res) => {
         console.log("sending email");
         // allOrders = await Order.find({ user: req.user });
         // req.flash("success", "Successfully purchased");
-        // let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+        req.body.postDataJson['amount']= req.body.postDataJson['amount']/100;
+        let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
         
         console.log(req.body.postDataJson);
-      // console.log(emailRes);  
+        console.log("*********&&&&&");
+        console.log(emailRes);  
         req.session.cart = null;
-        var response = { status: "SUCCESS" };
+        var response = { status: "SUCCESS",
+                        postdataJson: req.body.postDataJson,
+                        payId: req.body.order_pay_id };
         res.send(response);
       });
   } catch (error) {
@@ -643,11 +647,51 @@ router.post("/confirmGuestOrder", async(req, res) => {
     console.log(req.body.order_pay_id); 
     console.log(req.body.postDataJson);
     req.session.cart = null;
-    var response = { status: "SUCCESS" };
-    // let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
-    console.log("sending email");
-    // console.log(emailRes);
-    res.send(response);
+            let tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate()+4);
+      console.log("****s");
+     req.body.postDataJson['titles'] = req.body.postDataJson['titles'].trim();
+      const product = await Product.findOne({ title: req.body.postDataJson['titles']}).exec();
+      console.log(product);
+      let newcart = new Cart({});
+      newcart.items.push({
+        productId: product._id,
+        qty: 1,
+        price: product.sellingPrice,
+        title: product.title
+      });
+      const order = new Order({
+        user: req.user,
+        cart: {
+          totalQty: 1,
+          totalCost: 100,
+          items: newcart.items,
+        },
+        address: "Gurgaon",
+        paymentId: req.body.order_pay_id,
+        estDate : tomorrow
+      });
+      order.save(async (err, newOrder) => {
+        if (err) {
+          console.log(err);
+          return res.redirect("/checkout");
+        }
+        console.log("saved order")
+        console.log("sending email");
+        // allOrders = await Order.find({ user: req.user });
+        // req.flash("success", "Successfully purchased");
+        req.body.postDataJson['amount']= req.body.postDataJson['amount']/100;
+        let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+        
+        console.log(req.body.postDataJson);
+        console.log("*********&&&&&");
+        // console.log(emailRes);  
+        req.session.cart = null;
+        var response = { status: "SUCCESS",
+                        postdataJson: req.body.postDataJson,
+                        payId: req.body.order_pay_id };
+        res.send(response);
+      });
   } catch (error) {
     console.log(error);
     var response = { status: "failure" };
@@ -697,13 +741,13 @@ router.post(
   (req, res) => {
     // instantiate the SMTP server
     const smtpTrans = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      host: "smtp.zoho.in",
+      port: 465,
+      secure: true,
       auth: {
         // company's email and password
-        user: "bhagwnshrilocks@gmail.com",
-        pass: "yuretciewpzuinxr",
+        user: "sales@lavnalocks.com",
+        pass: "3HRH5vHXgZx4",
       },
       tls: {
         rejectUnauthorized: false,
@@ -712,7 +756,7 @@ router.post(
 
     // email options
     const mailOpts = {
-      from: "bhagwnshrilocks@gmail.com",
+      from: "sales@lavnalocks.com",
       to: "lavnalocks@gmail.com",
       subject: `Enquiry from ${req.body.name}`,
       html:
@@ -774,13 +818,13 @@ async function productsFromCart(cart) {
 
 async function sendPaymentEmail(postDataJson,payId) {
   const smtpTrans = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    host: "smtp.zoho.in",
+    port: 465,
+    secure: true,
     auth: {
       // company's email and password
-      user: "bhagwnshrilocks@gmail.com",
-      pass: "yuretciewpzuinxr",
+      user: "sales@lavnalocks.com",
+      pass: "3HRH5vHXgZx4",
     },
     tls: {
       rejectUnauthorized: false,
@@ -789,7 +833,7 @@ async function sendPaymentEmail(postDataJson,payId) {
 
   // email options
   const mailOpts = {
-    from: "bhagwnshrilocks@gmail.com",
+    from: "sales@lavnalocks.com",
     to: "lavnalocks@gmail.com",
     subject: `Payment Success`,
     html:

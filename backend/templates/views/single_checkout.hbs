@@ -353,7 +353,7 @@
                     "description": "Lavna Locks Payment Gateway",
                     "order_id": document.getElementById("rzp-text").value,
                     "handler": function (response) {
-                        var url = "/confirmOrder"
+                        var url = "/confirmGuestOrder"
                         console.log(JSON.stringify(response))
                         var params = {
                             order_pay_id: response.razorpay_payment_id,
@@ -368,7 +368,7 @@
                                 res = JSON.parse(xmlHttp.responseText);
                                 let status = res["status"];
                                 if (status == "SUCCESS") {
-                                    window.location.href = "/user/profile";
+                                    window.location.href = "/user/orders";
                                 }
                                 if (status == "failure") {
                                     window.location.href = "/errorpayment";

@@ -396,7 +396,7 @@
                                 res = JSON.parse(xmlHttp.responseText);
                                 let status = res["status"];
                                 if (status == "SUCCESS") {
-                                    window.location.href = "/user/profile";
+                                    window.location.href = "/user/orders";
                                 }
                                 if (status == "failure") {
                                     window.location.href = "/errorpayment";
