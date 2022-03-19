@@ -15,16 +15,16 @@ router.use(csrfProtection);
 const nodemailer = require("nodemailer");
 var Razorpay = require('razorpay');
 const { body } = require("express-validator");
-// var instance = new Razorpay({
-//   key_id: 'rzp_live_AesJaVZnibvAwT',
-//   key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
-// })
-
-
 var instance = new Razorpay({
-  key_id: 'rzp_test_DTRatZbmdR7EnW',
-  key_secret: 'ZotkGhgBTy9mNNLl3350LNWe'
+  key_id: 'rzp_live_AesJaVZnibvAwT',
+  key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
 })
+
+
+// var instance = new Razorpay({
+//   key_id: 'rzp_test_DTRatZbmdR7EnW',
+//   key_secret: 'ZotkGhgBTy9mNNLl3350LNWe'
+// })
 
 let price = 2000,
   currency = 'INR',
@@ -451,8 +451,8 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       shippingCharge:shippingCharge,
       csrfToken: req.csrfToken(),
       errorMsg,
-      // key: "rzp_live_AesJaVZnibvAwT",
-      key: "rzp_test_DTRatZbmdR7EnW",
+      key: "rzp_live_AesJaVZnibvAwT",
+      // key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart),
@@ -468,8 +468,8 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       csrfToken: req.csrfToken(),
       errorMsg,
       
-      // key: "rzp_live_AesJaVZnibvAwT",
-      key: "rzp_test_DTRatZbmdR7EnW",
+      key: "rzp_live_AesJaVZnibvAwT",
+      // key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
       products: await productsFromCart(cart)

@@ -86,9 +86,9 @@ router.get("/checkout/:name",  middleware.isProductCheckout, async (req, res) =>
       tax:tax.toFixed(2),
       subtotal:subtotal.toFixed(2),
       csrfToken: req.csrfToken(),
-      // key: "rzp_live_AesJaVZnibvAwT",
-      popup:popup,
-      key: "rzp_test_DTRatZbmdR7EnW"
+      key: "rzp_live_AesJaVZnibvAwT",
+      popup:popup
+      // key: "rzp_test_DTRatZbmdR7EnW"
     });
 
   });
