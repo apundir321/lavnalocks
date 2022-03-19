@@ -149,6 +149,8 @@ router.get("/add-to-cart/:id", async (req, res) => {
       cart = user_cart;
     }
     console.log(cart);
+    let quantity = req.query.quantity;
+    console.log(quantity+" %%%%%");
     // add the product to the cart
     const product = await Product.findOne({ title: productId }).exec();
     const itemIndex = cart.items.findIndex((p) => p.title == productId);
@@ -168,6 +170,65 @@ router.get("/add-to-cart/:id", async (req, res) => {
       });
       cart.totalQty++;
       cart.totalCost += product.sellingPrice;
+    }
+
+    // if the user is logged in, store the user's id and save cart to the db
+    if (req.user) {
+      cart.user = req.user._id;
+      await cart.save();
+    }
+    req.session.cart = cart;
+    req.flash("success", "Item added to the shopping cart");
+    res.redirect("/shopping-cart");
+    // res.redirect("/products/"+productId);
+  } catch (err) {
+    console.log(err.message);
+    res.redirect("/shopping-cart");
+  }
+});
+
+router.get("/add-to-cart-product/:id",middleware.isLoggedIn, async (req, res) => {
+  const productId = req.params.id;
+  try {
+    // get the correct cart, either from the db, session, or an empty cart.
+    let user_cart;
+    if (req.user) {
+      user_cart = await Cart.findOne({ user: req.user._id });
+    }
+    let cart;
+    if (
+      (req.user && !user_cart && req.session.cart) ||
+      (!req.user && req.session.cart)
+    ) {
+      cart = await new Cart(req.session.cart);
+    } else if (!req.user || !user_cart) {
+      cart = new Cart({});
+    } else {
+      cart = user_cart;
+    }
+    console.log(cart);
+    let quantity = parseInt(req.query.quantity);
+    console.log(quantity+" %%%%%");
+    // add the product to the cart
+    const product = await Product.findOne({ title: productId }).exec();
+    const itemIndex = cart.items.findIndex((p) => p.title == productId);
+    if (itemIndex > -1) {
+      // if product exists in the cart, update the quantity
+      let updatedQuantity = parseInt(cart.items[itemIndex].qty);
+      cart.items[itemIndex].qty =  updatedQuantity + quantity;
+      cart.items[itemIndex].price = cart.items[itemIndex].qty * product.sellingPrice;
+      cart.totalQty += quantity;
+      cart.totalCost += product.sellingPrice * quantity;
+    } else {
+      // if product does not exists in cart, find it in the db to retrieve its price and add new item
+      cart.items.push({
+        productId: product._id,
+        qty: quantity,
+        price: product.sellingPrice * quantity,
+        title: product.title
+      });
+      cart.totalQty += quantity;
+      cart.totalCost += product.sellingPrice * quantity;
     }
 
     // if the user is logged in, store the user's id and save cart to the db
@@ -255,6 +316,11 @@ router.get("/reduce/:id", async function (req, res, next) {
     }
 
     // find the item with productId
+    if(cart.couponStatus){
+      cart.totalCost = cart.totalCost + 799;
+      cart.couponStatus = false;
+      cart = cart.save();
+    }
     let itemIndex = cart.items.findIndex((p) => p.title == productId);
     if (itemIndex > -1) {
       // find the product to find its price
@@ -321,9 +387,14 @@ router.get("/removeAll/:id", async function (req, res, next) {
   }
 });
 
+router.get("/l-a24", async function (req, res, next) {
+  res.render("offer_l-a24");
+});
+
 // GET: checkout form with csrf token
 router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   console.log("checking out");
+
   if (!req.isAuthenticated()) {
     console.log("authenticated");
   }
@@ -335,17 +406,57 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   //load the cart with the session's cart's id from the db
   if (req.user) {
     cart = await Cart.findById(req.session.cart._id);
+    console.log(cart);
+    let popup = 0;
+    if(req.query.coupon == "LAVNA799"){ 
+
+      popup = 1;
+      console.log(req.body);
+      cart = await Cart.findById(req.session.cart._id);
+      if(cart.couponStatus){
+        return res.redirect('/checkout');
+      }
+
+      for(let item of cart.items){
+        if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-Gold(Bluetooth)'){
+          if(req.query.coupon == "LAVNA799"){
+              cart.totalCost = cart.totalCost - 799;
+              cart.couponStatus = true;
+              break;
+            }
+        }
+      }
+  
+    if(req.query.coupon != "LAVNA799"){
+      popup = 2;
+    }
+  }
+    let shippingCharge = await calculateShippingCharge(cart)
+      console.log(shippingCharge)
+      tax = ((cart.totalCost-shippingCharge)/118)*18
+      subtotal = cart.totalCost - shippingCharge - tax
+      console.log("print",{subtotal,tax})
+      
       res.render("checkout1", {
+
+        // tax = ((cart_user.totalCost-shippingCharge)/118)*18,
+        // subtotal = cart_user.totalCost - shippingCharge - tax,
+
       cart: cart,
-      total: cart.totalCost,
+      total: cart.couponStatus?cart.totalCost+799:cart.totalCost,
+      couponDiscount: cart.couponStatus?799:0,
       totalAmount: cart.totalCost*100,
+      tax:tax.toFixed(2),
+      subTotal : subtotal.toFixed(2),
+      shippingCharge:shippingCharge,
       csrfToken: req.csrfToken(),
       errorMsg,
       key: "rzp_live_AesJaVZnibvAwT",
       // key: "rzp_test_DTRatZbmdR7EnW",
       pageName: "Checkout",
       order_id: order_id,
-      products: await productsFromCart(cart)
+      products: await productsFromCart(cart),
+      popup : popup
     });
   }
   else {
@@ -365,6 +476,29 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
     });
   }
   const errMsg = req.flash("error")[0];
+});
+
+router.post("/applyCopon",middleware.isLoggedIn,async (req,res) =>{
+  console.log(req.body);
+  cart = await Cart.findById(req.session.cart._id);
+  if(cart.couponStatus){
+    return res.redirect('/checkout');
+  }
+
+  for(let item of cart.items){
+    if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-Gold(Bluetooth)'){
+        if(req.body.coupon == "LAVNA799"){
+          cart.totalCost = cart.totalCost - 799;
+          cart.couponStatus = true;
+          break;
+        }
+    }
+  }
+
+  cart.save();
+
+  console.log("cart after apply coupon --------",cart)
+  return res.redirect('/checkout');
 });
 
 router.get("/successpayment", async (req, res) => {
@@ -488,12 +622,16 @@ router.post("/confirmOrder", async(req, res) => {
         console.log("sending email");
         // allOrders = await Order.find({ user: req.user });
         // req.flash("success", "Successfully purchased");
-        // let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+        req.body.postDataJson['amount']= req.body.postDataJson['amount']/100;
+        let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
         
         console.log(req.body.postDataJson);
-      // console.log(emailRes);  
+        console.log("*********&&&&&");
+        console.log(emailRes);  
         req.session.cart = null;
-        var response = { status: "SUCCESS" };
+        var response = { status: "SUCCESS",
+                        postdataJson: req.body.postDataJson,
+                        payId: req.body.order_pay_id };
         res.send(response);
       });
   } catch (error) {
@@ -509,11 +647,51 @@ router.post("/confirmGuestOrder", async(req, res) => {
     console.log(req.body.order_pay_id); 
     console.log(req.body.postDataJson);
     req.session.cart = null;
-    var response = { status: "SUCCESS" };
-    // let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
-    console.log("sending email");
-    // console.log(emailRes);
-    res.send(response);
+            let tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate()+4);
+      console.log("****s");
+     req.body.postDataJson['titles'] = req.body.postDataJson['titles'].trim();
+      const product = await Product.findOne({ title: req.body.postDataJson['titles']}).exec();
+      console.log(product);
+      let newcart = new Cart({});
+      newcart.items.push({
+        productId: product._id,
+        qty: 1,
+        price: product.sellingPrice,
+        title: product.title
+      });
+      const order = new Order({
+        user: req.user,
+        cart: {
+          totalQty: 1,
+          totalCost: 100,
+          items: newcart.items,
+        },
+        address: "Gurgaon",
+        paymentId: req.body.order_pay_id,
+        estDate : tomorrow
+      });
+      order.save(async (err, newOrder) => {
+        if (err) {
+          console.log(err);
+          return res.redirect("/checkout");
+        }
+        console.log("saved order")
+        console.log("sending email");
+        // allOrders = await Order.find({ user: req.user });
+        // req.flash("success", "Successfully purchased");
+        req.body.postDataJson['amount']= req.body.postDataJson['amount']/100;
+        let emailRes = await sendPaymentEmail(req.body.postDataJson,req.body.order_pay_id);
+        
+        console.log(req.body.postDataJson);
+        console.log("*********&&&&&");
+        // console.log(emailRes);  
+        req.session.cart = null;
+        var response = { status: "SUCCESS",
+                        postdataJson: req.body.postDataJson,
+                        payId: req.body.order_pay_id };
+        res.send(response);
+      });
   } catch (error) {
     console.log(error);
     var response = { status: "failure" };
@@ -563,13 +741,13 @@ router.post(
   (req, res) => {
     // instantiate the SMTP server
     const smtpTrans = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      host: "smtp.zoho.in",
+      port: 465,
+      secure: true,
       auth: {
         // company's email and password
-        user: "bhagwnshrilocks@gmail.com",
-        pass: "yuretciewpzuinxr",
+        user: "sales@lavnalocks.com",
+        pass: "3HRH5vHXgZx4",
       },
       tls: {
         rejectUnauthorized: false,
@@ -578,7 +756,7 @@ router.post(
 
     // email options
     const mailOpts = {
-      from: "bhagwnshrilocks@gmail.com",
+      from: "sales@lavnalocks.com",
       to: "lavnalocks@gmail.com",
       subject: `Enquiry from ${req.body.name}`,
       html:
@@ -640,13 +818,13 @@ async function productsFromCart(cart) {
 
 async function sendPaymentEmail(postDataJson,payId) {
   const smtpTrans = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
+    host: "smtp.zoho.in",
+    port: 465,
+    secure: true,
     auth: {
       // company's email and password
-      user: "bhagwnshrilocks@gmail.com",
-      pass: "yuretciewpzuinxr",
+      user: "sales@lavnalocks.com",
+      pass: "3HRH5vHXgZx4",
     },
     tls: {
       rejectUnauthorized: false,
@@ -655,7 +833,7 @@ async function sendPaymentEmail(postDataJson,payId) {
 
   // email options
   const mailOpts = {
-    from: "bhagwnshrilocks@gmail.com",
+    from: "sales@lavnalocks.com",
     to: "lavnalocks@gmail.com",
     subject: `Payment Success`,
     html:

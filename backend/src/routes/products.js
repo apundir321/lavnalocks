@@ -59,12 +59,35 @@ router.get("/checkout/:name",  middleware.isProductCheckout, async (req, res) =>
   }
   console.log(foundProduct);
   //load the cart with the session's cart's id from the db
+  let shippingCharge = await calculateShippingCharge(foundProduct);
+  let couponApply = false;
+  let popup = 0;
+  if(req.query.coupon == "LAVNA799" && foundProduct.title == "L-A24-Black(Bluetooth)"){ 
+    couponApply = true;
+    popup = 1;
+  }
+
+  if(req.query.coupon != "LAVNA799"){
+    couponApply = false;
+    popup = 2;
+  }
+  console.log(req.query);
+  console.log(shippingCharge)
+  console.log(couponApply == true?foundProduct.sellingPrice-799:foundProduct.sellingPrice)
+      tax = ((foundProduct.sellingPrice-shippingCharge)/118)*18
+      subtotal = foundProduct.sellingPrice - shippingCharge - tax
+      console.log(tax,subtotal);
       res.render("single_checkout", {
       products:foundProduct,
-      total: foundProduct.sellingPrice,
+      couponApply:couponApply,
+      total: couponApply == true?foundProduct.sellingPrice-799:foundProduct.sellingPrice,
       totalAmount: foundProduct.sellingPrice*100,
+      shippingCharge:shippingCharge,
+      tax:tax.toFixed(2),
+      subtotal:subtotal.toFixed(2),
       csrfToken: req.csrfToken(),
-      key: "rzp_live_AesJaVZnibvAwT"
+      key: "rzp_live_AesJaVZnibvAwT",
+      popup:popup
       // key: "rzp_test_DTRatZbmdR7EnW"
     });
 
@@ -84,6 +107,7 @@ router.get('/variant/a24/black',async (req, res) => {
   // const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
   // console.log(foundProduct.count());
   res.render("newproductL-A24-black");
+  
 })
 
 router.get('/variant/a28',async (req, res) => {
@@ -186,5 +210,18 @@ router.get("/:slug/:id", async (req, res) => {
     return res.redirect("/");
   }
 });
+
+async function calculateShippingCharge(product){
+  const productTitle = ['L-A15','L-S9']
+  console.log(product);
+  let totalCharge=0;
+      if(productTitle.includes(product.title)){
+        totalCharge += 150
+        return totalCharge;
+      }
+      totalCharge +=250
+
+  return totalCharge;
+}
 
 module.exports = router;

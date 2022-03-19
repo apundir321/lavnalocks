@@ -122,17 +122,3 @@
            </div>
         </div>
      </section>
-
-
-     <script>
-      function addToCart() {
-        var title = document.getElementById("productTitle").innerHTML;
-        var quantity = document.getElementById("quantity").value;
-        console.log(quantity+" ^^^");
-        window.location.href = "/add-to-cart/" + title+"?quantity="+quantity;
-      }
-      function checkout() {
-        var title = document.getElementById("productTitle").innerHTML;
-        window.location.href = "/products/checkout/" + title;
-      }
-    </script>

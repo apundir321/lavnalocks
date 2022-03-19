@@ -103,9 +103,11 @@ const indexRouter = require("./routes/index");
 const productsRouter = require("./routes/products");
 const usersRouter = require("./routes/user");
 const pagesRouter = require("./routes/pages");
+const offersRouter = require("./routes/offers");
 app.use("/products", productsRouter);
 app.use("/user", usersRouter);
 app.use("/pages", pagesRouter);
+app.use("/offers", offersRouter);
 app.use("/", indexRouter);
 
 // catch 404 and forward to error handler
