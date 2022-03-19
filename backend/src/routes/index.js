@@ -418,7 +418,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
       }
 
       for(let item of cart.items){
-        if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-Gold(Bluetooth)'){
+        if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-GOLD'){
           if(req.query.coupon == "LAVNA799"){
               cart.totalCost = cart.totalCost - 799;
               cart.couponStatus = true;

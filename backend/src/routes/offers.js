@@ -10,10 +10,6 @@ const csrfProtection = csrf();
 router.use(csrfProtection);
 
 
-router.get("/l-a24", async function (req, res, next) {
-    res.render("offer_l-a24");
-  });
-
 
 
 
