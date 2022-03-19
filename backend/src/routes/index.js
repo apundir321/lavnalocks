@@ -757,7 +757,7 @@ router.post(
     // email options
     const mailOpts = {
       from: "sales@lavnalocks.com",
-      to: "lavnalocks@gmail.com",
+      to: "sales@lavnalocks.com",
       subject: `Enquiry from ${req.body.name}`,
       html:
         `
@@ -834,7 +834,7 @@ async function sendPaymentEmail(postDataJson,payId) {
   // email options
   const mailOpts = {
     from: "sales@lavnalocks.com",
-    to: "lavnalocks@gmail.com",
+    to: "sales@lavnalocks.com",
     subject: `Payment Success`,
     html:
       `
