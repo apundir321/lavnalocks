@@ -65,7 +65,7 @@
                         <li class="img1"><img src="../../public/assets/new_assets/images/LA5/LA-5_5.jpg" alt=""></li>
                         <li class="img1"><img src="../../public/assets/new_assets/images/LA5/LA-5_7.jpg" alt=""></li>
                         <li class="img1"><img src="../../public/assets/new_assets/images/LA5/LA-5_6.jpg" alt=""></li>
-                        <li class="img1"><img src="../../public/assets/new_assets/images/LA5/LA-5_8.jpg" alt=""></li>
+                        <li class="img1"><img src="../../public/assets/new_assets/images/free-installation.jpg" alt=""></li>
                     </ul>
                    </div>
                  
@@ -78,7 +78,7 @@
                      {{!-- <div class="col-lg-3 col-12">
                         <div class="number1">
                             <span class="minus">-</span>
-                            <input type="text" class="count" value="1"/>
+                            <input type="text" id="quantity" class="count" value="1"/>
                             <span class="plus">+</span>
                         </div>
                      </div> --}}
@@ -86,7 +86,7 @@
                    
                      {{!-- <div class="col-lg-5 col-6">
                         <div class="cart-add">
-                           <a type="button" onclick="addToCart();" class="btn btn-theme">Add To Cart</a>
+                           <a type="button" onclick="addToCart();" class="btn btn-theme">Add To Cart!</a>
                         </div>
                     </div>
                       <div class="col-lg-5 col-6">
@@ -127,7 +127,9 @@
      <script>
       function addToCart() {
         var title = document.getElementById("productTitle").innerHTML;
-        window.location.href = "/add-to-cart/" + title;
+        var quantity = document.getElementById("quantity").value;
+        console.log(quantity+" ^^^");
+        window.location.href = "/add-to-cart/" + title+"?quantity="+quantity;
       }
       function checkout() {
         var title = document.getElementById("productTitle").innerHTML;
