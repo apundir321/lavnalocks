@@ -48,6 +48,10 @@ const cartSchema = new mongoose.Schema({
   couponStatus:{
     type:Boolean,
     default:false,
+  },
+  couponAmount:{
+    type:Number,
+    default:0
   }
 });
 

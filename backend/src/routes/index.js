@@ -317,10 +317,12 @@ router.get("/reduce/:id", async function (req, res, next) {
 
     // find the item with productId
     if(cart.couponStatus){
-      cart.totalCost = cart.totalCost + 799;
+      cart.totalCost = cart.totalCost + cart.couponAmount;
+      cart.couponAmount = 0;
       cart.couponStatus = false;
       cart = cart.save();
     }
+
     let itemIndex = cart.items.findIndex((p) => p.title == productId);
     if (itemIndex > -1) {
       // find the product to find its price
@@ -370,11 +372,19 @@ router.get("/removeAll/:id", async function (req, res, next) {
       cart.totalCost -= cart.items[itemIndex].price;
       await cart.items.remove({ _id: cart.items[itemIndex]._id });
     }
+    if(cart.couponStatus){
+      cart.totalCost = cart.totalCost + cart.couponAmount;
+      cart.couponAmount = 0;
+      cart.couponStatus = false;
+      cart = cart.save();
+    }
+
     req.session.cart = cart;
+
     //save the cart it only if user is logged in
     if (req.user) {
       await cart.save();
-    }
+    }vvv
     //delete cart if qty is 0
     if (cart.totalQty <= 0) {
       req.session.cart = null;
@@ -408,43 +418,60 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
     cart = await Cart.findById(req.session.cart._id);
     console.log(cart);
     let popup = 0;
-    if(req.query.coupon == "LAVNA799"){ 
-
-      popup = 1;
+    couponAmount = 0
+    if(req.query.coupon == "LAVNA799" || req.query.coupon == "LAVNA5"){ 
+      popup = 2;
       console.log(req.body);
       cart = await Cart.findById(req.session.cart._id);
       if(cart.couponStatus){
         return res.redirect('/checkout');
       }
 
+
       for(let item of cart.items){
         if(item.title == 'L-A24-Black(Bluetooth)' || item.title == 'L-A24-GOLD'){
           if(req.query.coupon == "LAVNA799"){
-              cart.totalCost = cart.totalCost - 799;
+              popup = 1;
+              couponAmount = 799;
+              cart.totalCost = cart.totalCost - couponAmount;
               cart.couponStatus = true;
               break;
             }
         }
+
+        if(item.title == 'L-A28-Black(Bluetooth)' || item.title == 'L-A28-GOLD'){
+          if(req.query.coupon == "LAVNA5"){
+              popup = 1;
+              console.log("coupon apply -- ",item)
+              couponAmount = (item.price/(100*item.qty))*5
+              cart.totalCost = cart.totalCost - couponAmount.toFixed(2);
+              cart.couponStatus = true;
+              break;
+            }
+        }
+
       }
   
-    if(req.query.coupon != "LAVNA799"){
-      popup = 2;
+      // if(req.query.coupon != "LAVNA799" && req.query.coupon != "LAVNA5"){
+      //   popup = 2;
+      // }
+      console.log("hi this is cart",cart);
+      cart.couponAmount = couponAmount
+      cart.save();
     }
-  }
+    console.log("coupon Amount", couponAmount)
+    console.log("cart info",cart);
     let shippingCharge = await calculateShippingCharge(cart)
       console.log(shippingCharge)
-      tax = ((cart.totalCost-shippingCharge)/118)*18
-      subtotal = cart.totalCost - shippingCharge - tax
-      console.log("print",{subtotal,tax})
+      realCost = cart.totalCost+couponAmount
+      tax = ((realCost-shippingCharge)/118)*18
+      subtotal = realCost - shippingCharge - tax
+      console.log("print",{subtotal,tax,realCost,couponAmount})
       
       res.render("checkout1", {
-
-        // tax = ((cart_user.totalCost-shippingCharge)/118)*18,
-        // subtotal = cart_user.totalCost - shippingCharge - tax,
-
       cart: cart,
-      total: cart.couponStatus?cart.totalCost+799:cart.totalCost,
-      couponDiscount: cart.couponStatus?799:0,
+      total: cart.couponStatus?cart.totalCost:cart.totalCost,
+      couponDiscount: cart.couponStatus?cart.couponAmount:0,
       totalAmount: cart.totalCost*100,
       tax:tax.toFixed(2),
       subTotal : subtotal.toFixed(2),

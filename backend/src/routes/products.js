@@ -62,32 +62,42 @@ router.get("/checkout/:name",  middleware.isProductCheckout, async (req, res) =>
   let shippingCharge = await calculateShippingCharge(foundProduct);
   let couponApply = false;
   let popup = 0;
+  let couponAmount =0;
   if((req.query.coupon == "LAVNA799" && foundProduct.title == "L-A24-Black(Bluetooth)") || req.query.coupon == "LAVNA799" && foundProduct.title == "L-A24-GOLD"){ 
     couponApply = true;
+    couponAmount = 799
     popup = 1;
   }
 
-  if(req.query.coupon != "LAVNA799"){
+  if(req.query.coupon == "LAVNA5" && (foundProduct.title == "L-A28-Black(Bluetooth)" || foundProduct.title == "L-A28-GOLD")){
+    couponApply = true
+    couponAmount = (foundProduct.sellingPrice/100)*5
+    couponAmount = couponAmount.toFixed(2)
+    popup = 1;
+  }
+
+  if(req.query.coupon != "LAVNA799" && req.query.coupon != "LAVNA5"){
     couponApply = false;
     popup = 2;
   }
   console.log(req.query);
   console.log(shippingCharge)
-  console.log(couponApply == true?foundProduct.sellingPrice-799:foundProduct.sellingPrice)
+  console.log(couponApply == true?foundProduct.sellingPrice-couponAmount:foundProduct.sellingPrice)
       tax = ((foundProduct.sellingPrice-shippingCharge)/118)*18
       subtotal = foundProduct.sellingPrice - shippingCharge - tax
       console.log(tax,subtotal);
       res.render("single_checkout", {
       products:foundProduct,
       couponApply:couponApply,
-      total: couponApply == true?foundProduct.sellingPrice-799:foundProduct.sellingPrice,
+      total: couponApply == true?foundProduct.sellingPrice-couponAmount:foundProduct.sellingPrice,
       totalAmount: foundProduct.sellingPrice*100,
       shippingCharge:shippingCharge,
       tax:tax.toFixed(2),
       subtotal:subtotal.toFixed(2),
       csrfToken: req.csrfToken(),
       key: "rzp_live_AesJaVZnibvAwT",
-      popup:popup
+      popup:popup,
+      couponAmount:couponAmount
       // key: "rzp_test_DTRatZbmdR7EnW"
     });
 
