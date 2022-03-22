@@ -89,7 +89,7 @@ router.get("/checkout/:name",  middleware.isProductCheckout, async (req, res) =>
       res.render("single_checkout", {
       products:foundProduct,
       couponApply:couponApply,
-      total: couponApply == true?foundProduct.sellingPrice-couponAmount:foundProduct.sellingPrice,
+      total: couponApply == true?parseInt(foundProduct.sellingPrice-couponAmount):foundProduct.sellingPrice,
       totalAmount: foundProduct.sellingPrice*100,
       shippingCharge:shippingCharge,
       tax:tax.toFixed(2),

@@ -443,7 +443,7 @@ router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
           if(req.query.coupon == "LAVNA5"){
               popup = 1;
               console.log("coupon apply -- ",item)
-              couponAmount = (item.price/(100*item.qty))*5
+              couponAmount = parseInt((item.price/(100*item.qty))*5);
               cart.totalCost = cart.totalCost - couponAmount.toFixed(2);
               cart.couponStatus = true;
               break;
