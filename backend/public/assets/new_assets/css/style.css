@@ -424,9 +424,13 @@ a:hover {
     display: block;
   }
 }
-#togg{
-  display: none;
+
+@media (min-width:992px){
+  #togg{
+   display: none;
+  }
 }
+
 @media (min-width:767px) and (max-width: 992px) {
   #navbar{
     position: absolute;
