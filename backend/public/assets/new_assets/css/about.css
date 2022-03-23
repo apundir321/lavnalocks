@@ -469,3 +469,15 @@
     border-radius: 50px;
     margin-top: 30px;
 }
+@media (max-width:992px){
+    #togg{
+        border: none;
+        background: #fff;
+        color: #003399;
+        display: block;
+      }
+}
+
+#togg{
+    display: none;
+}

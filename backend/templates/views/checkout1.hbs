@@ -109,6 +109,15 @@
         font-size: 20px;
     }
 
+    @media (max-width:767px){
+        .panel{
+            margin-top: 15px;
+        }
+    }
+    #web_left{
+        margin-left: 0;
+    }
+  
 </style>
 
 <section>
@@ -192,7 +201,7 @@
         </div>
          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 order-lg-2 order-md-2 order-sm-1 order-1">
             <!--REVIEW ORDER-->
-            <div class="panel shadow panel-info" style="margin-left: 100px;">
+            <div class="panel shadow panel-info" id="web_left">
                 <div class="panel-heading">
                     Review Order <div class="pull-right"><small><a class="afix-1" href="/shopping-cart">Edit
                                 Cart</a></small></div>
@@ -687,6 +696,14 @@ $('#closemodal').trigger('click');
        document.getElementById("popup").innerHTML = ``
     },1000)
     }
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#togg").click(function(){
+            $("#navbar").toggle();
+        });
+    });
 </script>
 
 </body>
