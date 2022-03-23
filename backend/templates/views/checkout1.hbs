@@ -266,7 +266,7 @@
                                     <span>
                                         <i class="fa fa-rupee"></i>
                                     </span>
-                                    <span>799</span>
+                                    <span>{{couponDiscount}}</span>
 
                                 </div>
                             </div>
@@ -283,8 +283,6 @@
                         </div>
                         <div>
                             <form id="coupon_form" method="get" action="/checkout">
-                                {{!-- <input type="hidden" name="_csrf" value="{{ csrfToken }}" /> --}}
-                                {{!-- <input type="text" value="{{cart._id}}"> --}}
                                 <input type="text" name="coupon" id="coupon" required>
                                 <button class="coupon_button shadow" type="submit">Apply Coupon</button>
                             </form>
