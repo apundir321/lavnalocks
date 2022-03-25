@@ -368,7 +368,12 @@
                                 res = JSON.parse(xmlHttp.responseText);
                                 let status = res["status"];
                                 if (status == "SUCCESS") {
-                                    window.location.href = "/user/orders";
+                                    if("{{products.title}}" === "L-A24-Black(Bluetooth)" || "{{products.title}}" === "L-A24-GOLD" || "{{products.title}}" === "L-A28-Black(Bluetooth)" || "{{products.title}}" === "L-A28-GOLD"){
+                                    gtag_report_conversion("/user/orders");
+                                    }else{
+                                      window.location.href = "/user/orders";
+                                    }
+                                   
                                 }
                                 if (status == "failure") {
                                     window.location.href = "/errorpayment";
@@ -707,6 +712,33 @@ alert('Oops... ' + JSON.stringify(error));
             $("#navbar").toggle();
         });
     });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10822033569"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10822033569');
+</script>
+
+<!-- Event snippet for Website lead conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10822033569/QCBoCLHn1ZYDEKHBrKgo',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
 </script>
 
 </body>
