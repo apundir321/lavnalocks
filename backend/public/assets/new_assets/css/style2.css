@@ -18,7 +18,7 @@
 }
 
 
-.df_section .box1 h1 {
+.df_section .box1 h3 {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 42px;
@@ -131,7 +131,7 @@ del span{
     font-weight: 800;
 }
 
-.prod_card .content_box h3{
+.prod_card .content_box h2{
     font-family: 'Playfair Display', serif !important;
     font-weight: 600;
     color: #000;
@@ -250,9 +250,9 @@ width: 100%;
 }
 
 .content_bx_rev h3{
-    font-size: 20px;
-    color:#000;
-    font-weight: 30px;
+    font-size: 20px !important;
+    color:#000 !important;
+    font-weight: 30px !important;
 }
 
 

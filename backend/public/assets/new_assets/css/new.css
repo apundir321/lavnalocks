@@ -12,7 +12,7 @@
     float: left;
     border-right: 4px solid #fff;
 }
-#top_count .box .box_sm h1{
+#top_count .box .box_sm h3{
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
@@ -25,7 +25,7 @@
     font-size: 16px;
 }
 
-#top_count .box .box_lg h1{
+#top_count .box .box_lg h3{
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
@@ -62,7 +62,7 @@
     color: #4A4848;
     text-transform: uppercase;
 }
-#about .box1 h1{
+#about .box1 h3{
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 36px;
@@ -176,7 +176,7 @@
     color: #4A4848;
     text-transform: uppercase;
 }
-#video h1{
+#video h3{
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 42px;
@@ -203,7 +203,7 @@
     color: #4A4848;
     text-transform: uppercase;
 }
-#trusted h1{
+#trusted h3{
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 42px;
@@ -227,7 +227,7 @@
     color: #4A4848;
     text-transform: uppercase;
 }
-#Householders h1{
+#Householders h3{
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 42px;
@@ -517,10 +517,10 @@
         padding-bottom: 82px !important;
     }
     #hero {
-        width: 100%;
-        height: 100vh;
-        background: url("/assets/new_assets/img2/mobile header.png") top center;
-        background-size: cover;
+        width: 100% !important;
+        height: 100vh !important;
+        background: url("/assets/new_assets/img2/mobile header.png") top center !important;
+        background-size: cover !important;
         position: relative;
       }
       #hero .btn-get-started{

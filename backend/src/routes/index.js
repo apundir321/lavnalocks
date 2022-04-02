@@ -52,7 +52,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/index.html", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const products = await Product.find({})
       .sort("-createdAt")
