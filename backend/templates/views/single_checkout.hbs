@@ -369,9 +369,9 @@
                                 let status = res["status"];
                                 if (status == "SUCCESS") {
                                     if("{{products.title}}" === "L-A24-Black(Bluetooth)" || "{{products.title}}" === "L-A24-GOLD" || "{{products.title}}" === "L-A28-Black(Bluetooth)" || "{{products.title}}" === "L-A28-GOLD"){
-                                    gtag_report_conversion("/user/orders");
+                                    gtag_report_conversion("/successpayment");
                                     }else{
-                                      window.location.href = "/user/orders";
+                                      window.location.href = "/successpayment";
                                     }
                                    
                                 }
