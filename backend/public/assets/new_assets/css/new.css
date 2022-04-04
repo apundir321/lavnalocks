@@ -94,7 +94,7 @@
 
 
 #counts{
-    background-image: url('/assets/new_assets/img2/choose_lavna.png');
+    background-image: url('/assets/new_assets/img2/choose_lavna.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -519,7 +519,7 @@
     #hero {
         width: 100% !important;
         height: 100vh !important;
-        background: url("/assets/new_assets/img2/mobile header.png") top center !important;
+        background: url("/assets/new_assets/img2/mobile header.webp") top center !important;
         background-size: cover !important;
         position: relative;
       }
@@ -733,7 +733,7 @@ nav #my_img:hover{
         width: 60%;
         margin: 0 auto;
         height: 100vh;
-        background: url("/assets/new_assets/img2/mobile header.png") top center;
+        background: url("/assets/new_assets/img2/mobile header.webp") top center;
         background-size: cover;
         position: relative;
     }

@@ -345,7 +345,7 @@ width: 100%;
     position: absolute;
     left: -30px;
     top: 30%;
-    background: url(../img/icon/left.png)no-repeat;
+    background: url(../img/icon/left.webp)no-repeat;
     height: 32px;
     width: 32px;
     font-size: 0
@@ -355,7 +355,7 @@ width: 100%;
     position: absolute;
     right: -30px;
     top: 30%;
-    background: url(../img/icon/right.png)no-repeat;
+    background: url(../img/icon/right.webp)no-repeat;
     height: 32px;
     width: 32px;
     font-size: 0
@@ -506,7 +506,7 @@ width: 100%;
     width: 46px;
     height: 46px;
     font-size: .1px;
-    background: url(../img/icon/left1.png)no-repeat
+    background: url(../img/icon/left1.webp)no-repeat
 }
 
 #slider3D .owl-next {
@@ -516,7 +516,7 @@ width: 100%;
     width: 46px;
     height: 46px;
     font-size: .1px;
-    background: url(../img/icon/right1.png)no-repeat
+    background: url(../img/icon/right1.webp)no-repeat
 }
 
 .slider3Dbox .prDeas {
@@ -871,7 +871,7 @@ width: 100%;
     position: absolute;
     left: -30px;
     top: 30%;
-    background: url(../img/icon/left.png)no-repeat;
+    background: url(../img/icon/left.webp)no-repeat;
     height: 32px;
     width: 32px;
     font-size: 0
@@ -881,7 +881,7 @@ width: 100%;
     position: absolute;
     right: -30px;
     top: 30%;
-    background: url(../img/icon/right.png)no-repeat;
+    background: url(../img/icon/right.webp)no-repeat;
     height: 32px;
     width: 32px;
     font-size: 0

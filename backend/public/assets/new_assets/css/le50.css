@@ -47,7 +47,7 @@
 	position: absolute;
 	top: 40px;
 	left: 40px;
-	background: url(images/zoom-ico.png) left top no-repeat;
+	background: url(images/zoom-ico.webp) left top no-repeat;
 }
 
 .my_img {
@@ -575,7 +575,7 @@ section {
 }
 
 #top_ban_prod{
-    background-image: url('../../assets/new_assets/img2/bANNER (1).png');
+    background-image: url('../../assets/new_assets/img2/bANNER (1).webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1088,7 +1088,7 @@ display: none;
 
   @media (max-width: 767px) {
     #top_ban_prod{
-        background-image: url('../../assets/new_assets/img2/lavna_product-head-2.jpg');
+        background-image: url('../../assets/new_assets/img2/lavna_product-head-2.webp');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

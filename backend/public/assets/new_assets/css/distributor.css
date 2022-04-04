@@ -1,5 +1,5 @@
 #top_ban_dis{
-    background-image: url('/assets/new_assets/img2/distri_ban.png');
+    background-image: url('/assets/new_assets/img2/distri_ban.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -245,7 +245,7 @@
     min-height: 200px;
     height: auto;
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/basic_st-1.png');
+    background-image: url('/assets/new_assets/img2/basic_st-1.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -277,7 +277,7 @@
     min-height: 200px;
     height: auto;
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/basic_st-2.png');
+    background-image: url('/assets/new_assets/img2/basic_st-2.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -290,14 +290,14 @@
     min-height: 200px;
     height: auto;
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/basic_st-3.png');
+    background-image: url('/assets/new_assets/img2/basic_st-3.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 #requirment .box:hover{
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/re_1hov.png');
+    background-image: url('/assets/new_assets/img2/re_1hov.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -324,14 +324,14 @@
 
 #requirment .box1:hover{
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/re_2hov.png');
+    background-image: url('/assets/new_assets/img2/re_2hov.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 #requirment .box2:hover{
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/re_3hov.png');
+    background-image: url('/assets/new_assets/img2/re_3hov.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -339,7 +339,7 @@
 
 #requirment .box1:hover{
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/re_2hov.png');
+    background-image: url('/assets/new_assets/img2/re_2hov.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -354,7 +354,7 @@
 
 #requirment .box2:hover{
     transition: 0.3s ease;
-    background-image: url('/assets/new_assets/img2/re_3hov.png');
+    background-image: url('/assets/new_assets/img2/re_3hov.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -470,7 +470,7 @@
 }
 #topperks .box img:hover {
     opacity:1;
-    background-image: url('/assets/new_assets/images/LA24_1.jpg'); 
+    background-image: url('/assets/new_assets/images/LA24_1.webp'); 
     -webkit-transition: .5s ease-out;
     -moz-transition: .5s ease-out;
     -o-transition: .5s ease-out;
@@ -642,7 +642,7 @@
 
 
 #contactus{
-    background: url('/assets/new_assets/img2/about-ban.png');
+    background: url('/assets/new_assets/img2/about-ban.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
