@@ -43,7 +43,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Vendor CSS Files -->
   <link href="assets/new_assets/vendor/aos/aos.css" rel="stylesheet">
   
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/new_assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/new_assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/new_assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -1244,7 +1243,7 @@ li .line{
     <script src="assets/new_assets/js/jquery.min.js"></script>
 
   <!-- Vendor JS Files -->
-  <script src="assets/new_assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../../public/assets/new_assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/new_assets/vendor/aos/aos.js"></script>
   <script src="assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/new_assets/vendor/swiper/swiper-bundle.min.js"></script>
@@ -1320,11 +1319,11 @@ $(target).attr('src',src);
       $('#submit-modal').html('Sending...');
     			e.preventDefault();
 
-			var Name = document.getElementById("name").value;
-			var emailId = document.getElementById("email").value;
-			var mobile = document.getElementById("mobile").value;
-      var product = document.getElementById("product").value;
-      var message = document.getElementById("message").value;
+			var Name = document.getElementById("name")?.value;
+			var emailId = document.getElementById("email")?.value;
+			var mobile = document.getElementById("mobile")?.value;
+      var product = document.getElementById("product")?.value;
+      var message = document.getElementById("message")?.value;
 
 			if(Name ==='' || Name == undefined )
 			{
@@ -1401,7 +1400,7 @@ $('#closemodal').trigger('click');
 		$("#contact-form2").submit(function(e) {
       $('#submit-modal2').html('Sending...');
     			e.preventDefault();
-			var emailId = document.getElementById("emailsb").value;
+			var emailId = document.getElementById("emailsb")?.value;
 			if(emailId ==='' || emailId == undefined )
 			{
 				return;
@@ -1483,8 +1482,8 @@ $('#closemodal').trigger('click');
 		$("#pop-form").submit(function(e) {
       $('#pop-modal').html('Processing...');
     			e.preventDefault();
-			var popemailId = document.getElementById("popemail").value;
-      var popMobile = document.getElementById("popmobile").value;
+			var popemailId = document.getElementById("popemail")?.value;
+      var popMobile = document.getElementById("popmobile")?.value;
 			if(popemail ==='' || popemail == undefined )
 			{
 				return;

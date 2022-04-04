@@ -533,6 +533,12 @@ section {
 }
 .set-img-la24 img{
     width: 100%;
+    margin-left: 35px;
+}
+@media (max-width:767px){
+    .set-img-la24 img{
+        margin-left: 0;
+    }
 }
 .sensor{
     font-size: 18px !important;
@@ -1102,7 +1108,7 @@ display: none;
     .set-img-la24- img{
         width: 10% !important;
     }
-    .piclist{
+     .piclist{
         margin-top: -26px;
     }
     .vid_box iframe{
@@ -1118,4 +1124,10 @@ display: none;
   }
   .set-img-la24- img{
       width: 62%;
+      margin-left: 45px;
+  }
+  @media (max-width:767px){
+    .set-img-la24- img{
+        margin-left: 0;
+    }
   }

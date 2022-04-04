@@ -199,7 +199,7 @@
 <!-- End Footer -->
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  {{!-- <script src="assets/js/main.js"></script> --}}
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
@@ -216,34 +216,8 @@
 </script>
   
 
-  <script>
-      $(".progress-bar").animate({
-      width: "90%"
-    }, 2500);
-
-    $("#progress-bar2").animate({
-        width: "80%"
-    }, 2500);
-
-    $("#progress-bar3").animate({
-        width: "70%"
-    }, 2500);
-  </script>
-
- 
 
 <script>
-  var swiper = new Swiper("#prd_thumb", {
-    slidesPerView: 5.5,
-    spaceBetween: 20,
-
-    navigation: {
-        nextEl: "#prd_thumb .swiper-button-next",
-        prevEl: "#prd_thumb .swiper-button-prev",
-      },
-   
-  });
-
 
     $(document).ready(function(){
 
@@ -261,183 +235,6 @@
     });
 
 </script>
-
-
-{{!-- <script>
-	$(document).ready(function(){
-		$("#contact-form").submit(function(e) {
-      
-      $('#submit-modal').html('Sending...');
-    			e.preventDefault();
-
-			var Name = document.getElementById("name").value;
-			var emailId = document.getElementById("email").value;
-			var mobile = document.getElementById("mobile").value;
-      var product = document.getElementById("product").value;
-      var message = document.getElementById("message").value;
-
-			if(Name ==='' || Name == undefined )
-			{
-				return;
-			}
-			if(emailId ==='' || emailId == undefined )
-			{
-				return;
-			}
-			if(mobile==='' || mobile == undefined )
-			{
-				return;
-			}
-      if(product==='' || product == undefined )
-			{
-				return;
-			}
-      if(message==='' || message == undefined )
-			{
-				return;
-			}
-
-      var Body ='Name: '+Name+'<br>Email: '+emailId+'<br>Mobile: '+mobile+'<br>Product: '+product+'<br>Message: '+message;
-      $('#name').val('');
-      $('#email').val('');
-      $('#mobile').val('');
-      $('#product').val('');
-      $('#message').val('');
-
-      sendMailToOwner(Body, Name, emailId, mobile, product,message );
-			});
-
-		});
- 
-
-  function sendMailToOwner(Body, Name, emailId, mobile, product,message){
-
-    var data = {
-      service_id: 'service_8zp4yhp',
-      template_id: 'template_r8bl13q',
-      user_id: 'user_mTjMBBP092bpZsnZTyLfp',
-      template_params: {
-            'from_name': Name,
-            'user_name':Name,
-            'user_email':emailId,
-            'user_mobile':mobile,
-            'product':product,
-            'reply_to':'contact@flybunch.com', 
-            'owner_email': 'sales@lavnalocks.com',
-            'company': 'Lavnalocks',
-        'message':message,
-      }
-    };
-
-    $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-      type: 'POST',
-      data: JSON.stringify(data),
-      contentType: 'application/json'
-    }).done(function() {
-      $('#submit-modal').html('Send');
-    $('#closemodal').trigger('click');
-    }).fail(function(error) {
-      alert('Oops... ' + JSON.stringify(error));
-    });
-
-    }
-
-</script> --}}
-
-<script>
-var owl = $('.screenshot_slider').owlCarousel({
-    loop: true,
-    responsiveClass: true,
-    nav: true,
-    margin: 0,    
-    autoplayTimeout: 4000,
-    smartSpeed: 400,
-    center: true,
-    navText: ['&#8592;', '&#8594;'],
-    responsive: {
-        0: {
-            items: 1,
-        },
-        600: {
-            items: 5
-        },
-        1200: {
-            items: 5
-        }
-    }
-});
-
-/****************************/
-
-jQuery(document.documentElement).keydown(function (event) {    
-
-    // var owl = jQuery("#carousel");
-
-    // handle cursor keys
-    if (event.keyCode == 37) {
-       // go left
-      owl.trigger('prev.owl.carousel', [400]);
-      //owl.trigger('owl.prev');
-    } else if (event.keyCode == 39) {
-       // go right
-        owl.trigger('next.owl.carousel', [400]);
-       //owl.trigger('owl.next');
-    }
-
-});
-
-</script>
-
-<script>
-   $('.knw').click(function(){
-
-  var dtm = $(this).attr('data-more');
-
-
-
-  if( $(this).text()=='View More'){
-    $(dtm).addClass('active');
-    $(this).text('View Less');
-  }else{
-    $(dtm).removeClass('active');
-    $(this).text('View More');
-  }
-
-
- });
-</script>
-
-<script>
-  $(document).ready(function(){
-      $('.center-slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        centerMode: true,
-        arrows: true,
-        dots: false,
-        speed: 300,
-        centerPadding: '20px',
-        infinite: true,
-        autoplaySpeed: 5000,
-        autoplay: true,
-        breakpoint:{
-          320:{
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
-          520:{
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          },
-          720:{
-            slidesToShow: 5,
-            slidesToScroll: 1,
-          }
-        }
-      });
-    });
-</script>
-
 
 <script>
 	$(document).ready(function(){
