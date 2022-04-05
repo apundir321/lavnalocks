@@ -7,14 +7,14 @@ $(document).ready(function(){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >LavnaLocks | Buy Digital Fingerprint Lock Online</title>`;
+    <title >Buy Digital Fingerprint Door Lock Online  - Lavna Locks</title>`;
     
 
     if(page=='/'){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title >LavnaLocks | Buy Digital Fingerprint Lock Online</title>`;
+        <title >Buy Digital Fingerprint Door Lock Online  - Lavna Locks</title>`;
         $('head').prepend(metaData);
     }
 
@@ -22,7 +22,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title >About Us | Digital Fingerprint Lock- LavnaLocks</title>`;
+        <title >About Us - Lavna Locks</title>`;
         $('head').prepend(metaData);
     }
 
@@ -30,7 +30,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Explore wide range of smart door locks | LavnaLocks</title>`
+        <title>Online Shop - Lavna Locks</title>`
         $('head').prepend(metaData);
     }
 
@@ -38,7 +38,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Real State Project | Lavna Digital Lock- LavnaLocks</title>`
+        <title>Real State Project - Lavna Locks</title>`
         $('head').prepend(metaData);
     }
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Signin | Digital Fingerprint Lock - LavnaLocks</title>`
+        <title>Accounts Sign in - Lavna Locks</title>`
         $('head').prepend(metaData);
     }
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>SignUp | Lavna Digital Lock- Smart Door Lock </title>`
+        <title>Sign Up - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -62,7 +62,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Shoppinp Cart | Smart Door Lock - LavnaLocks </title>`
+        <title>Shoppinp Cart - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -70,7 +70,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>L-A24 | The 6 in 1 smart door lock - LavnaLocks </title>`
+        <title>L-A24-Black(Bluetooth) Door Lock - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -78,7 +78,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>L-A28 | Fingerprint door Lock - Lavna Digital Locks </title>`
+        <title>L-A28-Black(Bluetooth) Door Lock - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
   
@@ -86,14 +86,14 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>L-A15 | Digital Fingerprint Lock | Lavna Digital Locks </title>`
+        <title>Buy L-A15 Smart Fingerprint Digital Door Lock - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
     if(page == 'L-S9'){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-S9 | Digital Door Lock | Digital Fingerprint Locks </title>`
+        <title> Buy L-S9 Fingerprint Door Lock online - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -101,7 +101,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-A24-Gold | Fingerprint Door Lock | Lavna Digital Lock </title>`
+        <title> L-A24-GOLD Biometric Fingerprint Door Lock - Lavna Locks   </title>`
         $('head').prepend(metaData);
     }
 
@@ -109,7 +109,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-H300 (Encoder) | Digital Door Lock | Lavna Digital Lock </title>`
+        <title> L-H300(Encoder) Door Lock - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -117,7 +117,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-A5 | Fingerprint Door Lock | Lavna Digital Lock </title>`
+        <title> Buy L-A5 Digital Door Lock for Glass Door - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -125,7 +125,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-A28-GOLD | Digital Door Lock | Lavna Digital Lock </title>`
+        <title> L-A28-GOLD Biometric Door Lock System for Office - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
 
@@ -133,7 +133,7 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-E50 | Lavna Digital Locks - LavnaLocks </title>`
+        <title>L-E50 Best Smart Locks for Home - Lavna Locks </title>`
         $('head').prepend(metaData);
     }
   
