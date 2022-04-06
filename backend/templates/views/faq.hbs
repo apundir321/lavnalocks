@@ -1,199 +1,354 @@
 {{>header}}
 
 <style>
-  
-.links{
-  text-align: center;
+  .accordion-body {
+    padding: 1rem 1.25rem;
+    text-align: left;
 }
-.links ul li{
-  list-style: none;
-  line-height: 33px;
+#faq_new h3{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 36px;
+    color: #003399;
 }
-.links ul li a{
-  text-decoration: none;
-  color: #FFF;
-  font-weight: 500;
-  font-size: 16px;
+#faq_new h2{
+    font-family: 'Playfair Display', serif !important;
+    border: 1px solid #003399;
+    text-transform: capitalize !important;
 }
-.links h4{
-  font-size: 23px;
-  margin-left: 40px;
+.accordion-button:not(.collapsed){
+   color: #003399;
+    letter-spacing: 1px;
+     font-weight: bold;
 }
-.links span{
-  font-size: 17px;
-  font-weight: 600;
+
+.accordion-button{
+   color: #003399;
+    letter-spacing: 1px;
+     font-weight: bold;
+}
+.accordion-item{
+  margin-top: 20px;
+}
+.accordion-button:focus{
+  box-shadow: none;
 }
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
-  <main id="main">
+<main id="main">
 
-    
-    <!-- ======= Breadcrumbs ======= -->
-    {{!-- <section id="breadcrumbs" class="breadcrumbs"  style="background-color: black !important;">
-        <div class="container">
-  
-          <div class="d-flex justify-content-between align-items-center">
-            <h2>FAQ's</h2>
-            <ol>
-              <li><a style="font-size: 16px;" href="/">Home</a></li>
-              <li style="font-size: 16px;">FAQ's</li>
-            </ol>
-          </div>
-  
-        </div>
-    </section> --}}
-      <!-- End Breadcrumbs -->
-
- <section id="faq" class="faq">
-<div class="container" data-aos="fade-up">
-
-
-  <div class="section-title">
-       <h2>FAQ'S</strong></h2>
+<section id="faq_new">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <h3>FAQ</h3>
+      </div>
+    </div>
+    <div class="row mt-4 text-center">
+      <div class="col-lg-12">
+        <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+       Can i operate this door lock with alexa?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>No, it can’t be connected to external devices.</p>
+      </div>
+    </div>
   </div>
-
-
-  <button class="accordion"><b>CAN I OPERATE THIS DOOR LOCK WITH ALEXA?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">No, it can’t be connected to external devices.</p>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        What is emergency entrance otp?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Emergency entrance otp is generated via app
+          At any time.</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>WHAT IS EMERGENCY ENTRANCE OTP?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">Emergency entrance otp is generated via app
-At any time.</p>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Who will install this? Will the company send people along with the purchase on amazon?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>Carpenter can easily install this lock
+          Company will assist you if any problem occure and provide complete solution.</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>WHO WILL INSTALL THIS? WILL THE COMPANY SEND PEOPLE ALONG WITH THE PURCHASE ON AMAZON?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">Carpenter can easily install this lock
-Company will assist you if any problem occure and provide complete solution.</p>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      What is the size of battery &amp; number of batteries?
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>4 AA size battery recommended dueracell ( ultra).</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>WHAT IS THE SIZE OF BATTERY & NUMBER OF BATTERIES?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">4 AA size battery recommended dueracell ( ultra).</p>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+    Does it has RFID charger/ activator with it?
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>In case where battery stop working you can use 9v battery to start it
+          again
+          In the bottom of outer unit just touch the 9v batter at given point and it will start working.</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>DOES IT HAS RFID CHARGER/ ACTIVATOR WITH IT?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">In case where  battery stop working you can use 9v battery to start it again
-In the bottom of outer unit just touch the 9v batter at given point and it will start working.</p>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+       Is it automatically get lock after sometime if i forgot it while going outside?
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>In a condition where you forget to lock, in that condition your home is
+          safe…
+          Without fingerprint or pin or RFID card you can’t access your lavna digital locks.</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>IS IT AUTOMATICALLY GET LOCK AFTER SOMETIME IF I FORGOT TO LOCK IT WHILE GOING OUTSIDE?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">In a condition where you forget to lock, in that condition your home is safe…
-Without fingerprint or pin or RFID card you can’t access your lavna digital locks.</p>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+       Can it be exposed to rain?
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>No, it’s splash resistant not water resistant.</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>CAN IT BE EXPOSED TO RAIN?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">No, it’s splash resistant not water resistant.</p>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+       What is the depth of the inner lock mechanism and what is the width?
+      </button>
+    </h2>
+    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>The depth of inner lock is 9 cm
+          And width is 1.8 cm.</p>
+      </div>
+    </div>
   </div>
-
-  <button class="accordion"><b>WHAT IS THE DEPTH OF THE INNER LOCK MECHANISM AND WHAT IS THE WIDTH?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">The depth of inner lock is 9 cm
-And width is 1.8 cm.</p>
-  </div>
-
-  <button class="accordion"><b>HOW TO ORDER LEFT HANDED LOCK FOR INSIDE OPENING DOOR?</b></button>
-  <div class="panel">
-    <p style="font-size:1.8rem !important;">These lock comes with universal settings
-You can set lock Handel according to your door
-Like left handed inside door.</p>
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+      How to order left handed lock for inside opening door?
+      </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p>These lock comes with universal settings
+          You can set lock Handel according to your door
+          Like left handed inside door.</p>
+      </div>
+    </div>
   </div>
 </div>
-
+      </div>
+    </div>
+  </div>
 </section>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-
-
-
-
 
 </main>
 
-  <footer style="width: 100% !important;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 text-left align-left">
-            <div class="footer-content img-responsive">
-             <a href="/" class="logo"><img style="width: 100%; height: 40%;" src="/assets/img/Logo.jpg" alt=""></a>
-
-              <p>Your Finger Your Key. A Complete Fingerprint Door Lock collection. </p>
-              <ul class="socials">
-                  <li><a href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><i style="font-size: 1.8rem;" class="fa fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/lavnalocks/"><i style="font-size: 1.8rem;" class="fa fa-instagram"></i></a></li>
-                  <li><a href="https://www.youtube.com/channel/UCBCwfurSO-DsJaNKlaomHWg/videos"><i style="font-size: 1.8rem;" class="fa fa-youtube" aria-hidden="true"></i></a></li>
-                  <li><a href="https://api.whatsapp.com/send?phone=+91-9971427608"><i style="font-size: 1.8rem;" class="fa fa-whatsapp"></i></a></li>
-              </ul>
-              <p style="color:white;" >Customer Support: <a style="color:white;" href="tel:1800-313-4491">1800-313-4491</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 links">
-           <h4>Useful links</h4>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/shop">Shop</a></li>
-              <li><a href="/faq">Faq's</a></li> 
-              <li><a href="/blog">Blogs</a></li> 
-              <li><a href="/privacypolicy">Privacy Policy</a></li> 
-            </ul>
-        </div>
-           <div class="col-lg-4 links">
-           <h4>Contact Us</h4>
-            <ul>
-              <li><span>Main Head Office:</span> <a href="">Rohini, Sector - 3 Delhi - 110085</a></li><br>
-              <li><span>Mobile:</span> <a href="tel:9667771077">+91-9667771077</a></li>
-              <li><span>Email:</span> <a href="mailto:contact@lavnalocks.com">Contact@lavnalocks.com</a></li>
-            </ul>
-        </div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+      <div class="footer-top">
+          <div class="row">
+          <div class="col-lg-12">
+          <a href="/" class="logo me-auto"><img width="20%" src="assets/new_assets/img2/Logo.webp" alt="Lavna_logo"></a>
+          </div>
+          </div>    
       </div>
-    </div>
-    
-    <div class="footer-bottom img-responsive" style="background: rgb(243, 235, 235) !important; height:5.5rem !important;">
-        <p style="color: black !important; text-align: center; align-items: center; font-size:15px; font-weight:600">&copy;2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.</p>
-    </div>
-</footer>
+      <div class="footer-mid">
+          <div class="row mt-4">
+          <div class="col-lg-5">
+              <div class="box">
+              <h4>Subscribe to our newsletter</h4>
+              <form id="contact-form2">
+                  <input type="email" name="email" id="emailsb" placeholder="Enter Your Email" required><button type="submit" id="submit-modal2">Subscribe Us</button>
+              </form>
+              
+              </div>
+          </div>
+          <div class="col-lg-4">
+              <h4 class="link">Links</h4>
+              <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/shop">Products</a></li>
+              <li><a href="/builder">Builder’s Project</a></li>
+              <li><a href="/privacypolicy">Privacy Policy</a></li>
+              </ul>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="link">Contact Us</h4>
+            <ul>
+            <li><a href="tel:+91-18003134491"><i class="fa fa-phone"></i>  +91-18003134491</a></li>
+            <li> <a href="mailto:sales@lavnalocks.com"><i class="fa fa-envelope"></i> sales@lavnalocks.com</a></li>
+            </ul>
+              <ul class="lastul">
+              <li><a target="_blank" href="https://www.facebook.com/bhagwnshrilocksprivatelimited/"><img src="assets/new_assets/img2/facebook (2).svg" alt="facebook"></a></li>
+              <li><a target="_blank" href="https://www.instagram.com/lavnalocks/"><img src="assets/new_assets/img2/instagram (1).svg" alt="instagram"></a></li>
+              <li><a target="_blank" href="https://youtu.be/Yst8KW2Vm4M"><img src="assets/new_assets/img2/Vector (13).webp" alt="youtube"></a></li>
+            </ul>
+          </div>
+          </div>
+      </div>
+      </div>
 
-<!-- End Footer -->
 
-<!-- <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a> -->
+      <div id="f_bottom" class="container-fluid">
+      <div class="row text-center">
+          <div class="col-lg-12 footer-bottom">
+          <div class="copyright">
+              &copy; 2022 LAVNA Locks is a Unit of Bhagwn Shri Locks PVT. LTD. All Rights Reserved.
+          </div>
+          </div>
+      </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
 
-<script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/public/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/public/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-   
+    <div id="preloader"></div>
+    <script src="assets/new_assets/js/jquery.min.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="../../public/assets/new_assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/new_assets/vendor/aos/aos.js"></script>
+  <script src="assets/new_assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/new_assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/public/assets/js/main.js"></script>
-  {{!-- <script src="/public/assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
+  <script src="assets/new_assets/js/main.js"></script>
+  <script src="assets/new_assets/js/owl.min.js"></script>  
+  <script src="assets/new_assets/js/custom.js"></script>  
+
+  <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+  </script>
+
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("user_mTjMBBP092bpZsnZTyLfp");
+    })();
+  </script>
+
+  <script>
+	$(document).ready(function(){
+		$("#contact-form2").submit(function(e) {
+      $('#submit-modal2').html('Sending...');
+    			e.preventDefault();
+			var emailId = document.getElementById("emailsb")?.value;
+			if(emailId ==='' || emailId == undefined )
+			{
+				return;
+			}
+			var Body ='Email: '+emailId;
+      $('#emailsb').val('');
+
+      sendMailToUser(emailId);
+      sendMailToOwner(Body, emailId);
+			});
+
+		});
+
+
+function sendMailToUser(emailId){
+
+var data = {
+   service_id: 'service_8zp4yhp',
+   template_id: 'template_kvsj7kk',
+   user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+   template_params: {
+        'user_email':emailId,
+        'reply_to':'contact@lavnalocks.com',
+  		  'company':"Lavnalocks",
+
+   }
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function(msg) {
+  // alert(msg);
+  $('#submit-modal2').html('Subscribe');
+  swal("Thank You!", "Your have subscribe lavnalocks", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... user mail failed' + JSON.stringify(error));
+});
+
+}
+    
+
+  function sendMailToOwner(Body, emailId){
+var data = {
+   service_id: 'service_8zp4yhp',
+   template_id: 'template_mxovugp',
+   user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+   template_params: {
+         'user_email': emailId ,
+         'reply_to':'contact@lavnalocks.com', 
+         'owner_email': 'sales@lavnalocks.com',
+         'company': 'Lavnalocks',
+   }
+
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function() {
+  $('#submit-modal').html('Send');
+  swal("Thank You!", "Your Query has been submitted!", "success");
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
+</script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#togg").click(function(){
+            $("#navbar").toggle();
+        });
+    });
+</script>
+
 
 </body>
 

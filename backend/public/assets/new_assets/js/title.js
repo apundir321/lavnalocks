@@ -22,7 +22,9 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title >About Us - Lavna Locks</title>`;
+        <title >About Us - Lavna Locks</title>
+        <meta name="description" content=" " />
+        `;
         $('head').prepend(metaData);
     }
 
@@ -30,7 +32,9 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Online Shop - Lavna Locks</title>`
+        <title>Online Shop - Lavna Locks</title>
+        <meta name="description" content=" " />
+        `
         $('head').prepend(metaData);
     }
 
@@ -38,7 +42,9 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Real State Project - Lavna Locks</title>`
+        <title>Real State Project - Lavna Locks</title>
+        <meta name="description" content=" " />
+        `
         $('head').prepend(metaData);
     }
 
@@ -46,7 +52,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Accounts Sign in - Lavna Locks</title>`
+        <title>Accounts Sign in - Lavna Locks</title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -54,7 +61,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Sign Up - Lavna Locks </title>`
+        <title>Sign Up - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -62,7 +70,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Shoppinp Cart - Lavna Locks </title>`
+        <title>Shoppinp Cart - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -70,7 +79,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>L-A24-Black(Bluetooth) Door Lock - Lavna Locks </title>`
+        <title>L-A24-Black(Bluetooth) Door Lock - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -78,7 +88,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>L-A28-Black(Bluetooth) Door Lock - Lavna Locks </title>`
+        <title>L-A28-Black(Bluetooth) Door Lock - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
   
@@ -86,14 +97,16 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Buy L-A15 Smart Fingerprint Digital Door Lock - Lavna Locks </title>`
+        <title>Buy L-A15 Smart Fingerprint Digital Door Lock - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
     if(page == 'L-S9'){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> Buy L-S9 Fingerprint Door Lock online - Lavna Locks </title>`
+        <title> Buy L-S9 Fingerprint Door Lock online - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -101,7 +114,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-A24-GOLD Biometric Fingerprint Door Lock - Lavna Locks   </title>`
+        <title> L-A24-GOLD Biometric Fingerprint Door Lock - Lavna Locks   </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -109,7 +123,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-H300(Encoder) Door Lock - Lavna Locks </title>`
+        <title> L-H300(Encoder) Door Lock - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -117,7 +132,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> Buy L-A5 Digital Door Lock for Glass Door - Lavna Locks </title>`
+        <title> Buy L-A5 Digital Door Lock for Glass Door - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -125,7 +141,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title> L-A28-GOLD Biometric Door Lock System for Office - Lavna Locks </title>`
+        <title> L-A28-GOLD Biometric Door Lock System for Office - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
 
@@ -133,7 +150,8 @@ $(document).ready(function(){
         metaData = `
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>L-E50 Best Smart Locks for Home - Lavna Locks </title>`
+        <title>L-E50 Best Smart Locks for Home - Lavna Locks </title>
+        <meta name="description" content=" " />`
         $('head').prepend(metaData);
     }
   
