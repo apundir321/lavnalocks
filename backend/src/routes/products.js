@@ -7,6 +7,7 @@ const LawnaProduct = require("../models/lavnaproduct");
 var moment = require("moment");
 const csrfProtection = csrf();
 const middleware = require("../middleware");
+const product = require("../models/product");
 router.use(csrfProtection);
 
 // // GET: display all products
@@ -46,7 +47,8 @@ router.get('/:name',async (req, res) => {
   console.log(foundProduct);
   if(foundProduct){
   res.render("products",{
-    product:foundProduct
+    product:foundProduct,
+    title:`Buy ${foundProduct.title} Door Lock - Lavna Locks`
   });
   }else{
     res.redirect("/");

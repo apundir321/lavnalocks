@@ -15,6 +15,7 @@ router.use(csrfProtection);
 const nodemailer = require("nodemailer");
 var Razorpay = require('razorpay');
 const { body } = require("express-validator");
+const blogs = require("../models/blog");
 var instance = new Razorpay({
   key_id: 'rzp_live_AesJaVZnibvAwT',
   key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
@@ -122,6 +123,18 @@ router.get('/faq', (req, res) => {
 
 router.get('/blog', (req, res) => {
   res.render("blog");
+})
+
+router.get('/blog/:title', (req, res) => {
+  // console.log("blog",blogs);
+  console.log(req.params.title);
+  blog = blogs[req.params.title];
+  // console.log(blog);
+  if(!blog){
+    res.redirect("/");
+    return;
+  } 
+  res.render("blog-detail",{blog:blog});
 })
 
 
