@@ -688,7 +688,7 @@ nav #my_img{
 }
 
 nav #my_img:hover{
-    content: url('../../assets/img2/cart-2.svg');
+    content: url('../../landing_assets/images/icons/cart-2.svg');
 }
 #hero .box1 img{
     float: left !important;

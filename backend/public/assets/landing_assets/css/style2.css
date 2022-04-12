@@ -1167,14 +1167,14 @@ width: 100%;
 #reviewSlides .swiper-slide-active .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../../assets/images/img/review_bg_21.png') !important; 
+    background: url('../../landing_assets/images/img/review_bg_21.png') !important; 
     background-repeat: no-repeat !important;
      background-size: 100% !important;
 
 }#reviewSlides .swiper-slide-next .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../../assets/images/img/review_bg_23.png') !important; 
+    background: url('../../landing_assets/images/img/review_bg_23.png') !important; 
     background-repeat: no-repeat !important;
      background-size: 100% !important ;
 
@@ -1214,7 +1214,7 @@ width: 100%;
 #reviewSlides .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../../assets/images/img/review_bg_22.png'); 
+    background: url('../../landing_assets/images/img/review_bg_22.png'); 
     background-repeat: no-repeat !important;
      background-size: 100% !important;
 
