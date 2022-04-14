@@ -6,7 +6,7 @@
       
       <div class="row row-sm">
         <div class=" col-lg-12 col-md-12 _boxzoom">
-
+          <input type="text" id="productname" value="{{product.title}}"/>
           {{#ifCond product.features "features-L-A24(WI-FI)"}}
           {{>img_la24_gold_wifi}}
           {{/ifCond}}
@@ -313,12 +313,12 @@
 
 <script>
   function addToCart() {
-    var title = document.getElementById("productTitle").innerHTML;
+    var title = document.getElementById("productname").value;
    var quantity = document.getElementById("quantity").value;
     window.location.href = "/add-to-cart-product/" + title+"?quantity="+quantity;
   }
   function checkout() {
-    var title = document.getElementById("productTitle").innerHTML;
+    var title = document.getElementById("productname").value;
     window.location.href = "/products/checkout/" + title;
   }
 </script>
