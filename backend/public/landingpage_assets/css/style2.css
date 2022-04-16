@@ -1168,14 +1168,14 @@ width: 100%;
 #reviewSlides .swiper-slide-active .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../../assets/images/img/review_bg_21.webp') !important; 
+    background: url('../images/img/review_bg_21.webp') !important; 
     background-repeat: no-repeat !important;
      background-size: 100% !important;
 
 }#reviewSlides .swiper-slide-next .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../../assets/images/img/review_bg_23.webp') !important; 
+    background: url('../images/img/review_bg_23.webp') !important; 
     background-repeat: no-repeat !important;
      background-size: 100% !important ;
 
@@ -1215,7 +1215,7 @@ width: 100%;
 #reviewSlides .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../../assets/images/img/review_bg_22.webp'); 
+    background: url('../images/img/review_bg_22.webp'); 
     background-repeat: no-repeat !important;
      background-size: 100% !important;
 
