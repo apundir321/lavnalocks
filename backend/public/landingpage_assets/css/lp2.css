@@ -690,6 +690,10 @@
         margin-top: 0%;
         width: 100%;
     }
+    sup{
+        top: -16px;
+    right: -4px;
+    }
     #main_banner .box1 h4{
         color: black;
         font-family: 'Source Sans Pro', sans-serif;
@@ -697,10 +701,11 @@
         font-weight: bold;
         width: 30%;
         text-align: end;
-        margin-left: 46%;
+        margin-left: 55%;
     }
     #main_banner .box1 h4 span{
         display: block;
+      
     }
     #main_banner .box1 a{
         font-size: 20px;
@@ -724,7 +729,7 @@
         font-size: 14px;
     }
     #main_banner .box1 h4 span{
-        font-size: 18px;
+        font-size: 23px;
     }
     #range .owl-prev i{
         font-size: 20px;
