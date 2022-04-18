@@ -978,7 +978,7 @@
 #reviewSlides .swiper-slide-active .rev_box {
     transition: 0.5s;
     min-height:600px;
-    background: url('../images/img/review_bg_21.png') !important;
+    background: url('../images/img/review_bg_21.png') !important; 
     background-repeat: no-repeat !important;
      background-size: 100% !important;
 
