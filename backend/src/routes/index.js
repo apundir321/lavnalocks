@@ -15,10 +15,12 @@ router.use(csrfProtection);
 const nodemailer = require("nodemailer");
 var Razorpay = require('razorpay');
 const { body } = require("express-validator");
+const blogs = require("../models/blog");
 var instance = new Razorpay({
   key_id: 'rzp_live_AesJaVZnibvAwT',
   key_secret: 'GCQOfaLJglmH7AmoNLriiqPf'
 })
+
 
 
 // var instance = new Razorpay({
@@ -81,20 +83,36 @@ router.get("/cart", async (req, res) => {
 app.use(bodyParser.json())
 
 app.get('/register', (req, res) => {
-  res.render("register");
+  // res.render("register");
+  res.render('register', {
+    title: 'Sign Up - Lavna Locks',
+    description: ''
+});
 })
 
 
 router.get('/login', (req, res) => {
-  res.render("login");
+  // res.render("login");
+  res.render('login', {
+    title: 'Accounts Sign in - Lavna Locks',
+    description: ''
+});
 })
 
 router.get('/about', (req, res) => {
-  res.render("about");
+  // res.render("about");
+  res.render('about', {
+    title: 'About Usss - Lavna Locks',
+    description: ''
+});
 })
 
 router.get('/builder', (req, res) => {
-  res.render("builder");
+  // res.render("builder");
+  res.render('builder', {
+    title: 'Real State Project - Lavna Locks',
+    description: ''
+});
 })
 
 router.get('/distributor', (req, res) => {
@@ -107,23 +125,48 @@ router.get('/products', (req, res) => {
 
 
 router.get('/shop', (req, res) => {
-  res.render("shop");
-})
+  // res.render("shop");
+  let meta = {
+    title: 'Online Shop - Lavna Locks',
+    description: ''
+}
+  res.render('shop', meta);
 
-router.get('/privacypolicy', (req, res) => {
-  res.render("privacypolicy");
 })
 
 
 router.get('/faq', (req, res) => {
-  res.render("faq");
+  // res.render("faq");
+  res.render('faq', {
+    title: 'FAQ - Lavna Locks',
+    description: ''
+});
 })
 
+router.get('/privacypolicy', (req, res) => {
+  // res.render("privacypolicy");
+  res.render('privacypolicy', {
+    title: 'Privacy Policy - Lavna Locks',
+    description: ''
+});
+})
 
 router.get('/blog', (req, res) => {
   res.render("blog");
 })
 
+
+router.get('/blog/:title', (req, res) => {
+  // console.log("blog",blogs);
+  console.log(req.params.title);
+  blog = blogs[req.params.title];
+  // console.log(blog);
+  if(!blog){
+    res.redirect("/");
+    return;
+  } 
+  res.render("blog-detail",{blog:blog});
+})
 
 
 
