@@ -444,6 +444,10 @@ router.get("/l-a24", async function (req, res, next) {
   res.render("offer_l-a24");
 });
 
+router.get("/l-a24offer", async function (req, res, next) {
+  res.render("la24offer");
+});
+
 // GET: checkout form with csrf token
 router.get("/checkout", middleware.isLoggedIn, async (req, res) => {
   console.log("checking out");
