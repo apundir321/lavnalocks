@@ -102,7 +102,7 @@ router.get('/login', (req, res) => {
 router.get('/about', (req, res) => {
   // res.render("about");
   res.render('about', {
-    title: 'About Usss - Lavna Locks',
+    title: 'About Us - Lavna Locks',
     description: ''
 });
 })
