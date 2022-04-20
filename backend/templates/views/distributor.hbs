@@ -363,7 +363,7 @@
             <form id="contact-form">
               <input type="text" name="cpname" id="name" placeholder="Name" pattern="[A-Za-z. ]+" data-error="Name is required." min-length="3" required>
               <input type="email" name="cpemail" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-error="Valid email is required." required>
-              <input type="text" name="cpphone" id="mobile" placeholder="Phone" pattern="[1-9]+[0-9]{9}" data-error="Contact no is required." required>
+              <input type="text" name="cpphone" id="mobile" placeholder="Phone" maxlength="10" minlength="10" pattern="[1-9]+[0-9]{9}" data-error="Contact no is required." required>
               <select name="product" id="product" required>
                 <option value="" selected>Select Product</option>
                 <option value="la24bluetooth">L-A24(Bluetooth)</option>
@@ -696,6 +696,87 @@ $('#closemodal').trigger('click');
             $("#navbar").toggle();
         });
     });
+</script>
+
+<script>
+	$(document).ready(function(){
+		$("#contact-form").submit(function(e) {
+      $('#submit-modal').html('Sending...');
+    			e.preventDefault();
+
+			var Name = document.getElementById("name")?.value;
+			var emailId = document.getElementById("email")?.value;
+			var mobile = document.getElementById("mobile")?.value;
+      var product = document.getElementById("product")?.value;
+      var message = document.getElementById("message")?.value;
+
+			if(Name ==='' || Name == undefined )
+			{
+				return;
+			}
+			if(emailId ==='' || emailId == undefined )
+			{
+				return;
+			}
+			if(mobile==='' || mobile == undefined )
+			{
+				return;
+			}
+      if(product==='' || product == undefined )
+			{
+				return;
+			}
+      if(message==='' || message == undefined )
+			{
+				return;
+			}
+
+      var Body ='Name: '+Name+'<br>Email: '+emailId+'<br>Mobile: '+mobile+'<br>Product: '+product+'<br>Message: '+message;
+      $('#name').val('');
+      $('#email').val('');
+      $('#mobile').val('');
+      $('#product').val('');
+      $('#message').val('');
+
+      sendMailToOwner(Body, Name, emailId, mobile, product,message );
+			});
+
+		});
+ 
+
+  function sendMailToOwner(Body, Name, emailId, mobile, product,message){
+
+var data = {
+   service_id: 'service_8zp4yhp',
+   template_id: 'template_r8bl13q',
+   user_id: 'user_mTjMBBP092bpZsnZTyLfp',
+   template_params: {
+     
+        'from_name': Name,
+	      'user_name':Name,
+         'user_email':emailId,
+         'user_mobile':mobile,
+         'product':product,
+          'message':message,
+         'reply_to':'contact@flybunch.com', 
+         'owner_email': 'sales@lavnalocks.com',
+         'company': 'Lavnalocks',
+   }
+};
+
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+   type: 'POST',
+   data: JSON.stringify(data),
+   contentType: 'application/json'
+}).done(function() {
+  $('#submit-modal').html('Send');
+$('#closemodal').trigger('click');
+}).fail(function(error) {
+   alert('Oops... ' + JSON.stringify(error));
+});
+
+}
+
 </script>
 
 </body>

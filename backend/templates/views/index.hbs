@@ -76,6 +76,19 @@
   gtag('config', 'UA-174630181-1');
 </script>
 
+    <!-- MailerLite Universal -->
+  <script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+    var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+    f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+    var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+    _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+    
+    var ml_account = ml('accounts', '3867533', 'r4q2f7i6e7', 'load');
+  </script>
+  <!-- End MailerLite Universal -->
+
+
 <style>
   #togg{
   border: none;
@@ -1005,7 +1018,9 @@ li .line{
 
         <section id="offer">
             <div class="container-fluid">
-              <a href="javascript:;" onclick="ml_account('webforms', '5606933', 'd0s8e5', 'show')" ><img width="100%" src="assets/new_assets/img2/offer_.webp" alt="coupon_code_offer"></a>
+              <a type="button" data-toggle="modal" data-target="#exampleModalCenter" >
+                <img width="100%" src="assets/new_assets/img2/offer_.webp" alt="coupon_code_offer">
+              </a>
             </div>
         </section>
 
@@ -1021,26 +1036,8 @@ li .line{
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="pop-form">
-                            <div class="box">
-                                <div class="form-group">
-                                    <label class="mt-2" for="email">Email*</label>
-                                    <input class="form-control" type="email" id="popemail" placeholder="Your Email*"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" data-error="Valid email is required." required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="mt-2" for="email">Whatsapp No*</label>
-                                    <input class="form-control" type="text" id="popmobile" placeholder="Your Whatsapp No*"  pattern="[1-9]+[0-9]{9}" data-error="Whatsapp no is required." required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button id="pop-modal" type="submit" class="btn btn_getcode shadow">Get Coupon Code</button>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-lg-12 text-center">
-                                    <h6>*Don’t worry, you won’t be spammed</h6>
-                                </div>
-                            </div>
-                        </form>                      
+                       <div class="ml-form-embed" data-account="3867533:r4q2f7i6e7" data-form="5604774:t6j4n1"></div>
+                     
                     </div>                   
                        <!-- Badge overlay DIV -->
                        <div class="badge-overlay">

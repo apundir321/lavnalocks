@@ -45,17 +45,15 @@ const descdata = require("../../src/static_data/desc");
 router.get('/:name',async (req, res) => {
   console.log(req.params.name+"   ****");
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
-  // console.log(foundProduct,"desc", descdata);
   let desc = descdata.desc;
   let schema = descdata.schema;
   let inject = schema[foundProduct.title] != null?true:false;
   if(foundProduct){
-    // console.log("products",desc);
     res.render("products",{
       product:foundProduct,
       title:`Buy ${foundProduct.title} Door Lock - Lavna Locks`,
       description: desc[foundProduct.title].description,
-      schema : schma[foundProduct.title].schema,
+      schema : inject == false?null:schema[foundProduct.title].schema,
       inject: inject
     });
   }else{

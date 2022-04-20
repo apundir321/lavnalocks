@@ -203,7 +203,7 @@
         min-length="3" required>
       <input type="email" name="cpemail" id="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         data-error="Valid email is required." required>
-      <input type="text" name="cpphone" id="mobile" placeholder="Phone" pattern="[1-9]+[0-9]{9}"
+      <input type="text" name="cpphone" id="mobile" placeholder="Phone" maxlength="10" minlength="10" pattern="[1-9]+[0-9]{9}"
         data-error="Contact no is required." required>
       <select name="product" id="product" required>
         <option value="" selected>Select Product</option>
