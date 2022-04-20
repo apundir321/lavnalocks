@@ -53,13 +53,8 @@ router.get('/:name',async (req, res) => {
       product:foundProduct,
       title:`Buy ${foundProduct.title} Door Lock - Lavna Locks`,
       description: desc[foundProduct.title].description,
-<<<<<<< HEAD
       schema : inject == false?null:schema[foundProduct.title].schema,
       inject: inject
-=======
-      schema : "",
-      inject: false
->>>>>>> 3b6bdb2bec8be40a5d0ce765a5c47c3a70b1eb7e
     });
   }else{
     res.redirect("/");
