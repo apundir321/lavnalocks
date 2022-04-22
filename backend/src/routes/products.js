@@ -47,11 +47,12 @@ router.get('/:name',async (req, res) => {
   const foundProduct = await LawnaProduct.findOne({ title: req.params.name }).exec();
   let desc = descdata.desc;
   let schema = descdata.schema;
+  let title = descdata.titleSch[foundProduct.title].title;
   let inject = schema[foundProduct.title] != null?true:false;
   if(foundProduct){
     res.render("products",{
       product:foundProduct,
-      title:`Buy ${foundProduct.title} Door Lock - Lavna Locks`,
+      title:title,
       description: desc[foundProduct.title].description,
       schema : inject == false?null:schema[foundProduct.title].schema,
       inject: inject

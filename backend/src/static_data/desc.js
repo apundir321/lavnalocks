@@ -9,7 +9,7 @@ descSchema = {
         "description" :     "smart door lock from lavna Locks,make you offices smarter with lavna range of fingerprint door lock for office that comes with multiple smart systems."
     },
     "L-A28-Black(Bluetooth)" :{
-        "description" :     "Door Lock-Advance your home security without compromising on safety and security with Lavna Digital fingerprint locks"
+        "description" :     "Door Lock-Advance your home security without compromising on safety and security with Lavna Digital fingerprint locks."
     },
     "L-A28-GOLD" :{
         "description" :     "Biometric Door Lock System for Office-This lock completely operates through mobile application."
@@ -18,16 +18,16 @@ descSchema = {
         "description" :     "Best smart locks for home-most affordable smart door lock from lavna locks, which you can access from your fingerprint and key."
     },
     "L-A15" :{   
-        "description" :     "Lavna Fingerprint Door Lock: We presents easy to access high-tech Fingerprint glass door lock with strong features for your premium."
+        "description" :     "Smart Fingerprint Digital Door Lock-most affordable smart door lock from lavna Locks, which you can access from your Fingerprint and Key."
     },
     "L-A5" :{
         "description" :     "Lavna Fingerprint Door Lock: We presents easy to access high-tech Fingerprint glass door lock with strong features for your premium."
     },
     "L-H300(Encoder)" :{
-        "description" :     "Lavna Fingerprint Door Lock: We presents easy to access high-tech Fingerprint glass door lock with strong features for your premium."
+        "description" :     "Door Lock-smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key."
     },
     "L-S9" :{
-        "description" :     "Lavna Fingerprint Door Lock: We presents easy to access high-tech Fingerprint glass door lock with strong features for your premium."
+        "description" :     "Fingerprint Door Lock online-Lock for your cabinets from Lavna Locks, which you can access from your fingerprint and PIN."
     }
 }
 
@@ -201,5 +201,35 @@ schemaSrc = {
     }
 }
 
-module.exports = {desc: descSchema,schema: schemaSrc};
+titleSchema = {
+    "L-A15":{
+        "title": "Buy L-A15 Smart Fingerprint Digital Door Lock - Lavna Locks"
+    },
+    "L-S9":{
+        "title": "Buy L-S9 Fingerprint Door Lock online - Lavna Locks"
+    },
+    "L-A5":{
+        "title": "Buy L-A5 Digital Door Lock for Glass Door - Lavna Locks"
+    },
+    "L-E50":{
+        "title": "L-E50 Best Smart Locks for Home - Lavna Locks"
+    },
+    "L-A24-GOLD":{
+        "title": "L-A24-GOLD Biometric Fingerprint Door Lock - Lavna Locks"
+    },
+    "L-A28-GOLD":{
+        "title": "L-A28-GOLD Biometric Door Lock System for Office - Lavna Locks"
+    },
+    "L-H300(Encoder)":{
+        "title": "L-H300(Encoder) Door Lock - Lavna Locks"
+    },
+    "L-A24-Black(Bluetooth)":{
+        "title": "L-A24-Black(Bluetooth) Door Lock - Lavna Locks"
+    },
+    "L-A28-Black(Bluetooth)":{
+        "title": "L-A28-Black(Bluetooth) Door Lock - Lavna Locks"
+    },
+}
+
+module.exports = {desc: descSchema,schema: schemaSrc, titleSch : titleSchema};
 
