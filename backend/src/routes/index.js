@@ -908,7 +908,7 @@ async function sendPaymentEmail(postDataJson,payId) {
   // email options
   const mailOpts = {
     from: "sales@lavnalocks.com",
-    to: "ps1089124@gmail.com",
+    to: "sales@lavnalocks.com",
     subject: `Payment Success`,
     html:
       `
