@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "starts":"nodemon src/app.js"
   },
   "styles": {
     "css": "./node_modules/swiper/swiper-bundle.css"
