@@ -24,7 +24,7 @@ const Register = require('./models/user');
 const { json } = require("express");
 connectDB();
 
-const port = 81;
+const port = 80;
 
 
 const static_path = path.join(__dirname, "../public");
