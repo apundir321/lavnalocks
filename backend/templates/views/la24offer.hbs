@@ -99,6 +99,23 @@
   </script>
   <!-- End MailerLite Universal -->
 
+  <style>
+      .box_modal h4{
+        color:#003399 ;
+        text-align: center;
+
+      }
+      #exampleModal .close{
+        top: 0 !important;
+        right: 0 !important;
+      }
+      .new_form .close{
+        top: 0 !important;
+        right: 0 !important;
+      }
+      
+  </style>
+
 </head>
 
 <body style="overflow-x: hidden;">
@@ -137,10 +154,30 @@
       <div class="row">
        
           <div class="box1">
-            <h4>    JUST&nbsp;  <span>RS. 9400</span><sup>*</sup></h4>
+           
             <a href="#main_prod" class="btn">Order Now</a>
           </div>         
             
+      </div>
+    </div>
+  </section>
+
+  <section id="mobile_banner">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <img src="../../public/landingpage_assets/images/img/lp-new-v2-mobile.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="col-lg-6">
+          <div class="content_section text-center">
+            <h2 class="mt-4">Why choose smart door locks?</h2>
+            <ul class="mt-3 text-left">
+              <li><img src="../../public/landingpage_assets/images/img/i1_v2.png" alt="" class="img-fluid">1st step towards your <span>smart home</span>  </li>
+              <li><img src="../../public/landingpage_assets/images/img/i2_v2.png" alt="" class="img-fluid">6 ways to enter makes it <span>convenient</span> </li>
+              <li><img src="../../public/landingpage_assets/images/img/i3_v2.png"alt="" class="img-fluid">Feel the <span>luxury</span> , everytime you enter </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -284,7 +321,7 @@
             <div class="small_box">
               <img src="landingpage_assets/images/lp-img/10k_cust.svg" alt="">
             </div>
-            <h5> <span class="mrp"> M.R.P. </span>&nbsp; <span class="delete"> <del> Rs.</i>  14200</del></span>  &nbsp; <span class="number"> Rs.</i> 10,199</span></h5>
+            <h5> <span class="mrp"> M.R.P. </span>&nbsp; <span class="delete"> <del> Rs.</i>  14200</del></span>  &nbsp; <span class="number"> Rs.</i> 10,999</span></h5>
             <div class="row d-flex align-items-center">
               <div class="col-lg-4 col-6 mt-2">
                 <div class="row">
@@ -860,7 +897,7 @@
 
 
 
-    <section id="main_prod">
+    {{!-- <section id="main_prod">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
@@ -872,7 +909,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
 
     <!---------- Related Product done ----------->
@@ -992,7 +1029,32 @@
   </footer>
   <!-- End Footer -->
 
-  <div id="preloader"></div>
+ 
+
+<div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header new_form">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body justify-content-center align-items-center mb-4">
+        <div class="col-lg-6 modal_image_section">
+          <img src="../../public/landingpage_assets/images/img/form-v2.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+           <div class="box box_modal">
+              <h4>To Celebrate 3 years of securing 10,000+ homes lavna is launching coupons of flat ₹799 off <br>on l-a24 model.</h4>
+              <div class="ml-form-embed" data-account="3867533:r4q2f7i6e7" data-form="5604774:t6j4n1"></div>
+              <p class="text-center">*Please also check your Promotion tab.</p>
+          </div>
+        </div>
+         
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Vendor JS Files -->
   <script src="landingpage_assets/vendor/aos/aos.js"></script>
@@ -1063,7 +1125,6 @@
   });
 
 </script>
-
 
 
   <script>
@@ -1147,7 +1208,6 @@
   </script>
 
 
-
   <script>
     $('.swiper-button-next').click(
       function (e) {
@@ -1158,7 +1218,6 @@
   </script>
 
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
 
 <script>
@@ -1305,6 +1364,18 @@ $(document).ready(function(){
                   nextButton:"#reviewSlides .swiper-button-next",
                   prevButton:"#reviewSlides .swiper-button-prev"
                   });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   setTimeout(function() {
+      $('#exampleModalCenter').modal('show');
+  }, 5000);
+  });
+
+  $(".close").click(function(){
+     $('#exampleModalCenter').modal('hide');
+});
 </script>
 
 </body>

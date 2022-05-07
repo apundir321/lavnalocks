@@ -1,14 +1,15 @@
 #main_banner{
-    background-image: url('../images/img/lp_banner.webp');
+    background-image: url('../images/img/mobile_banner_5.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 760px;
+    width: 100%;
     position: relative;
 }
 #main_banner .box1{
     position: absolute;
-    bottom: 10%;
+    bottom: 23%;
     left: 10%;
     
 }
@@ -31,12 +32,12 @@
     font-weight: bold;
 }
 #main_banner .box1 a{
-    background-color: #039;
+    background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 34px;
     padding-right: 34px;
-    color: #fff;
+    color: #039;
     border-radius: 25px;
     font-family: 'Source Sans Pro',sans-serif;
     font-weight: 600;
@@ -514,7 +515,33 @@
     padding: 0px;
 }
 
-
+#mobile_banner{
+    display: none ;
+}
+.content_section h2{
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+}
+.content_section ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.content_section ul li{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+.content_section ul li img{
+    padding-right: 10px;
+}
+.content_section ul li span{
+    color: #039;
+    font-weight: 600;
+}
+.box_modal{
+    padding: 10%;
+}
 
 
 
@@ -538,6 +565,14 @@
 }
 
 @media (max-width:767px){
+    .modal-dialog {
+        max-width: 500px !important;
+        margin: 1.75rem auto;
+    }
+    .box_modal h4 {
+        padding-left: 0px;
+    }
+    
     .break{
         display: block !important;
     }
@@ -682,13 +717,12 @@
         padding-right: 32px;
     }
     #main_banner{
-        background-image: url('../images/lp-img/mbannerok.jpg');
-        background-position: top center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        margin-top: 0%;
-        width: 100%;
+        display: none !important;
+       
+    }
+    #mobile_banner{
+        display: block ;
+        padding-top: 0px !important;
     }
     sup{
         top: -16px;
@@ -1050,4 +1084,11 @@
 
 .break{
     display: none;
+}
+
+
+
+.modal-dialog {
+    max-width: 1000px;
+    margin: 1.75rem auto;
 }
