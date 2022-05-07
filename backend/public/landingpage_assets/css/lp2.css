@@ -1,15 +1,16 @@
 #main_banner{
-    background-image: url('../images/img/mobile_banner_5.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 760px;
-    width: 100%;
+
     position: relative;
+}
+#main_banner{
+    padding: 0;
+    margin: 0;
+    padding-left: 0 !important;
+    margin-left: 0;
 }
 #main_banner .box1{
     position: absolute;
-    bottom: 23%;
+  bottom: 23%;
     left: 10%;
     
 }
