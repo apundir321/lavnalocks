@@ -53,7 +53,7 @@ async function seedDB() {
 //     }
 // ],"features-L-A24-GOLD");
   await seedCateg("L-A28-BLACK",8999,"/assets/img/lavna5.jpg",7600,"Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.",null,"features-L-A28-BLACK");
-  await seedCateg("L-A28-GOLD",8999,"/assets/img/lavna6.jpg",7999,"Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.",null,"features-L-A28-GOLD");
+  await seedCateg("L-A28-GOLD",10999,"/assets/img/lavna6.jpg",8599,"Meet the 6 in 1 Fingerprint door lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN, Bluetooth unlocking, OTP Unlocking and Key.",null,"features-L-A28-GOLD");
   await seedCateg("L-A15",4999,"/assets/img/LA15/1.jpg",3999,"Meet the 2 in 1 MOST Affordable Digital door lock from LAVNA Locks, which you can access from your fingerprint and Key.",null,"features-L-A15");
   await seedCateg("L-H300",7500,"/assets/img/LH300/2.jpg",3999,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-H300");
   await seedCateg("L-A5",13900,"/assets/img/LA5/1.jpg",11999,"Meet the 4 in 1 Glass door security lock from LAVNA Locks, which you can access from your fingerprint, RFID Card, PIN and remote",null,"features-L-A5");
@@ -66,9 +66,10 @@ async function seedDB() {
   await seedCateg("L-A28(Bluetooth)",8999,"/assets/img/lavna6.jpg",7699,"Meet the 6 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, Bluetooth unlocking and Manual Key.",null,"features-L-A28(Bluetooth)");
   // await seedCateg("L-A28(WI-FI)",9999,"/assets/img/LA28_gold/9.jpg",8699,"Meet the 6 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, WI-FI unlocking and Manual Key.",null,"features-L-A28(WI-FI)");
   // await seedCateg("L-A28(Remote)",9999,"/assets/img/lavna6.jpg",9000,"Meet the 5 in 1 Lock for your doors from LAVNA Locks, which you can access from your fingerprint, PIN, RFID card, Remote and Manual Key .",null,"features-L-A28(Remote)");
-  await seedCateg("L-A28-Black(Bluetooth)",8999,"/assets/img/L-A28.jpg",8499,"Meet the 6 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, Bluetooth unlocking and Manual Key.",null,"features-L-A28-Black(Bluetooth)");
+  await seedCateg("L-A28-Black(Bluetooth)",10999,"/assets/img/L-A28.jpg",8599,"Meet the 6 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, Bluetooth unlocking and Manual Key.",null,"features-L-A28-Black(Bluetooth)");
   // await seedCateg("L-A28-Black(WI-FI)",9999,"/assets/img/LA28_black/10.jpg",8700,"Meet the 6 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, OTP unlocking, WI-FI unlocking and Manual Key",null,"features-L-A28-Black(WI-FI)");
   await seedCateg("L-A28-Black(Remote)",9999,"/assets/img/LA28_black/8.jpg",9000,"Meet the 5 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, Remote and Manual Key . ",null,"features-L-A28-Black(Remote)");
+  await seedCateg("L-H400",9999,"/assets/img/LH-400/LH400.jpg",3899,"Meet the 5 in 1 Lock for your doors from LAVNA Locks, which you can access from your Fingerprint, PIN, RFID card, Remote and Manual Key . ",null,"features-L-H400");
   
   await seedCateg("L-H300(Encoder)",7500,"/assets/img/LA28_black/8.jpg",3999,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-H300(Encoder)");
   await seedCateg("L-E50",9900,"/assets/img/LE50/1.jpg",6999,"Meet the 2 in 1 smart lock for hotel doors from LAVNA Locks, which you can access from your RFID Card and Key.",null,"features-L-E50");
