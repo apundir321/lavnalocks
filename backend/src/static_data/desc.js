@@ -29,6 +29,10 @@ descSchema = {
     "L-S9" :{
         "description" :     "Fingerprint Door Lock online-Lock for your cabinets from Lavna Locks, which you can access from your fingerprint and PIN."
     }
+    ,
+    "L-H400" :{
+        "description" :     "Fingerprint Door Lock online-Lock for your cabinets from Lavna Locks, which you can access from your fingerprint and PIN."
+    }
 }
 
 schemaSrc = {
@@ -199,6 +203,35 @@ schemaSrc = {
           }
         `
     }
+    ,
+    "L-H400" : {
+        "schema" : `
+        {
+            "@context": "https://schema.org/", 
+            "@type": "Product", 
+            "name": "L-H400 Biometric Door Lock System for Office",
+            "image": "",
+            "brand": {
+              "@type": "Brand",
+              "name": "Lavna Locks"
+            },
+            "sku": "+91-18003134491",
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.lavnalocks.com/products/L-H400",
+              "priceCurrency": "INR",
+              "price": "6999"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "2",
+              "ratingCount": "5"
+            }
+          }
+        `
+    }
 }
 
 titleSchema = {
@@ -229,6 +262,9 @@ titleSchema = {
     "L-A28-Black(Bluetooth)":{
         "title": "L-A28-Black(Bluetooth) Door Lock - Lavna Locks"
     },
+    "L-H400":{
+      "title": "L-H400 Door Lock - Lavna Locks"
+  },
 }
 
 module.exports = {desc: descSchema,schema: schemaSrc, titleSch : titleSchema};

@@ -81,6 +81,9 @@
           {{#ifCond product.features "features-L-E50"}}
           {{>img_E50}}
           {{/ifCond}}
+           {{#ifCond product.features "features-L-H400"}}
+          {{>img_h400}}
+          {{/ifCond}}
        
         </div>
         <div class="col-lg-6 col-md-6">
@@ -190,6 +193,10 @@
 
       {{#ifCond product.features "features-L-E50"}}
       {{>features_E50}}
+      {{/ifCond}}
+
+       {{#ifCond product.features "features-L-H400"}}
+      {{>feature_h400}}
       {{/ifCond}}
 
   
